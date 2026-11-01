@@ -413,7 +413,6 @@ function renderBoard() {
     let rotate = ang - 90;
     let anchorR, anchorX;
     if (rightSide) {
-      if (ang > 90) rotate += 180;   // secteur bas-droit : retourner pour rester lisible
       /* lecture du centre vers l'extérieur : la première lettre près du logo */
       anchorR = endR + (textLen * charW) / 2;
       anchorX = -(textLen * charW) / 2;   // première lettre à x local négatif... 
