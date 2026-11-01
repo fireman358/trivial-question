@@ -55,8 +55,6 @@ let animating = false;
 let lastPaths = {};
 var CATEGORY_ORDER = ["G", "S", "A", "H", "L", "D"];
 
-/* Logo Edukisto : étoile bleue + sigle infini (SVG vectoriel) */
-const EDUKISTO_MARK = `<svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 3l5.2 18.2 10.8-5.2-5.2 10.8L61 32l-18.2 5.2 5.2 10.8-10.8-5.2L32 61l-5.2-18.2-10.8 5.2 5.2-10.8L3 32l18.2-5.2-5.2-10.8 10.8 5.2z" fill="#38bdf8"/><path d="M32 32c-1.6-2-3-3.1-4.8-3.1a4.7 4.7 0 1 0 0 9.4c1.8 0 3.2-1.1 4.8-3.1 1.6 2 3 3.1 4.8 3.1a4.7 4.7 0 1 0 0-9.4c-1.8 0-3.2 1.1-4.8 3.1z" stroke="#333333" stroke-width="2.2" fill="none"/></svg>`;
 
 /* ---------- Utilitaires DOM ---------- */
 const $ = (sel) => document.querySelector(sel);
@@ -187,21 +185,24 @@ function buildBoard() {
   }
 
   // 6 rayons de 6 cases (36), alignés sur les QG (intersection rayon/anneau).
-  // Les cases d'anneau non-QG tombent naturellement ENTRE deux rayons.
+  // Couleurs en carré latin : à distance égale du centre, chaque rayon porte
+  // une catégorie différente — un dé donné ne peut jamais tomber deux fois
+  // sur la même catégorie. La case interne (k=0) porte la couleur du rayon,
+  // la case externe (k=5) jamais (elle jouxte le QG de cette même couleur).
+  // Décalages du carré latin : tous distincts entre rayons (latin) et choisis
+  // pour que la case externe (k=5) ne porte jamais la couleur du QG du rayon.
+  const SHIFT = [2, 4, 0, 3, 5, 1];
   for (let s = 0; s < 6; s++) {
     const ang = s * 60;
-    const own = CATEGORY_ORDER[s];
-    const others = CAT_KEYS.filter(k => k !== own);
-    const cats = [...others, others[0]];
+    const shift = SHIFT[s];
     let prev = "hub";
     for (let k = 0; k < 6; k++) {
       const [x, y] = polar(SPOKE_R[k], ang);
       const id = "sp" + s + "-" + k;
-      add({ id, x, y, cat: cats[k], isWedge: false });
+      add({ id, x, y, cat: CAT_KEYS[(shift + k) % 6], isWedge: false });
       link(prev, id);
       prev = id;
     }
-    // le bout du rayon rejoint le QG, à l'intersection avec l'anneau
     link(prev, "ring" + (s * 6));
   }
 
@@ -246,12 +247,16 @@ function renderBoard() {
   for (const id in board.cells) {
     const c = board.cells[id];
     if (c.isCenter) {
-      // Moyeu : anthracite + logo Edukisto (étoile bleue au sigle infini)
+      // Moyeu : anthracite + logo Edukisto (étoile bleue au sigle infini), à l'échelle du cercle
+      const ms = (HUB_R - 8) / 32;   // le mark couvre 0..64, on le centre
       out += `<g id="cell-hub" class="cell hub-cell">
         <circle cx="${c.x}" cy="${c.y + 2}" r="${HUB_R}" fill="#00000022"/>
         <circle cx="${c.x}" cy="${c.y}" r="${HUB_R}" fill="#333333" stroke="#38bdf8" stroke-width="3" filter="url(#f-drop)"/>
-        <g transform="translate(${c.x - HUB_R} ${c.y - HUB_R}) scale(${(HUB_R * 2) / 64})">${EDUKISTO_MARK}</g>
-        <circle cx="${c.x}" cy="${c.y}" r="${HUB_R - 3}" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.35"/>
+        <g transform="translate(${c.x - 32 * ms} ${c.y - 32 * ms}) scale(${ms})">
+          <path d="M32 3l5.2 18.2 10.8-5.2-5.2 10.8L61 32l-18.2 5.2 5.2 10.8-10.8-5.2L32 61l-5.2-18.2-10.8 5.2 5.2-10.8L3 32l18.2-5.2-5.2-10.8 10.8 5.2z" fill="#38bdf8"/>
+          <path d="M32 32c-1.6-2-3-3.1-4.8-3.1a4.7 4.7 0 1 0 0 9.4c1.8 0 3.2-1.1 4.8-3.1 1.6 2 3 3.1 4.8 3.1a4.7 4.7 0 1 0 0-9.4c-1.8 0-3.2 1.1-4.8 3.1z" stroke="#7dd3fc" stroke-width="2.2" fill="none"/>
+        </g>
+        <circle cx="${c.x}" cy="${c.y}" r="${HUB_R - 2}" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.3"/>
       </g>`;
       continue;
     }

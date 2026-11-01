@@ -124,8 +124,9 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 
 /* Game layout */
 #game-screen { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
-#sidebar { flex: 1; min-width: 300px; max-width: 360px; order: 0; }
-#board-wrap { flex: 2; min-width: 340px; order: 1; }
+#left-col { flex: 0 0 230px; min-width: 200px; max-width: 260px; order: 0; }
+#board-wrap { flex: 2 1 380px; min-width: 340px; order: 1; }
+#sidebar { flex: 0 0 320px; min-width: 300px; max-width: 360px; order: 2; }
 
 #board { width: 100%; height: auto; border-radius: var(--radius); }
 .cell { cursor: default; }
