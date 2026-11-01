@@ -1,0 +1,20 @@
+/* Trivial Quest — styles globaux (charte edukisto) */
+:root {
+  --bg: #333333;
+  --surface: #3d3d3d;
+  --text: #ffffff;
+  --muted: #ffffff;
+  --accent: #38bdf8;
+  --border: #4a4a4a;
+  --radius: 8px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+#board { width: 100%; height: auto; border-radius: 8px; }
