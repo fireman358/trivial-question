@@ -382,56 +382,41 @@ function renderBoard() {
     /* Icône + nom sur deux lignes, dans le sens de la lecture.
        La taille du texte s'adapte au nom : elle est calculée pour que le
        nom le plus long tienne dans la largeur du triangle à ce rayon. */
-    /* Texte ancré à la base du triangle (côté anneau extérieur) :
-       la première ligne touche la base, les suivantes s'étendent vers
-       l'intérieur du plateau — jamais sur les cases de l'anneau. */
-    const baseR = RING_R - 40;            // sommet du bloc : contre la base
-    const blockDepth = 66;               // profondeur du bloc vers le centre
-    const anchorR = baseR - blockDepth / 2;  // centre de gravité du bloc
-    const [lx, ly] = polar(anchorR, ang);
-    /* Largeur disponible : calculée au point le PLUS INTÉRIEUR du bloc
-       (la dernière ligne de texte), là où le triangle est le plus étroit.
-       C'est la vraie contrainte, avec marge de sécurité. */
-    const innerR = anchorR - blockDepth / 2 - 6;
-    const availW = 2 * innerR * Math.tan(28 * Math.PI / 180) * 0.62;
-    /* Noms longs sur deux lignes : la taille se calcule sur le segment
-       le plus long, chaque ligne tient dans le triangle. */
-    let lines = [info.name];
-    if (info.name.length > 10 && info.name.includes(" ")) {
-      const words = info.name.split(" ");
-      const mid = Math.ceil(words.length / 2);
-      lines = [words.slice(0, mid).join(" "), words.slice(mid).join(" ")];
-    }
-    const longest = Math.max(...lines.map(l => l.length));
-    const fontPx = Math.max(10, Math.min(24, Math.floor(availW / (longest * 0.78))));
-    /* TEXTE RADIAL : le mot s'écrit LE LONG de l'axe du triangle, la
-       première lettre contre le bord extérieur (la base), la dernière
-       vers le centre — comme un rayon, sans toucher le logo central.
-       Repère : après rotate(ang - 90), l'axe x local suit l'axe du rayon ;
-       x négatif = vers le centre, x positif = vers l'extérieur. */
+    /* TEXTE RADIAL PLEINE COURSE : le mot occupe toute la bande libre,
+       de la base du triangle (près de l'anneau) jusqu'à l'arc du logo
+       central. La taille se calcule pour que la dernière lettre finisse
+       EXACTEMENT au bord du logo. */
     const textLen = info.name.length;
-    const charW = fontPx * 0.62;                 // largeur moyenne d'un caractère
-    const startR = RING_R - 42;                  // première lettre : près de la base
-    const endR = startR - textLen * charW;        // dernière lettre : vers le centre
-    /* largeur contrainte : le mot doit tenir entre startR et max(HUB_R+10, endR) */
-    const fitR = Math.max(HUB_R + 12, endR);
-    const maxChars = Math.floor((startR - (HUB_R + 12)) / charW);
-    /* si le mot est trop long pour la course disponible, réduire la police */
-    let effFont = fontPx;
-    if (textLen * charW > startR - (HUB_R + 12)) {
-      effFont = Math.max(8, Math.floor((startR - (HUB_R + 12)) / (textLen * 0.62)));
-    }
-    const eIconH = Math.round(effFont * 1.3);
-    const eCharW = effFont * 0.62;
+    const startR = RING_R - 26;                 // première lettre : contre la base
+    const endR = HUB_R + 16;                    // dernière lettre : bord du logo (HUB_R=72)
+    const course = startR - endR;              // course totale disponible
+    /* taille pour que : textLen × 0.62 × font = course */
+    let effFont = Math.floor(course / (textLen * 0.62));
+    effFont = Math.max(8, Math.min(30, effFont));
+    const charW = effFont * 0.62;
+    /* sens de lecture : sur la moitié DROITE du plateau (ang entre 0 et 180),
+       la lecture naturelle va du centre vers l'extérieur — la DERNIÈRE lettre
+       est donc près de l'anneau. Sur la moitié gauche : la première lettre
+       près de l'anneau. L'icône au-dessus du texte, centrée. */
+    const rightSide = ang > 0 && ang < 180;
     let rotate = ang - 90;
-    if (ang > 180) rotate += 180;
-    /* l'ancre du texte : centre de la course du mot */
-    const textMidR = startR - (textLen * eCharW) / 2;
-    const [tx2, ty2] = polar(textMidR, ang);
-    const baseOffset = startR - textMidR;        // x local de la première lettre
+    let anchorR, anchorX;
+    if (rightSide) {
+      if (ang > 90) rotate += 180;   // secteur bas-droit : retourner pour rester lisible
+      /* lecture du centre vers l'extérieur : la première lettre près du logo */
+      anchorR = endR + (textLen * charW) / 2;
+      anchorX = -(textLen * charW) / 2;   // première lettre à x local négatif... 
+    } else {
+      if (ang > 180) rotate += 180;
+      /* lecture de l'extérieur vers le centre : première lettre près de l'anneau */
+      anchorR = startR - (textLen * charW) / 2;
+      anchorX = (textLen * charW) / 2;
+    }
+    const [tx2, ty2] = polar(anchorR, ang);
+    const halfText = (textLen * charW) / 2;
     out += `<g class="sector-label" data-sector="${sector}" transform="translate(${tx2} ${ty2}) rotate(${rotate})">
-      <text x="${baseOffset}" y="${Math.round(effFont * 0.35)}" text-anchor="begin" class="sector-radial" font-size="${effFont}">${info.name}</text>
-      <text x="${baseOffset}" y="${Math.round(-effFont * 0.05)}" text-anchor="begin" class="sector-icon" font-size="${eIconH}">${info.icon}</text>
+      <text x="0" y="${Math.round(effFont * 0.35)}" text-anchor="middle" class="sector-radial" font-size="${effFont}">${info.name}</text>
+      <text x="0" y="${Math.round(-effFont * 0.55)}" text-anchor="middle" class="sector-icon" font-size="${Math.round(effFont * 1.3)}">${info.icon}</text>
     </g>`;
   }
   out += `<circle cx="350" cy="352" r="${HUB_R + 14}" fill="#f2e9cf" stroke="#c9b98a" stroke-width="2" opacity="0.8"/>`;
