@@ -218,9 +218,9 @@ $("#btn-start").onclick = startGame;
    - 6 rayons de 6 cases (36) : couleurs alternées, jamais la couleur du QG
    - Piste circulaire extérieure (36) : les 6 QG en bout de rayon,
      les 30 autres cases alternent les catégories                      */
-const HUB_R = 58;
-const RING_R = 322, SPOKE_R = [104, 141, 178, 215, 252, 289];
-const CELL_R = 17;
+const HUB_R = 78;
+const RING_R = 322, SPOKE_R = [148, 185, 222, 259, 296];
+const CELL_R = 13;
 
 function polar(r, angleDeg) {
   const a = (angleDeg - 90) * Math.PI / 180;
@@ -258,7 +258,7 @@ function buildBoard() {
     const ang = s * 60;
     const shift = SHIFT[s];
     let prev = "hub";
-    for (let k = 0; k < 6; k++) {
+    for (let k = 0; k < SPOKE_R.length; k++) {
       const [x, y] = polar(SPOKE_R[k], ang);
       const id = "sp" + s + "-" + k;
       add({ id, x, y, cat: CAT_KEYS[(shift + k) % 6], isWedge: false });
@@ -333,18 +333,20 @@ function renderBoard() {
     /* Icône + nom sur deux lignes, dans le sens de la lecture.
        La taille du texte s'adapte au nom : elle est calculée pour que le
        nom le plus long tienne dans la largeur du triangle à ce rayon. */
-    const midR = (HUB_R + RING_R) / 2 + 10;
-    const [lx, ly] = polar(midR, ang);
-    // largeur disponible du triangle à ce rayon : 2 * midR * tan(demi-angle)
-    const availW = 2 * midR * Math.tan(29 * Math.PI / 180) * 0.78; // marge de 22 %
-    // largeur estimée du texte : nb caractères × taille × 0.62 (majuscules)
+    /* Deux lignes de texte placées dans la bande dégagée du triangle :
+       entre le moyeu (HUB_R) et la première rangée de cases (SPOKE_R[0]).
+       L'icône en haut (zone étroite près du moyeu), le nom en dessous. */
+    const bandMid = (HUB_R + SPOKE_R[0]) / 2;   // centre de la bande libre
+    const [lx, ly] = polar(bandMid, ang);
+    // largeur du triangle au centre de la bande
+    const availW = 2 * bandMid * Math.tan(29 * Math.PI / 180) * 0.7;
     const chars = info.name.length;
-    const fontPx = Math.min(24, Math.floor(availW / (chars * 0.68)));
+    const fontPx = Math.max(9, Math.min(20, Math.floor(availW / (chars * 0.78))));
     let rotate = ang - 90;
     if (ang > 180) rotate += 180;
     out += `<g class="sector-label" transform="translate(${lx} ${ly}) rotate(${rotate})">
-      <text x="0" y="-12" text-anchor="middle" class="sector-icon" font-size="${Math.round(fontPx * 1.5)}">${info.icon}</text>
-      <text x="0" y="16" text-anchor="middle" class="sector-cat" font-size="${fontPx}">${info.name}</text>
+      <text x="0" y="-8" text-anchor="middle" class="sector-icon" font-size="${Math.round(fontPx * 1.4)}">${info.icon}</text>
+      <text x="0" y="12" text-anchor="middle" class="sector-cat" font-size="${fontPx}">${info.name}</text>
     </g>`;
   }
   out += `<circle cx="350" cy="352" r="${HUB_R + 14}" fill="#f2e9cf" stroke="#c9b98a" stroke-width="2" opacity="0.8"/>`;
