@@ -355,7 +355,10 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 
 /* ===== Bouton Nouvelle partie dans le header (toujours visible) ===== */
 .header-newgame {
-  background: transparent; color: #f87171; border: 1px solid #f87171;
-  padding: 6px 12px; border-radius: 8px; font-size: .85rem; cursor: pointer; font-weight: 600;
+  margin-left: auto;
+  background: rgba(248,113,113,.12); color: #f87171; border: 1.5px solid #f87171;
+  padding: 8px 16px; border-radius: 8px; font-size: .95rem; cursor: pointer; font-weight: 700;
 }
-.header-newgame:hover { background: rgba(248,113,113,.15); }
+.header-newgame:hover { background: rgba(248,113,113,.28); }
+/* la version suit le bouton, à droite */
+.app-version { margin-left: 0 !important; }
