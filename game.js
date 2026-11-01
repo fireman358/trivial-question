@@ -340,13 +340,21 @@ function renderBoard() {
     const [lx, ly] = polar(bandMid, ang);
     // largeur du triangle au centre de la bande
     const availW = 2 * bandMid * Math.tan(29 * Math.PI / 180) * 0.7;
-    const chars = info.name.length;
-    const fontPx = Math.max(9, Math.min(20, Math.floor(availW / (chars * 0.78))));
+    /* Noms longs sur deux lignes : la taille se calcule sur le segment
+       le plus long, chaque ligne tient dans le triangle. */
+    let lines = [info.name];
+    if (info.name.length > 10 && info.name.includes(" ")) {
+      const words = info.name.split(" ");
+      const mid = Math.ceil(words.length / 2);
+      lines = [words.slice(0, mid).join(" "), words.slice(mid).join(" ")];
+    }
+    const longest = Math.max(...lines.map(l => l.length));
+    const fontPx = Math.max(9, Math.min(20, Math.floor(availW / (longest * 0.78))));
     let rotate = ang - 90;
     if (ang > 180) rotate += 180;
     out += `<g class="sector-label" transform="translate(${lx} ${ly}) rotate(${rotate})">
       <text x="0" y="-8" text-anchor="middle" class="sector-icon" font-size="${Math.round(fontPx * 1.4)}">${info.icon}</text>
-      <text x="0" y="12" text-anchor="middle" class="sector-cat" font-size="${fontPx}">${info.name}</text>
+      ${lines.map((l, i) => `<text x="0" y="${10 + i * (fontPx + 2)}" text-anchor="middle" class="sector-cat" font-size="${fontPx}">${l}</text>`).join("")}
     </g>`;
   }
   out += `<circle cx="350" cy="352" r="${HUB_R + 14}" fill="#f2e9cf" stroke="#c9b98a" stroke-width="2" opacity="0.8"/>`;
