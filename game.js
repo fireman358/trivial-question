@@ -10,9 +10,6 @@ const CATEGORIES = {
   D: { name: "Divertissement",    color: "#d5368d", icon: "🎬" }
 };
 const CAT_KEYS = Object.keys(CATEGORIES);
-
-const ROLL_COLOR = "#8d99ae", ROLL_ICON = "↻";
-const THEME_COLOR = "#4b5563", THEME_ICON = "★";
 const HQ_ICON = "🧀";
 
 /* Ordre des couleurs alternées (comme le plateau officiel : jamais deux identiques côte à côte) */
@@ -38,12 +35,12 @@ function ageGroupFor(age) {
 
 /* ---------- Pions (un par catégorie, comme les pions Monopoly) ---------- */
 const PAWNS = {
-  G: { name: "Le Voyageur",    emoji: "🚀" },
-  H: { name: "Le Sage",        emoji: "🦉" },
-  S: { name: "Le Savant",     emoji: "🧪" },
-  L: { name: "L'Athlète",     emoji: "🏆" },
-  A: { name: "L'Artiste",     emoji: "🎭" },
-  D: { name: "La Star",       emoji: "🎬" }
+  G: { name: "Le Voyageur", emoji: "🚀" },
+  H: { name: "Le Sage",     emoji: "🦉" },
+  S: { name: "Le Savant",   emoji: "🧪" },
+  L: { name: "L'Athlète",   emoji: "🏆" },
+  A: { name: "L'Artiste",   emoji: "🎭" },
+  D: { name: "La Star",     emoji: "🎬" }
 };
 
 /* ---------- État ---------- */
@@ -55,7 +52,11 @@ let activeThemes = { disney: false, musique: false };
 let board = null;
 let gameOver = false;
 let animating = false;
+let lastPaths = {};
 var CATEGORY_ORDER = ["G", "S", "A", "H", "L", "D"];
+
+/* Logo Edukisto : étoile bleue + sigle infini (SVG vectoriel) */
+const EDUKISTO_MARK = `<svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 3l5.2 18.2 10.8-5.2-5.2 10.8L61 32l-18.2 5.2 5.2 10.8-10.8-5.2L32 61l-5.2-18.2-10.8 5.2 5.2-10.8L3 32l18.2-5.2-5.2-10.8 10.8 5.2z" fill="#38bdf8"/><path d="M32 32c-1.6-2-3-3.1-4.8-3.1a4.7 4.7 0 1 0 0 9.4c1.8 0 3.2-1.1 4.8-3.1 1.6 2 3 3.1 4.8 3.1a4.7 4.7 0 1 0 0-9.4c-1.8 0-3.2 1.1-4.8 3.1z" stroke="#333333" stroke-width="2.2" fill="none"/></svg>`;
 
 /* ---------- Utilitaires DOM ---------- */
 const $ = (sel) => document.querySelector(sel);
@@ -79,11 +80,7 @@ function renderSetup() {
       <span class="group-tag">${window.QUESTION_PACKS[p.group].label}</span>
       <span class="pawn-tag">${PAWNS[p.pawn].emoji} ${PAWNS[p.pawn].name}</span>
       <button data-i="${i}" class="remove">✕</button>`;
-    row.querySelector(".remove").onclick = () => {
-      const freed = players[i].pawn;
-      players.splice(i, 1);
-      refreshSetup();
-    };
+    row.querySelector(".remove").onclick = () => { players.splice(i, 1); refreshSetup(); };
     list.appendChild(row);
   });
 
@@ -95,7 +92,7 @@ function renderSetup() {
     const div = document.createElement("div");
     div.className = "theme-option";
     div.innerHTML = `<input type="checkbox" id="${id}" ${activeThemes[key] ? "checked" : ""}>
-      <label for="${id}">⭐ ${pack.label} (${pack.questions.length} questions)</label>`;
+      <label for="${id}">⭐ ${pack.label} — ${pack.questions.length} questions</label>`;
     div.querySelector("input").onchange = (e) => { activeThemes[key] = e.target.checked; };
     themes.appendChild(div);
   });
@@ -113,7 +110,7 @@ function renderPawnPicker() {
   for (const k of CAT_KEYS) {
     const isTaken = taken.includes(k);
     html += `<div class="pawn-choice ${isTaken ? 'taken' : ''}" data-cat="${k}" title="${PAWNS[k].name}${isTaken ? ' (déjà pris)' : ''}">
-      <span class="pawn-mini pawn-2-5d" style="--pc:${CATEGORIES[k].color}">${PAWNS[k].emoji}</span>
+      <span class="pawn-mini" style="--pc:${CATEGORIES[k].color}">${PAWNS[k].emoji}</span>
       <span class="pawn-choice-name">${PAWNS[k].name}</span>
       ${isTaken ? '<span class="pawn-taken-label">pris</span>' : ''}
     </div>`;
@@ -132,7 +129,6 @@ let pendingPawn = null;
 
 function refreshSetup() { renderSetup(); }
 
-const PLAYER_COLORS = ["#e63946", "#2a9d8f", "#457b9d", "#ffb703", "#8338ec", "#ff7096"];
 $("#btn-add-player").onclick = () => {
   const name = $("#new-player-name").value.trim();
   const age = parseInt($("#new-player-age").value, 10);
@@ -159,9 +155,9 @@ $("#btn-start").onclick = startGame;
 
 /* ---------- Plateau officiel : 73 cases ----------
    - Moyeu central (1) : départ et question finale
-   - 6 rayons de 6 cases (36) : alternance des couleurs, jamais deux identiques adjacentes
-   - Piste circulaire extérieure (36) : les 6 QG (camemberts) sont EN BOUT DE RAYON,
-     c'est-à-dire sur le cercle extérieur, à l'intersection avec chaque rayon   */
+   - 6 rayons de 6 cases (36) : couleurs alternées, jamais la couleur du QG
+   - Piste circulaire extérieure (36) : les 6 QG en bout de rayon,
+     les 30 autres cases alternent les catégories                      */
 const HUB_R = 58;
 const RING_R = 322, SPOKE_R = [104, 141, 178, 215, 252, 289];
 const CELL_R = 17;
@@ -176,36 +172,21 @@ function buildBoard() {
   const add = (c) => { board.cells[c.id] = c; board.adj[c.id] = []; };
   const link = (a, b) => { board.adj[a].push(b); board.adj[b].push(a); };
 
-  // Moyeu (1 case) — départ de tous les joueurs
-  add({ id: "hub", x: 350, y: 350, cat: null, isCenter: true, isWedge: false, isRollAgain: false, isTheme: false });
+  add({ id: "hub", x: 350, y: 350, cat: null, isCenter: true, isWedge: false });
 
-  // Piste circulaire extérieure (36 cases)
-  // Le QG de chaque catégorie est en bout de rayon : position i multiple de 6,
-  // et le QG porte la couleur qui SUIT dans l'ordre du rayon correspondant.
+  // Piste circulaire (36) : QG en bout de rayon (i multiple de 6), sinon catégorie alternée
   for (let i = 0; i < 36; i++) {
     const ang = i * 10;
     const [x, y] = polar(RING_R, ang);
-    const m = i % 6;
-    if (m === 0) {
-      // QG (case camembert) en bout de rayon s = i/6, couleur de la 1re case du rayon
-      const s = i / 6;
-      const qgCat = CATEGORY_ORDER[s];
-      add({ id: "ring" + i, x, y, cat: qgCat, isWedge: true, wedgeCat: qgCat, isRollAgain: false, isTheme: false });
+    if (i % 6 === 0) {
+      const qgCat = CATEGORY_ORDER[i / 6];
+      add({ id: "ring" + i, x, y, cat: qgCat, isWedge: true, wedgeCat: qgCat });
     } else {
-      add({
-        id: "ring" + i, x, y,
-        cat: RING_CATS[i],
-        isWedge: false,
-        isRollAgain: false,
-        isTheme: m === 3
-      });
+      add({ id: "ring" + i, x, y, cat: RING_CATS[i], isWedge: false });
     }
   }
 
-  // 6 rayons de 6 cases internes (36 cases), du centre vers l'extérieur.
-  // Le QG en bout de rayon est posé sur l'anneau (7e case visuelle du rayon).
-  // Couleurs alternées : le rayon ne contient jamais sa propre couleur
-  // (les 5 autres catégories, la 6e répétant la 1re — jamais deux identiques adjacentes).
+  // 6 rayons de 6 cases (36) : jamais la couleur du QG du rayon
   for (let s = 0; s < 6; s++) {
     const ang = s * 60 + 30;
     const own = CATEGORY_ORDER[s];
@@ -215,18 +196,14 @@ function buildBoard() {
     for (let k = 0; k < 6; k++) {
       const [x, y] = polar(SPOKE_R[k], ang);
       const id = "sp" + s + "-" + k;
-      add({ id, x, y, cat: cats[k], isWedge: false, isRollAgain: false, isTheme: false });
+      add({ id, x, y, cat: cats[k], isWedge: false });
       link(prev, id);
       prev = id;
     }
-    // le bout du rayon interne rejoint le QG sur l'anneau
     link(prev, "ring" + (s * 6));
   }
 
-  // Liaisons de l'anneau
-  for (let i = 0; i < 36; i++) {
-    link("ring" + i, "ring" + ((i + 1) % 36));
-  }
+  for (let i = 0; i < 36; i++) link("ring" + i, "ring" + ((i + 1) % 36));
 
   renderBoard();
   renderLegend();
@@ -242,13 +219,6 @@ function hexPoints(cx, cy, r) {
   return pts.join(" ");
 }
 
-function cellPaint(cell) {
-  if (cell.isRollAgain) return { c: ROLL_COLOR, icon: ROLL_ICON };
-  if (cell.isTheme) return { c: THEME_COLOR, icon: THEME_ICON };
-  if (cell.isWedge) return { c: CATEGORIES[cell.wedgeCat].color, icon: HQ_ICON };
-  return { c: CATEGORIES[cell.cat].color, icon: CATEGORIES[cell.cat].icon };
-}
-
 function renderBoard() {
   const svg = $("#board");
   let defs = `<defs>
@@ -258,10 +228,6 @@ function renderBoard() {
     <filter id="f-soft" x="-40%" y="-40%" width="180%" height="180%">
       <feDropShadow dx="0" dy="1.5" stdDeviation="1.2" flood-color="#000" flood-opacity="0.25"/>
     </filter>
-    <radialGradient id="rg-roll" cx="38%" cy="32%">
-      <stop offset="0%" stop-color="#cfd6e4"/><stop offset="100%" stop-color="${ROLL_COLOR}"/></radialGradient>
-    <radialGradient id="rg-theme" cx="38%" cy="32%">
-      <stop offset="0%" stop-color="#59606a"/><stop offset="100%" stop-color="${THEME_COLOR}"/></radialGradient>
     <radialGradient id="rg-board" cx="50%" cy="46%">
       <stop offset="0%" stop-color="#f8f4e6"/><stop offset="100%" stop-color="#e8dfc4"/></radialGradient>`;
   for (const k of CAT_KEYS) {
@@ -269,7 +235,7 @@ function renderBoard() {
       <stop offset="0%" stop-color="${lighten(CATEGORIES[k].color, 90)}"/>
       <stop offset="100%" stop-color="${CATEGORIES[k].color}"/></radialGradient>`;
   }
-  defs += `<clipPath id="clip-hub"><circle cx="350" cy="350" r="${HUB_R - 4}"/></clipPath></defs>`;
+  defs += `</defs>`;
 
   let out = defs;
   out += `<circle cx="350" cy="352" r="350" fill="url(#rg-board)" stroke="#c9b98a" stroke-width="3" filter="url(#f-soft)"/>`;
@@ -278,16 +244,16 @@ function renderBoard() {
   for (const id in board.cells) {
     const c = board.cells[id];
     if (c.isCenter) {
+      // Moyeu : anthracite + logo Edukisto (étoile bleue au sigle infini)
       out += `<g id="cell-hub" class="cell hub-cell">
         <circle cx="${c.x}" cy="${c.y + 2}" r="${HUB_R}" fill="#00000022"/>
-        <circle cx="${c.x}" cy="${c.y}" r="${HUB_R}" fill="#115eb2" stroke="#0d3f77" stroke-width="3" filter="url(#f-drop)"/>
-        <image href="img/logo-hub.png" x="${c.x - HUB_R + 4}" y="${c.y - HUB_R + 4}" width="${(HUB_R - 4) * 2}" height="${(HUB_R - 4) * 2}" clip-path="url(#clip-hub)" preserveAspectRatio="xMidYMid slice"/>
-        <circle cx="${c.x}" cy="${c.y}" r="${HUB_R}" fill="none" stroke="#ffd76a" stroke-width="3" opacity="0.9"/>
+        <circle cx="${c.x}" cy="${c.y}" r="${HUB_R}" fill="#333333" stroke="#38bdf8" stroke-width="3" filter="url(#f-drop)"/>
+        <g transform="translate(${c.x - 34} ${c.y - 34}) scale(1.06)">${EDUKISTO_MARK}</g>
+        <circle cx="${c.x}" cy="${c.y}" r="${HUB_R - 3}" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.35"/>
       </g>`;
       continue;
     }
-    const paint = cellPaint(c);
-    const grad = c.isRollAgain ? "rg-roll" : c.isTheme ? "rg-theme" : "rg-" + (c.isWedge ? c.wedgeCat : c.cat);
+    const grad = "rg-" + (c.isWedge ? c.wedgeCat : c.cat);
     if (c.isWedge) {
       out += `<g id="cell-${c.id}" class="cell wedge-cell">
         <polygon points="${hexPoints(c.x, c.y + 2.5, 24)}" fill="#00000026"/>
@@ -298,12 +264,12 @@ function renderBoard() {
       out += `<g id="cell-${c.id}" class="cell">
         <circle cx="${c.x}" cy="${c.y + 2.5}" r="${CELL_R}" fill="#00000026"/>
         <circle cx="${c.x}" cy="${c.y}" r="${CELL_R}" fill="url(#${grad})" stroke="#2b2b2b" stroke-width="2" filter="url(#f-drop)"/>
-        <text x="${c.x}" y="${c.y + 6}" text-anchor="middle" class="cell-icon">${paint.icon}</text>
+        <text x="${c.x}" y="${c.y + 6}" text-anchor="middle" class="cell-icon">${CATEGORIES[c.cat].icon}</text>
       </g>`;
     }
   }
 
-  // pions 2.5D (sphère + ombre), l'emoji du pion flotte au-dessus
+  // pions 2.5D
   players.forEach((p, i) => {
     const c = board.cells[p.pos];
     if (!c) return;
@@ -327,71 +293,82 @@ function renderLegend() {
   for (const k of CAT_KEYS) {
     html += `<span class="legend-item"><span class="dot" style="background:${CATEGORIES[k].color}"></span>${CATEGORIES[k].icon} ${CATEGORIES[k].name}</span>`;
   }
-  html += `</div><b>Cases spéciales</b><div class="legend-grid">
-    <span class="legend-item">🧀 QG (bout de chaque rayon, sur l'anneau) : camembert de la couleur en jeu</span>
-    <span class="legend-item"><span class="dot" style="background:${THEME_COLOR}"></span>★ Thème : question Disney / Musique (si activé)</span>
+  html += `</div><b>Case spéciale</b><div class="legend-grid">
+    <span class="legend-item">🧀 QG (bout de chaque rayon, sur le cercle) : camembert de la couleur en jeu</span>
+    <span class="legend-item">Le dé impose le nombre exact de pas</span>
   </div>`;
   el.innerHTML = html;
 }
 
-/* ---------- Déplacement ---------- */
+/* ---------- Déplacement : EXACTEMENT le nombre du dé ----------
+   BFS sur les états (case, pas restant) : on ne retient que les trajets
+   de longueur exactement égale au dé. Le moyeu n'est accessible qu'en
+   dernier pas et uniquement avec les 6 camemberts.                        */
 function neighbors(cellId) { return board.adj[cellId] || []; }
 
-function reachable(startId, steps, player) {
+function exactPaths(startId, steps, player) {
   const hasAllWedges = player && Object.keys(player.wedges).length === 6;
-  let frontier = new Set([startId]);
+  let frontier = new Map([[startId, null]]);   // cellule -> parent (couche précédente)
+  const layers = [frontier];
   for (let s = 0; s < steps; s++) {
-    const next = new Set();
-    frontier.forEach(id => neighbors(id).forEach(n => {
-      if (board.cells[n].isCenter && !hasAllWedges) return;
-      next.add(n);
-    }));
-    frontier = next;
-  }
-  frontier.delete(startId);
-  return [...frontier];
-}
-
-/* Chemin le plus court (BFS avec parents) pour animer le pion */
-function shortestPath(startId, goalId, player) {
-  const hasAllWedges = player && Object.keys(player.wedges).length === 6;
-  if (startId === goalId) return [startId];
-  const parents = { [startId]: null };
-  let queue = [startId];
-  while (queue.length) {
-    const cur = queue.shift();
-    for (const n of neighbors(cur)) {
-      if (n in parents) continue;
-      if (board.cells[n].isCenter && !hasAllWedges) continue;
-      parents[n] = cur;
-      if (n === goalId) {
-        const path = [goalId];
-        let c = goalId;
-        while (parents[c] !== null) { c = parents[c]; path.unshift(c); }
-        return path;
+    const next = new Map();
+    const isLast = s === steps - 1;
+    for (const [cell] of frontier) {
+      for (const n of neighbors(cell)) {
+        const c = board.cells[n];
+        if (c.isCenter && !(isLast && hasAllWedges)) continue; // moyeu : dernier pas + 6 camemberts
+        if (!next.has(n)) next.set(n, cell);
       }
-      queue.push(n);
     }
+    frontier = next;
+    layers.push(frontier);
   }
-  return null;
+  const paths = {};
+  for (const [cell] of frontier) {
+    const path = [cell];
+    let c = cell;
+    for (let s = layers.length - 1; s > 0; s--) {
+      c = layers[s].get(c);
+      path.unshift(c);
+    }
+    paths[cell] = path;   // longueur exacte : steps + 1 cases
+  }
+  return paths;
 }
 
 /* ---------- Animation du dé ---------- */
+const PIPS = {
+  1: [4],
+  2: [0, 8],
+  3: [0, 4, 8],
+  4: [0, 2, 6, 8],
+  5: [0, 2, 4, 6, 8],
+  6: [0, 2, 3, 5, 6, 8]
+};
+function dieFaceHTML(n) {
+  let pips = "";
+  for (let i = 0; i < 9; i++) {
+    pips += `<span class="pip-slot">${PIPS[n].includes(i) ? "<span class='pip'></span>" : ""}</span>`;
+  }
+  return `<div class="die"><div class="die-face">${pips}</div></div>`;
+}
+
 function rollDice(cb) {
   const el = $("#dice-result");
-  const faces = ["⚀","⚁","⚂","⚃","⚄","⚅"];
   let spins = 0;
   const interval = setInterval(() => {
     const d = 1 + Math.floor(Math.random() * 6);
-    el.innerHTML = `<span class="dice-face dice-spin">${faces[d - 1]}</span>`;
+    el.innerHTML = dieFaceHTML(d);
+    el.firstChild.firstChild.classList.add("die-tumble");
     spins++;
     if (spins >= 10) {
       clearInterval(interval);
       const final = 1 + Math.floor(Math.random() * 6);
-      el.innerHTML = `<span class="dice-face dice-final">${faces[final - 1]}</span>`;
-      setTimeout(() => cb(final), 350);
+      el.innerHTML = dieFaceHTML(final);
+      el.firstChild.firstChild.classList.add("die-land");
+      setTimeout(() => cb(final), 400);
     }
-  }, 90);
+  }, 100);
 }
 
 /* ---------- Questions ---------- */
@@ -405,6 +382,7 @@ function pickQuestion(player, catKey) {
   return q;
 }
 
+/* Extensions : cartes bonus Disney/Musique/… servies sur la catégorie Divertissement */
 function pickThemeQuestion(player) {
   const keys = Object.keys(window.THEME_PACKS).filter(k => activeThemes[k]);
   if (keys.length === 0) return null;
@@ -421,7 +399,6 @@ function startGame() {
   usedQuestions = {};
   gameOver = false;
   current = 0;
-  // Départ : tous les joueurs sur le moyeu (case de départ officielle)
   players.forEach(p => { p.pos = "hub"; p.wedges = {}; });
   buildBoard();
   hide($("#setup-screen"));
@@ -453,14 +430,16 @@ $("#btn-roll").onclick = () => {
   $("#btn-roll").disabled = true;
   rollDice((dice) => {
     const p = players[current];
-    const targets = reachable(p.pos, dice, p);
+    lastPaths = exactPaths(p.pos, dice, p);
+    const targets = Object.keys(lastPaths);
     if (targets.length === 0) {
       $("#dice-result").textContent = `🎲 ${dice} — aucune case accessible, au tour suivant.`;
       setTimeout(nextTurn, 1400);
       return;
     }
     const el = $("#dice-result");
-    el.innerHTML = `<span class="dice-face dice-final">${["⚀","⚁","⚂","⚃","⚄","⚅"][dice - 1]}</span> <span class="dice-info">Cliquez sur la case de destination.</span>`;
+    el.innerHTML = dieFaceHTML(dice) + `<span class="dice-info">Dé : ${dice} — cliquez sur la case de destination (exactement ${dice} pas).</span>`;
+    el.querySelector(".die-face").classList.add("die-land");
     targets.forEach(id => {
       const cell = $("#cell-" + id);
       if (cell) { cell.classList.add("reachable"); cell.onclick = () => moveTo(id); }
@@ -471,14 +450,14 @@ $("#btn-roll").onclick = () => {
 function moveTo(cellId) {
   document.querySelectorAll(".reachable").forEach(el => { el.classList.remove("reachable"); el.onclick = null; });
   const p = players[current];
-  const path = shortestPath(p.pos, cellId, p);
+  const path = lastPaths[cellId];
   if (!path || path.length < 2) { arrive(cellId); return; }
   animating = true;
   let step = 1;
   const walk = () => {
     p.pos = path[step];
     renderBoard();
-    if (step < path.length - 1) { step++; setTimeout(walk, 240); }
+    if (step < path.length - 1) { step++; setTimeout(walk, 300); }
     else { animating = false; setTimeout(() => arrive(cellId), 250); }
   };
   walk();
@@ -487,12 +466,6 @@ function moveTo(cellId) {
 function arrive(cellId) {
   const p = players[current];
   const cell = board.cells[cellId];
-  if (cell.isRollAgain) {
-    $("#dice-result").textContent = "↻ Rejouez ! Relancez le dé.";
-    awaitingRoll = true;
-    $("#btn-roll").disabled = false;
-    return;
-  }
   askQuestion(cell, p);
 }
 
@@ -507,17 +480,16 @@ function askQuestion(cell, player) {
     const q = pickQuestion(player, cat);
     catName = "🏆 Question finale — " + CATEGORIES[cat].icon + " " + CATEGORIES[cat].name;
     question = q[1]; options = q.slice(2, 6); correct = q[6];
-  } else if (cell.isTheme) {
+  } else if (cell.cat === "D") {
+    // Extensions activées ? Les cartes bonus servent la catégorie Divertissement.
     const t = pickThemeQuestion(player);
-    if (!t) {
-      const idx = parseInt(cell.id.slice(4), 10);
-      const cat = RING_CATS[idx] || CAT_KEYS[0];
-      const q = pickQuestion(player, cat);
-      catName = CATEGORIES[cat].icon + " " + CATEGORIES[cat].name;
-      question = q[1]; options = q.slice(2, 6); correct = q[6];
-    } else {
-      catName = "⭐ " + t.theme;
+    if (t) {
+      catName = "⭐ " + t.theme + " (carte bonus)";
       question = t.q[0]; options = t.q.slice(1, 5); correct = t.q[5];
+    } else {
+      const q = pickQuestion(player, "D");
+      catName = CATEGORIES.D.icon + " " + CATEGORIES.D.name + (cell.isWedge ? " — 🧀 camembert en jeu !" : "");
+      question = q[1]; options = q.slice(2, 6); correct = q[6];
     }
   } else {
     const q = pickQuestion(player, cell.cat);

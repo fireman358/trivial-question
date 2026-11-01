@@ -30,12 +30,14 @@ Chaque tranche a son propre cursus de questions, réparties dans les 6 catégori
 | 16–30 ans | 124 |
 | 31 ans et + | 123 |
 
-### Packs à thème
+### Extensions — cartes bonus
 
-Des cases **★** sur le plateau servent une question d'un pack à thème activable :
+Les extensions sont des **paquets de cartes supplémentaires** qui enrichissent la catégorie Divertissement (🎬) : quand un joueur tombe sur une case 🎬, il peut piocher une carte bonus du thème activé. Elles se cochent en option avant la partie :
 
 - ⭐ **Spécial Disney** (104 questions)
 - ⭐ **Spécial Musique** (104 questions)
+
+D'autres thèmes pourront être ajoutés au fil du temps (cinéma, Star Wars, famille…).
 
 ## 🚀 Comment jouer
 
