@@ -313,18 +313,21 @@ function renderBoard() {
     out += `<polygon class="sector-fill"
       points="${t1x},${t1y} ${t2x},${t2y} ${b2x},${b2y} ${b1x},${b1y}"
       fill="${info.color}" opacity="0.92"/>`;
-    /* Icône + nom sur deux lignes, le long du rayon central du secteur,
-       dans le sens de la lecture. Le rayon central du secteur pointe vers
-       « ang » ; on écrit le long de cet axe, jamais à l'envers. */
+    /* Icône + nom sur deux lignes, dans le sens de la lecture.
+       La taille du texte s'adapte au nom : elle est calculée pour que le
+       nom le plus long tienne dans la largeur du triangle à ce rayon. */
     const midR = (HUB_R + RING_R) / 2 + 10;
     const [lx, ly] = polar(midR, ang);
-    // angle de lecture : le texte suit l'axe du rayon ; on le retourne
-    // s'il pointe vers la gauche pour qu'il reste lisible.
+    // largeur disponible du triangle à ce rayon : 2 * midR * tan(demi-angle)
+    const availW = 2 * midR * Math.tan(29 * Math.PI / 180) * 0.9;  // marge de 10 %
+    // largeur estimée du texte : nb caractères × taille × 0.62 (majuscules)
+    const chars = info.name.length;
+    const fontPx = Math.min(26, Math.floor(availW / (chars * 0.62)));
     let rotate = ang - 90;
     if (ang > 180) rotate += 180;
     out += `<g class="sector-label" transform="translate(${lx} ${ly}) rotate(${rotate})">
-      <text x="0" y="-12" text-anchor="middle" class="sector-icon">${info.icon}</text>
-      <text x="0" y="16" text-anchor="middle" class="sector-cat">${info.name}</text>
+      <text x="0" y="-12" text-anchor="middle" class="sector-icon" font-size="${Math.round(fontPx * 1.5)}">${info.icon}</text>
+      <text x="0" y="16" text-anchor="middle" class="sector-cat" font-size="${fontPx}">${info.name}</text>
     </g>`;
   }
   out += `<circle cx="350" cy="352" r="${HUB_R + 14}" fill="#f2e9cf" stroke="#c9b98a" stroke-width="2" opacity="0.8"/>`;

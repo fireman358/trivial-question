@@ -25,15 +25,6 @@ window.THEME_PACKS.musique = {
     ],
     [
      "AR",
-     "Quel chanteur est surnommé « le King du rock'n'roll » ?",
-     "Elvis Presley",
-     "Chuck Berry",
-     "Johnny Cash",
-     "Buddy Holly",
-     0
-    ],
-    [
-     "AR",
      "Quel chanteur français a chanté « Mistral gagnant » ?",
      "Renaud",
      "Jacques Brel",
@@ -75,15 +66,6 @@ window.THEME_PACKS.musique = {
      "Étienne Daho",
      "Alain Chamfort",
      "Les Rita Mitsouko",
-     0
-    ],
-    [
-     "AR",
-     "Quel duo français porte des casques de robot ?",
-     "Daft Punk",
-     "Justice",
-     "Air",
-     "Cassius",
      0
     ],
     [
@@ -151,15 +133,6 @@ window.THEME_PACKS.musique = {
     ],
     [
      "SO",
-     "Quelle chanson de Daft Punk répète « One More Time » ?",
-     "One More Time",
-     "Around the World",
-     "Get Lucky",
-     "Harder Better Faster Stronger",
-     0
-    ],
-    [
-     "SO",
      "Quelle chanteuse a interprété « Résiste » ?",
      "France Gall",
      "Sylvie Vartan",
@@ -174,15 +147,6 @@ window.THEME_PACKS.musique = {
      "Michel Berger",
      "Jean-Jacques Goldman",
      "Renaud",
-     0
-    ],
-    [
-     "IN",
-     "Quel instrument a 88 touches ?",
-     "Le piano",
-     "L'orgue",
-     "Le clavecin",
-     "Le célesta",
      0
     ],
     [
@@ -223,29 +187,11 @@ window.THEME_PACKS.musique = {
     ],
     [
      "IN",
-     "Quel instrument souffle-t-on pour jouer ?",
-     "La flûte",
-     "Le piano",
-     "La batterie",
-     "La harpe",
-     0
-    ],
-    [
-     "IN",
      "Quel instrument a des touches noires et blanches ?",
      "Le piano",
      "Le violon",
      "La guitare",
      "Le tambour",
-     0
-    ],
-    [
-     "IN",
-     "Quel instrument à vent a un pavillon et des pistons ?",
-     "La trompette",
-     "La flûte",
-     "La clarinette",
-     "Le hautbois",
      0
     ],
     [
@@ -258,192 +204,12 @@ window.THEME_PACKS.musique = {
      0
     ],
     [
-     "ST",
-     "Quel genre musical est né à La Nouvelle-Orléans ?",
-     "Le jazz",
-     "Le blues",
-     "Le country",
-     "Le gospel",
-     0
-    ],
-    [
-     "ST",
-     "Quel musicien jamaïcain a popularisé le reggae ?",
-     "Bob Marley",
-     "Peter Tosh",
-     "Jimmy Cliff",
-     "Desmond Dekker",
-     0
-    ],
-    [
-     "ST",
-     "Quel genre est originaire du Bronx dans les années 1970 ?",
-     "Le hip-hop",
-     "La disco",
-     "Le punk",
-     "La new wave",
-     0
-    ],
-    [
-     "ST",
-     "Quel genre musical est né dans le Delta du Mississippi ?",
-     "Le blues",
-     "Le jazz",
-     "Le funk",
-     "Le reggae",
-     0
-    ],
-    [
-     "ST",
-     "Quelle danse est originaire de Cuba ?",
-     "La salsa",
-     "Le tango",
-     "La valse",
-     "Le flamenco",
-     0
-    ],
-    [
-     "ST",
-     "Quel style de danse est né dans le Bronx ?",
-     "Le breakdance",
-     "Le modern jazz",
-     "Le tango",
-     "Le claquet",
-     0
-    ],
-    [
-     "ST",
-     "Quel compositeur est devenu sourd ?",
-     "Beethoven",
-     "Mozart",
-     "Bach",
-     "Haendel",
-     0
-    ],
-    [
-     "CN",
-     "Quel grand festival breton attire chaque été des centaines de milliers de personnes ?",
-     "Les Vieilles Charrues",
-     "Rock en Seine",
-     "Solidays",
-     "Main Square",
-     0
-    ],
-    [
-     "CN",
-     "Quel festival de musique se tient à Glastonbury ?",
-     "Le Glastonbury Festival",
-     "Reading",
-     "Wireless",
-     "Isle of Wight",
-     0
-    ],
-    [
-     "CN",
-     "Quel concours européen de chanson a lieu chaque année ?",
-     "L'Eurovision",
-     "The Voice",
-     "American Idol",
-     "La Nouvelle Star",
-     0
-    ],
-    [
-     "CN",
-     "Quelle chanson d'ABBA a remporté l'Eurovision 1974 ?",
-     "Waterloo",
-     "Mamma Mia",
-     "Dancing Queen",
-     "Fernando",
-     0
-    ],
-    [
-     "CN",
-     "Quelle chanteuse a offert à la France sa dernière victoire à l'Eurovision en 1977 ?",
-     "Marie Myriam",
-     "France Gall",
-     "Anne-Marie David",
-     "Mireille Mathieu",
-     0
-    ],
-    [
-     "CN",
-     "Quelle chanson de France Gall a remporté l'Eurovision 1965 ?",
-     "Poupée de cire, poupée de son",
-     "Les Sucettes",
-     "Résiste",
-     "Bébé Requin",
-     0
-    ],
-    [
-     "MD",
-     "Quel pays est le berceau du tango ?",
-     "L'Argentine",
-     "L'Espagne",
-     "Cuba",
-     "Le Brésil",
-     0
-    ],
-    [
-     "MD",
-     "Quel pays a inventé le reggae ?",
-     "La Jamaïque",
-     "Cuba",
-     "Les États-Unis",
-     "L'Afrique du Sud",
-     0
-    ],
-    [
-     "MD",
-     "Quel pays a inventé le jazz ?",
-     "Les États-Unis",
-     "La France",
-     "L'Angleterre",
-     "Le Brésil",
-     0
-    ],
-    [
      "MD",
      "Quel pays accueille le plus grand carnaval du monde, à Rio ?",
      "Le Brésil",
      "L'Argentine",
      "Cuba",
      "Le Portugal",
-     0
-    ],
-    [
-     "MD",
-     "Quel instrument ouest-africain est une grande harpe à 21 cordes ?",
-     "La kora",
-     "Le balafon",
-     "Le djembé",
-     "Le ngoni",
-     0
-    ],
-    [
-     "MD",
-     "Quel instrument écossais fonctionne avec des soufflets ?",
-     "La cornemuse",
-     "La harpe",
-     "Le violon",
-     "La flûte irlandaise",
-     0
-    ],
-    [
-     "MD",
-     "Quel groupe suédois a popularisé la disco-pop dans les années 1970 ?",
-     "ABBA",
-     "Roxette",
-     "Ace of Base",
-     "The Cardigans",
-     0
-    ],
-    [
-     "MD",
-     "Quel groupe de folk-rock québécois chante « Sur mon épaule » ?",
-     "Les Cowboys Fringants",
-     "Harmonium",
-     "Beau Dommage",
-     "Les Colocs",
      0
     ],
     [
@@ -480,33 +246,6 @@ window.THEME_PACKS.musique = {
      "Carlos Santana",
      "Desi Arnaz",
      "Tito Puente",
-     0
-    ],
-    [
-     "AR",
-     "Quel duo a chanté « The Sound of Silence » ?",
-     "Simon et Garfunkel",
-     "The Everly Brothers",
-     "Sonny and Cher",
-     "Hall and Oates",
-     0
-    ],
-    [
-     "AR",
-     "Quel chanteur britannique a chanté « Rocket Man » ?",
-     "Elton John",
-     "David Bowie",
-     "Paul McCartney",
-     "Rod Stewart",
-     0
-    ],
-    [
-     "AR",
-     "Quel groupe a chanté « We Will Rock You » ?",
-     "Queen",
-     "Kiss",
-     "AC/DC",
-     "Bon Jovi",
      0
     ],
     [
@@ -601,65 +340,11 @@ window.THEME_PACKS.musique = {
     ],
     [
      "IN",
-     "Quel instrument est le plus petit de la famille des cordes frottées ?",
-     "Le violon",
-     "L'alto",
-     "Le violoncelle",
-     "La contrebasse",
-     0
-    ],
-    [
-     "IN",
-     "Quel instrument compte 47 cordes et des pédales ?",
-     "La harpe",
-     "Le piano",
-     "La lyre",
-     "Le luth",
-     0
-    ],
-    [
-     "IN",
-     "Quel instrument à vent a une anche double ?",
-     "Le hautbois",
-     "La flûte",
-     "La trompette",
-     "Le saxophone",
-     0
-    ],
-    [
-     "IN",
-     "Quel instrument possède des touches et un soufflet ?",
-     "L'accordéon",
-     "L'orgue",
-     "Le piano",
-     "La vielle",
-     0
-    ],
-    [
-     "IN",
      "Quel instrument africain a la forme d'une coupe et se frappe à mains nues ?",
      "Le djembé",
      "Le bongo",
      "Le conga",
      "La timbale",
-     0
-    ],
-    [
-     "IN",
-     "Quel instrument espagnol accompagne le flamenco ?",
-     "La guitare",
-     "Le violon",
-     "Le piano",
-     "Les castagnettes",
-     0
-    ],
-    [
-     "IN",
-     "Comment s'appelle le piano vertical appuyé au mur ?",
-     "Le piano droit",
-     "Le piano à queue",
-     "Le clavecin",
-     "Le synthé",
      0
     ],
     [
@@ -672,102 +357,12 @@ window.THEME_PACKS.musique = {
      0
     ],
     [
-     "ST",
-     "Quel genre brésilien lent et romantique a conquis le monde ?",
-     "La bossa nova",
-     "La samba",
-     "Le forró",
-     "L'axé",
-     0
-    ],
-    [
-     "ST",
-     "Quel genre originaire de la Jamaïque dérive du ska ?",
-     "Le reggae",
-     "Le calypso",
-     "Le mento",
-     "Le dancehall",
-     0
-    ],
-    [
-     "ST",
-     "Quel genre argentin se danse à deux enlacés ?",
-     "Le tango",
-     "La salsa",
-     "La samba",
-     "Le flamenco",
-     0
-    ],
-    [
-     "ST",
-     "Quel genre musical américain est né à Nashville ?",
-     "Le country",
-     "Le blues",
-     "Le gospel",
-     "Le zydeco",
-     0
-    ],
-    [
-     "ST",
-     "Quel genre jouent les brass bands de La Nouvelle-Orléans ?",
-     "Le jazz New Orleans",
-     "Le bebop",
-     "Le swing",
-     "Le ragtime",
-     0
-    ],
-    [
-     "ST",
-     "Quel genre de danse électronique est né de la techno de Détroit ?",
-     "La techno",
-     "La house",
-     "Le drum and bass",
-     "La trance",
-     0
-    ],
-    [
-     "ST",
-     "Quel genre a été popularisé par Bob Dylan avec guitare et harmonica ?",
-     "Le folk",
-     "Le blues",
-     "Le rockabilly",
-     "Le country rock",
-     0
-    ],
-    [
-     "ST",
-     "Quel genre cubain mêle guitares et percussions pour danser en couple ?",
-     "La salsa",
-     "Le merengue",
-     "La cumbia",
-     "Le mambo",
-     0
-    ],
-    [
      "CN",
      "Quels supporters chantent « You'll Never Walk Alone » ?",
      "Ceux de Liverpool",
      "Ceux de Manchester",
      "Ceux de Londres",
      "Ceux de Glasgow",
-     0
-    ],
-    [
-     "CN",
-     "Quel concert géant de 1969 a marqué les États-Unis ?",
-     "Woodstock",
-     "Monterey Pop",
-     "Live Aid",
-     "Isle of Wight",
-     0
-    ],
-    [
-     "CN",
-     "Quel concert caritatif de 1985 a réuni les plus grandes stars ?",
-     "Le Live Aid",
-     "Farm Aid",
-     "Live 8",
-     "Le Concert de Paris",
      0
     ],
     [
@@ -799,74 +394,11 @@ window.THEME_PACKS.musique = {
     ],
     [
      "MD",
-     "Quel instrument traditionnel accompagne la musique andine ?",
-     "La flûte de pan",
-     "Le sitar",
-     "La kora",
-     "Le didgeridoo",
-     0
-    ],
-    [
-     "MD",
-     "Quel instrument australien se souffle en vibrant ?",
-     "Le didgeridoo",
-     "La flûte de pan",
-     "Le shakuhachi",
-     "La guimbarde",
-     0
-    ],
-    [
-     "MD",
-     "Quel instrument indien à long manche joue la musique classique indienne ?",
-     "Le sitar",
-     "Le tabla",
-     "Le sarod",
-     "La vînâ",
-     0
-    ],
-    [
-     "MD",
-     "Quel percussionniste accompagne le sitar en Inde ?",
-     "Le joueur de tabla",
-     "Le joueur de djembé",
-     "Le joueur de bongo",
-     "Le joueur de tampura",
-     0
-    ],
-    [
-     "MD",
-     "Quel genre cubain a influencé la salsa ?",
-     "Le son cubain",
-     "Le merengue",
-     "La cumbia",
-     "Le zouk",
-     0
-    ],
-    [
-     "MD",
-     "Quel genre vient des Antilles françaises ?",
-     "Le zouk",
-     "Le reggae",
-     "Le calypso",
-     "Le merengue",
-     0
-    ],
-    [
-     "MD",
      "Quel genre congolais anime les bals africains ?",
      "La rumba congolaise",
      "Le highlife",
      "Le mbaqanga",
      "Le kwaito",
-     0
-    ],
-    [
-     "MD",
-     "De quelle île vient le ska avant le reggae ?",
-     "De la Jamaïque",
-     "De Cuba",
-     "De la Barbade",
-     "D'Haïti",
      0
     ],
     [
@@ -912,6 +444,474 @@ window.THEME_PACKS.musique = {
      "Maurice Chevalier",
      "Georges Brassens",
      "Yves Montand",
+     0
+    ],
+    [
+     "AR",
+     "Qui chante « Frère Jacques » dans la chanson ?",
+     "Frère Jacques",
+     "Papa Jacques",
+     "Maman Marie",
+     "Oncle Pierre",
+     0
+    ],
+    [
+     "AR",
+     "Qui est l'ami de « Alouette, gentille alouette » ?",
+     "L'alouette",
+     "Le moineau",
+     "Le canari",
+     "Le pigeon",
+     0
+    ],
+    [
+     "AR",
+     "Dans « Une souris verte », de quelle couleur est la souris ?",
+     "Verte",
+     "Rouge",
+     "Bleue",
+     "Jaune",
+     0
+    ],
+    [
+     "AR",
+     "Qui mange du pain dans « Il pleut, il mouille »... quel animal s'abrite dans « Il pleut bergère » ?",
+     "La bergère et son ménage",
+     "Le facteur",
+     "Le boulanger",
+     "Le berger",
+     0
+    ],
+    [
+     "AR",
+     "Qui « court après » dans la comptine « Promenons-nous dans les bois » ?",
+     "Le loup",
+     "Le chat",
+     "Le chien",
+     "Le renard",
+     0
+    ],
+    [
+     "SO",
+     "Comment continue « Frère Jacques, Frère Jacques » ?",
+     "Dormez-vous ? Dormez-vous ?",
+     "Levez-vous ? Levez-vous ?",
+     "Mangez-vous ? Mangez-vous ?",
+     "Chantez-vous ? Chantez-vous ?",
+     0
+    ],
+    [
+     "SO",
+     "Comment continue « Une souris verte qui courait dans l'herbe » ?",
+     "Je l'attrape par la queue",
+     "Je la regarde courir",
+     "Je lui donne du fromage",
+     "Je la mets dans ma poche",
+     0
+    ],
+    [
+     "SO",
+     "Comment continue « Alouette, gentille alouette, alouette, je te... » ?",
+     "Plumerai",
+     "Mangerai",
+     "Chanterai",
+     "Regarderai",
+     0
+    ],
+    [
+     "SO",
+     "Comment continue « Promenons-nous dans les bois, pendant que le loup n'y est pas »... que fait le loup selon la chanson ?",
+     "Il mange les gens",
+     "Il dort",
+     "Il chante",
+     "Il danse",
+     0
+    ],
+    [
+     "SO",
+     "Comment continue « Il était un petit navire » ... qui n'avait jamais navigué ?",
+     "Un petit navire",
+     "Un gros bateau",
+     "Un pirate",
+     "Un mousse",
+     0
+    ],
+    [
+     "AR",
+     "Dans « Ah les crocodiles », que font les crocodiles ?",
+     "Ils s'en vont en guerre contre les éléphants",
+     "Ils dorment au soleil",
+     "Ils nagent dans la rivière",
+     "Ils mangent du poisson",
+     0
+    ],
+    [
+     "SO",
+     "Dans « Ah les crocodiles », qui gagne à la fin ... contre qui les crocodiles partent-ils en guerre ?",
+     "Contre les éléphants",
+     "Contre les hippopotames",
+     "Contre les lions",
+     "Contre les zèbres",
+     0
+    ],
+    [
+     "SO",
+     "Comment continue « Cadet Rousselle a trois... » ?",
+     "Maisons",
+     "Chapeaux",
+     "Chemises",
+     "Chaussures",
+     0
+    ],
+    [
+     "AR",
+     "Dans « Ainsi font, font, font », que font les marionnettes ?",
+     "Elles dansent",
+     "Elles dorment",
+     "Elles chantent",
+     "Elles mangent",
+     0
+    ],
+    [
+     "SO",
+     "Comment continue « Un jour dans son potager, le père... » de la chanson du Père Nicolas ?",
+     "Nicolas",
+     "Martin",
+     "Jacques",
+     "Guillaume",
+     0
+    ],
+    [
+     "AR",
+     "Dans « Le fermier dans son pré », qui est avec le fermier ?",
+     "Sa femme",
+     "Son chien",
+     "Sa vache",
+     "Souris",
+     0
+    ],
+    [
+     "SO",
+     "Comment finit « Une souris verte » ... que fait-on avec la souris à la fin ?",
+     "On la montre à ces messieurs",
+     "On la relâche",
+     "On la garde",
+     "On la peint",
+     0
+    ],
+    [
+     "AR",
+     "Dans « Meunier tu dors », que fait le moulin quand le meunier dort ?",
+     "Il tourne",
+     "Il s'arrête",
+     "Il chante",
+     "Il danse",
+     0
+    ],
+    [
+     "SO",
+     "Dans « Meunier tu dors », qu'est-ce qui tourne ?",
+     "Le moulin",
+     "La roue du carrosse",
+     "Le vent",
+     "La meule",
+     0
+    ],
+    [
+     "SO",
+     "Comment continue « Dans sa maison un grand cerf » ... que fait le cerf ?",
+     "Il regardait par la fenêtre",
+     "Il dormait profondément",
+     "Il mangeait de l'herbe",
+     "Il chantait une chanson",
+     0
+    ],
+    [
+     "SO",
+     "Dans « Pirouette Cacahuète », que fait l'homme ?",
+     "Il danse",
+     "Il dort",
+     "Il chante",
+     "Il mange",
+     0
+    ],
+    [
+     "AR",
+     "Dans « À la volette », où est le moineau ?",
+     "Sur la branche",
+     "Dans le nid",
+     "Sous la feuille",
+     "Dans le ciel",
+     0
+    ],
+    [
+     "SO",
+     "Comment continue « Savez-vous planter les choux » ... comment les plante-t-on ?",
+     "À la mode de chez nous",
+     "Avec une pelle",
+     "Dans le jardin",
+     "Au printemps",
+     0
+    ],
+    [
+     "AR",
+     "Dans « La famille Tortue », que fait la maman tortue ?",
+     "Elle frotte le plancher",
+     "Elle dort",
+     "Elle chante",
+     "Elle cuisine",
+     0
+    ],
+    [
+     "AR",
+     "Dans « Petit escargot », où porte-t-il sa maison ?",
+     "Sur son dos",
+     "Sur sa tête",
+     "Dans sa poche",
+     "Dans le jardin",
+     0
+    ],
+    [
+     "AR",
+     "Dans « Jean petit qui danse », que fait Jean ?",
+     "Il danse",
+     "Il dort",
+     "Il court",
+     "Il saute",
+     0
+    ],
+    [
+     "AR",
+     "Dans « Toc toc toc, qui frappe comme ça », qui frappe à la porte ?",
+     "C'est le loup",
+     "C'est le chat",
+     "C'est la souris",
+     "C'est maman",
+     0
+    ],
+    [
+     "AR",
+     "Dans « Vole, vole, vole papillon », où vole le papillon ?",
+     "Autour de nous",
+     "Dans le ciel",
+     "Sur les fleurs",
+     "Dans le jardin",
+     0
+    ],
+    [
+     "AR",
+     "Dans « Coucou caché », où est caché le coucou ?",
+     "Dans la main",
+     "Dans le sac",
+     "Derrière le dos",
+     "Sous la table",
+     0
+    ],
+    [
+     "SO",
+     "Comment finit « Ding din dong » ... que fait la cloche ?",
+     "Elle sonne",
+     "Elle dort",
+     "Elle danse",
+     "Elle chante",
+     0
+    ],
+    [
+     "IN",
+     "Quel instrument fait « tin tin tin » quand on frappe dessus ?",
+     "Le triangle",
+     "Le tambour",
+     "Le xylophone",
+     "La cloche",
+     0
+    ],
+    [
+     "IN",
+     "Quel instrument fait « boum boum boum » ?",
+     "Le tambour",
+     "La flûte",
+     "Le violon",
+     "La trompette",
+     0
+    ],
+    [
+     "IN",
+     "Quel instrument fait « ting ting » quand on secoue ?",
+     "Les maracas",
+     "Le tambour",
+     "La cloche",
+     "Le piano",
+     0
+    ],
+    [
+     "IN",
+     "Quel instrument fait « sssssss » comme le vent ?",
+     "La flûte",
+     "Le tambour",
+     "Le piano",
+     "Le violon",
+     0
+    ],
+    [
+     "IN",
+     "Quel instrument fait « ding dong » à la porte de l'école ?",
+     "La cloche",
+     "Le tambour",
+     "La trompette",
+     "Le violon",
+     0
+    ],
+    [
+     "IN",
+     "Combien de notes a une chanson comme « Do ré mi » ?",
+     "Sept",
+     "Trois",
+     "Cinq",
+     "Neuf",
+     0
+    ],
+    [
+     "IN",
+     "Comment s'appettent les sept notes de musique ?",
+     "Do ré mi fa sol la si",
+     "Ut ré mi",
+     "La si do",
+     "Do mi sol",
+     0
+    ],
+    [
+     "IN",
+     "Quel instrument a des touches blanches et noires qu'on appuie ?",
+     "Le piano",
+     "La guitare",
+     "La flûte",
+     "Le tambour",
+     0
+    ],
+    [
+     "IN",
+     "Quel instrument à cordes se pince avec les doigts ?",
+     "La harpe",
+     "Le tambour",
+     "La trompette",
+     "La flûte",
+     0
+    ],
+    [
+     "IN",
+     "Quel instrument souffle-t-on pour faire de la musique ?",
+     "La flûte",
+     "Le piano",
+     "Le tambour",
+     "La harpe",
+     0
+    ],
+    [
+     "ST",
+     "Quelle chanson chante-t-on pour fêter un anniversaire ?",
+     "Joyeux anniversaire",
+     "Au clair de la lune",
+     "Frère Jacques",
+     "Ainsi font",
+     0
+    ],
+    [
+     "ST",
+     "Quelle comptine chante-t-on en faisant tourner un mouchoir ?",
+     "Gouttes d'eau",
+     "Sur le pont d'Avignon",
+     "Alouette",
+     "Meunier tu dors",
+     1
+    ],
+    [
+     "ST",
+     "Dans « Sur le pont d'Avignon », que fait-on sur le pont ?",
+     "On danse",
+     "On mange",
+     "On dort",
+     "On chante",
+     0
+    ],
+    [
+     "ST",
+     "Quand chante-t-on « Vive le vent » ?",
+     "À Noël",
+     "À Pâques",
+     "En été",
+     "À la rentrée",
+     0
+    ],
+    [
+     "ST",
+     "Quand chante-t-on « Il pleut, il mouille » ?",
+     "Quand il pleut",
+     "Quand il neige",
+     "Au soleil",
+     "Le matin",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson commence par « Au clair de la lune, mon ami... » ?",
+     "Pierrot",
+     "Jean",
+     "Jacques",
+     "Nicolas",
+     0
+    ],
+    [
+     "AR",
+     "Dans « Au clair de la lune », que demande Pierrot ?",
+     "Une plume pour écrire",
+     "Du pain",
+     "De l'eau",
+     "Une chanson",
+     0
+    ],
+    [
+     "ST",
+     "Quelle chanson parle d'une dame qui « sort de chez elle » avec un chapeau ?",
+     "Promenons-nous dans les bois",
+     "Alouette",
+     "Une souris verte",
+     "Frère Jacques",
+     0
+    ],
+    [
+     "CN",
+     "Que chante-t-on quand on joue à cache-cache ?",
+     "Toc toc toc qui frappe",
+     "Joyeux anniversaire",
+     "Vive le vent",
+     "Au clair de la lune",
+     0
+    ],
+    [
+     "CN",
+     "Quand chante-t-on « À la volette » ?",
+     "En jouant avec les mains",
+     "À Noël",
+     "À l'école",
+     "Le soir",
+     0
+    ],
+    [
+     "CN",
+     "Quelle chanson accompagne le jeu du mouchoir ?",
+     "Sur le pont d'Avignon",
+     "Alouette",
+     "Pirouette Cacahuète",
+     "Il pleut bergère",
+     0
+    ],
+    [
+     "MD",
+     "D'où vient la chanson « Pirouette Cacahuète » ... dans quel pays chante-t-on cette comptine ?",
+     "En France",
+     "En Belgique",
+     "En Italie",
+     "En Espagne",
      0
     ]
    ]
