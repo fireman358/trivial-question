@@ -400,6 +400,519 @@ window.THEME_PACKS.musique2000 = {
      "James Arthur",
      "Billie Eilish",
      0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse a chanté « Cruel Summer »… quel groupe ?",
+     "Banarama (80s)… aucun 2000s",
+     "Ariana",
+     "Taylor",
+     "Katy",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Dynamite » ?",
+     "Taio Cruz",
+     "Bruno Mars",
+     "Pitbull",
+     "Usher",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « I Gotta Feeling » ?",
+     "Black Eyed Peas",
+     "Maroon 5",
+     "OneRepublic",
+     "Train",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Hey, Soul Sister » ?",
+     "Train",
+     "Maroon 5",
+     "OneRepublic",
+     "The Fray",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Grenade » ?",
+     "Bruno Mars",
+     "Ed Sheeran",
+     "Justin Bieber",
+     "Pharrell",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Fireflies » ?",
+     "Owl City",
+     "Train",
+     "Owl City (déjà)",
+     "Bastille",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Use Somebody » ?",
+     "Kings of Leon",
+     "The Killers",
+     "Coldplay",
+     "Muse",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Sex on Fire » ?",
+     "Kings of Leon",
+     "The Killers",
+     "Arctic Monkeys",
+     "Muse",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Somebody Told Me » ?",
+     "The Killers",
+     "Kings of Leon",
+     "Coldplay",
+     "Muse",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « You're Beautiful » ?",
+     "James Blunt",
+     "Ed Sheeran",
+     "Sam Smith",
+     "Lewis Capaldi",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Price Tag »… quelle chanteuse ?",
+     "Jessie J",
+     "Ariana Grande",
+     "Nicki Minaj",
+     "Rita Ora",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Let It Go »… quelle chanteuse de Disney ?",
+     "Idina Menzel",
+     "Demi Lovato",
+     "Adele",
+     "Ariana",
+     0
+    ],
+    [
+     "AR",
+     "Quel duo a chanté « Somebody That I Used to Know » ?",
+     "Gotye et Kimbra",
+     "Maroon 5",
+     "Train",
+     "Bastille",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse a chanté « Titanium » ?",
+     "Sia (avec David Guetta)",
+     "Adele",
+     "Rihanna",
+     "Katy",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse a chanté « Dark Horse » ?",
+     "Katy Perry",
+     "Taylor Swift",
+     "Rihanna",
+     "Adele",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Love Yourself » ?",
+     "Justin Bieber",
+     "Ed Sheeran",
+     "Shawn Mendes",
+     "Bruno Mars",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Perfect » ?",
+     "Ed Sheeran",
+     "Justin Bieber",
+     "Sam Smith",
+     "James Arthur",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « What Makes You Beautiful » ?",
+     "One Direction",
+     "The Wanted",
+     "Union J",
+     "McFly",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Glad You Came » ?",
+     "The Wanted",
+     "One Direction",
+     "Union J",
+     "JLS",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Viva la Vida » (déjà)… quel album ?",
+     "Viva la Vida",
+     "X&Y",
+     "Mylo",
+     "Ghost",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse a chanté « How to Be a Heartbreaker » ?",
+     "Marina and the Diamonds",
+     "Lorde",
+     "Halsey",
+     "Daya",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse a chanté « Bang Bang » ?",
+     "Jessie J",
+     "Ariana Grande",
+     "Nicki Minaj",
+     "Rita Ora",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse a chanté « Problem » ?",
+     "Ariana Grande",
+     "Jessie J",
+     "Nicki Minaj",
+     "Rita Ora",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Love Yourself » (déjà)… « Sorry » ?",
+     "Justin Bieber",
+     "Ed Sheeran",
+     "Shawn Mendes",
+     "Bruno Mars",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Vamos a la Playa »… quel duo espagnol des années 2000 ?",
+     "Los del Río (90s)… aucun",
+     "Las Ketchup",
+     "Enrique Iglesias",
+     "Ricky Martin",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson des Killers s'appelle « All These Things That I've Done » ?",
+     "All These Things",
+     "Mr. Brightside",
+     "Somebody",
+     "Human",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson des Killers s'appelle « Human » ?",
+     "Human",
+     "Mr. Brightside",
+     "All These",
+     "Somebody",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson des Kings of Leon s'appelle « Use Somebody » (déjà)… quel album contient-elle ?",
+     "Only by the Night",
+     "Because of the Times",
+     "Aha Shake",
+     "Mechanical",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Happy » (déjà)… quel album « G I R L » ?",
+     "G I R L",
+     "Happy (single seul)",
+     "Girl",
+     "Frontin",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson de Taylor Swift s'appelle « Love Story » (déjà)… quel album « Fearless » ?",
+     "Fearless",
+     "1989",
+     "Red",
+     "Speak Now",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse a chanté « Bring Me to Life »… quel groupe ?",
+     "Evanescence",
+     "Paramore",
+     "Flyleaf",
+     "Within Temptation",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse a chanté « My Immortal » ?",
+     "Evanescence",
+     "Paramore",
+     "Flyleaf",
+     "Within Temptation",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson de Black Eyed Peas s'appelle « Where Is the Love » ?",
+     "Where Is the Love",
+     "I Gotta Feeling",
+     "Boom Boom Pow",
+     "Meet Me Halfway",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson de Fergie s'appelle « Big Girls Don't Cry » ?",
+     "Big Girls Don't Cry",
+     "Fergalicious",
+     "Glamorous",
+     "London Bridge",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Bad Day » ?",
+     "Daniel Powter",
+     "James Blunt",
+     "Owl City",
+     "Train",
+     0
+    ],
+    [
+     "AR",
+     "Quel duo a chanté « What I've Done »… quel groupe ?",
+     "Linkin Park",
+     "Nickelback",
+     "Three Days Grace",
+     "Breaking Benjamin",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « In the End » ?",
+     "Linkin Park",
+     "Nickelback",
+     "Breaking Benjamin",
+     "Evanescence",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « How You Remind Me » ?",
+     "Nickelback",
+     "Linkin Park",
+     "Three Days Grace",
+     "Seether",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « The Reason » ?",
+     "Hoobastank",
+     "Nickelback",
+     "Linkin Park",
+     "Seether",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Bring Me to Life » (déjà)… quel chanteur fait le rap ?",
+     "Paul McCoy",
+     "Chester",
+     "Mike Shinoda",
+     "Amy Lee",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson de Maroon 5 s'appelle « She Will Be Loved » ?",
+     "She Will Be Loved",
+     "This Love",
+     "Makes Me Wonder",
+     "Payphone",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson de Maroon 5 s'appelle « Payphone » ?",
+     "Payphone",
+     "One More Night",
+     "Sugar",
+     "Animals",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson de Train s'appelle « Drive By » ?",
+     "Drive By",
+     "Hey Soul Sister",
+     "Drops of Jupiter",
+     "Calling All Angels",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson de Train s'appelle « Drops of Jupiter » ?",
+     "Drops of Jupiter",
+     "Hey Soul Sister",
+     "Drive By",
+     "Meet Virginia",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « You Give Me Something » ?",
+     "James Morrison",
+     "James Blunt",
+     "Daniel Powter",
+     "Newton Faulkner",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Wonderful World »… quel James a chanté « You're Beautiful » (déjà) ?",
+     "James Blunt",
+     "James Morrison",
+     "Daniel Powter",
+     "Owl City",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Smokers Outside the Hospital Doors » ?",
+     "Editors",
+     "Interpol",
+     "White Lies",
+     "The Cinematics",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Munich » ?",
+     "Editors",
+     "Interpol",
+     "White Lies",
+     "Bloc Party",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Banquet » ?",
+     "Bloc Party",
+     "Editors",
+     "Interpol",
+     "Franz Ferdinand",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Naive » (déjà)… quel album « Inside In/Inside Out » ?",
+     "The Kooks",
+     "Arctic Monkeys",
+     "The Fratellis",
+     "The View",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « She Moves in Her Own Way » ?",
+     "The Kooks",
+     "Arctic Monkeys",
+     "The Fratellis",
+     "The View",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Chelsea Dagger » ?",
+     "The Fratellis",
+     "The Kooks",
+     "The View",
+     "Arctic Monkeys",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Same Jeans » ?",
+     "The View",
+     "The Fratellis",
+     "The Kooks",
+     "Arctic Monkeys",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Let's Dance to Joy Division » ?",
+     "The Wombats",
+     "Scouting for Girls",
+     "The Kooks",
+     "The Fratellis",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson des Gorillaz s'appelle « Feel Good Inc. » ?",
+     "Feel Good Inc.",
+     "Clint Eastwood",
+     "DARE",
+     "Kids with Guns",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson des Gorillaz s'appelle « Clint Eastwood » ?",
+     "Clint Eastwood",
+     "Feel Good Inc.",
+     "DARE",
+     "19-2000",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Shape of You » ?",
+     "Ed Sheeran",
+     "Bruno Mars",
+     "Sam Smith",
+     "Shawn Mendes",
+     0
     ]
    ]
   },
@@ -1795,6 +2308,420 @@ window.THEME_PACKS.musique2000 = {
      "Pearl Jam",
      "Foo Fighters",
      "Alice in Chains",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Take Me Out » ?",
+     "Franz Ferdinand",
+     "Arctic Monkeys",
+     "The Strokes",
+     "Kaiser Chiefs",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « I Bet You Look Good on the Dancefloor » ?",
+     "Arctic Monkeys",
+     "The Strokes",
+     "Franz Ferdinand",
+     "Libertines",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Last Nite » ?",
+     "The Strokes",
+     "Arctic Monkeys",
+     "The White Stripes",
+     "Franz",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson des Daft Punk s'appelle « One More Time » ?",
+     "One More Time",
+     "Get Lucky",
+     "Around the World",
+     "Harder Better",
+     0
+    ],
+    [
+     "AR",
+     "Quel album des Daft Punk s'appelle « Discovery » ?",
+     "Discovery",
+     "Homework",
+     "Human After All",
+     "RAM",
+     0
+    ],
+    [
+     "AR",
+     "Quel duo a chanté « D.A.N.C.E. » ?",
+     "Justice",
+     "Daft Punk",
+     "Cassius",
+     "SebastiAn",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « If I Ever Feel Better » ?",
+     "Phoenix",
+     "Indochine",
+     "Daft Punk",
+     "Air",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Lisztomania » ?",
+     "Phoenix",
+     "Air",
+     "Justice",
+     "Daft Punk",
+     0
+    ],
+    [
+     "AR",
+     "Quel rappeur français a chanté « Basique » ?",
+     "Orelsan",
+     "Nekfeu",
+     "Booba",
+     "Jul",
+     0
+    ],
+    [
+     "AR",
+     "Quel rappeur a chanté « Christophe » ?",
+     "Nekfeu",
+     "Orelsan",
+     "Booba",
+     "Damso",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse belge a chanté « Balance ton quoi » ?",
+     "Angèle",
+     "Damso",
+     "Roméo Elvis",
+     "Selah Sue",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Tocsin » ?",
+     "Indochine",
+     "Noir Désir",
+     "Téléphone",
+     "Phoenix",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Le Vent nous portera » ?",
+     "Noir Désir",
+     "Indochine",
+     "Téléphone",
+     "Phoenix",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Ça (c'est vraiment nous) » ?",
+     "Téléphone",
+     "Indochine",
+     "Noir Désir",
+     "Phoenix",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse a remporté l'Oscar pour « Skyfall » ?",
+     "Adele",
+     "Lady Gaga",
+     "Idina Menzel",
+     "Billie Eilish",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Take Me Out » (déjà)… quel album « Franz Ferdinand » ?",
+     "Franz Ferdinand",
+     "You Could Have It",
+     "Tonight",
+     "Right Thoughts",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « I Predict a Riot » ?",
+     "Kaiser Chiefs",
+     "Franz Ferdinand",
+     "Arctic Monkeys",
+     "Bloc Party",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Ruby » (déjà)… quel album « Yours Truly, Angry Mob » ?",
+     "Yours Truly, Angry Mob",
+     "Employment",
+     "The Future Is Medieval",
+     "Off with Their Heads",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Naive » (déjà)… quel single « She Moves in Her Own Way » (déjà)… quel album « Konk » ?",
+     "Konk",
+     "Inside In",
+     "Junk of the Heart",
+     "Listen",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Pinoy… quel album des Killers s'appelle « Hot Fuss » ?",
+     "Hot Fuss",
+     "Sam's Town",
+     "Day & Age",
+     "Battle Born",
+     0
+    ],
+    [
+     "AR",
+     "Quel album des Kings of Leon contient « Sex on Fire » ?",
+     "Only by the Night",
+     "Because of the Times",
+     "Aha Shake Heartbreak",
+     "Youth & Young Manhood",
+     0
+    ],
+    [
+     "AR",
+     "Quel album des Coldplay contient « Yellow » ?",
+     "Parachutes",
+     "A Rush of Blood to the Head",
+     "X&Y",
+     "Viva la Vida",
+     0
+    ],
+    [
+     "AR",
+     "Quel album des Coldplay contient « Fix You » ?",
+     "X&Y",
+     "Parachutes",
+     "A Rush of Blood",
+     "Viva la Vida",
+     0
+    ],
+    [
+     "AR",
+     "Quel album des Radiohead contient « Creep » ?",
+     "Pablo Honey",
+     "The Bends",
+     "OK Computer",
+     "Kid A",
+     0
+    ],
+    [
+     "AR",
+     "Quel album des Radiohead contient « Karma Police » ?",
+     "OK Computer",
+     "The Bends",
+     "Kid A",
+     "In Rainbows",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Naive » (déjà)… quel groupe gallois a chanté « The Race for Life »… quel groupe a chanté « Isn't ItFunny »… quel groupe gallois a chanté « Local Boy in the Photograph » ?",
+     "Stereophonics",
+     "Manic Street",
+     "Super Furry",
+     "Catatonia",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Dakota » ?",
+     "Stereophonics",
+     "Manic Street",
+     "Super Furry",
+     "Travis",
+     0
+    ],
+    [
+     "AR",
+     "Quel album des Muse contient « Supermassive Black Hole » ?",
+     "Black Holes and Revelations",
+     "Absolution",
+     "Origin of Symmetry",
+     "The Resistance",
+     0
+    ],
+    [
+     "AR",
+     "Quel album des Arctic Monkeys contient « Fluorescent Adolescent » ?",
+     "Favourite Worst Nightmare",
+     "Whatever People Say",
+     "AM",
+     "Humbug",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Alphaville… quel groupe a chanté « Big in Japan » ?",
+     "Alphaville",
+     "A-ha",
+     "Talk Talk",
+     "Nena",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Take On Me » (déjà)… quel groupe norvégien ?",
+     "a-ha",
+     "Alphaville",
+     "Talk Talk",
+     "Nena",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse a chanté « 99 Luftballons » ?",
+     "Nena",
+     "Alphaville",
+     "Sandra",
+     "C.C. Catch",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Subdivisions »… quel groupe canadien a chanté « Tom Sawyer » ?",
+     "Rush",
+     "Yes",
+     "Genesis",
+     "ELP",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Owner of a Lonely Heart » (déjà)… quel album « 90125 » ?",
+     "90125",
+     "Drama",
+     "Big Generator",
+     "Talk",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Land of Confusion » ?",
+     "Genesis",
+     "Yes",
+     "Rush",
+     "ELP",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Sussudio » (déjà)… quel album « No Jacket Required » ?",
+     "No Jacket Required",
+     "Face Value",
+     "Both Sides",
+     "Dance into the Light",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Everybody Wants to Rule the World » ?",
+     "Tears for Fears",
+     "Duran Duran",
+     "Simple Minds",
+     "OMD",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Shout » ?",
+     "Tears for Fears",
+     "Duran Duran",
+     "The Human League",
+     "OMD",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « West End Girls » ?",
+     "Pet Shop Boys",
+     "Duran Duran",
+     "OMD",
+     "Erasure",
+     0
+    ],
+    [
+     "AR",
+     "Quel duo a chanté « It's a Sin » ?",
+     "Pet Shop Boys",
+     "Erasure",
+     "Soft Cell",
+     "Yazoo",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson des Pet Shop Boys s'appelle « Go West » ?",
+     "Go West",
+     "West End Girls",
+     "Always on My Mind",
+     "It's a Sin",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « A Little Respect » ?",
+     "Erasure",
+     "Pet Shop Boys",
+     "Yazoo",
+     "Soft Cell",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Don't Go » ?",
+     "Yazoo",
+     "Erasure",
+     "Soft Cell",
+     "OMD",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanson des Erasure s'appelle « Sometimes » ?",
+     "Sometimes",
+     "A Little Respect",
+     "Chains of Love",
+     "Oh L'Amour",
+     0
+    ],
+    [
+     "AR",
+     "Quel duo a chanté « One More Time » ?",
+     "Daft Punk",
+     "Justice",
+     "Air",
+     "Cassius",
+     0
+    ],
+    [
+     "AR",
+     "Quel DJ a chanté « Titanium » ?",
+     "David Guetta",
+     "Calvin Harris",
+     "Marshmello",
+     "Avicii",
      0
     ]
    ]

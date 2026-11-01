@@ -544,6 +544,375 @@ window.THEME_PACKS.cinema = {
      "Pat'Patrouille",
      "Zootopie",
      0
+    ],
+    [
+     "FI",
+     "Quel film suit une équipe de super-héros en famille ?",
+     "Les Indestructibles",
+     "Spider-Man",
+     "Batman",
+     "Les 4 Fantastiques",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un dragon qui crache du feu… un dragon et un viking ?",
+     "Dragons",
+     "Shrek",
+     "Kung Fu Panda",
+     "Le Chat Potté",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un ours avec un chapeau rouge… un ours qui parle ?",
+     "Paddington",
+     "Winnie",
+     "Babar",
+     "Baloo",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une princesse qui ne veut pas se marier ?",
+     "Rebelle",
+     "Frozen",
+     "Vaiana",
+     "Raiponce",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une fille avec des longs cheveux dans une tour ?",
+     "Raiponce",
+     "Frozen",
+     "Cendrillon",
+     "Vaiana",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un rat qui cuisine à Paris ?",
+     "Ratatouille",
+     "Nemo",
+     "Cars",
+     "Toy Story",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit des émotions dans la tête d'une fillette ?",
+     "Vice-versa",
+     "Soul",
+     "Coco",
+     "Là-haut",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un vieux monsieur avec des ballons ?",
+     "Là-haut",
+     "Coco",
+     "Soul",
+     "Vice-versa",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un ogre vert et un âne ?",
+     "Shrek",
+     "Kung Fu Panda",
+     "Zootopie",
+     "Le Chat Potté",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un éléphant roi ?",
+     "Babar",
+     "Paddington",
+     "Winnie",
+     "Dumbo",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une fille qui traverse l'océan ?",
+     "Vaiana",
+     "Moana (même)",
+     "Mulan",
+     "Aladdin",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un petit éléphant aux grandes oreilles ?",
+     "Dumbo",
+     "Pinocchio",
+     "Bambi",
+     "Winnie",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un lion qui devient roi (déjà)… quel studio ?",
+     "Disney",
+     "DreamWorks",
+     "Pixar",
+     "Illumination",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un chien espion avec une maison volante ?",
+     "Volt",
+     "Pat'Patrouille",
+     "Zootopie",
+     "Toy Story",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une équipe de jouets spaceman ?",
+     "Toy Story (Buzz)",
+     "Toy Story 2",
+     "Cars",
+     "Nemo",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une voiture de course ?",
+     "Cars",
+     "Planes",
+     "Turbo",
+     "Ratatouille",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un groupe d'animaux qui retournent au zoo ?",
+     "Madagascar",
+     "Kirikou",
+     "Zootopie",
+     "Dragons",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un ours qui parle avec un chapeau… un ours jaune avec un chapeau rouge ?",
+     "Paddington",
+     "Winnie",
+     "Babar",
+     "Baloo",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une princesses avec des cheveux qui brillent ?",
+     "Raiponce",
+     "Frozen",
+     "Cendrillon",
+     "Vaiana",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un garçon et un ballon rouge ?",
+     "Le Ballon rouge",
+     "Là-haut",
+     "Kirikou",
+     "Coco",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une girafe… un hippopotame… un lion dans un zoo ?",
+     "Madagascar",
+     "Kirikou",
+     "Zootopie",
+     "Le Roi lion",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un chat botté avec un chapeau ?",
+     "Le Chat Potté",
+     "Shrek",
+     "Dragons",
+     "Kung Fu Panda",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un dragon qui devient ami avec un viking (déjà)… quel est le nom du dragon ?",
+     "Kroc-Mignet",
+     "Toothless",
+     "Drago",
+     "Furet",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un ogre vert avec un âne (déjà)… quel est le nom de l'âne ?",
+     "Non spécifié",
+     "Câlin",
+     "Bouffi",
+     "Papy",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une équipe de super-héros en famille (déjà)… quel est le nom du héros principal ?",
+     "Mr. Indestructible",
+     "Frozone",
+     "Violette",
+     "Flèche",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit des monstres qui fabriquent des peurs (déjà)… quel est le nom du monstre bleu ?",
+     "Bob",
+     "Sulley",
+     "Randall",
+     "Yeti",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un rat qui cuisine (déjà)… quel est le nom du rat ?",
+     "Remy",
+     "Emile",
+     "Django",
+     "Linguini",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un vieil homme et un garçon qui volent (déjà)… quel est le nom du garçon ?",
+     "Russell",
+     "Kevin",
+     "Dug",
+     "Charlie",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un poisson-clown qui cherche son fils (déjà)… quel est le nom du fils ?",
+     "Nemo",
+     "Marlin",
+     "Nigel",
+     "Jacques",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit des jouets qui vivent (déjà)… quel est le jouet cow-boy ?",
+     "Woody",
+     "Buzz",
+     "Rex",
+     "Sid",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit des voitures qui parlent (déjà)… quel est le nom de la voiture rouge ?",
+     "Flash",
+     "Cébidou",
+     "Doc",
+     "Sally",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une ville où vivent des animaux (déjà)… quel est le nom du héros ?",
+     "Judy Hopps",
+     "Nick",
+     "Gazelle",
+     "Bellwether",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un panda qui apprend le kung-fu (déjà)… quel est le nom du panda ?",
+     "Po",
+     "Shifu",
+     "Tai Lung",
+     "Oogway",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un ogre vert et un âne (déjà)… quel est le nom de la princesse ?",
+     "Fiona",
+     "Doris",
+     "Blanche",
+     "Raiponce",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une famille de monstres (déjà)… quel est le nom de la petite fille ?",
+     "Boo",
+     "Cece",
+     "Lila",
+     "May",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un émotion… des émotions dans une tête (déjà)… quelle est l'émotion principale ?",
+     "Joie",
+     "Tristesse",
+     "Peur",
+     "Colère",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un garçon qui entre dans le monde des morts (déjà)… quel est le nom du garçon ?",
+     "Miguel",
+     "Hector",
+     "Ernesto",
+     "Dante",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une princesse qui gèle (déjà)… quel est le nom de sa sœur ?",
+     "Anna",
+     "Elsa",
+     "Olaf",
+     "Kristoff",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une guerrière chinoise (déjà)… quel est le nom du dragon ?",
+     "Mushu",
+     "Khan",
+     "Cri-Kee",
+     "Shan",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un ours polaire qui perd sa calotte (déjà)… quel est le nom du film ?",
+     "Bernard",
+     "Zig et Sharko",
+     "Tom",
+     "Oggy",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un garçon et un dragon sur une île mystérieuse (Pixar 2024)… quel film Pixar suit des émotions qui reviennent ?",
+     "Vice-versa 2",
+     "Soul 2",
+     "Luca 2",
+     "Coco 2",
+     0
     ]
    ]
   },
@@ -1422,6 +1791,33 @@ window.THEME_PACKS.cinema = {
      "Arrival",
      "Total Recall",
      0
+    ],
+    [
+     "FI",
+     "Quel film suit un boxeur qui refuse de se coucher ?",
+     "Rocky",
+     "Raging Bull",
+     "Million Dollar Baby",
+     "Cinderella Man",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un tueur et une jeune femme qui l'aide ?",
+     "Léon",
+     "Nikita",
+     "Le Grand Bleu",
+     "Le Transporteur",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un champion de boxe qui devient pauvre (déjà)… quel réalisateur ?",
+     "Sylvester Stallone (acteur-réalisateur)",
+     "John Avildsen",
+     "Ryan Coogler",
+     "Creed",
+     0
     ]
    ]
   },
@@ -2191,6 +2587,141 @@ window.THEME_PACKS.cinema = {
      "Catherine Deneuve",
      "Isabelle Adjani",
      "Melvyn Douglas",
+     0
+    ],
+    [
+     "CO",
+     "Quel film suit un tueur et une femme qui l'aide ?",
+     "Léon",
+     "Nikita",
+     "Le Grand Bleu",
+     "Le Cinquième Élément",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Samouraï (déjà)… quel acteur joue Jef ?",
+     "Alain Delon",
+     "Belmondo",
+     "Lino Ventura",
+     "Jean Gabin",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Mépris (déjà)… quel acteur joue Paul ?",
+     "Michel Piccoli",
+     "Brigitte Bardot",
+     "Jack Palance",
+     "Fritz Lang",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé À bout de souffle (déjà)… quel acteur joue Michel ?",
+     "Jean-Paul Belmondo",
+     "Jean Seberg",
+     "Jean-Pierre Melville",
+     "Lino Ventura",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Les 400 coups (déjà)… quel acteur joue Antoine ?",
+     "Jean-Pierre Léaud",
+     "Belmondo",
+     "Jean Seberg",
+     "Claude Brasseur",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Hiroshima mon amour (déjà)… quel acteur joue l'Allemand ?",
+     "Eiji Okada",
+     "Emmanuelle Riva",
+     "Alain Resnais",
+     " none",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Cléo de 5 à 7 (déjà)… quel acteur joue Cléo ?",
+     "Corinne Marchand",
+     "Agnès Varda",
+     "Dorothée Blanck",
+     "Michel Legrand",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Boucher (déjà)… quel acteur joue Popaul ?",
+     "Jean Yanne",
+     "Chabrol",
+     "Stéphane Audran",
+     "Antoine",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Bob le flambeur (déjà)… quel acteur joue Bob ?",
+     "Roger Duchesne",
+     "Isabelle Corey",
+     "Daniel Cauchet",
+     "Guy Decomble",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Casque d'or (déjà)… quel acteur joue Manda ?",
+     "Gérard Philipe",
+     "Michèle Morgan",
+     "Simone Signoret",
+     "Jacques Becker",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé La Grande Illusion (déjà)… quel acteur joue Maréchal ?",
+     "Jean Gabin",
+     "Pierre Fresnay",
+     "Erich von Stroheim",
+     "Marcel Dalio",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Les Enfants du paradis (déjà)… quel acteur joue Frédérick ?",
+     "Pierre Brasseur",
+     "Jean-Louis Barrault",
+     "Arletty",
+     "Marcel Herrand",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Quai des brumes (déjà)… quel acteur joue Lucien ?",
+     "Pierre Brasseur",
+     "Jean Gabin",
+     "Michèle Morgan",
+     "Robert Le Vigan",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé La Règle du jeu (déjà)… quel acteur joue Octave ?",
+     "Jean Renoir",
+     "Marcel Dalio",
+     "Nora Grégor",
+     "Roland Toutain",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé La Grande Vadrouille (déjà)… quel acteur joue Augustin ?",
+     "Bourvil",
+     "Louis de Funès",
+     "Terry-Thomas",
+     "Claudio Brook",
      0
     ]
    ]

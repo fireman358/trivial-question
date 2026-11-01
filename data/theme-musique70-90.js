@@ -1377,6 +1377,447 @@ window.THEME_PACKS.musique7090 = {
      "Celia Cruz",
      "Zuco 103",
      0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Wonderwall » ?",
+     "Oasis",
+     "Blur",
+     "Pulp",
+     "Suede",
+     0
+    ],
+    [
+     "AR",
+     "Quel rappeur a sorti « Nuthin' but a 'G' Thang » ?",
+     "Dr. Dre",
+     "2Pac",
+     "Biggie",
+     "Snoop Dogg",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe de Manchester a chanté « Wonderwall » (déjà)… « Don't Look Back in Anger » ?",
+     "Oasis",
+     "Blur",
+     "Stone Roses",
+     "The Verve",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Chandelier »… quelle chanteuse ?",
+     "Sia",
+     "Rihanna",
+     "Adele",
+     "Dua Lipa",
+     0
+    ],
+    [
+     "AR",
+     "Quel duo a chanté « Underwater… quel duo a chanté « Torn » ?",
+     "Natalie Imbruglia (seule)",
+     "Alanis",
+     "Jewel",
+     "Fiona",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Killer… quel groupe a chanté « Insomnia » ?",
+     "Faithless",
+     "The Prodigy",
+     "Underworld",
+     "Moby",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Bitter Sweet Symphony » ?",
+     "The Verve",
+     "Oasis",
+     "Blur",
+     "Radiohead",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des The Verve s'appelle « The Drugs Don't Work » ?",
+     "The Drugs Don't Work",
+     "Bitter Sweet",
+     "Lucky Man",
+     "Sonnet",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Maybe… quel groupe a chanté « Country House » ?",
+     "Blur",
+     "Oasis",
+     "Pulp",
+     "Elastica",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Roll With It » ?",
+     "Oasis",
+     "Blur",
+     "Pulp",
+     "Suede",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Radiohead s'appelle « No Surprises » ?",
+     "No Surprises",
+     "Karma Police",
+     "Creep",
+     "Paranoid Android",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Song 2 » (déjà)… quel groupe a chanté « Beetlebum » ?",
+     "Blur",
+     "Oasis",
+     "Pulp",
+     "Elastica",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Common People » ?",
+     "Pulp",
+     "Blur",
+     "Oasis",
+     "Elastica",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Disco 2000 » ?",
+     "Pulp",
+     "Blur",
+     "Oasis",
+     "Suede",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Animal Nitrate » ?",
+     "Suede",
+     "Blur",
+     "Pulp",
+     "Elastica",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Connection » ?",
+     "Elastica",
+     "Blur",
+     "Pulp",
+     "Suede",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « If You Tolerate This » ?",
+     "Manic Street Preachers",
+     "Stereophonics",
+     "Travis",
+     "Coldplay (début)",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Design for Life » ?",
+     "Manic Street Preachers",
+     "Stereophonics",
+     "Travis",
+     "Ocean Colour",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « The Bartender… quel groupe a chanté « Have a Nice Day » ?",
+     "Stereophonics",
+     "Manic",
+     "Travis",
+     "Coldplay",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Why Does It Always Rain on Me » ?",
+     "Travis",
+     "Coldplay",
+     "Stereophonics",
+     "Radiohead",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Yellow » ?",
+     "Coldplay",
+     "Travis",
+     "Radiohead",
+     "Muse",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Paranoia… quel groupe a chanté « Time Is Running Out » ?",
+     "Muse",
+     "Coldplay",
+     "Radiohead",
+     "The Killers",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Sultans of Swing » ?",
+     "Dire Straits",
+     "The Police",
+     "Eric Clapton",
+     "Pink Floyd",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Money for Nothing » ?",
+     "Dire Straits",
+     "The Police",
+     "Talking Heads",
+     "Simple Minds",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Axel F » ?",
+     "Harold Faltermeyer",
+     "Jan Hammer",
+     "Giorgio Moroder",
+     "Vangelis",
+     0
+    ],
+    [
+     "AR",
+     "Quel compositeur a créé « Chariots of Fire » ?",
+     "Vangelis",
+     "Ennio Morricone",
+     "John Williams",
+     "Hans Zimmer",
+     0
+    ],
+    [
+     "AR",
+     "Quel compositeur a créé « Blade Runner » (1982) ?",
+     "Vangelis",
+     "Ennio Morricone",
+     "John Williams",
+     "Jerry Goldsmith",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Final Countdown » ?",
+     "Europe",
+     "Bon Jovi",
+     "Def Leppard",
+     "Scorpions",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Wind of Change » ?",
+     "Scorpions",
+     "Europe",
+     "Bon Jovi",
+     "Whitesnake",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Rock You Like a Hurricane » ?",
+     "Scorpions",
+     "Europe",
+     "Bon Jovi",
+     "AC/DC",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Highway to Hell » ?",
+     "AC/DC",
+     "Scorpions",
+     "Bon Jovi",
+     "Guns N' Roses",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Back in Black » ?",
+     "AC/DC",
+     "Scorpions",
+     "Bon Jovi",
+     "Metallica",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Sweet Child o' Mine » ?",
+     "Guns N' Roses",
+     "AC/DC",
+     "Bon Jovi",
+     "Metallica",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « November Rain » ?",
+     "Guns N' Roses",
+     "AC/DC",
+     "Metallica",
+     "Bon Jovi",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Nothing Else Matters » ?",
+     "Metallica",
+     "Guns N' Roses",
+     "AC/DC",
+     "Megadeth",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Enter Sandman » (déjà)… quel album ?",
+     "Metallica (Black Album)",
+     "Master of Puppets",
+     "Ride",
+     "And Justice",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Smells Like Teen Spirit » ?",
+     "Nirvana",
+     "Pearl Jam",
+     "Soundgarden",
+     "Alice in Chains",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Black Hole Sun » (déjà)… quel chanteur ?",
+     "Chris Cornell",
+     "Eddie Vedder",
+     "Kurt Cobain",
+     "Layne Staley",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur est mort en 1994 ?",
+     "Kurt Cobain",
+     "Chris Cornell",
+     "Layne Staley",
+     "Andy Wood",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Insomnia » ?",
+     "Faithless",
+     "The Prodigy",
+     "Underworld",
+     "Moby",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Praise You » ?",
+     "Fatboy Slim",
+     "The Prodigy",
+     "Chemical Brothers",
+     "Moby",
+     0
+    ],
+    [
+     "AR",
+     "Quel DJ a chanté « Porcelain » ?",
+     "Moby",
+     "Fatboy Slim",
+     "Chemical Brothers",
+     "Underworld",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Born Slippy » ?",
+     "Underworld",
+     "The Prodigy",
+     "Chemical Brothers",
+     "Orbital",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Setting Sun » ?",
+     "The Chemical Brothers",
+     "The Prodigy",
+     "Underworld",
+     "Orbital",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Born in the USA » ?",
+     "Bruce Springsteen",
+     "John Mellencamp",
+     "Tom Petty",
+     "Bob Seger",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Dancing in the Dark » ?",
+     "Bruce Springsteen",
+     "John Mellencamp",
+     "Tom Petty",
+     "Bob Seger",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Faith » ?",
+     "George Michael",
+     "Prince",
+     "Michael Jackson",
+     "Rick Astley",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Freedom! '90 » ?",
+     "George Michael",
+     "Wham!",
+     "Culture Club",
+     "Duran Duran",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Don't You Want Me » ?",
+     "The Human League",
+     "OMD",
+     "Depeche Mode",
+     "Eurythmics",
+     0
     ]
    ]
   },
@@ -1939,6 +2380,348 @@ window.THEME_PACKS.musique7090 = {
      "Can",
      "Neu!",
      "Tangerine Dream",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Another Brick in the Wall » ?",
+     "Pink Floyd",
+     "Led Zeppelin",
+     "The Who",
+     "Genesis",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Rolling Stones s'appelle « Sympathy for the Devil » ?",
+     "Sympathy for the Devil",
+     "Gimme Shelter",
+     "Paint It Black",
+     "Angie",
+     0
+    ],
+    [
+     "AL",
+     "Quel album des Rolling Stones s'appelle « Sticky Fingers » ?",
+     "Sticky Fingers",
+     "Exile",
+     "Let It Bleed",
+     "Beggars",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « My Generation » ?",
+     "The Who",
+     "The Beatles",
+     "The Kinks",
+     "The Stones",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Pinball Wizard » ?",
+     "The Who",
+     "The Beatles",
+     "The Kinks",
+     "Queen",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Baba O'Riley » ?",
+     "The Who",
+     "The Beatles",
+     "Queen",
+     "The Kinks",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « A Quick One »… quel opéra-rock ?",
+     "Tommy",
+     "Quadrophenia",
+     "The Wall",
+     "The Lamb",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Substi… quel groupe a chanté « Da Funk » ?",
+     "Daft Punk",
+     "Air",
+     "Justice",
+     "Cassius",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Around the World » ?",
+     "Daft Punk",
+     "Air",
+     "Justice",
+     "Cassius",
+     0
+    ],
+    [
+     "AR",
+     "Quel DJ a chanté « Warp… quel groupe a chanté « Higher State of Consciousness » ?",
+     "Josh Wink",
+     "The Orb",
+     "Orbital",
+     "Underworld",
+     0
+    ],
+    [
+     "AR",
+     "Quel DJ a chanté « Spastik » ?",
+     "Plastikman (Richie Hawtin)",
+     "Sven Väth",
+     "Jeff Mills",
+     "Carl Cox",
+     0
+    ],
+    [
+     "AR",
+     "Quel DJ a chanté « Cofusion… quel DJ de Detroit a lancé Underground Resistance ?",
+     "Jeff Mills",
+     "Juan Atkins",
+     "Kevin Saunderson",
+     "Eddie Fowlkes",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Big Fun »… quel single d'Inner City ?",
+     "Big Fun",
+     "Good Life",
+     "Back to Heaven",
+     "Your Love",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Voodoo Ray » ?",
+     "A Guy Called Gerald",
+     "808 State",
+     "The Orb",
+     "Altern-8",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Pacific State » ?",
+     "808 State",
+     "A Guy Called Gerald",
+     "The Orb",
+     "Underworld",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Little Fluffy Clouds » ?",
+     "The Orb",
+     "Orbital",
+     "Underworld",
+     "Aphex Twin",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Halcyon + On + On » ?",
+     "Orbital",
+     "The Orb",
+     "Underworld",
+     "Aphex Twin",
+     0
+    ],
+    [
+     "AR",
+     "Quel musicien a sorti « Selected Ambient Works » ?",
+     "Aphex Twin",
+     "The Orb",
+     "Orbital",
+     "Biosphere",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Cars » ?",
+     "Gary Numan",
+     "David Bowie",
+     "Tubeway Army",
+     "John Foxx",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Are Friends Electric » ?",
+     "Tubeway Army",
+     "Kraftwerk",
+     "Gary Numan",
+     "Ultravox",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Vienna » ?",
+     "Ultravox",
+     "Kraftwerk",
+     "Gary Numan",
+     "OMD",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Enola Gay » ?",
+     "OMD",
+     "Ultravox",
+     "Kraftwerk",
+     "Depeche Mode",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Just Can't Get Enough » ?",
+     "Depeche Mode",
+     "OMD",
+     "Ultravox",
+     "New Order",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Blue Monday » ?",
+     "New Order",
+     "Depeche Mode",
+     "OMD",
+     "The Cure",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « True Faith » ?",
+     "New Order",
+     "Depeche Mode",
+     "OMD",
+     "The Cure",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Just Like Heaven » ?",
+     "The Cure",
+     "New Order",
+     "Depeche Mode",
+     "The Smiths",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Boys Don't Cry » ?",
+     "The Cure",
+     "New Order",
+     "The Smiths",
+     "Depeche Mode",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « How Soon Is Now » ?",
+     "The Smiths",
+     "The Cure",
+     "New Order",
+     "Morrissey",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « There Is a Light » ?",
+     "The Smiths",
+     "The Cure",
+     "Morrissey",
+     "New Order",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a sorti « Viva Hate » (solo) ?",
+     "Morrissey",
+     "Robert Smith",
+     "Ian Curtis",
+     "Johnny Marr",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Love Will Tear Us Apart » ?",
+     "Joy Division",
+     "New Order",
+     "The Cure",
+     "The Smiths",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur de Joy Division est mort en 1980 ?",
+     "Ian Curtis",
+     "Bernard Sumner",
+     "Peter Hook",
+     "Stephen Morris",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe est né de Joy Division ?",
+     "New Order",
+     "The Cure",
+     "The Smiths",
+     "Echo and the Bunnymen",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « The Killing Moon » ?",
+     "Echo and the Bunnymen",
+     "Joy Division",
+     "The Cure",
+     "The Smiths",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Ship… quel groupe de Liverpool a chanté « Fruit Machine » ?",
+     "The Stone Roses",
+     "The La's",
+     "Echo",
+     "The Farm",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Waterfall » ?",
+     "The Stone Roses",
+     "The La's",
+     "The Farm",
+     "The Happy Mondays",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Step On » ?",
+     "Happy Mondays",
+     "Stone Roses",
+     "The La's",
+     "The Farm",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « There She Goes » ?",
+     "The La's",
+     "Stone Roses",
+     "Happy Mondays",
+     "The Farm",
      0
     ]
    ]

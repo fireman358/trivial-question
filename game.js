@@ -234,7 +234,7 @@ function buildBoard() {
       const qgCat = CATEGORY_ORDER[i / 6];
       add({ id: "ring" + i, x, y, cat: qgCat, isWedge: true, wedgeCat: qgCat });
     } else {
-      add({ id: "ring" + i, x, y, cat: RING_CATS[i], isWedge: false });
+      add({ id: "ring" + i, x, y, cat: (i % 6 === 3) ? null : RING_CATS[i], isWedge: false, isRollAgain: i % 6 === 3 });
     }
   }
 
@@ -353,6 +353,9 @@ function renderBoard() {
     <filter id="f-soft" x="-40%" y="-40%" width="180%" height="180%">
       <feDropShadow dx="0" dy="1.5" stdDeviation="1.2" flood-color="#000" flood-opacity="0.25"/>
     </filter>
+    <radialGradient id="rg-roll" cx="38%" cy="32%">
+      <stop offset="0%" stop-color="#cfd6e4"/><stop offset="100%" stop-color="#8d99ae"/>
+    </radialGradient>
     <radialGradient id="rg-board" cx="50%" cy="46%">
       <stop offset="0%" stop-color="#f8f4e6"/><stop offset="100%" stop-color="#e8dfc4"/></radialGradient>`;
   for (const k of CAT_KEYS) {
@@ -439,12 +442,18 @@ function renderBoard() {
       </g>`;
       continue;
     }
-    const grad = "rg-" + (c.isWedge ? c.wedgeCat : c.cat);
+    const grad = c.isRollAgain ? "rg-roll" : "rg-" + (c.isWedge ? c.wedgeCat : c.cat);
     if (c.isWedge) {
       out += `<g id="cell-${c.id}" class="cell wedge-cell">
         <polygon points="${diamondPoints(c.x, c.y + 2.5, 26)}" fill="#00000026"/>
         <polygon points="${diamondPoints(c.x, c.y, 26)}" fill="url(#${grad})" stroke="#2b2b2b" stroke-width="2.5" filter="url(#f-drop)"/>
         <text x="${c.x}" y="${c.y + 6}" text-anchor="middle" class="cell-icon">${HQ_ICON}</text>
+      </g>`;
+    } else if (c.isRollAgain) {
+      out += `<g id="cell-${c.id}" class="cell">
+        <circle cx="${c.x}" cy="${c.y + 2.5}" r="${CELL_R}" fill="#00000026"/>
+        <circle cx="${c.x}" cy="${c.y}" r="${CELL_R}" fill="url(#rg-roll)" stroke="#2b2b2b" stroke-width="2" filter="url(#f-drop)"/>
+        <text x="${c.x}" y="${c.y + 5}" text-anchor="middle" class="cell-icon cell-roll">↻</text>
       </g>`;
     } else {
       out += `<g id="cell-${c.id}" class="cell">
@@ -699,6 +708,14 @@ function moveTo(cellId) {
 function arrive(cellId) {
   const p = players[current];
   const cell = board.cells[cellId];
+  if (cell.isRollAgain) {
+    /* Case « Relancer le dé » : relance immédiate, sans question. */
+    $("#dice-result").textContent = "↻ Relancer le dé ! Vous rejouez sans question.";
+    awaitingRoll = true;
+    $("#btn-roll").disabled = false;
+    saveGame();
+    return;
+  }
   askQuestion(cell, p);
 }
 
