@@ -315,33 +315,35 @@ function fitSectorLabels(svgEl) {
     const texts = [...g.querySelectorAll("text")];
     const nameText = texts.find(t => t.classList.contains("sector-radial")) || texts[0];
     if (typeof nameText.getBBox !== "function") return;
-    const insideAllAt = () => {
-      for (const t of texts) {
-        const tb = t.getBBox();
-        const corners = [[tb.x, tb.y], [tb.x + tb.width, tb.y], [tb.x, tb.y + tb.height], [tb.x + tb.width, tb.y + tb.height]];
-        for (const [cx, cy] of corners) {
-          const px = glx + cx * cos - cy * sin;
-          const py = gly + cx * sin + cy * cos;
-          if (!inside(px, py)) return false;
-        }
+    const iconText = texts.find(t => t.classList.contains("sector-icon"));
+    const insideName = () => {
+      const tb = nameText.getBBox();
+      const corners = [[tb.x, tb.y], [tb.x + tb.width, tb.y], [tb.x, tb.y + tb.height], [tb.x + tb.width, tb.y + tb.height]];
+      for (const [cx, cy] of corners) {
+        const px = glx + cx * cos - cy * sin;
+        const py = gly + cx * sin + cy * cos;
+        if (!inside(px, py)) return false;
       }
       return true;
     };
     const size = () => +nameText.getAttribute("font-size") || 10;
-    const setAll = v => texts.forEach(t => t.setAttribute("font-size", v));
+    const setName = v => {
+      nameText.setAttribute("font-size", v);
+      if (iconText) iconText.setAttribute("font-size", Math.round(v * 1.25));
+    };
     /* Phase 1 : agrandir tant que le mot ne remplit pas la course */
     let guard = 0;
     while (guard++ < 42) {
       if (nameText.getBBox().width >= course - 6) break;
-      setAll(Math.min(42, size() + 1));
+      setName(Math.min(44, size() + 1));
     }
-    /* Phase 2 : réduire uniquement si le texte déborde du triangle ou dépasse la course */
+    /* Phase 2 : réduire uniquement si le NOM déborde du triangle ou dépasse la course */
     guard = 0;
     while (guard++ < 42) {
-      const ok = insideAllAt() && nameText.getBBox().width <= course + 3;
+      const ok = insideName() && nameText.getBBox().width <= course + 3;
       if (ok) break;
       if (size() <= 7) break;
-      setAll(size() - 1);
+      setName(size() - 1);
     }
   });
 }

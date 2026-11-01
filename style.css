@@ -348,7 +348,7 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 .sector-fill { stroke: rgba(0,0,0,.2); stroke-width: 1.5; }
 .sector-label { pointer-events: none; }
 .sector-icon {
-  font-size: 40px; font-weight: 400;
+  font-weight: 400;
   text-shadow: 0 2px 6px rgba(0,0,0,.4);
 }
 .sector-radial {
@@ -356,9 +356,7 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
   text-shadow: 0 2px 4px rgba(0,0,0,.5);
   text-transform: uppercase;
 }
-@media (max-width: 1100px) { .sector-icon { font-size: 30px; } .sector-cat { font-size: 19px; } }
-@media (max-width: 800px)  { .sector-icon { font-size: 22px; } .sector-cat { font-size: 13px; } .sector-cat { letter-spacing: 0; } }
-@media (max-width: 500px)  { .sector-icon { font-size: 16px; } .sector-cat { font-size: 9px; } }
+@media (max-width: 800px) { .sector-radial { letter-spacing: 0; } }
 
 /* ===== Bouton Nouvelle partie dans le header (toujours visible) ===== */
 .header-newgame {
