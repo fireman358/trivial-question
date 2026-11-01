@@ -8,6 +8,11 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#333333">
   <link rel="icon" type="image/png" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Trivial Quest">
 </head>
 <body>
   <div id="studio-splash" aria-hidden="true">
@@ -30,6 +35,7 @@
       <span class="brand-name">◈ Trivial <span>Quest</span></span>
     </div>
     <button id="btn-newgame-header" class="header-newgame hidden" title="Effacer la partie en cours et revenir à la configuration">↺ Nouvelle partie</button>
+    <button id="btn-install" class="header-newgame" title="Installer Trivial Quest sur votre appareil (fonctionne hors-ligne)">⬇ Installer l'app</button>
     <span id="app-version" class="app-version" title="Version de l'application"></span>
   </header>
 
@@ -167,6 +173,38 @@
       .catch(() => { /* version.txt inaccessible */ });
   })();
   document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script>
+  /* Installation PWA : bouton visible dès que le navigateur le permet (Chrome/Edge/Android).
+     iOS Safari : le bouton ouvre un guide (Partager → Sur l'écran d'accueil). */
+  (function () {
+    const btn = document.getElementById("btn-install");
+    if (!btn) return;
+    let deferredPrompt = null;
+    const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+    const hide = () => { btn.style.display = "none"; };
+    if (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) return hide();
+    if (navigator.standalone) return hide();
+    if (isIOS) {
+      btn.title = "Sur iPhone/iPad : bouton Partager (carré avec flèche) puis « Sur l'écran d'accueil »";
+      btn.onclick = () => alert("Installation sur iPhone/iPad :\n\n1. Appuyez sur le bouton Partager (le carré avec la flèche vers le haut, en bas de l'écran)\n2. Faites défiler et choisissez « Sur l'écran d'accueil »\n3. Confirmez avec « Ajouter »\n\nTrivial Quest sera alors disponible comme une vraie app, même hors-ligne.");
+      return;
+    }
+    btn.disabled = true;
+    window.addEventListener("beforeinstallprompt", e => {
+      e.preventDefault();
+      deferredPrompt = e;
+      btn.disabled = false;
+    });
+    btn.onclick = async () => {
+      if (!deferredPrompt) return;
+      deferredPrompt.prompt();
+      const c = await deferredPrompt.userChoice;
+      if (c && c.outcome === "accepted") hide();
+      deferredPrompt = null;
+    };
+    window.addEventListener("appinstalled", hide);
+  })();
 </script>
 <script>
   /* Service worker : installation PWA + mise à jour automatique */
