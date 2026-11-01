@@ -300,8 +300,8 @@ function fitSectorLabels(svgEl) {
     const [b1x, b1y] = polar(RING_R - 4, ang - 29);
     const [b2x, b2y] = polar(RING_R - 4, ang + 29);
     const quad = [[t1x, t1y], [t2x, t2y], [b2x, b2y], [b1x, b1y]];
-    /* course radiale disponible pour le texte (bord moyeu → bord anneau) */
-    const course = RING_R - HUB_R - 14;
+    /* course du texte : même calcul que dans renderBoard (base triangle → bord logo) */
+    const course = (RING_R - 26) - (HUB_R + 16);
     const inside = (px, py) => {
       for (let i = 0; i < 4; i++) {
         const [ax, ay] = quad[i], [bx, by] = quad[(i + 1) % 4];
@@ -314,34 +314,34 @@ function fitSectorLabels(svgEl) {
     const rad = rot * Math.PI / 180, cos = Math.cos(rad), sin = Math.sin(rad);
     const texts = [...g.querySelectorAll("text")];
     const nameText = texts.find(t => t.classList.contains("sector-radial")) || texts[0];
-    let guard = 0;
-    while (guard++ < 60) {
-      if (typeof nameText.getBBox !== "function") return;
-      const bb = nameText.getBBox();
-      /* 1) dans le triangle (tous les textes) */
-      let insideAll = true;
+    if (typeof nameText.getBBox !== "function") return;
+    const insideAllAt = () => {
       for (const t of texts) {
         const tb = t.getBBox();
         const corners = [[tb.x, tb.y], [tb.x + tb.width, tb.y], [tb.x, tb.y + tb.height], [tb.x + tb.width, tb.y + tb.height]];
         for (const [cx, cy] of corners) {
           const px = glx + cx * cos - cy * sin;
           const py = gly + cx * sin + cy * cos;
-          if (!inside(px, py)) { insideAll = false; break; }
+          if (!inside(px, py)) return false;
         }
-        if (!insideAll) break;
       }
-      /* 2) remplir la course : longueur du texte ≈ course (±3px) */
-      const len = bb.width;
-      const fills = len >= course - 6;
-      if (insideAll && fills) break;
-      const cur = +nameText.getAttribute("font-size") || 10;
-      if (!insideAll || len > course + 3) {
-        /* trop grand : réduire */
-        texts.forEach(t => t.setAttribute("font-size", Math.max(6, (+t.getAttribute("font-size") || 10) - 1)));
-      } else {
-        /* trop petit : agrandir */
-        texts.forEach(t => t.setAttribute("font-size", Math.min(42, (+t.getAttribute("font-size") || 10) + 1)));
-      }
+      return true;
+    };
+    const size = () => +nameText.getAttribute("font-size") || 10;
+    const setAll = v => texts.forEach(t => t.setAttribute("font-size", v));
+    /* Phase 1 : agrandir tant que le mot ne remplit pas la course */
+    let guard = 0;
+    while (guard++ < 42) {
+      if (nameText.getBBox().width >= course - 6) break;
+      setAll(Math.min(42, size() + 1));
+    }
+    /* Phase 2 : réduire uniquement si le texte déborde du triangle ou dépasse la course */
+    guard = 0;
+    while (guard++ < 42) {
+      const ok = insideAllAt() && nameText.getBBox().width <= course + 3;
+      if (ok) break;
+      if (size() <= 7) break;
+      setAll(size() - 1);
     }
   });
 }
