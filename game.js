@@ -1,19 +1,32 @@
 /* ===== Trivial Pursuit adapté à l'âge — moteur de jeu ===== */
 
-/* ---------- Catégories (fidèles au Trivial Pursuit classique : 6 camemberts) ---------- */
+/* ---------- Catégories : couleurs officielles du Trivial Pursuit ----------
+   Bleu=Géographie, Rose=Divertissement, Jaune=Histoire,
+   Violet=Arts, Vert=Sciences, Orange=Sports & Loisirs            */
 const CATEGORIES = {
-  G: { name: "Géographie",        color: "#0d6efd", icon: "🌍" },
-  H: { name: "Histoire",          color: "#f4c20d", icon: "🏛️" },
-  S: { name: "Sciences",          color: "#20c997", icon: "🔬" },
-  L: { name: "Loisirs & Sports",  color: "#fd7e14", icon: "⚽" },
-  A: { name: "Arts & Littérature",color: "#6f42c1", icon: "🎨" },
-  D: { name: "Divertissement",    color: "#e83e8c", icon: "🎬" }
+  G: { name: "Géographie",        color: "#1f6fb2", icon: "🌍" },
+  H: { name: "Histoire",          color: "#f2c500", icon: "🏛️" },
+  S: { name: "Sciences",          color: "#2e9b4e", icon: "🔬" },
+  L: { name: "Sports & Loisirs",  color: "#f07c1e", icon: "⚽" },
+  A: { name: "Arts & Littérature",color: "#7a4fa3", icon: "🎨" },
+  D: { name: "Divertissement",    color: "#d5368d", icon: "🎬" }
 };
 const CAT_KEYS = Object.keys(CATEGORIES);
 
 const ROLL_COLOR = "#8d99ae", ROLL_ICON = "↻";
-const THEME_COLOR = "#343a40", THEME_ICON = "★";
+const THEME_COLOR = "#4b5563", THEME_ICON = "★";
 const HQ_ICON = "🧀";
+
+/* Ordre des catégories autour de l'anneau : mélangées, jamais deux
+   couleurs identiques côte à côte, comme sur le plateau officiel. */
+const RING_CATS = [
+  "G","S","A","H","L","D",
+  "A","D","G","L","S","H",
+  "L","H","S","D","A","G",
+  "D","G","H","A","L","S",
+  "H","L","D","S","G","A",
+  "S","A","L","G","H","D"
+];
 
 /* ---------- Tranches d'âge ---------- */
 const AGE_GROUPS = ["6-8", "9-11", "12-15", "16-30", "31+"];
@@ -30,9 +43,10 @@ let players = [];
 let current = 0;
 let awaitingRoll = true;
 let usedQuestions = {};
-let activeThemes = { disney: true, musique: true };
+let activeThemes = { disney: false, musique: false };
 let board = null;
 let gameOver = false;
+let animating = false;
 var CATEGORY_ORDER = ["G", "S", "A", "H", "L", "D"];
 
 /* ---------- Utilitaires DOM ---------- */
@@ -81,7 +95,7 @@ function refreshSetup() { renderSetup(); }
 const PLAYER_COLORS = ["#e63946", "#2a9d8f", "#457b9d", "#ffb703", "#8338ec", "#ff7096"];
 $("#btn-add-player").onclick = () => {
   const name = $("#new-player-name").value.trim();
-  const age = parseInt($("#new-player-age").value, 10);
+  const age = parseInt($("#new-player-age"). value, 10);
   if (!name) return alert("Donnez un nom au joueur.");
   if (!age || age < 4 || age > 120) return alert("Donnez un âge valide (4 à 120).");
   if (players.length >= 6) return alert("Maximum 6 joueurs.");
@@ -99,12 +113,7 @@ $("#btn-add-player").onclick = () => {
 
 $("#btn-start").onclick = startGame;
 
-/* ---------- Plateau (fidèle au jeu original) ----------
-   - Moyeu central (question finale)
-   - 6 rayons de 3 cases : interne / SIÈGE camembert (au milieu) / externe
-   - Anneau extérieur de 36 cases ; « Rejouez » (↻) à l'entrée de chaque rayon,
-     case à thème (★) à l'opposée de chaque sextant
-   - Total : 1 + 18 + 36 = 55 cases, comme le plateau classique                */
+/* ---------- Plateau (fidèle au jeu original) ---------- */
 const HUB_R = 68;
 const RING_R = 305, SPOKE_OUT_R = 248, HQ_R = 192, SPOKE_IN_R = 136;
 const CELL_R = 21;
@@ -139,11 +148,9 @@ function buildBoard() {
     const ang = i * 10;
     const [x, y] = polar(RING_R, ang);
     const m = i % 6;
-    // Chaque sextant contient 4 cases de la même catégorie que son rayon,
-    // sauf l'entrée (Rejouez ↻) et la case opposée (thème ★).
     add({
       id: "ring" + i, x, y,
-      cat: (m === 0 || m === 3) ? null : CATEGORY_ORDER[Math.floor(i / 6)],
+      cat: (m === 0 || m === 3) ? null : RING_CATS[i],
       isWedge: false,
       isRollAgain: m === 0,
       isTheme: m === 3
@@ -184,34 +191,31 @@ function renderBoard() {
     <filter id="f-soft" x="-40%" y="-40%" width="180%" height="180%">
       <feDropShadow dx="0" dy="1.5" stdDeviation="1.2" flood-color="#000" flood-opacity="0.25"/>
     </filter>
-    <radialGradient id="rg-hub" cx="38%" cy="35%">
-      <stop offset="0%" stop-color="#fff3c4"/><stop offset="100%" stop-color="#e9b949"/>
-    </radialGradient>
     <radialGradient id="rg-roll" cx="38%" cy="32%">
       <stop offset="0%" stop-color="#cfd6e4"/><stop offset="100%" stop-color="${ROLL_COLOR}"/></radialGradient>
     <radialGradient id="rg-theme" cx="38%" cy="32%">
       <stop offset="0%" stop-color="#59606a"/><stop offset="100%" stop-color="${THEME_COLOR}"/></radialGradient>
     <radialGradient id="rg-board" cx="50%" cy="46%">
-      <stop offset="0%" stop-color="#fffdf5"/><stop offset="100%" stop-color="#f3ead6"/></radialGradient>`;
+      <stop offset="0%" stop-color="#f8f4e6"/><stop offset="100%" stop-color="#e8dfc4"/></radialGradient>`;
   for (const k of CAT_KEYS) {
     defs += `<radialGradient id="rg-${k}" cx="38%" cy="32%">
       <stop offset="0%" stop-color="${lighten(CATEGORIES[k].color, 90)}"/>
       <stop offset="100%" stop-color="${CATEGORIES[k].color}"/></radialGradient>`;
   }
-  defs += `</defs>`;
+  defs += `<clipPath id="clip-hub"><circle cx="350" cy="350" r="${HUB_R - 4}"/></clipPath></defs>`;
 
   let out = defs;
   out += `<circle cx="350" cy="352" r="336" fill="url(#rg-board)" stroke="#c9b98a" stroke-width="3" filter="url(#f-soft)"/>`;
-  out += `<circle cx="350" cy="352" r="${HUB_R + 16}" fill="#f7efd8" stroke="#c9b98a" stroke-width="2" opacity="0.8"/>`;
+  out += `<circle cx="350" cy="352" r="${HUB_R + 16}" fill="#f2e9cf" stroke="#c9b98a" stroke-width="2" opacity="0.8"/>`;
 
   for (const id in board.cells) {
     const c = board.cells[id];
     if (c.isCenter) {
       out += `<g id="cell-hub" class="cell hub-cell">
         <circle cx="${c.x}" cy="${c.y + 2}" r="${HUB_R}" fill="#00000022"/>
-        <circle cx="${c.x}" cy="${c.y}" r="${HUB_R}" fill="url(#rg-hub)" stroke="#8a6d1d" stroke-width="3" filter="url(#f-drop)"/>
-        <text x="${c.x}" y="${c.y - 4}" text-anchor="middle" class="center-label">CENTRE</text>
-        <text x="${c.x}" y="${c.y + 16}" text-anchor="middle" class="center-sub">6 🧀 → victoire</text>
+        <circle cx="${c.x}" cy="${c.y}" r="${HUB_R}" fill="#115eb2" stroke="#0d3f77" stroke-width="3" filter="url(#f-drop)"/>
+        <image href="img/logo-hub.png" x="${c.x - HUB_R + 4}" y="${c.y - HUB_R + 4}" width="${(HUB_R - 4) * 2}" height="${(HUB_R - 4) * 2}" clip-path="url(#clip-hub)" preserveAspectRatio="xMidYMid slice"/>
+        <circle cx="${c.x}" cy="${c.y}" r="${HUB_R}" fill="none" stroke="#ffd76a" stroke-width="3" opacity="0.9"/>
       </g>`;
       continue;
     }
@@ -236,7 +240,8 @@ function renderBoard() {
     const c = board.cells[p.pos];
     if (!c) return;
     const px = c.x + ((i % 3) - 1) * 15, py = c.y + (Math.floor(i / 3) - 0.5) * 18;
-    out += `<g id="pawn-${i}" filter="url(#f-drop)">
+    const moving = animating && i === current;
+    out += `<g id="pawn-${i}" filter="url(#f-drop)" class="${moving ? "pawn-moving" : ""}">
       <ellipse cx="${px}" cy="${py + 13}" rx="10" ry="4" fill="#00000033"/>
       <circle cx="${px}" cy="${py}" r="11" fill="${p.color}" stroke="#1d1d1d" stroke-width="1.5"/>
       <circle cx="${px - 3.5}" cy="${py - 4}" r="3.2" fill="#ffffffcc"/>
@@ -256,13 +261,13 @@ function renderLegend() {
   }
   html += `</div><b>Cases spéciales</b><div class="legend-grid">
     <span class="legend-item"><span class="dot" style="background:${ROLL_COLOR}"></span>↻ Rejouez : relancez le dé</span>
-    <span class="legend-item"><span class="dot" style="background:${THEME_COLOR}"></span>★ Thème : question Disney / Musique</span>
+    <span class="legend-item"><span class="dot" style="background:${THEME_COLOR}"></span>★ Thème : question Disney / Musique (si activé)</span>
     <span class="legend-item">🧀 Siège de catégorie (milieu des rayons) : camembert en jeu</span>
   </div>`;
   el.innerHTML = html;
 }
 
-/* ---------- Déplacement (adjacence explicite) ---------- */
+/* ---------- Déplacement ---------- */
 function neighbors(cellId) { return board.adj[cellId] || []; }
 
 function reachable(startId, steps, player) {
@@ -278,6 +283,49 @@ function reachable(startId, steps, player) {
   }
   frontier.delete(startId);
   return [...frontier];
+}
+
+/* Chemin le plus court (BFS avec parents) pour animer le pion */
+function shortestPath(startId, goalId, player) {
+  const hasAllWedges = player && Object.keys(player.wedges).length === 6;
+  if (startId === goalId) return [startId];
+  const parents = { [startId]: null };
+  let queue = [startId];
+  while (queue.length) {
+    const cur = queue.shift();
+    for (const n of neighbors(cur)) {
+      if (n in parents) continue;
+      if (board.cells[n].isCenter && !hasAllWedges) continue;
+      parents[n] = cur;
+      if (n === goalId) {
+        const path = [goalId];
+        let c = goalId;
+        while (parents[c] !== null) { c = parents[c]; path.unshift(c); }
+        return path;
+      }
+      queue.push(n);
+    }
+  }
+  return null;
+}
+
+/* ---------- Animation du dé ---------- */
+function rollDice(cb) {
+  const el = $("#dice-result");
+  const faces = ["⚀","⚁","⚂","⚃","⚄","⚅"];
+  let spins = 0;
+  el.innerHTML = `<span class="dice-rolling"></span>`;
+  const interval = setInterval(() => {
+    const d = 1 + Math.floor(Math.random() * 6);
+    el.innerHTML = `<span class="dice-face dice-spin">${faces[d - 1]}</span>`;
+    spins++;
+    if (spins >= 10) {
+      clearInterval(interval);
+      const final = 1 + Math.floor(Math.random() * 6);
+      el.innerHTML = `<span class="dice-face dice-final">${faces[final - 1]}</span>`;
+      setTimeout(() => cb(final), 350);
+    }
+  }, 90);
 }
 
 /* ---------- Questions ---------- */
@@ -332,28 +380,45 @@ function updateTurnUI() {
 }
 
 $("#btn-roll").onclick = () => {
-  if (!awaitingRoll || gameOver) return;
-  const dice = 1 + Math.floor(Math.random() * 6);
-  const p = players[current];
-  const targets = reachable(p.pos, dice, p);
-  if (targets.length === 0) {
-    $("#dice-result").textContent = `🎲 ${dice} — aucune case accessible, au tour suivant.`;
-    setTimeout(nextTurn, 1400);
-    return;
-  }
-  $("#dice-result").textContent = `🎲 ${dice} — cliquez sur la case de destination.`;
-  targets.forEach(id => {
-    const el = $("#cell-" + id);
-    if (el) { el.classList.add("reachable"); el.onclick = () => moveTo(id); }
-  });
+  if (!awaitingRoll || gameOver || animating) return;
+  awaitingRoll = false;
   $("#btn-roll").disabled = true;
+  rollDice((dice) => {
+    const p = players[current];
+    const targets = reachable(p.pos, dice, p);
+    if (targets.length === 0) {
+      $("#dice-result").textContent = `🎲 ${dice} — aucune case accessible, au tour suivant.`;
+      setTimeout(nextTurn, 1400);
+      return;
+    }
+    $("#dice-result").textContent = "";
+    const el = $("#dice-result");
+    el.innerHTML = `<span class="dice-face dice-final">${["⚀","⚁","⚂","⚃","⚄","⚅"][dice - 1]}</span> <span class="dice-info">Cliquez sur la case de destination.</span>`;
+    targets.forEach(id => {
+      const cell = $("#cell-" + id);
+      if (cell) { cell.classList.add("reachable"); cell.onclick = () => moveTo(id); }
+    });
+  });
 };
 
 function moveTo(cellId) {
   document.querySelectorAll(".reachable").forEach(el => { el.classList.remove("reachable"); el.onclick = null; });
   const p = players[current];
-  p.pos = cellId;
-  renderBoard();
+  const path = shortestPath(p.pos, cellId, p);
+  if (!path || path.length < 2) { arrive(cellId); return; }
+  animating = true;
+  let step = 1;
+  const walk = () => {
+    p.pos = path[step];
+    renderBoard();
+    if (step < path.length - 1) { step++; setTimeout(walk, 260); }
+    else { animating = false; setTimeout(() => arrive(cellId), 250); }
+  };
+  walk();
+}
+
+function arrive(cellId) {
+  const p = players[current];
   const cell = board.cells[cellId];
   if (cell.isRollAgain) {
     $("#dice-result").textContent = "↻ Rejouez ! Relancez le dé.";
@@ -378,9 +443,11 @@ function askQuestion(cell, player) {
   } else if (cell.isTheme) {
     const t = pickThemeQuestion(player);
     if (!t) {
-      const cat = cell.cat || CAT_KEYS[0];
+      // Aucun pack à thème activé : la case ★ sert une question de connaissance générale.
+      const cat = RING_CATS[parseInt(cell.id.slice(4), 10)] || CAT_KEYS[0];
       const q = pickQuestion(player, cat);
-      catName = CATEGORIES[cat].name; question = q[1]; options = q.slice(2, 6); correct = q[6];
+      catName = CATEGORIES[cat].icon + " " + CATEGORIES[cat].name;
+      question = q[1]; options = q.slice(2, 6); correct = q[6];
     } else {
       catName = "⭐ " + t.theme;
       question = t.q[0]; options = t.q.slice(1, 5); correct = t.q[5];
@@ -392,7 +459,7 @@ function askQuestion(cell, player) {
   }
 
   $("#question-cat").textContent = catName;
-  $("#question-cat").style.color = cell.cat ? CATEGORIES[cell.cat].color : "#333";
+  $("#question-cat").style.color = cell.cat ? CATEGORIES[cell.cat].color : "#38bdf8";
   $("#question-text").textContent = question;
 
   const answers = $("#answers");
@@ -422,7 +489,6 @@ function answer(btn, isCorrect, cell, player, correct, options) {
       fb.textContent += " Il vous faut encore tous les camemberts pour gagner au centre !";
     }
     updateTurnUI();
-    awaitingRoll = false;
     setTimeout(() => { awaitingRoll = true; $("#btn-roll").disabled = false; hide($("#question-panel")); $("#dice-result").textContent = ""; }, 1600);
   } else {
     btn.classList.add("wrong");
