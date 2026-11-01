@@ -401,8 +401,8 @@ function renderBoard() {
     const startR = RING_R - 26;                 // première lettre : contre la base
     const endR = HUB_R + 16;                    // dernière lettre : bord du logo (HUB_R=72)
     const course = startR - endR;              // course totale disponible
-    /* taille pour que : textLen × 0.62 × font = course */
-    let effFont = Math.floor(course / (textLen * 0.66));
+    /* taille pour que : textLen × 0.62 × font = course, légèrement réduite (×0.93) */
+    let effFont = Math.floor(course / (textLen * 0.66) * 0.93);
     effFont = Math.max(8, Math.min(36, effFont));
     const charW = effFont * 0.66;
     /* sens de lecture : sur la moitié DROITE du plateau (ang entre 0 et 180),
