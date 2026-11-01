@@ -138,11 +138,15 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 
 /* Game layout */
 #game-screen { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
-#left-col { flex: 0 0 230px; min-width: 200px; max-width: 260px; order: 0; }
-#board-wrap { flex: 2 1 380px; min-width: 340px; order: 1; }
-#sidebar { flex: 0 0 320px; min-width: 300px; max-width: 360px; order: 2; }
+#board-wrap { flex: 2 1 380px; min-width: 320px; order: 0; }
+#sidebar { flex: 1 1 300px; min-width: 280px; max-width: 380px; order: 1; }
 
-#board { width: 100%; height: auto; border-radius: var(--radius); }
+#board {
+  width: 100%; height: auto; border-radius: var(--radius);
+  max-height: calc(100vh - 140px);   /* s'adapte à la hauteur visible (header + marges) */
+  max-width: min(100%, calc(100vh - 140px));
+  display: block; margin: 0 auto;
+}
 .cell { cursor: default; }
 .cell.reachable { cursor: pointer; stroke: #fff !important; stroke-width: 3 !important; }
 .cell.reachable { animation: pulse 1s infinite alternate; }
@@ -336,3 +340,12 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
   padding: 10px 14px; border-radius: 8px; font-size: .9rem; cursor: pointer; font-weight: 600;
 }
 .btn-newgame:hover { border-color: #f87171; filter: brightness(1.15); }
+
+/* ===== Labels de catégories dans les secteurs du plateau ===== */
+.sector-label { pointer-events: none; }
+.sector-cat {
+  font-size: 13px; font-weight: 700; fill: #3a3222; letter-spacing: .3px;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+@media (max-width: 900px) { .sector-cat { font-size: 10px; } }
+@media (max-width: 600px) { .sector-cat { font-size: 8.5px; } }

@@ -263,7 +263,6 @@ function buildBoard() {
   for (let i = 0; i < 36; i++) link("ring" + i, "ring" + ((i + 1) % 36));
 
   renderBoard();
-  renderLegend();
 }
 
 /* ---------- Rendu 2.5D ---------- */
@@ -296,6 +295,20 @@ function renderBoard() {
 
   let out = defs;
   out += `<circle cx="350" cy="352" r="350" fill="url(#rg-board)" stroke="#c9b98a" stroke-width="3" filter="url(#f-soft)"/>`;
+
+  /* Légende intégrée : une catégorie par secteur vide (triangle entre deux rayons),
+     avec sa couleur et son icône — suit la recharge active via catInfo(). */
+  for (let sector = 0; sector < 6; sector++) {
+    const slot = CAT_KEYS[sector];
+    const info = catInfo(slot);
+    const ang = sector * 60 + 30;           // centre du secteur (les rayons sont à sector*60)
+    const [lx, ly] = polar(96, ang);        // point proche du centre, dans la zone vide
+    const [tx, ty] = polar(40, ang);        // point de fuite pour orienter le texte
+    const rotate = ang - 90;                // texte radial, lisible du centre vers l'extérieur
+    out += `<g class="sector-label" transform="translate(${lx} ${ly}) rotate(${rotate})">
+      <text x="0" y="0" text-anchor="middle" class="sector-cat">${info.icon} ${info.name}</text>
+    </g>`;
+  }
   out += `<circle cx="350" cy="352" r="${HUB_R + 14}" fill="#f2e9cf" stroke="#c9b98a" stroke-width="2" opacity="0.8"/>`;
 
   for (const id in board.cells) {
@@ -347,20 +360,6 @@ function renderBoard() {
   svg.innerHTML = out;
 }
 
-function renderLegend() {
-  const el = $("#legend");
-  if (!el) return;
-  let html = `<b>Catégories ${activeTheme ? "— recharge " + window.THEME_PACKS[activeTheme].icon + " " + window.THEME_PACKS[activeTheme].label : ""}</b><div class='legend-grid'>`;
-  for (const slot of CAT_KEYS) {
-    const info = catInfo(slot);
-    html += `<span class="legend-item"><span class="dot" style="background:${info.color}"></span>${info.icon} ${info.name}</span>`;
-  }
-  html += `</div><b>Case spéciale</b><div class='legend-grid'>
-    <span class="legend-item">🧀 QG (bout de chaque rayon, sur le cercle) : camembert de la couleur en jeu</span>
-    <span class="legend-item">Le dé impose le nombre exact de pas</span>
-  </div>`;
-  el.innerHTML = html;
-}
 
 /* ---------- Déplacement : EXACTEMENT le nombre du dé ----------
    BFS par couches sur les états (case courante, case précédente) :
