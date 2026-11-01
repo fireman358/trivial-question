@@ -758,6 +758,25 @@ function win(player) {
   $("#winner-sub").textContent = `6 camemberts collectés et question finale réussie. Bravo !`;
 }
 
+/* Nouvelle partie : efface la sauvegarde et revient à la configuration */
+$("#btn-newgame").onclick = () => {
+  stopTimer();
+  hideQuestionBanner();
+  clearSave();
+  gameOver = false;
+  current = 0;
+  players = [];
+  pendingPawn = null;
+  activeTheme = activeTheme; // la recharge choisie est conservée dans le formulaire
+  $("#dice-result").textContent = "";
+  $("#btn-roll").disabled = false;
+  awaitingRoll = true;
+  show($("#setup-screen"));
+  hide($("#game-screen"));
+  hide($("#win-screen"));
+  renderSetup();
+};
+
 $("#btn-restart").onclick = () => {
   show($("#setup-screen"));
   hide($("#game-screen"));
