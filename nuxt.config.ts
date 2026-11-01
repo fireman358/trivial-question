@@ -1,6 +1,8 @@
 // Trivial Quest — configuration Nuxt (SSR statique pour Cloudflare Pages)
 export default defineNuxtConfig({
   ssr: true,
+  // Structure Nuxt 4 : tout le code applicatif vit dans app/
+  srcDir: 'app/',
   // Rendu statique : les données de jeu sont publiques, aucun serveur nécessaire
   nitro: { preset: 'static' },
   app: {
