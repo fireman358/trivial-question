@@ -98,6 +98,14 @@ function renderSetup() {
 
   const themes = $("#themes-list");
   themes.innerHTML = "";
+  // Culture générale d'abord : l'option par défaut, en tête de liste
+  const noneDiv = document.createElement("div");
+  noneDiv.className = "theme-option";
+  noneDiv.innerHTML = `<input type="radio" name="theme-pack" id="theme-none" ${activeTheme === null ? "checked" : ""}>
+    <label for="theme-none">🎓 <b>Culture générale</b> — jeu de base (par défaut)</label>`;
+  noneDiv.querySelector("input").onchange = (e) => { if (e.target.checked) activeTheme = null; };
+  themes.appendChild(noneDiv);
+  // puis les recharges
   Object.keys(window.THEME_PACKS).forEach(key => {
     const pack = window.THEME_PACKS[key];
     const id = "theme-" + key;
@@ -105,17 +113,10 @@ function renderSetup() {
     div.className = "theme-option";
     const total = Object.values(pack.groups).reduce((a, g) => a + g.questions.length, 0);
     div.innerHTML = `<input type="radio" name="theme-pack" id="${id}" ${activeTheme === key ? "checked" : ""}>
-      <label for="${id}">${pack.icon} <b>${pack.label}</b> — ${total} questions (3 tranches d'âge)</label>`;
+      <label for="${id}">${pack.icon} <b>${pack.label}</b> — ${total} questions (3 tranches)</label>`;
     div.querySelector("input").onchange = (e) => { activeTheme = e.target.checked ? key : null; };
     themes.appendChild(div);
   });
-  // Option « aucune recharge » : revenir au jeu de base
-  const noneDiv = document.createElement("div");
-  noneDiv.className = "theme-option";
-  noneDiv.innerHTML = `<input type="radio" name="theme-pack" id="theme-none" ${activeTheme === null ? "checked" : ""}>
-    <label for="theme-none">🎓 <b>Culture générale</b> — jeu de base, sans recharge</label>`;
-  noneDiv.querySelector("input").onchange = (e) => { if (e.target.checked) activeTheme = null; };
-  themes.appendChild(noneDiv);
 
   renderPawnPicker();
   $("#btn-start").disabled = players.length < GAME_CONFIG.minPlayers;

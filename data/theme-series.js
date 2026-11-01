@@ -292,6 +292,96 @@ window.THEME_PACKS.series = {
      "Dora",
      "Phinéas",
      0
+    ],
+    [
+     "SE",
+     "Quelle série suit un escadron de ninjas adolescents ?",
+     "Naruto",
+     "One Piece",
+     "Boruto",
+     "My Hero",
+     0
+    ],
+    [
+     "SE",
+     "Quelle série suit un garçon et un chien magique dans un monde post-apo ?",
+     "Adventure Time",
+     "Regular Show",
+     "Steven Universe",
+     "Gravity Falls",
+     0
+    ],
+    [
+     "PE",
+     "Comment s'appelle le héros de Naruto ?",
+     "Naruto Uzumaki",
+     "Sasuke",
+     "Kakashi",
+     "Boruto",
+     0
+    ],
+    [
+     "PE",
+     "Dans One Piece, quel est le rêve de Luffy ?",
+     "Devenir roi des pirates",
+     "Devenir Hokage",
+     "Attraper tous les Pokémon",
+     "Venger son père",
+     0
+    ],
+    [
+     "QU",
+     "Dans Friends, quel personnage est paléontologue ?",
+     "Ross",
+     "Joey",
+     "Chandler",
+     "Monica",
+     0
+    ],
+    [
+     "QU",
+     "Dans Bob l'éponge, où travaille Bob ?",
+     "Au Krusty Krab",
+     "Au Chum Bucket",
+     "Chez lui",
+     "À l'école",
+     0
+    ],
+    [
+     "FR",
+     "Quelle série française suit un chevalier idiot ?",
+     "Kaamelott",
+     "Miraculous",
+     "Wakfu",
+     "Zorro",
+     0
+    ],
+    [
+     "SE",
+     "Quelle série suit un lycée de super-héros ?",
+     "My Hero Academia",
+     "Naruto",
+     "One Piece",
+     "Demon Slayer",
+     0
+    ],
+    [
+     "SE",
+     "Quelle série animée suit trois ours frères ?",
+     "We Bare Bears",
+     "Gumball",
+     "Regular Show",
+     "Adventure Time",
+     0
+    ],
+    [
+     "PE",
+     "Comment s'appelle le héros de One Piece ?",
+     "Luffy",
+     "Zorro",
+     "Nami",
+     "Sanji",
+     0
     ]
    ]
   },
@@ -585,6 +675,96 @@ window.THEME_PACKS.series = {
      "Les Bleus",
      "Engrenages",
      0
+    ],
+    [
+     "SE",
+     "Quelle série suit un tueur en série analysé par le FBI ?",
+     "Mindhunter",
+     "Hannibal",
+     "Dexter",
+     "True Detective",
+     0
+    ],
+    [
+     "SE",
+     "Quelle série suit une femme agent du KGB ?",
+     "The Americans",
+     "Homeland",
+     "Alias",
+     "Nikita",
+     0
+    ],
+    [
+     "PE",
+     "Dans Game of Thrones, qui est la mère des dragons ?",
+     "Daenerys",
+     "Cersei",
+     "Sansa",
+     "Arya",
+     0
+    ],
+    [
+     "PE",
+     "Dans Black Mirror, quel épisode montre un premier ministre et un cochon ?",
+     "The National Anthem",
+     "Fifteen Million",
+     "White Bear",
+     "Nosedive",
+     0
+    ],
+    [
+     "PL",
+     "Dans Dark, quel est le secret du village de Winden ?",
+     "Les voyages temporels",
+     "Un trésor",
+     "Un meurtre",
+     "Une guerre",
+     0
+    ],
+    [
+     "ST",
+     "Qui a créé Mr. Robot ?",
+     "Sam Esmail",
+     "David Fincher",
+     "Vince Gilligan",
+     "David Chase",
+     0
+    ],
+    [
+     "FR",
+     "Quelle série française suit un braquage minuté ?",
+     "La Casa de Papel",
+     "Lupin",
+     "Le Bureau",
+     "Engrenages",
+     0
+    ],
+    [
+     "QU",
+     "Dans Breaking Bad, quel est le vrai nom de Heisenberg ?",
+     "Walter White",
+     "Walter Black",
+     "Heisenberg White",
+     "Walt Whitman",
+     0
+    ],
+    [
+     "SE",
+     "Quelle série suit des dieux vivant parmi les humains ?",
+     "American Gods",
+     "Supernatural",
+     "Lucifer",
+     "Preacher",
+     0
+    ],
+    [
+     "PE",
+     "Comment s'appelle le frère de Sherlock ?",
+     "Mycroft",
+     "Watson",
+     "Moriarty",
+     "Lestrade",
+     0
     ]
    ]
   },
@@ -859,6 +1039,87 @@ window.THEME_PACKS.series = {
      "Studio 60",
      "The West Wing",
      "Borgen",
+     0
+    ],
+    [
+     "SE",
+     "Quelle série a inventé la télévision de prestige ?",
+     "Hill Street Blues (pionnière)",
+     "The Wire",
+     "Breaking Bad",
+     "Mad Men",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Don Draper ?",
+     "Jon Hamm",
+     "Bryan Cranston",
+     "Michael C. Hall",
+     "James Gandolfini",
+     0
+    ],
+    [
+     "ST",
+     "Quelle chaîne a produit The Sopranos ?",
+     "HBO",
+     "AMC",
+     "Showtime",
+     "FX",
+     0
+    ],
+    [
+     "ST",
+     "Quelle chaîne a produit Breaking Bad ?",
+     "AMC",
+     "HBO",
+     "FX",
+     "Showtime",
+     0
+    ],
+    [
+     "FR",
+     "Quelle série française a remporté un Emmy ?",
+     "Le Bureau des Légendes",
+     "Kaamelott",
+     "Bref",
+     "Les Revenants",
+     0
+    ],
+    [
+     "QU",
+     "Dans Les Soprano, quelle charcuterie Tony adore-t-il ?",
+     "Le gabagool",
+     "La pizza",
+     "Le burger",
+     "Les pâtes",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Carrie Mathison dans Homeland ?",
+     "Claire Danes",
+     "Keri Russell",
+     "Maggie Gyllenhaal",
+     "Jodie Foster",
+     0
+    ],
+    [
+     "ST",
+     "Quelle série a marqué les années 90 avec 10 saisons ?",
+     "Friends",
+     "Seinfeld",
+     "ER",
+     "X-Files",
+     0
+    ],
+    [
+     "SE",
+     "Quelle série suit la vie d'un président américain ?",
+     "The West Wing",
+     "House of Cards",
+     "Scandal",
+     "Designated Survivor",
      0
     ]
    ]

@@ -247,6 +247,96 @@ window.THEME_PACKS.musique7090 = {
      "Dangerous",
      "Off the Wall",
      0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Mamma Mia » ?",
+     "ABBA",
+     "Queen",
+     "Bee Gees",
+     "Boney M",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « We Are the Champions » ?",
+     "Queen",
+     "The Beatles",
+     "Pink Floyd",
+     "The Who",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de Queen parle d'un monde imaginaire ?",
+     "Bohemian Rhapsody",
+     "Radio Ga Ga",
+     "We Will Rock You",
+     "Somebody to Love",
+     0
+    ],
+    [
+     "ST",
+     "Quel genre musical est né à Kingston ?",
+     "Le reggae",
+     "Le ska",
+     "Le calypso",
+     "Le mento",
+     0
+    ],
+    [
+     "SC",
+     "Quelle série a popularisé la disco en 1977 ?",
+     "La Fièvre du samedi soir",
+     "Grease",
+     "Happy Days",
+     "The Midnight Special",
+     0
+    ],
+    [
+     "AN",
+     "Quelle chanson d'ABBA parle d'une danse ?",
+     "Dancing Queen",
+     "Waterloo",
+     "Fernando",
+     "Chiquitita",
+     0
+    ],
+    [
+     "AL",
+     "Quel album de Michael Jackson est sorti en 1982 ?",
+     "Thriller",
+     "Bad",
+     "Dangerous",
+     "Off the Wall",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Y.M.C.A. » ?",
+     "Village People",
+     "Bee Gees",
+     "ABBA",
+     "Boney M",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Beat It » ?",
+     "Michael Jackson",
+     "Prince",
+     "Stevie Wonder",
+     "James Brown",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Bee Gees parle de rester en vie ?",
+     "Stayin' Alive",
+     "Night Fever",
+     "Tragedy",
+     "How Deep",
+     0
     ]
    ]
   },
@@ -468,6 +558,87 @@ window.THEME_PACKS.musique7090 = {
      "Pearl Jam",
      "Green Day",
      0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse a chanté « Like a Prayer » ?",
+     "Madonna",
+     "Cyndi Lauper",
+     "Whitney Houston",
+     "Tina Turner",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Spice Girls parle de ce que tu veux vraiment ?",
+     "Wannabe",
+     "Say You'll Be There",
+     "2 Become 1",
+     "Spice Up",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de 2Pac parle des changements ?",
+     "Changes",
+     "California Love",
+     "Dear Mama",
+     "Hit Em Up",
+     0
+    ],
+    [
+     "ST",
+     "Quel genre a dominé les années 90 en France ?",
+     "Le rap français",
+     "Le rock",
+     "La techno",
+     "Le reggae",
+     0
+    ],
+    [
+     "SC",
+     "Quel festival a réuni le plus de monde en 1969 ?",
+     "Woodstock",
+     "Monterey",
+     "Altamont",
+     "Isle of Wight",
+     0
+    ],
+    [
+     "AN",
+     "Quel clip de Michael Jackson a popularisé le moonwalk ?",
+     "Billie Jean",
+     "Thriller",
+     "Beat It",
+     "Smooth Criminal",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe de filles anglaises a dominé les années 90 ?",
+     "Spice Girls",
+     "All Saints",
+     "TLC",
+     "Destiny's Child",
+     0
+    ],
+    [
+     "AL",
+     "Quel album de Nirvana s'appelle « Nevermind » ?",
+     "Nevermind",
+     "Bleach",
+     "In Utero",
+     "MTV Unplugged",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Creep » ?",
+     "Radiohead",
+     "Blur",
+     "Oasis",
+     "Pulp",
+     0
     ]
    ]
   },
@@ -670,6 +841,87 @@ window.THEME_PACKS.musique7090 = {
      "Animals",
      "Wish You Were Here",
      "Meddle",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a sorti « The Dark Side of the Moon » ?",
+     "Pink Floyd",
+     "Led Zeppelin",
+     "The Who",
+     "Genesis",
+     0
+    ],
+    [
+     "AL",
+     "Quel album des Pink Floyd parle d'un mur ?",
+     "The Wall",
+     "Animals",
+     "Wish You Were Here",
+     "Meddle",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de Led Zeppelin dure 8 minutes ?",
+     "Stairway to Heaven",
+     "Whole Lotta Love",
+     "Kashmir",
+     "Black Dog",
+     0
+    ],
+    [
+     "ST",
+     "Quel genre a dominé les radios des années 80 ?",
+     "Le pop / new wave",
+     "Le punk",
+     "Le reggae",
+     "Le métal",
+     0
+    ],
+    [
+     "AN",
+     "Quel groupe a fait sauter une voiture sur scène ?",
+     "The Who",
+     "KISS",
+     "Ramones",
+     "Nirvana",
+     0
+    ],
+    [
+     "AL",
+     "Quel album des Beatles a été publié en dernier (ordre de sortie) ?",
+     "Let It Be",
+     "Abbey Road",
+     "The White Album",
+     "Sgt Pepper",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse a chanté « Total Eclipse of the Heart » ?",
+     "Bonnie Tyler",
+     "Tina Turner",
+     "Kim Wilde",
+     "Laura Branigan",
+     0
+    ],
+    [
+     "ST",
+     "Quel mouvement a suivi le punk ?",
+     "La new wave",
+     "Le métal",
+     "Le grunge",
+     "La disco",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur est surnommé « The Boss » ?",
+     "Bruce Springsteen",
+     "Bob Dylan",
+     "Elton John",
+     "Billy Joel",
      0
     ]
    ]

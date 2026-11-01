@@ -211,6 +211,87 @@ window.THEME_PACKS.cinema = {
      "Vaiana",
      "Coco",
      0
+    ],
+    [
+     "FI",
+     "Quel film suit une famille de monstres ?",
+     "Monstres et Cie",
+     "Là-haut",
+     "Vice-versa",
+     "Coco",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit des émotions dans la tête d'une fille ?",
+     "Vice-versa",
+     "Soul",
+     "Luca",
+     "Coco",
+     0
+    ],
+    [
+     "PE",
+     "Quelle actrice a joué Mérida dans Rebelle ?",
+     "Kelly Macdonald",
+     "Emma Thompson",
+     "Julie Walters",
+     "Sally Hawkins",
+     0
+    ],
+    [
+     "SF",
+     "Quel film suit un garçon qui entre dans le monde des morts ?",
+     "Coco",
+     "Nemo",
+     "Là-haut",
+     "Soul",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit des voitures qui parlent ?",
+     "Cars",
+     "Planes",
+     "Turbo",
+     "Ratatouille",
+     0
+    ],
+    [
+     "CO",
+     "Quel film suit un agent ridicule qui enquête au Caire ?",
+     "OSS 117 : Le Caire nid d'espions",
+     "Le Corniaud",
+     "La Grande Vadrouille",
+     "Les Tontons",
+     0
+    ],
+    [
+     "OS",
+     "Quel film d'animation a remporté l'Oscar en 2015 ?",
+     "Big Hero 6",
+     "Vice-versa",
+     "Dragons 2",
+     "Song of the Sea",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un ours qui veut du miel ?",
+     "Winnie l'ourson",
+     "Paddington",
+     "Bambi",
+     "Baloo",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Indiana Jones ?",
+     "Harrison Ford",
+     "Sean Connery",
+     "Michael Douglas",
+     "Mel Gibson",
+     0
     ]
    ]
   },
@@ -409,6 +490,96 @@ window.THEME_PACKS.cinema = {
     [
      "FI",
      "Quel film suit un jazz… un pianiste et une actrice à Los Angeles ?",
+     "La La Land",
+     "Whiplash",
+     "Birdman",
+     "Moulin Rouge",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un adolescent qui devient Spider-Man ?",
+     "Spider-Man : Homecoming",
+     "Spider-Man 2",
+     "The Amazing Spider-Man",
+     "No Way Home",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé The Dark Knight ?",
+     "Christopher Nolan",
+     "Matt Reeves",
+     "Zack Snyder",
+     "Tim Burton",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué le Batman de 2022 ?",
+     "Robert Pattinson",
+     "Christian Bale",
+     "Ben Affleck",
+     "Michael Keaton",
+     0
+    ],
+    [
+     "SF",
+     "Quel film suit une équipe qui entre dans les rêves ?",
+     "Inception",
+     "Interstellar",
+     "Shutter Island",
+     "Memento",
+     0
+    ],
+    [
+     "OS",
+     "Quel film a remporté l'Oscar du meilleur film en 2017 ?",
+     "Moonlight",
+     "La La Land",
+     "Hidden Figures",
+     "Manchester",
+     0
+    ],
+    [
+     "CO",
+     "Quel film suit un tueur et une fillette ?",
+     "Léon",
+     "Nikita",
+     "Le Grand Bleu",
+     "Le Cinquième Élément",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un champion boxeur qui perd tout ?",
+     "Rocky",
+     "Raging Bull",
+     "Cinderella Man",
+     "Southpaw",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Rocky Balboa ?",
+     "Sylvester Stallone",
+     "Robert De Niro",
+     "Carl Weathers",
+     "Dolph Lundgren",
+     0
+    ],
+    [
+     "SF",
+     "Quel film suit un vaisseau qui revient vers la Terre ?",
+     "Interstellar",
+     "Gravity",
+     "Ad Astra",
+     "The Martian",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un pianiste et une actrice à Los Angeles ?",
      "La La Land",
      "Whiplash",
      "Birdman",
@@ -634,6 +805,78 @@ window.THEME_PACKS.cinema = {
      "Nikita",
      "Le Grand Bleu",
      "Le Cinquième Élément",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un réalisateur qui perd le contrôle ?",
+     "8½",
+     "La Nuit américaine",
+     "Birdman",
+     "Mulholland Drive",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Amarcord ?",
+     "Federico Fellini",
+     "Antonioni",
+     "Visconti",
+     "De Sica",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Marcello dans La Dolce Vita ?",
+     "Marcello Mastroianni",
+     "Alberto Sordi",
+     "Vittorio Gassman",
+     "Ugo Tognazzi",
+     0
+    ],
+    [
+     "OS",
+     "Quel film italien a remporté l'Oscar du meilleur film étranger en 2014 ?",
+     "La grande bellezza",
+     "La vie est belle",
+     "Gomorra",
+     "Il Divo",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un voyageur qui revient dans le temps ?",
+     "Retour vers le futur",
+     "Interstellar",
+     "Primer",
+     "Looper",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Retour vers le futur ?",
+     "Robert Zemeckis",
+     "Steven Spielberg",
+     "James Cameron",
+     "Ridley Scott",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Marty McFly ?",
+     "Michael J. Fox",
+     "Christopher Lloyd",
+     "Tom Hanks",
+     "John Cusack",
+     0
+    ],
+    [
+     "OS",
+     "Quel film français a remporté le plus de Césars ?",
+     "Le Dernier Métro (10)",
+     "Intouchables",
+     "Amour",
+     "La Vie en rose",
      0
     ]
    ]

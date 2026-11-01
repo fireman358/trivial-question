@@ -247,6 +247,96 @@ window.THEME_PACKS.superheroes = {
      "Captain Marvel",
      "Ant-Man",
      0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a une armure rouge et or ?",
+     "Iron Man",
+     "War Machine",
+     "Hulk",
+     "Vision",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC a un costume bleu et rouge avec une cape ?",
+     "Superman",
+     "Batman",
+     "Flash",
+     "Shazam",
+     0
+    ],
+    [
+     "ME",
+     "Quel méchant Marvel a un costume violet ?",
+     "Thanos",
+     "Ultron",
+     "Loki",
+     "Magneto",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC suit un héros qui parle à l'eau ?",
+     "Aquaman",
+     "Flash",
+     "Shazam",
+     "Green Lantern",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel vit à Harlem ?",
+     "Luke Cage",
+     "Iron Fist",
+     "Daredevil",
+     "Punisher",
+     0
+    ],
+    [
+     "EQ",
+     "Quelle équipe Marvel est une école de mutants ?",
+     "Les X-Men",
+     "Les Avengers",
+     "Les 4 Fantastiques",
+     "Les Eternals",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la planète natale de Thor ?",
+     "Asgard",
+     "Krypton",
+     "Tatooine",
+     "Namek",
+     0
+    ],
+    [
+     "DC",
+     "Quelle héroïne DC a des ailes ?",
+     "Hawkgirl",
+     "Wonder Woman",
+     "Supergirl",
+     "Zatanna",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit un héros qui rétrécit ?",
+     "Ant-Man",
+     "Spider-Man",
+     "Doctor Strange",
+     "Iron Man 3",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel est aveugle et avocat ?",
+     "Daredevil",
+     "Iron Fist",
+     "Punisher",
+     "Jessica Jones",
+     0
     ]
    ]
   },
@@ -495,6 +585,96 @@ window.THEME_PACKS.superheroes = {
      "Suicide Squad",
      "Birds of Prey",
      0
+    ],
+    [
+     "MA",
+     "Comment s'appelle le vrai nom du Hulk ?",
+     "Bruce Banner",
+     "Tony Stark",
+     "Steve Rogers",
+     "Stephen Strange",
+     0
+    ],
+    [
+     "DC",
+     "Quel est le vrai nom de Batman ?",
+     "Bruce Wayne",
+     "Clark Kent",
+     "Barry Allen",
+     "Oliver Queen",
+     0
+    ],
+    [
+     "MA",
+     "Quelle héroïne Marvel est une mutante météo ?",
+     "Storm",
+     "Jean Grey",
+     "Rogue",
+     "Shadowcat",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC est un flic de Central City ?",
+     "Flash",
+     "Green Lantern",
+     "Aquaman",
+     "Cyborg",
+     0
+    ],
+    [
+     "ME",
+     "Quel méchant de Batman a un double visage ?",
+     "Two-Face",
+     "Le Joker",
+     "Bane",
+     "Penguin",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC suit une équipe de super-vilains ?",
+     "Suicide Squad",
+     "Justice League",
+     "Birds of Prey",
+     "The Batman",
+     0
+    ],
+    [
+     "MA",
+     "Quel film Marvel suit un sorcier ?",
+     "Doctor Strange",
+     "Thor 2",
+     "Iron Man 3",
+     "Black Panther",
+     0
+    ],
+    [
+     "MY",
+     "Quel artefact Marvel contrôle la réalité ?",
+     "La Pierre de Réalité",
+     "La Pierre du Temps",
+     "La Pierre de l'Âme",
+     "La Pierre de l'Espace",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC est le roi de l'Atlantide ?",
+     "Aquaman",
+     "Flash",
+     "Shazam",
+     "Green Arrow",
+     0
+    ],
+    [
+     "EQ",
+     "Quelle équipe DC protège la Terre ?",
+     "La Justice League",
+     "Les Teen Titans",
+     "La Suicide Squad",
+     "Le Legion",
+     0
     ]
    ]
   },
@@ -715,6 +895,78 @@ window.THEME_PACKS.superheroes = {
      "Avengers",
      "Thor",
      "Captain Marvel",
+     0
+    ],
+    [
+     "MA",
+     "Qui a dessiné Spider-Man avec Stan Lee ?",
+     "Steve Ditko",
+     "Jack Kirby",
+     "John Romita",
+     "Gene Colan",
+     0
+    ],
+    [
+     "MA",
+     "Quel est le vrai nom de Black Panther ?",
+     "T'Challa",
+     "T'Chaka",
+     "Killmonger",
+     "M'Baku",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel a dépassé 2,7 milliards $ ?",
+     "Avengers: Endgame",
+     "Infinity War",
+     "No Way Home",
+     "The Avengers",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC a été le plus rentable ?",
+     "The Dark Knight",
+     "Aquaman",
+     "Wonder Woman",
+     "Batman v Superman",
+     0
+    ],
+    [
+     "DC",
+     "Quel acteur a joué Superman dans les années 70-80 ?",
+     "Christopher Reeve",
+     "George Reeves",
+     "Dean Cain",
+     "Brandon Routh",
+     0
+    ],
+    [
+     "MA",
+     "Quelle actrice a joué Captain Marvel ?",
+     "Brie Larson",
+     "Scarlett Johansson",
+     "Emily Blunt",
+     "Charlize Theron",
+     0
+    ],
+    [
+     "MA",
+     "Quel acteur a joué Doctor Strange ?",
+     "Benedict Cumberbatch",
+     "Ethan Hawke",
+     "Tom Hiddleston",
+     "Chiwetel Ejiofor",
+     0
+    ],
+    [
+     "DC",
+     "Quel acteur a joué The Flash dans la Justice League ?",
+     "Ezra Miller",
+     "Grant Gustin",
+     "Tom Cavanagh",
+     "Nikolaj Coster",
      0
     ]
    ]

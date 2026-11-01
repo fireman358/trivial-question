@@ -193,6 +193,78 @@ window.THEME_PACKS.musique2000 = {
      "Westlife",
      "Take That",
      0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse a chanté « Blank Space » ?",
+     "Taylor Swift",
+     "Katy Perry",
+     "Rihanna",
+     "Adele",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Uptown Funk » ?",
+     "Bruno Mars",
+     "Ed Sheeran",
+     "Justin Timberlake",
+     "Pharrell",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe coréen a chanté « Dynamite » ?",
+     "BTS",
+     "Blackpink",
+     "EXO",
+     "Stray Kids",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de Justin Bieber parle d'un bébé ?",
+     "Baby",
+     "Sorry",
+     "Love Yourself",
+     "Peaches",
+     0
+    ],
+    [
+     "ST",
+     "Quel genre a popularisé Gangnam Style ?",
+     "La K-pop",
+     "La J-pop",
+     "Le mandopop",
+     "Le T-pop",
+     0
+    ],
+    [
+     "AN",
+     "Quel clip a dépassé 4 milliards de vues en 2020 ?",
+     "Despacito",
+     "Baby",
+     "Gangnam Style",
+     "Shape of You",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson d'Adele roule dans le profond ?",
+     "Rolling in the Deep",
+     "Someone Like You",
+     "Hello",
+     "Set Fire",
+     0
+    ],
+    [
+     "SC",
+     "Quelle application a fait danser le monde avec des vidéos de 15 secondes ?",
+     "TikTok",
+     "Snapchat",
+     "Instagram",
+     "Vine",
+     0
     ]
    ]
   },
@@ -396,6 +468,87 @@ window.THEME_PACKS.musique2000 = {
      "Drake",
      "Lil Wayne",
      0
+    ],
+    [
+     "AR",
+     "Quel rappeur a sorti « Scorpion » ?",
+     "Drake",
+     "Kendrick Lamar",
+     "J. Cole",
+     "Travis Scott",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Weeknd parle de lumières aveuglantes ?",
+     "Blinding Lights",
+     "Starboy",
+     "Can't Feel My Face",
+     "Save Your Tears",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de Dua Lipa parle de nouvelles règles ?",
+     "New Rules",
+     "IDGAF",
+     "Don't Start Now",
+     "Physical",
+     0
+    ],
+    [
+     "SC",
+     "Quelle plateforme a révolutionné la découverte musicale ?",
+     "Spotify",
+     "Deezer",
+     "YouTube Music",
+     "Apple Music",
+     0
+    ],
+    [
+     "AN",
+     "Quel clip de Beyoncé est filmé en une prise ?",
+     "Single Ladies",
+     "Formation",
+     "Halo",
+     "Crazy in Love",
+     0
+    ],
+    [
+     "AR",
+     "Quelle artiste a sorti l'album « Anti » ?",
+     "Rihanna",
+     "Beyoncé",
+     "Adele",
+     "SZA",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des White Stripes a un riff culte ?",
+     "Seven Nation Army",
+     "Icky Thump",
+     "Fell in Love",
+     "Black Math",
+     0
+    ],
+    [
+     "AL",
+     "Quel album de Beyoncé s'appelle « Lemonade » ?",
+     "Lemonade",
+     "B'Day",
+     "I Am Sasha Fierce",
+     "Renaissance",
+     0
+    ],
+    [
+     "AR",
+     "Quel rappeur a gagné un Pulitzer en 2018 ?",
+     "Kendrick Lamar",
+     "Drake",
+     "Jay-Z",
+     "Chance",
+     0
     ]
    ]
   },
@@ -580,6 +733,87 @@ window.THEME_PACKS.musique2000 = {
      "Fell in Love",
      "Icky Thump",
      "Black Math",
+     0
+    ],
+    [
+     "AR",
+     "Quel duo français a sorti « Get Lucky » ?",
+     "Daft Punk",
+     "Justice",
+     "Cassius",
+     "Air",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Arctic Monkeys demande si tu veux savoir ?",
+     "Do I Wanna Know",
+     "505",
+     "R U Mine",
+     "Fluorescent",
+     0
+    ],
+    [
+     "AL",
+     "Quel album de Radiohead a été publié à prix libre ?",
+     "In Rainbows",
+     "Kid A",
+     "OK Computer",
+     "A Moon Shaped Pool",
+     0
+    ],
+    [
+     "AN",
+     "Quelle artiste a surpris avec un album visuel sans annonce ?",
+     "Beyoncé",
+     "Rihanna",
+     "Taylor Swift",
+     "Adele",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse a remporté l'Oscar de la chanson ?",
+     "Adele (Skyfall)",
+     "Lady Gaga",
+     "Idina Menzel",
+     "Billie Eilish",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de Coldplay parle de la vie ?",
+     "Viva la Vida",
+     "Yellow",
+     "The Scientist",
+     "Paradise",
+     0
+    ],
+    [
+     "AL",
+     "Quel album de Daft Punk s'appelle « Random Access Memories » ?",
+     "Random Access Memories",
+     "Discovery",
+     "Homework",
+     "Human After All",
+     0
+    ],
+    [
+     "AN",
+     "Quel clip de OK Go est célèbre pour ses tapis roulants ?",
+     "Here It Goes Again",
+     "This Too Shall Pass",
+     "I Won't Let You Down",
+     "The Writing's",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Chandelier »… quelle chanteuse ?",
+     "Sia",
+     "Rihanna",
+     "Adele",
+     "Dua Lipa",
      0
     ]
    ]

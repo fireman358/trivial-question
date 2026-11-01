@@ -436,6 +436,483 @@ window.THEME_PACKS.dragonball = {
      "Le saut spatial",
      "Le déplacement",
      0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le Saiyan qui arrive en premier sur Terre ?",
+     "Raditz",
+     "Nappa",
+     "Vegeta",
+     "Goku",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la couleur des cheveux de Super Saiyan ?",
+     "Blond (doré)",
+     "Noir",
+     "Rouge",
+     "Bleu",
+     0
+    ],
+    [
+     "DR",
+     "Comment s'appelle le dragon noir (dans GT) ?",
+     "Omega Shenron",
+     "Shenron",
+     "Porunga",
+     "Darkron",
+     0
+    ],
+    [
+     "EN",
+     "Comment s'appelle le frère de Freezer ?",
+     "Cooler",
+     "King Cold",
+     "Frost",
+     "Chilled",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le premier grand tournoi dans Dragon Ball ?",
+     "Le Tenkaichi Budokai (21e)",
+     "Le Cell Game",
+     "Le Mondial",
+     "Le Pouvoir",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle la maison de Tortue Géniale ?",
+     "Kame House",
+     "Le palais",
+     "La tour",
+     "Le temple",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le cochon qui se transforme ?",
+     "Oolong",
+     "Puar",
+     "Chaozu",
+     "Krilin",
+     0
+    ],
+    [
+     "EN",
+     "Qui est le grand-père adoptif de Goku ?",
+     "Gohan (le grand-père)",
+     "Kamé Sennin",
+     "Ox-King",
+     "Krilin",
+     0
+    ],
+    [
+     "SA",
+     "Dans quelle saga Goku meurt-il la première fois ?",
+     "La saga Saiyan",
+     "La saga Cell",
+     "La saga Freezer",
+     "La saga Bou",
+     0
+    ],
+    [
+     "DR",
+     "Combien de vœux Shenron peut-il exaucer ?",
+     "Un (classique)",
+     "Trois",
+     "Sept",
+     "Zéro",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le chat qui vit avec Yamcha ?",
+     "Puar",
+     "Oolong",
+     "Chaozu",
+     "Krilin",
+     0
+    ],
+    [
+     "TR",
+     "Comment s'appelle la technique de vol (par le ki) ?",
+     "Le vol",
+     "Le Kamehameha",
+     "Le Kaioken",
+     "Le Genki Dama",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le dernier film DBZ avant Super ?",
+     "Battle of Gods",
+     "Fusion Reborn",
+     "Wrath of the Dragon",
+     "Super 13",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle la salle où une journée = un an ?",
+     "La salle de l'Esprit et du Temps",
+     "Le palais",
+     "La tour",
+     "Le temple",
+     0
+    ],
+    [
+     "EN",
+     "Qui a créé les cyborgs C-17 et C-18 ?",
+     "Le docteur Gero",
+     "Bulma",
+     "Freezer",
+     "Babidi",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le tout premier épisode de Dragon Ball ?",
+     "Goku rencontre Bulma",
+     "Le tournoi",
+     "Raditz",
+     "Le mariage",
+     0
+    ],
+    [
+     "DR",
+     "Combien de temps d'attente après un vœu ?",
+     "Un an",
+     "Un mois",
+     "Une semaine",
+     "Dix ans",
+     0
+    ],
+    [
+     "TR",
+     "Quelle technique rassemble l'énergie des êtres vivants ?",
+     "Le Genki Dama",
+     "Le Kamehameha",
+     "Le Kaioken",
+     "Le Masenko",
+     0
+    ],
+    [
+     "EN",
+     "Comment s'appelle le roi du démon dans le premier tournoi ?",
+     "Piccolo Daimao",
+     "Kamé Sennin",
+     "Tien",
+     "Yamcha",
+     0
+    ],
+    [
+     "GU",
+     "Qui a formé Krilin ?",
+     "Tortue Géniale",
+     "Karin",
+     "Kamé",
+     "Kaio",
+     0
+    ],
+    [
+     "SA",
+     "Dans quel film Goku et Vegeta fusionnent en Gogeta ?",
+     "Fusion Reborn (Janemba)",
+     "Broly",
+     "Battle of Gods",
+     "Super Hero",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la technique ultime de Vegeta (sacrifice) ?",
+     "L'Ultra Final Flash",
+     "Le Big Bang",
+     "Le Galick Gun",
+     "Le Kamehameha",
+     0
+    ],
+    [
+     "SA",
+     "Quelle est la suite de DBZ en France après 291 épisodes ?",
+     "Dragon Ball GT",
+     "Dragon Ball Super",
+     "Dragon Ball Kai",
+     "Rien",
+     0
+    ],
+    [
+     "DR",
+     "Quelles sont les 7 boules de la Terre (couleur) ?",
+     "Rouge avec étoiles",
+     "Bleues",
+     "Noires",
+     "Jaunes",
+     0
+    ],
+    [
+     "SA",
+     "Dans quelle saga Gohan a-t-il 9 ans ?",
+     "La saga Cell",
+     "La saga Bou",
+     "La saga Freezer",
+     "La saga Saiyan",
+     0
+    ],
+    [
+     "TR",
+     "Comment Piccolo se régénère-t-il ?",
+     "Il se régénère (Namek)",
+     "Il ne peut pas",
+     "Il mange",
+     "Il dort",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle le monde des morts (enfer) ?",
+     "L'enfer",
+     "Le paradis",
+     "Namek",
+     "Kaioshin",
+     0
+    ],
+    [
+     "EN",
+     "Comment s'appelle le chef du Ruban Rouge ?",
+     "Le commandant Red",
+     "Le docteur Gero",
+     "Blue",
+     "Silver",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le premier ami de Goku (fille) ?",
+     "Bulma",
+     "Chichi",
+     "Videl",
+     "Lunch",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le titre du dernier épisode de DBZ ?",
+     "« Au revoir Goku » (épisode 291)",
+     "Le dernier combat",
+     "La fin",
+     "Goku revient",
+     0
+    ],
+    [
+     "TR",
+     "Quelle technique permet à Goku de se téléporter ?",
+     "La téléportation instantanée",
+     "Le vol",
+     "Le Kaioken",
+     "Le Genki Dama",
+     0
+    ],
+    [
+     "SA",
+     "Dans quel film apparaît Broly pour la première fois ?",
+     "Broly : Le Super guerrier",
+     "Fusion Reborn",
+     "Battle of Gods",
+     "Super Hero",
+     0
+    ],
+    [
+     "DR",
+     "Qui a créé les boules de cristal ?",
+     "Les Nameks",
+     "Les Saiyans",
+     "Les Terriens",
+     "Les dieux",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le roi ami de Goku (père de Chichi) ?",
+     "Le roi Ox (Gyumaoh)",
+     "Kamé Sennin",
+     "Piccolo",
+     "Yamcha",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle le lieu d'entraînement de Goku enfant ?",
+     "Le terrain de Tortue Géniale",
+     "Le palais",
+     "La tour",
+     "Le temple",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le nom du vaisseau qui amène Goku sur Terre ?",
+     "Une capsule Saiyan",
+     "Un avion",
+     "Un bateau",
+     "Un portail",
+     0
+    ],
+    [
+     "EN",
+     "Comment s'appelle le bras droit de Freezer ?",
+     "Zarbon",
+     "Dodoria",
+     "Ginyu",
+     "Nappa",
+     0
+    ],
+    [
+     "TR",
+     "Quelle technique fait pousser les membres (Tortue Géniale) ?",
+     "Elle n'existe pas (invention)",
+     "Le Kamehameha",
+     "Le Kaioken",
+     "Le Makankosappo",
+     0
+    ],
+    [
+     "DR",
+     "Que dit Shenron quand il apparaît ?",
+     "« Je suis Shenron »",
+     "« Bonjour »",
+     "« Vœu »",
+     "« Parle »",
+     0
+    ],
+    [
+     "SA",
+     "Comment s'appelle la saga qui suit Freezer ?",
+     "La saga des Cyborgs/Cell",
+     "La saga Bou",
+     "La saga Saiyan",
+     "Le Ruban Rouge",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est l'attaque de Gohan contre Cell ?",
+     "Le Kamehameha (à deux mains)",
+     "Le Masenko",
+     "Le Genki Dama",
+     "Le Kaioken",
+     0
+    ],
+    [
+     "EN",
+     "Comment s'appelle le duo de méchants dans Bou ?",
+     "Babidi et Bibidi",
+     "Dabura",
+     "Majin",
+     "Buu",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle la femme de Vegeta (scientifique) ?",
+     "Bulma",
+     "Chichi",
+     "Videl",
+     "Android 18",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle la planète où vivent les dieux ?",
+     "Le monde des Kaioshin",
+     "Namek",
+     "Vegeta",
+     "Terre",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le premier épisode de DBZ ?",
+     "L'arrivée de Raditz",
+     "Le tournoi",
+     "La rencontre",
+     "Le mariage",
+     0
+    ],
+    [
+     "TR",
+     "Comment s'appelle le nuage magique de Goku ?",
+     "Kinto-un",
+     "Le tapis",
+     "Le vélo",
+     "La moto",
+     0
+    ],
+    [
+     "EN",
+     "Comment s'appelle le méchant dans le premier film DBZ ?",
+     "Garlic Jr.",
+     "Broly",
+     "Cell",
+     "Freezer",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le fils de Tortue Géniale… qui a formé Goku et Krilin ?",
+     "Tortue Géniale lui-même",
+     "Karin",
+     "Kamé",
+     "Kaio",
+     0
+    ],
+    [
+     "SA",
+     "Dans quelle saga Vegeta devient-il bon ?",
+     "La saga Freezer",
+     "La saga Saiyan",
+     "La saga Cell",
+     "La saga Bou",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle la tour où Goku monte pour s'entraîner ?",
+     "La tour Karine",
+     "Le palais",
+     "Kame House",
+     "Le temple",
+     0
+    ],
+    [
+     "DR",
+     "Quelles boules Namek sont plus grosses ?",
+     "Les boules de Namek",
+     "Les terrestres",
+     "Les noires",
+     "Les rouges",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle la petite fille qui est la fille de Gohan (dans Super) ?",
+     "Pan",
+     "Bulla",
+     "Videl",
+     "Chichi",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le tournoi où Goku affronte Piccolo ?",
+     "Le 23e Tenkaichi Budokai",
+     "Le Cell Game",
+     "Le Pouvoir",
+     "Le Mondial",
+     0
     ]
    ]
   },
@@ -846,6 +1323,501 @@ window.THEME_PACKS.dragonball = {
      "Le Genki Dama",
      "Le Kaioken",
      0
+    ],
+    [
+     "GU",
+     "Comment s'appelle la forme de Vegeta dans GT (après SSJ2) ?",
+     "SSJ4",
+     "SSJ3",
+     "Mystique",
+     "Blue",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la technique de fusion avec les boucles ?",
+     "La fusion Potara",
+     "La fusion Metamoran",
+     "Le Kaioken",
+     "Le Masenko",
+     0
+    ],
+    [
+     "EN",
+     "Comment s'appelle le demi-Saiyan de l'univers 6 ?",
+     "Cabba",
+     "Kale",
+     "Caulifla",
+     "Hit",
+     0
+    ],
+    [
+     "SA",
+     "Quelle est la première saga de Dragon Ball Super ?",
+     "La saga de Beerus",
+     "La saga de Zamasu",
+     "La saga Champa",
+     "La saga Moro",
+     0
+    ],
+    [
+     "DR",
+     "Quelles boules utilisent les Nameks ?",
+     "Les boules de Namek",
+     "Les terrestres",
+     "Les noires",
+     "Les rouges",
+     0
+    ],
+    [
+     "PL",
+     "Où Goku apprend-il le Genki Dama ?",
+     "Sur la planète de Kaio",
+     "Namek",
+     "Dans la salle",
+     "Sur Terre",
+     0
+    ],
+    [
+     "EN",
+     "Comment s'appelle le dieu de la destruction de l'univers 6 ?",
+     "Champa",
+     "Beerus",
+     "Quitela",
+     "Sidra",
+     0
+    ],
+    [
+     "SA",
+     "Quel tournoi oppose l'univers 6 et 7 ?",
+     "Le tournoi de Champa",
+     "Le Tournoi du Pouvoir",
+     "Le Tenkaichi",
+     "Le Cell Game",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle la fille de Bulma et Vegeta ?",
+     "Bulla",
+     "Pan",
+     "Bra",
+     "Videl",
+     0
+    ],
+    [
+     "TR",
+     "Quelle transformation donne des cheveux bleus ?",
+     "Le Super Saiyan Blue",
+     "Le SSJ3",
+     "L'Ultra Instinct",
+     "Le SSJ4",
+     0
+    ],
+    [
+     "EN",
+     "Qui est le plus grand ennemi dans le film Broly ?",
+     "Broly",
+     "Freezer",
+     "Cell",
+     "Bou",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle la planète natale de Beerus ?",
+     "Aucune (il vit dans son univers)",
+     "Namek",
+     "Terre",
+     "Vegeta",
+     0
+    ],
+    [
+     "SA",
+     "Quel arc suit le tournoi de Champa ?",
+     "La saga de Zamasu",
+     "La saga Moro",
+     "La saga Broly",
+     "La saga Granolah",
+     0
+    ],
+    [
+     "GU",
+     "Qui est le maître de Whis ?",
+     "Le grand prêtre",
+     "Beerus",
+     "Zeno",
+     "Kaioshin",
+     0
+    ],
+    [
+     "EN",
+     "Comment s'appelle le Zamasu fusionné ?",
+     "Merged Zamasu",
+     "Goku Black",
+     "Zamasu",
+     "Babidi",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la force de Jiren ?",
+     "Une puissance de l'univers 11",
+     "La magie",
+     "La transformation",
+     "Le Kaioken",
+     0
+    ],
+    [
+     "DR",
+     "Combien de vœux Porunga exauce-t-il ?",
+     "Trois",
+     "Un",
+     "Sept",
+     "Cinq",
+     0
+    ],
+    [
+     "SA",
+     "Quand est sorti le film Broly ?",
+     "2018",
+     "2015",
+     "2020",
+     "2013",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle la planète de Broly dans le film ?",
+     "Vampa",
+     "Namek",
+     "Terre",
+     "Vegeta",
+     0
+    ],
+    [
+     "GU",
+     "Qui est le frère de Beerus ?",
+     "Champa",
+     "Whis",
+     "Zeno",
+     "Vados",
+     0
+    ],
+    [
+     "EN",
+     "Qui est le dieu roi de tout l'univers ?",
+     "Zeno",
+     "Beerus",
+     "Whis",
+     "Le grand prêtre",
+     0
+    ],
+    [
+     "TR",
+     "Quelle technique Vegeta utilise-t-il contre Toppo ?",
+     "L'Ultra Final Flash",
+     "Le Big Bang",
+     "Le Galick",
+     "Le Genki",
+     0
+    ],
+    [
+     "SA",
+     "Quel arc suit la saga de Zamasu ?",
+     "La saga du Tournoi du Pouvoir",
+     "La saga Moro",
+     "La saga Broly",
+     "La saga Granolah",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le mari de Videl ?",
+     "Gohan",
+     "Goku",
+     "Vegeta",
+     "Goten",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle le monde où vivent les anges ?",
+     "Le monde de Zeno",
+     "Le royaume divin",
+     "Kaioshin",
+     "Namek",
+     0
+    ],
+    [
+     "EN",
+     "Comment s'appelle le plus grand ennemi de la saga Moro ?",
+     "Moro",
+     "Granolah",
+     "Gas",
+     "Elecc",
+     0
+    ],
+    [
+     "SA",
+     "Quel film suit Broly dans la chronologie ?",
+     "Super Hero",
+     "Battle of Gods",
+     "Resurrection F",
+     "Fusion",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la technique signature de Freezer doré ?",
+     "Le Death Beam",
+     "Le Kamehameha",
+     "Le Genki",
+     "Le Kaioken",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle l'ange qui sert Beerus ?",
+     "Whis",
+     "Vados",
+     "Marcarita",
+     "Cus",
+     0
+    ],
+    [
+     "EN",
+     "Qui a tué Gas dans la saga Granolah ?",
+     "Granolah et Goku",
+     "Vegeta seul",
+     "Beerus",
+     "Moro",
+     0
+    ],
+    [
+     "DR",
+     "Quelles boules sont utilisées dans GT pour les dragons noirs ?",
+     "Les boules de la Terre (fissurées)",
+     "Les Nameks",
+     "Les Super",
+     "Les noires",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le premier épisode de Dragon Ball Super ?",
+     "L'arrivée de Beerus",
+     "La suite de Z",
+     "Le tournoi",
+     "Moro",
+     0
+    ],
+    [
+     "GU",
+     "Qui forme Goten dans Super ?",
+     "Goku",
+     "Piccolo",
+     "Vegeta",
+     "Krilin",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la puissance de l'Ultra Instinct ?",
+     "Une maîtrise divine du combat",
+     "Une force brute",
+     "Une magie",
+     "Un Kaioken",
+     0
+    ],
+    [
+     "SA",
+     "Quand est sorti Super Hero ?",
+     "2022",
+     "2020",
+     "2018",
+     "2023",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle la planète de Granolah ?",
+     "Cereal",
+     "Namek",
+     "Terre",
+     "Vegeta",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le fils de Bulma dans le futur ?",
+     "Trunks",
+     "Goten",
+     "Gohan",
+     "Bra",
+     0
+    ],
+    [
+     "EN",
+     "Qui est le docteur qui crée les cyborgs dans Super (Red Ribbon) ?",
+     "Magenta (Gero défunt)",
+     "Bulma",
+     "Freezer",
+     "Babidi",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la technique de fusion des Metamorans ?",
+     "La fusion Metamoran (danse)",
+     "La fusion Potara",
+     "Le Kaioken",
+     "Le Masenko",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle le monde où vit Zeno ?",
+     "Le palais de Zeno",
+     "Le royaume divin",
+     "Kaioshin",
+     "Namek",
+     0
+    ],
+    [
+     "EN",
+     "Qui est le plus fort guerrier de l'univers 7 après Goku ?",
+     "Vegeta",
+     "Gohan",
+     "Piccolo",
+     "Broly",
+     0
+    ],
+    [
+     "GU",
+     "Qui est le maître de Beerus (ange) ?",
+     "Whis (son ange)",
+     "Le grand prêtre",
+     "Zeno",
+     "Vados",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le premier film de Super ?",
+     "Battle of Gods",
+     "Broly",
+     "Resurrection F",
+     "Super Hero",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la technique que Goku apprend de Whis ?",
+     "L'Ultra Instinct",
+     "Le Kaioken",
+     "Le Genki",
+     "Le Masenko",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle la planète des Saiyans de l'univers 6 ?",
+     "Sadala",
+     "Namek",
+     "Vegeta",
+     "Terre",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le fils de Gohan et Videl ?",
+     "Pan (fille)",
+     "Goku Jr.",
+     "Goten",
+     "Aucun fils",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la technique de Beerus (destruction) ?",
+     "La Hakai",
+     "Le Kamehameha",
+     "Le Genki",
+     "Le Kaioken",
+     0
+    ],
+    [
+     "EN",
+     "Qui est l'ennemi de Vegeta dans la saga Moro ?",
+     "Moro",
+     "Gas",
+     "Granolah",
+     "Elecc",
+     0
+    ],
+    [
+     "SA",
+     "Quelle saga suit Super Hero ?",
+     "La saga continue (manga)",
+     "Moro",
+     "Granolah",
+     "Broly",
+     0
+    ],
+    [
+     "PL",
+     "Où se trouve le palais du grand prêtre ?",
+     "Le monde de Zeno",
+     "Kaioshin",
+     "Namek",
+     "Terre",
+     0
+    ],
+    [
+     "DR",
+     "Combien de boules ont les Nameks ?",
+     "7",
+     "5",
+     "3",
+     "9",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le rival de Beerus (dieu) ?",
+     "Champa",
+     "Whis",
+     "Zeno",
+     "Vados",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la technique que Gohan utilise dans Super Hero ?",
+     "Le Masenko (et Beast)",
+     "Le Kamehameha",
+     "Le Genki",
+     "Le Kaioken",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le prochain film annoncé après Super Hero ?",
+     "Inconnu (aucun annoncé)",
+     "Broly 2",
+     "Moro",
+     "Daima",
+     0
+    ],
+    [
+     "EN",
+     "Qui est le plus grand ennemi de l'univers 11 ?",
+     "Jiren",
+     "Toppo",
+     "Dyspo",
+     "K'nsi",
+     0
     ]
    ]
   },
@@ -1102,6 +2074,654 @@ window.THEME_PACKS.dragonball = {
      "Namek",
      "Vegeta",
      "Terre",
+     0
+    ],
+    [
+     "SA",
+     "Quand Dragon Ball Super a-t-il commencé ?",
+     "2015",
+     "2010",
+     "2018",
+     "2013",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle la série qui suit Z avant Super ?",
+     "Dragon Ball GT",
+     "Dragon Ball Kai",
+     "Daima",
+     "Rien",
+     0
+    ],
+    [
+     "SA",
+     "Quelle série a été refaite en HD ?",
+     "Dragon Ball Kai",
+     "Super",
+     "GT",
+     "Z",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la technique signature de Krilin ?",
+     "Le Kienzan",
+     "Le Kamehameha",
+     "Le Genki",
+     "Le Kaioken",
+     0
+    ],
+    [
+     "SA",
+     "Combien de films DBZ classiques existent ?",
+     "15",
+     "5",
+     "3",
+     "20",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle la planète où vivent les Saiyans de l'univers 6 ?",
+     "Sadala",
+     "Namek",
+     "Vegeta",
+     "Terre",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle la nouvelle série de 2024 ?",
+     "Dragon Ball Daima",
+     "Super 2",
+     "GT2",
+     "Kai 2",
+     0
+    ],
+    [
+     "SA",
+     "Quand Toriyama a-t-il terminé le manga DBZ ?",
+     "1995",
+     "1990",
+     "2000",
+     "1989",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la force de Beerus (chiffre) ?",
+     "Inconnue (mais > Super Saiyan)",
+     "1 million",
+     "100",
+     "1000",
+     0
+    ],
+    [
+     "GU",
+     "Qui a dessiné le manga après Toriyama (Super) ?",
+     "Toyotarou",
+     "Oda",
+     "Kishimoto",
+     "Toriyama seul",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le meilleur jeu DBZ selon la critique ?",
+     "FighterZ",
+     "Xenoverse 2",
+     "Kakarot",
+     "Budokai 3",
+     0
+    ],
+    [
+     "SA",
+     "Combien d'épisodes compte Dragon Ball Super ?",
+     "131",
+     "100",
+     "150",
+     "50",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle le monde de Beerus ?",
+     "Sa planète natale (inconnue)",
+     "Kaioshin",
+     "Terre",
+     "Namek",
+     0
+    ],
+    [
+     "GU",
+     "Qui est le rival de Goku depuis le début ?",
+     "Krilin… puis Vegeta",
+     "Gohan",
+     "Piccolo",
+     "Krilin",
+     0
+    ],
+    [
+     "SA",
+     "Quand Toriyama est-il décédé ?",
+     "Mars 2024",
+     "2020",
+     "2018",
+     "2022",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la force spéciale de Whis ?",
+     "Le temps (Ultra Instinct)",
+     "La destruction",
+     "La création",
+     "La guérison",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le jeu DBZ le plus vendu ?",
+     "Xenoverse 2",
+     "FighterZ",
+     "Kakarot",
+     "Budokai",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle le palais où vit Dendé ?",
+     "Le palais du Tout-Puissant",
+     "La tour Karine",
+     "Kame House",
+     "Le temple",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle la femme de Vegeta dans Super ?",
+     "Bulma",
+     "Chichi",
+     "Android 18",
+     "Videl",
+     0
+    ],
+    [
+     "SA",
+     "Combien de temps a duré la saga Granolah ?",
+     "Environ 20 chapitres",
+     "5",
+     "50",
+     "100",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la limite du SSJ3 ?",
+     "Elle épuise le corps",
+     "Aucune",
+     "Elle est permanente",
+     "Elle est magique",
+     0
+    ],
+    [
+     "SA",
+     "Quel manga a inspiré Toriyama pour Dragon Ball ?",
+     "Le Voyage en Occident",
+     "Naruto",
+     "One Piece",
+     "Astroboy",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle l'éditeur français de Dragon Ball ?",
+     "Glénat",
+     "Kana",
+     "Tonkam",
+     "Soleil",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le premier chapitre de Dragon Ball ?",
+     "Bulma et Sangoku",
+     "Le tournoi",
+     "Raditz",
+     "Le mariage",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle le Kaio du Sud (dieu) ?",
+     "Le Kaioshin du Sud",
+     "Kaio",
+     "Dendé",
+     "Karin",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la forme maximale de Freezer dans Super ?",
+     "Black Freezer",
+     "Golden Freezer",
+     "Final Form",
+     "Mecha Freezer",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le grand prêtre (ange supérieur) ?",
+     "Le grand prêtre",
+     "Whis",
+     "Zeno",
+     "Beerus",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le volume total du manga (volumes) ?",
+     "42 (DB+DBZ)",
+     "20",
+     "60",
+     "100",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle le monde où Goku rencontre Yemma ?",
+     "Le royaume des morts",
+     "L'enfer",
+     "Le paradis",
+     "Kaioshin",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la technique que Vegeta développe dans la saga Moro ?",
+     "La Force Spirituelle",
+     "Le Big Bang",
+     "Le Galick",
+     "Le Kaioken",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le nom du tournoi le plus important dans Super ?",
+     "Le Tournoi du Pouvoir",
+     "Le Tenkaichi",
+     "Le Champa",
+     "Le Cell Game",
+     0
+    ],
+    [
+     "GU",
+     "Qui est le dieu créateur des Saiyans (mythologie) ?",
+     "Zalama",
+     "Kaioshin",
+     "Beerus",
+     "Le grand prêtre",
+     0
+    ],
+    [
+     "SA",
+     "Combien de saisons compte DBZ en France ?",
+     "9 (découpage français)",
+     "5",
+     "3",
+     "12",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle le monde des anges (palais) ?",
+     "Le palais de Zeno",
+     "Le royaume divin",
+     "Kaioshin",
+     "Namek",
+     0
+    ],
+    [
+     "SA",
+     "Quel film montre l'endroit où Goku rencontre son père (vision) ?",
+     "Bardock (spécial TV)",
+     "Broly",
+     "Battle of Gods",
+     "Super Hero",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle la mère de Goku ?",
+     "Gine",
+     "Chichi",
+     "Bulma",
+     "Videl",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le tout dernier arc du manga Super (2024) ?",
+     "La saga Super Hero (manga)",
+     "Moro",
+     "Granolah",
+     "Broly",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la force de l'Ultra Ego (Vegeta) ?",
+     "Une puissance de destruction",
+     "Une guérison",
+     "Une création",
+     "Le temps",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le magazine qui publiait DBZ au Japon ?",
+     "Weekly Shonen Jump",
+     "Young Jump",
+     "Sunday",
+     "Magazine Z",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le fils de Goku enGT (arrière-petit-fils) ?",
+     "Goku Jr.",
+     "Pan",
+     "Goten",
+     "Gohan",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la transformation exclusive de Vegeta dans Super ?",
+     "L'Ultra Ego",
+     "Le SSJ4",
+     "Le Blue 2",
+     "Le Kaioken",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le meilleur jeu DBZ sur le plan compétitif ?",
+     "FighterZ",
+     "Xenoverse",
+     "Kakarot",
+     "Sparking",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle la planète de Moro ?",
+     "Aucune (il voyage)",
+     "Namek",
+     "Terre",
+     "Vegeta",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le père de Bulma ?",
+     "Docteur Briefs",
+     "Mr. Satan",
+     "Ox-King",
+     "Krilin",
+     0
+    ],
+    [
+     "SA",
+     "Combien de mangas Toriyama a-t-il créés en tout ?",
+     "Plusieurs (Dr. Slump, DB, Cowa…)",
+     "1",
+     "2",
+     "5",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la puissance de l'Ultra Ego ?",
+     "Elle augmente avec les dégâts",
+     "Elle diminue",
+     "Elle est fixe",
+     "Elle est magique",
+     0
+    ],
+    [
+     "SA",
+     "Quand est sortie la série Daima ?",
+     "2024",
+     "2023",
+     "2022",
+     "2025",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle le monde où vivent les morts vertueux ?",
+     "Le paradis",
+     "L'enfer",
+     "Le royaume",
+     "Namek",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le roi des démons (Dabura) ?",
+     "Dabura",
+     "Babidi",
+     "Bibidi",
+     "Buu",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le dernier film sorti en France (2022) ?",
+     "Super Hero",
+     "Broly",
+     "Battle of Gods",
+     "Resurrection F",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la technique ultime de Gohan dans Super Hero ?",
+     "Le Beast (Gohan Beast)",
+     "Le Masenko",
+     "Le Kamehameha",
+     "Le Genki",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle la planète où vivent les Métamors ?",
+     "Une planète inconnue",
+     "Namek",
+     "Terre",
+     "Vegeta",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle la mère de Vegeta ?",
+     "Inconnue (jamais nommée)",
+     "Bulma",
+     "Chichi",
+     "Bulla",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le studio qui anime Daima ?",
+     "Toei Animation",
+     "Madhouse",
+     "Ufotable",
+     "MAPPA",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la force du SSJ God ?",
+     "Une puissance divine",
+     "Une magie",
+     "Une force brute",
+     "Un Kaioken",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle le monde où Beerus dort ?",
+     "Sa planète (nom inconnu)",
+     "Namek",
+     "Terre",
+     "Kaioshin",
+     0
+    ],
+    [
+     "GU",
+     "Qui est le grand-père de Goku (père de Bardock) ?",
+     "Inconnu (jamais nommé)",
+     "Bardock",
+     "King Vegeta",
+     "Gohan",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le meilleur arc de Super selon les fans ?",
+     "La saga du Tournoi du Pouvoir",
+     "Moro",
+     "Granolah",
+     "Broly",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la technique que Piccolo apprend dans Super Hero ?",
+     "L'Orange Piccolo",
+     "Le Makankosappo",
+     "Le Masenko",
+     "Le Kienzan",
+     0
+    ],
+    [
+     "SA",
+     "Combien d'années a duré la publication du manga DB ?",
+     "11 ans (1984-1995)",
+     "5",
+     "20",
+     "3",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le grand-père de Gohan et Goten ?",
+     "Goku (père de Gohan)",
+     "Krilin",
+     "Piccolo",
+     "Vegeta",
+     0
+    ],
+    [
+     "PL",
+     "Comment s'appelle le monde où Dendé remplace le Tout-Puissant ?",
+     "La Terre",
+     "Namek",
+     "Kaioshin",
+     "Vegeta",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la puissance de l'Ultra Instinct Signe ?",
+     "Une étape intermédiaire",
+     "La forme complète",
+     "Une magie",
+     "Un Kaioken",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le chef-d'œuvre de Toriyama selon les fans ?",
+     "Dragon Ball",
+     "Dr. Slump",
+     "Cowa",
+     "Kajika",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle le frère de Gohan ?",
+     "Goten",
+     "Trunks",
+     "Goku",
+     "Vegeta",
+     0
+    ],
+    [
+     "PL",
+     "Où se trouve la salle de l'Esprit et du Temps ?",
+     "Au palais du Tout-Puissant",
+     "Kame House",
+     "La tour Karine",
+     "Namek",
+     0
+    ],
+    [
+     "SA",
+     "Quel est le jeu DBZ le plus récent (2024) ?",
+     "Sparking! ZERO",
+     "Kakarot 2",
+     "FighterZ 2",
+     "Xenoverse 3",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la limite du SSJ Blue ?",
+     "Elle consomme de l'énergie",
+     "Aucune",
+     "Elle est magique",
+     "Elle est illimitée",
+     0
+    ],
+    [
+     "GU",
+     "Comment s'appelle la femme de Mr. Satan ?",
+     "Inconnue (jamais nommée)",
+     "Videl",
+     "Chichi",
+     "Android 18",
+     0
+    ],
+    [
+     "SA",
+     "Quel arc du manga Super est le plus long ?",
+     "La saga du Tournoi du Pouvoir",
+     "Moro",
+     "Granolah",
+     "Broly",
+     0
+    ],
+    [
+     "SA",
+     "Quel manga Toriyama a-t-il créé avant Dragon Ball ?",
+     "Dr. Slump",
+     "Cowa",
+     "Kajika",
+     "Neko Majin",
+     0
+    ],
+    [
+     "TR",
+     "Quelle est la technique que Vegeta utilise pour se téléporter (Super) ?",
+     "La téléportation (apprise de Goku)",
+     "Le Kaioken",
+     "Le Genki",
+     "Le vol",
      0
     ]
    ]
