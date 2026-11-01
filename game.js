@@ -197,6 +197,7 @@ function tryResume() {
   if (gameOver) { clearSave(); return false; }
   hide($("#setup-screen"));
   show($("#game-screen"));
+  show($("#btn-newgame-header"));
   buildBoard();
   updateTurnUI();
   renderSetup();
@@ -296,29 +297,34 @@ function renderBoard() {
   let out = defs;
   out += `<circle cx="350" cy="352" r="350" fill="url(#rg-board)" stroke="#c9b98a" stroke-width="3" filter="url(#f-soft)"/>`;
 
-  /* Légende intégrée : chaque secteur (triangle entre deux rayons) est rempli
-     de la couleur de sa catégorie, avec le nom en grand dans le sens de lecture.
-     Suit la recharge active via catInfo(). */
+  /* Légende intégrée : chaque secteur (l'espace vide entre deux rayons, du moyeu
+     jusqu'à l'anneau extérieur) est un grand triangle coloré de sa catégorie,
+     avec l'icône et le nom occupant l'espace. Suit la recharge via catInfo(). */
   for (let sector = 0; sector < 6; sector++) {
     const slot = CAT_KEYS[sector];
     const info = catInfo(slot);
-    const ang = sector * 60;                // le rayon du secteur est à sector*60
-    // triangle : sommet au centre du plateau, base sur le cercle intérieur des rayons
-    const a1 = ang - 30, a2 = ang + 30;     // limites angulaires du secteur
-    const [x1, y1] = polar(HUB_R + 12, a1);
-    const [x2, y2] = polar(HUB_R + 12, a2);
-    const [bx, by] = polar(SPOKE_R[0] - 8, a1);
-    const [cx, cy] = polar(SPOKE_R[0] - 8, a2);
+    const ang = sector * 60;               // le rayon central du secteur
+    const a1 = ang - 30, a2 = ang + 30;    // limites angulaires (entre les rayons voisins)
+    // Triangle : sommet au bord du moyeu, base élargie sur l'anneau extérieur
+    const [t1x, t1y] = polar(HUB_R + 6, a1);
+    const [t2x, t2y] = polar(HUB_R + 6, a2);
+    const [b1x, b1y] = polar(RING_R - 4, a1);
+    const [b2x, b2y] = polar(RING_R - 4, a2);
     out += `<polygon class="sector-fill"
-      points="350,350 ${x1},${y1} ${bx},${by} ${cx},${cy} ${x2},${y2}"
-      fill="${info.color}" opacity="0.85"/>`;
-    // Nom de la catégorie : texte incliné perpendiculairement au rayon,
-    // toujours dans le sens de la lecture (jamais à l'envers).
-    const [lx, ly] = polar((HUB_R + SPOKE_R[0]) / 2 + 4, ang);
-    let rotate = -(ang);              // texte perpendiculaire au rayon
-    if (ang > 90 && ang < 270) rotate += 180;  // moitié basse : retourner pour rester lisible
+      points="${t1x},${t1y} ${t2x},${t2y} ${b2x},${b2y} ${b1x},${b1y}"
+      fill="${info.color}" opacity="0.92"/>`;
+    /* Icône + nom sur deux lignes, le long du rayon central du secteur,
+       dans le sens de la lecture. Le rayon central du secteur pointe vers
+       « ang » ; on écrit le long de cet axe, jamais à l'envers. */
+    const midR = (HUB_R + RING_R) / 2 + 10;
+    const [lx, ly] = polar(midR, ang);
+    // angle de lecture : le texte suit l'axe du rayon ; on le retourne
+    // s'il pointe vers la gauche pour qu'il reste lisible.
+    let rotate = ang - 90;
+    if (ang > 180) rotate += 180;
     out += `<g class="sector-label" transform="translate(${lx} ${ly}) rotate(${rotate})">
-      <text x="0" y="0" text-anchor="middle" class="sector-cat">${info.name}</text>
+      <text x="0" y="-12" text-anchor="middle" class="sector-icon">${info.icon}</text>
+      <text x="0" y="16" text-anchor="middle" class="sector-cat">${info.name}</text>
     </g>`;
   }
   out += `<circle cx="350" cy="352" r="${HUB_R + 14}" fill="#f2e9cf" stroke="#c9b98a" stroke-width="2" opacity="0.8"/>`;
