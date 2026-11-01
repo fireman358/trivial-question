@@ -350,11 +350,17 @@ function renderBoard() {
     }
     const longest = Math.max(...lines.map(l => l.length));
     const fontPx = Math.max(9, Math.min(20, Math.floor(availW / (longest * 0.78))));
+    /* Centrage : le bloc (icône + lignes) est réparti symétriquement
+       autour du point central du triangle. */
+    const iconH = Math.round(fontPx * 1.4);
+    const lineH = fontPx + 2;
+    const blockH = iconH + 4 + lines.length * lineH;
+    const top = -Math.floor(blockH / 2);           // sommet du bloc
     let rotate = ang - 90;
     if (ang > 180) rotate += 180;
     out += `<g class="sector-label" transform="translate(${lx} ${ly}) rotate(${rotate})">
-      <text x="0" y="-8" text-anchor="middle" class="sector-icon" font-size="${Math.round(fontPx * 1.4)}">${info.icon}</text>
-      ${lines.map((l, i) => `<text x="0" y="${10 + i * (fontPx + 2)}" text-anchor="middle" class="sector-cat" font-size="${fontPx}">${l}</text>`).join("")}
+      <text x="0" y="${top + iconH}" text-anchor="middle" class="sector-icon" font-size="${iconH}">${info.icon}</text>
+      ${lines.map((l, i) => `<text x="0" y="${top + iconH + 6 + (i + 1) * lineH}" text-anchor="middle" class="sector-cat" font-size="${fontPx}">${l}</text>`).join("")}
     </g>`;
   }
   out += `<circle cx="350" cy="352" r="${HUB_R + 14}" fill="#f2e9cf" stroke="#c9b98a" stroke-width="2" opacity="0.8"/>`;

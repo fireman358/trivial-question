@@ -137,16 +137,14 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 .theme-option input { accent-color: var(--accent); }
 
 /* Game layout */
+/* Trois colonnes : tour+joueurs à GAUCHE du plateau, plateau au centre, stats à DROITE */
 #game-screen { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
-#board-wrap { flex: 2 1 380px; min-width: 320px; order: 0; }
-#sidebar { flex: 1 1 300px; min-width: 280px; max-width: 380px; order: 1; }
-/* sidebar en deux colonnes : tour/joueurs à gauche, stats à droite */
-#sidebar { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
-#sidebar > .panel:nth-child(-n+2) { grid-column: 1; }
-#sidebar > #stats-panel { grid-column: 2; }
-@media (max-width: 1200px) {
-  #sidebar { grid-template-columns: 1fr; }
-  #sidebar > #stats-panel { grid-column: 1; }
+#sidebar { flex: 0 0 270px; min-width: 250px; max-width: 300px; order: 0; }
+#board-wrap { flex: 2 1 340px; min-width: 320px; order: 1; }
+#right-col { flex: 0 0 290px; min-width: 260px; max-width: 330px; order: 2; }
+/* empilement sous 1100px : plateau d'abord, puis les panneaux */
+@media (max-width: 1100px) {
+  #sidebar, #board-wrap, #right-col { flex: 1 1 100%; order: 0; }
 }
 
 #board {
