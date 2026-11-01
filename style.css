@@ -278,3 +278,50 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 @media (max-width: 800px) {
   #answers { grid-template-columns: 1fr; }
 }
+
+/* ===== Bandeau question (slide depuis le bas) ===== */
+#question-banner {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  background: rgba(28, 28, 28, 0.96);
+  border-top: 2px solid var(--accent);
+  padding: 14px 24px 10px;
+  transform: translateY(110%);
+  transition: transform 0.45s cubic-bezier(.2,.9,.3,1);
+  z-index: 500;
+  display: flex; align-items: center; gap: 18px;
+  box-shadow: 0 -6px 24px rgba(0,0,0,.5);
+}
+#question-banner.open { transform: translateY(0); }
+#banner-cat { font-size: 1.5rem; font-weight: 800; flex: 1; }
+#question-timerwrap {
+  position: relative; width: 220px; height: 30px;
+  background: #23272b; border-radius: 999px; overflow: hidden;
+  border: 1px solid var(--border);
+}
+#question-timerbar { position: absolute; inset: 0; width: 100%; background: linear-gradient(90deg, #2a9d8f, #38bdf8); }
+#question-timertext {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: .95rem; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.7);
+}
+
+/* ===== Statistiques ===== */
+.stats-player { margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px dashed var(--border); }
+.stats-player:last-child { border-bottom: none; margin-bottom: 0; }
+.stats-head { display: flex; align-items: center; gap: 6px; }
+.stats-pct { margin-left: auto; font-weight: 800; color: var(--accent); font-size: 1.05rem; }
+.stats-line { font-size: .85rem; margin: 4px 0; }
+.stats-cats { display: flex; flex-direction: column; gap: 2px; }
+.stats-cat { font-size: .8rem; display: inline-flex; align-items: center; gap: 6px; }
+.stats-cat .dot { width: 10px; height: 10px; }
+.muted { opacity: .55; font-size: .78rem; }
+
+/* ===== Visibilité renforcée des cases de destination ===== */
+.cell.reachable { animation: reach-pulse 0.9s infinite alternate; transform-box: fill-box; transform-origin: center; cursor: pointer; }
+.cell.reachable circle, .cell.reachable polygon {
+  stroke: #ffffff !important; stroke-width: 3.5 !important;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,.85));
+}
+@keyframes reach-pulse {
+  from { opacity: 0.65; transform: scale(1); }
+  to   { opacity: 1;    transform: scale(1.12); }
+}

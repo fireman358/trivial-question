@@ -53,6 +53,10 @@ let drawBags = {};
 // Une seule recharge à la fois : les cartes bonus ne se mélangent pas.
 let activeTheme = null;
 
+/* Timer de réponse + persistance */
+let questionTimer = null;
+let timeLeft = 0;
+
 /* Tranche d'âge pour les recharges (plus larges que le jeu de base) */
 function themeGroupFor(age) {
   if (age <= 12) return "4-12";
@@ -152,13 +156,52 @@ $("#btn-add-player").onclick = () => {
     pawn: pendingPawn,
     color: CATEGORIES[pendingPawn].color,
     pos: null,
-    wedges: {}
+    wedges: {},
+    stats: { correct: 0, wrong: 0, timeout: 0, byCat: {} }
   });
   pendingPawn = null;
   $("#new-player-name").value = "";
   $("#new-player-age").value = "";
   refreshSetup();
 };
+
+/* ---------- Persistance localStorage ---------- */
+function saveGame() {
+  try {
+    if (!GAME_CONFIG.storageKey) return;
+    localStorage.setItem(GAME_CONFIG.storageKey, JSON.stringify({
+      players, current, activeTheme, gameOver, drawBags, v: 1
+    }));
+  } catch (e) { /* localStorage indisponible */ }
+}
+function loadGame() {
+  try {
+    const raw = localStorage.getItem(GAME_CONFIG.storageKey);
+    if (!raw) return false;
+    const snap = JSON.parse(raw);
+    if (!snap.players || snap.players.length < 2) return false;
+    players = snap.players;
+    current = snap.current || 0;
+    activeTheme = snap.activeTheme || null;
+    gameOver = !!snap.gameOver;
+    drawBags = snap.drawBags || {};
+    return true;
+  } catch (e) { return false; }
+}
+function clearSave() {
+  try { localStorage.removeItem(GAME_CONFIG.storageKey); } catch (e) {}
+}
+/* Une partie en cours survit au rafraîchissement de la page */
+function tryResume() {
+  if (!loadGame()) return false;
+  if (gameOver) { clearSave(); return false; }
+  hide($("#setup-screen"));
+  show($("#game-screen"));
+  buildBoard();
+  updateTurnUI();
+  renderSetup();
+  return true;
+}
 
 $("#btn-start").onclick = startGame;
 
@@ -452,6 +495,7 @@ function startGame() {
   hide($("#win-screen"));
   show($("#game-screen"));
   updateTurnUI();
+  saveGame();
 }
 
 function updateTurnUI() {
@@ -469,6 +513,34 @@ function updateTurnUI() {
        <span class="group-tag">${window.QUESTION_PACKS[pl.group].label}</span>
        <span>${Object.keys(pl.wedges).length}/6</span>
      </div>`).join("");
+  renderStats();
+}
+
+/* Statistiques par joueur : global + détail par catégorie */
+function renderStats() {
+  const el = $("#stats-display");
+  if (!el || !GAME_CONFIG.statsEnabled) return;
+  let html = "";
+  players.forEach(p => {
+    const st = p.stats || { correct: 0, wrong: 0, timeout: 0, byCat: {} };
+    const total = st.correct + st.wrong + st.timeout;
+    const pct = total ? Math.round(st.correct / total * 100) : 0;
+    html += `<div class="stats-player">
+      <div class="stats-head"><span class="pawn-mini-inline">${PAWNS[p.pawn].emoji}</span> <b>${p.name}</b>
+        <span class="stats-pct">${pct}%</span></div>
+      <div class="stats-line">✅ ${st.correct} · ❌ ${st.wrong} · ⏰ ${st.timeout} <span class="muted">(${total} q.)</span></div>
+      <div class="stats-cats">`;
+    CAT_KEYS.forEach(k => {
+      const c = st.byCat[k];
+      if (!c) return;
+      const info = catInfo(k);
+      const t = c.correct + c.wrong + c.timeout;
+      const cp = t ? Math.round(c.correct / t * 100) : 0;
+      html += `<span class="stats-cat"><span class="dot" style="background:${info.color}"></span>${info.icon} ${info.name} : ${cp}% (${c.correct}/${t})</span>`;
+    });
+    html += `</div></div>`;
+  });
+  el.innerHTML = html || "<p class='hint'>Les statistiques apparaîtront après les premières questions.</p>";
 }
 
 $("#btn-roll").onclick = () => {
@@ -504,8 +576,8 @@ function moveTo(cellId) {
   const walk = () => {
     p.pos = path[step];
     renderBoard();
-    if (step < path.length - 1) { step++; setTimeout(walk, 300); }
-    else { animating = false; setTimeout(() => arrive(cellId), 250); }
+    if (step < path.length - 1) { step++; setTimeout(walk, GAME_CONFIG.pawnStepMs); }
+    else { animating = false; saveGame(); setTimeout(() => arrive(cellId), 250); }
   };
   walk();
 }
@@ -542,12 +614,84 @@ function askQuestion(cell, player) {
     btn.onclick = () => answer(btn, i === correct, cell, player, correct, options);
     answers.appendChild(btn);
   });
+
+  /* Bandeau de question + timer */
+  showQuestionBanner(catName, cell.cat ? CATEGORIES[cell.cat].color : "#38bdf8");
+  startTimer(cell, player, correct, options);
+  saveGame();
+}
+
+/* Bandeau question : slide depuis le bas */
+function showQuestionBanner(catName, color) {
+  const banner = $("#question-banner");
+  $("#banner-cat").textContent = catName;
+  $("#banner-cat").style.color = color;
+  banner.classList.add("open");
+}
+function hideQuestionBanner() {
+  const banner = $("#question-banner");
+  if (banner) banner.classList.remove("open");
+}
+
+/* ---------- Timer de réponse ---------- */
+function stopTimer() {
+  if (questionTimer) { clearInterval(questionTimer); questionTimer = null; }
+  const wrap = $("#question-timerwrap");
+  if (wrap) hide(wrap);
+}
+function answerTimeFor(player) {
+  if (activeTheme && GAME_CONFIG.answerTimeByTheme) {
+    const t = GAME_CONFIG.answerTimeByTheme[themeGroupFor(player.age)];
+    if (t) return t;
+  }
+  return GAME_CONFIG.answerTimeByAge ? (GAME_CONFIG.answerTimeByAge[player.group] || null) : null;
+}
+function startTimer(cell, player, correct, options) {
+  const total = answerTimeFor(player);
+  if (!total) return;
+  timeLeft = total;
+  const wrap = $("#question-timerwrap");
+  const bar = $("#question-timerbar");
+  show(wrap);
+  bar.style.transition = "none";
+  bar.style.width = "100%";
+  requestAnimationFrame(() => {
+    bar.style.transition = "width " + total + "s linear";
+    bar.style.width = "0%";
+  });
+  $("#question-timertext").textContent = total + " s";
+  questionTimer = setInterval(() => {
+    timeLeft--;
+    if (timeLeft > 0) {
+      $("#question-timertext").textContent = timeLeft + " s";
+    } else {
+      stopTimer();
+      player.stats.timeout++;
+      recordCatStat(player, cell, "timeout");
+      document.querySelectorAll(".answer").forEach(b => b.disabled = true);
+      const correctBtn = [...document.querySelectorAll(".answer")].find(b => b.textContent === options[correct]);
+      if (correctBtn) correctBtn.classList.add("correct");
+      $("#answer-feedback").textContent = "\u23f0 Temps écoulé ! C'était : " + options[correct] + ".";
+      saveGame();
+      setTimeout(nextTurn, 2200);
+    }
+  }, 1000);
+}
+/* Statistiques par catégorie */
+function recordCatStat(player, cell, kind) {
+  const cat = cell.isWedge ? cell.wedgeCat : cell.cat;
+  if (!cat) return;
+  if (!player.stats.byCat[cat]) player.stats.byCat[cat] = { correct: 0, wrong: 0, timeout: 0 };
+  player.stats.byCat[cat][kind]++;
 }
 
 function answer(btn, isCorrect, cell, player, correct, options) {
+  stopTimer();
   document.querySelectorAll(".answer").forEach(b => b.disabled = true);
   const fb = $("#answer-feedback");
   if (isCorrect) {
+    player.stats.correct++;
+    recordCatStat(player, cell, "correct");
     btn.classList.add("correct");
     fb.textContent = "✅ Bonne réponse !";
     if (cell.isWedge && !player.wedges[cell.wedgeCat]) {
@@ -560,12 +704,17 @@ function answer(btn, isCorrect, cell, player, correct, options) {
       fb.textContent += " Il vous faut encore tous les camemberts pour gagner au centre !";
     }
     updateTurnUI();
+    saveGame();
+    hideQuestionBanner();
     setTimeout(() => { awaitingRoll = true; $("#btn-roll").disabled = false; hide($("#question-panel")); $("#dice-result").textContent = ""; }, 1600);
   } else {
+    player.stats.wrong++;
+    recordCatStat(player, cell, "wrong");
     btn.classList.add("wrong");
     const correctBtn = [...document.querySelectorAll(".answer")].find(b => b.textContent === options[correct]);
     if (correctBtn) correctBtn.classList.add("correct");
     fb.textContent = `❌ Mauvaise réponse. C'était : ${options[correct]}.`;
+    saveGame();
     setTimeout(() => { nextTurn(); }, 2000);
   }
 }
@@ -595,6 +744,8 @@ function animateWedge(cell, catKey) {
 }
 
 function nextTurn() {
+  stopTimer();
+  hideQuestionBanner();
   hide($("#question-panel"));
   $("#dice-result").textContent = "";
   current = (current + 1) % players.length;
@@ -605,6 +756,7 @@ function nextTurn() {
 
 function win(player) {
   gameOver = true;
+  clearSave();
   hide($("#game-screen"));
   show($("#win-screen"));
   $("#winner-name").textContent = `🏆 ${player.name} remporte la partie !`;
@@ -617,5 +769,6 @@ $("#btn-restart").onclick = () => {
   hide($("#win-screen"));
 };
 
-/* Init */
+/* Init : restituer la partie en cours au chargement */
 renderSetup();
+tryResume();
