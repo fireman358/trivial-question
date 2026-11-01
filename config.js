@@ -3,7 +3,7 @@
 
 const GAME_CONFIG = {
   /* ---- Joueurs ---- */
-  minPlayers: 2,
+  minPlayers: 1,   // 1 = mode solo autorisé
   maxPlayers: 6,
   minAge: 4,
   maxAge: 120,

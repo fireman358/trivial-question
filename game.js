@@ -111,7 +111,7 @@ function renderSetup() {
   });
 
   renderPawnPicker();
-  $("#btn-start").disabled = players.length < 2;
+  $("#btn-start").disabled = players.length < GAME_CONFIG.minPlayers;
 }
 
 /* Choix du pion : un pion par catégorie, indisponible s'il est déjà pris */
@@ -179,7 +179,7 @@ function loadGame() {
     const raw = localStorage.getItem(GAME_CONFIG.storageKey);
     if (!raw) return false;
     const snap = JSON.parse(raw);
-    if (!snap.players || snap.players.length < 2) return false;
+    if (!snap.players || snap.players.length < GAME_CONFIG.minPlayers) return false;
     players = snap.players;
     current = snap.current || 0;
     activeTheme = snap.activeTheme || null;
