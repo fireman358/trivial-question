@@ -1,8 +1,6 @@
 /* ===== Trivial Pursuit adapté à l'âge — moteur de jeu ===== */
 
-/* ---------- Catégories : couleurs officielles du Trivial Pursuit ----------
-   Bleu=Géographie, Rose=Divertissement, Jaune=Histoire,
-   Violet=Arts, Vert=Sciences, Orange=Sports & Loisirs            */
+/* ---------- Catégories : couleurs officielles du Trivial Pursuit ---------- */
 const CATEGORIES = {
   G: { name: "Géographie",        color: "#1f6fb2", icon: "🌍" },
   H: { name: "Histoire",          color: "#f2c500", icon: "🏛️" },
@@ -17,8 +15,7 @@ const ROLL_COLOR = "#8d99ae", ROLL_ICON = "↻";
 const THEME_COLOR = "#4b5563", THEME_ICON = "★";
 const HQ_ICON = "🧀";
 
-/* Ordre des catégories autour de l'anneau : mélangées, jamais deux
-   couleurs identiques côte à côte, comme sur le plateau officiel. */
+/* Ordre des couleurs alternées (comme le plateau officiel : jamais deux identiques côte à côte) */
 const RING_CATS = [
   "G","S","A","H","L","D",
   "A","D","G","L","S","H",
@@ -29,14 +26,25 @@ const RING_CATS = [
 ];
 
 /* ---------- Tranches d'âge ---------- */
-const AGE_GROUPS = ["6-8", "9-11", "12-15", "16-30", "31+"];
+const AGE_GROUPS = ["4-5", "6-8", "9-11", "12-15", "16-30", "31+"];
 function ageGroupFor(age) {
+  if (age <= 5) return "4-5";
   if (age <= 8) return "6-8";
   if (age <= 11) return "9-11";
   if (age <= 15) return "12-15";
   if (age <= 30) return "16-30";
   return "31+";
 }
+
+/* ---------- Pions (un par catégorie, comme les pions Monopoly) ---------- */
+const PAWNS = {
+  G: { name: "Le Voyageur",    emoji: "🚀" },
+  H: { name: "Le Sage",        emoji: "🦉" },
+  S: { name: "Le Savant",     emoji: "🧪" },
+  L: { name: "L'Athlète",     emoji: "🏆" },
+  A: { name: "L'Artiste",     emoji: "🎭" },
+  D: { name: "La Star",       emoji: "🎬" }
+};
 
 /* ---------- État ---------- */
 let players = [];
@@ -69,8 +77,13 @@ function renderSetup() {
     row.innerHTML = `<span class="dot" style="background:${p.color}"></span>
       <span>${p.name}</span>
       <span class="group-tag">${window.QUESTION_PACKS[p.group].label}</span>
+      <span class="pawn-tag">${PAWNS[p.pawn].emoji} ${PAWNS[p.pawn].name}</span>
       <button data-i="${i}" class="remove">✕</button>`;
-    row.querySelector(".remove").onclick = () => { players.splice(i, 1); refreshSetup(); };
+    row.querySelector(".remove").onclick = () => {
+      const freed = players[i].pawn;
+      players.splice(i, 1);
+      refreshSetup();
+    };
     list.appendChild(row);
   });
 
@@ -87,25 +100,56 @@ function renderSetup() {
     themes.appendChild(div);
   });
 
+  renderPawnPicker();
   $("#btn-start").disabled = players.length < 2;
 }
+
+/* Choix du pion : un pion par catégorie, indisponible s'il est déjà pris */
+function renderPawnPicker() {
+  const taken = players.map(p => p.pawn);
+  const wrap = $("#pawn-picker");
+  if (!wrap) return;
+  let html = "<div class='pawn-grid'>";
+  for (const k of CAT_KEYS) {
+    const isTaken = taken.includes(k);
+    html += `<div class="pawn-choice ${isTaken ? 'taken' : ''}" data-cat="${k}" title="${PAWNS[k].name}${isTaken ? ' (déjà pris)' : ''}">
+      <span class="pawn-mini pawn-2-5d" style="--pc:${CATEGORIES[k].color}">${PAWNS[k].emoji}</span>
+      <span class="pawn-choice-name">${PAWNS[k].name}</span>
+      ${isTaken ? '<span class="pawn-taken-label">pris</span>' : ''}
+    </div>`;
+  }
+  html += "</div>";
+  wrap.innerHTML = html;
+  wrap.querySelectorAll(".pawn-choice:not(.taken)").forEach(el => {
+    el.onclick = () => {
+      pendingPawn = el.dataset.cat;
+      wrap.querySelectorAll(".pawn-choice").forEach(c => c.classList.remove("selected"));
+      el.classList.add("selected");
+    };
+  });
+}
+let pendingPawn = null;
 
 function refreshSetup() { renderSetup(); }
 
 const PLAYER_COLORS = ["#e63946", "#2a9d8f", "#457b9d", "#ffb703", "#8338ec", "#ff7096"];
 $("#btn-add-player").onclick = () => {
   const name = $("#new-player-name").value.trim();
-  const age = parseInt($("#new-player-age"). value, 10);
+  const age = parseInt($("#new-player-age").value, 10);
   if (!name) return alert("Donnez un nom au joueur.");
   if (!age || age < 4 || age > 120) return alert("Donnez un âge valide (4 à 120).");
   if (players.length >= 6) return alert("Maximum 6 joueurs.");
+  if (!pendingPawn) return alert("Choisissez un pion (cliquez sur un pion libre).");
+  if (players.some(p => p.pawn === pendingPawn)) return alert("Ce pion est déjà pris.");
   players.push({
     name, age,
     group: ageGroupFor(age),
-    color: PLAYER_COLORS[players.length % PLAYER_COLORS.length],
+    pawn: pendingPawn,
+    color: CATEGORIES[pendingPawn].color,
     pos: null,
     wedges: {}
   });
+  pendingPawn = null;
   $("#new-player-name").value = "";
   $("#new-player-age").value = "";
   refreshSetup();
@@ -113,10 +157,14 @@ $("#btn-add-player").onclick = () => {
 
 $("#btn-start").onclick = startGame;
 
-/* ---------- Plateau (fidèle au jeu original) ---------- */
-const HUB_R = 68;
-const RING_R = 305, SPOKE_OUT_R = 248, HQ_R = 192, SPOKE_IN_R = 136;
-const CELL_R = 21;
+/* ---------- Plateau officiel : 73 cases ----------
+   - Moyeu central (1) : départ et question finale
+   - 6 rayons de 6 cases (36) : alternance des couleurs, jamais deux identiques adjacentes
+   - Piste circulaire extérieure (36) : les 6 QG (camemberts) sont EN BOUT DE RAYON,
+     c'est-à-dire sur le cercle extérieur, à l'intersection avec chaque rayon   */
+const HUB_R = 58;
+const RING_R = 322, SPOKE_R = [104, 141, 178, 215, 252, 289];
+const CELL_R = 17;
 
 function polar(r, angleDeg) {
   const a = (angleDeg - 90) * Math.PI / 180;
@@ -128,37 +176,56 @@ function buildBoard() {
   const add = (c) => { board.cells[c.id] = c; board.adj[c.id] = []; };
   const link = (a, b) => { board.adj[a].push(b); board.adj[b].push(a); };
 
+  // Moyeu (1 case) — départ de tous les joueurs
   add({ id: "hub", x: 350, y: 350, cat: null, isCenter: true, isWedge: false, isRollAgain: false, isTheme: false });
 
-  for (let s = 0; s < 6; s++) {
-    const cat = CATEGORY_ORDER[s];
-    const ang = s * 60 + 30;
-    const [ix, iy] = polar(SPOKE_IN_R, ang);
-    const [hx, hy] = polar(HQ_R, ang);
-    const [ox, oy] = polar(SPOKE_OUT_R, ang);
-    add({ id: "in-" + cat, x: ix, y: iy, cat, isWedge: false, isRollAgain: false, isTheme: false });
-    add({ id: "hq-" + cat, x: hx, y: hy, cat, isWedge: true, wedgeCat: cat, isRollAgain: false, isTheme: false });
-    add({ id: "out-" + cat, x: ox, y: oy, cat, isWedge: false, isRollAgain: false, isTheme: false });
-    link("hub", "in-" + cat);
-    link("in-" + cat, "hq-" + cat);
-    link("hq-" + cat, "out-" + cat);
-  }
-
+  // Piste circulaire extérieure (36 cases)
+  // Le QG de chaque catégorie est en bout de rayon : position i multiple de 6,
+  // et le QG porte la couleur qui SUIT dans l'ordre du rayon correspondant.
   for (let i = 0; i < 36; i++) {
     const ang = i * 10;
     const [x, y] = polar(RING_R, ang);
     const m = i % 6;
-    add({
-      id: "ring" + i, x, y,
-      cat: (m === 0 || m === 3) ? null : RING_CATS[i],
-      isWedge: false,
-      isRollAgain: m === 0,
-      isTheme: m === 3
-    });
+    if (m === 0) {
+      // QG (case camembert) en bout de rayon s = i/6, couleur de la 1re case du rayon
+      const s = i / 6;
+      const qgCat = CATEGORY_ORDER[s];
+      add({ id: "ring" + i, x, y, cat: qgCat, isWedge: true, wedgeCat: qgCat, isRollAgain: false, isTheme: false });
+    } else {
+      add({
+        id: "ring" + i, x, y,
+        cat: RING_CATS[i],
+        isWedge: false,
+        isRollAgain: false,
+        isTheme: m === 3
+      });
+    }
   }
+
+  // 6 rayons de 6 cases internes (36 cases), du centre vers l'extérieur.
+  // Le QG en bout de rayon est posé sur l'anneau (7e case visuelle du rayon).
+  // Couleurs alternées : le rayon ne contient jamais sa propre couleur
+  // (les 5 autres catégories, la 6e répétant la 1re — jamais deux identiques adjacentes).
+  for (let s = 0; s < 6; s++) {
+    const ang = s * 60 + 30;
+    const own = CATEGORY_ORDER[s];
+    const others = CAT_KEYS.filter(k => k !== own);
+    const cats = [...others, others[0]];
+    let prev = "hub";
+    for (let k = 0; k < 6; k++) {
+      const [x, y] = polar(SPOKE_R[k], ang);
+      const id = "sp" + s + "-" + k;
+      add({ id, x, y, cat: cats[k], isWedge: false, isRollAgain: false, isTheme: false });
+      link(prev, id);
+      prev = id;
+    }
+    // le bout du rayon interne rejoint le QG sur l'anneau
+    link(prev, "ring" + (s * 6));
+  }
+
+  // Liaisons de l'anneau
   for (let i = 0; i < 36; i++) {
     link("ring" + i, "ring" + ((i + 1) % 36));
-    if (i % 6 === 0) link("ring" + i, "out-" + CATEGORY_ORDER[i / 6]);
   }
 
   renderBoard();
@@ -205,8 +272,8 @@ function renderBoard() {
   defs += `<clipPath id="clip-hub"><circle cx="350" cy="350" r="${HUB_R - 4}"/></clipPath></defs>`;
 
   let out = defs;
-  out += `<circle cx="350" cy="352" r="336" fill="url(#rg-board)" stroke="#c9b98a" stroke-width="3" filter="url(#f-soft)"/>`;
-  out += `<circle cx="350" cy="352" r="${HUB_R + 16}" fill="#f2e9cf" stroke="#c9b98a" stroke-width="2" opacity="0.8"/>`;
+  out += `<circle cx="350" cy="352" r="350" fill="url(#rg-board)" stroke="#c9b98a" stroke-width="3" filter="url(#f-soft)"/>`;
+  out += `<circle cx="350" cy="352" r="${HUB_R + 14}" fill="#f2e9cf" stroke="#c9b98a" stroke-width="2" opacity="0.8"/>`;
 
   for (const id in board.cells) {
     const c = board.cells[id];
@@ -223,8 +290,8 @@ function renderBoard() {
     const grad = c.isRollAgain ? "rg-roll" : c.isTheme ? "rg-theme" : "rg-" + (c.isWedge ? c.wedgeCat : c.cat);
     if (c.isWedge) {
       out += `<g id="cell-${c.id}" class="cell wedge-cell">
-        <polygon points="${hexPoints(c.x, c.y + 2.5, 25)}" fill="#00000026"/>
-        <polygon points="${hexPoints(c.x, c.y, 25)}" fill="url(#${grad})" stroke="#2b2b2b" stroke-width="2.5" filter="url(#f-drop)"/>
+        <polygon points="${hexPoints(c.x, c.y + 2.5, 24)}" fill="#00000026"/>
+        <polygon points="${hexPoints(c.x, c.y, 24)}" fill="url(#${grad})" stroke="#2b2b2b" stroke-width="2.5" filter="url(#f-drop)"/>
         <text x="${c.x}" y="${c.y + 6}" text-anchor="middle" class="cell-icon">${HQ_ICON}</text>
       </g>`;
     } else {
@@ -236,16 +303,17 @@ function renderBoard() {
     }
   }
 
+  // pions 2.5D (sphère + ombre), l'emoji du pion flotte au-dessus
   players.forEach((p, i) => {
     const c = board.cells[p.pos];
     if (!c) return;
-    const px = c.x + ((i % 3) - 1) * 15, py = c.y + (Math.floor(i / 3) - 0.5) * 18;
+    const px = c.x + ((i % 3) - 1) * 14, py = c.y + (Math.floor(i / 3) - 0.5) * 16;
     const moving = animating && i === current;
-    out += `<g id="pawn-${i}" filter="url(#f-drop)" class="${moving ? "pawn-moving" : ""}">
+    out += `<g id="pawn-${i}" filter="url(#f-drop)" class="pawn-group ${moving ? "pawn-moving" : ""}">
       <ellipse cx="${px}" cy="${py + 13}" rx="10" ry="4" fill="#00000033"/>
       <circle cx="${px}" cy="${py}" r="11" fill="${p.color}" stroke="#1d1d1d" stroke-width="1.5"/>
       <circle cx="${px - 3.5}" cy="${py - 4}" r="3.2" fill="#ffffffcc"/>
-      <text x="${px}" y="${py + 4}" text-anchor="middle" class="pawn-label">${p.name[0]}</text>
+      <text x="${px}" y="${py - 14}" text-anchor="middle" class="pawn-emoji">${PAWNS[p.pawn].emoji}</text>
     </g>`;
   });
 
@@ -260,9 +328,8 @@ function renderLegend() {
     html += `<span class="legend-item"><span class="dot" style="background:${CATEGORIES[k].color}"></span>${CATEGORIES[k].icon} ${CATEGORIES[k].name}</span>`;
   }
   html += `</div><b>Cases spéciales</b><div class="legend-grid">
-    <span class="legend-item"><span class="dot" style="background:${ROLL_COLOR}"></span>↻ Rejouez : relancez le dé</span>
+    <span class="legend-item">🧀 QG (bout de chaque rayon, sur l'anneau) : camembert de la couleur en jeu</span>
     <span class="legend-item"><span class="dot" style="background:${THEME_COLOR}"></span>★ Thème : question Disney / Musique (si activé)</span>
-    <span class="legend-item">🧀 Siège de catégorie (milieu des rayons) : camembert en jeu</span>
   </div>`;
   el.innerHTML = html;
 }
@@ -314,7 +381,6 @@ function rollDice(cb) {
   const el = $("#dice-result");
   const faces = ["⚀","⚁","⚂","⚃","⚄","⚅"];
   let spins = 0;
-  el.innerHTML = `<span class="dice-rolling"></span>`;
   const interval = setInterval(() => {
     const d = 1 + Math.floor(Math.random() * 6);
     el.innerHTML = `<span class="dice-face dice-spin">${faces[d - 1]}</span>`;
@@ -355,7 +421,8 @@ function startGame() {
   usedQuestions = {};
   gameOver = false;
   current = 0;
-  players.forEach((p, i) => { p.pos = "ring" + (2 + i * 6); p.wedges = {}; });
+  // Départ : tous les joueurs sur le moyeu (case de départ officielle)
+  players.forEach(p => { p.pos = "hub"; p.wedges = {}; });
   buildBoard();
   hide($("#setup-screen"));
   hide($("#win-screen"));
@@ -365,7 +432,7 @@ function startGame() {
 
 function updateTurnUI() {
   const p = players[current];
-  $("#turn-title").textContent = `Au tour de ${p.name}`;
+  $("#turn-title").textContent = `${PAWNS[p.pawn].emoji} Au tour de ${p.name}`;
   const wd = $("#wedges-display");
   wd.innerHTML = `<div class="camembert">${CAT_KEYS.map(k =>
     `<span class="wedge ${p.wedges[k] ? 'got' : ''}" style="background:${p.wedges[k] ? CATEGORIES[k].color : '#dee2e6'}" title="${CATEGORIES[k].name}"></span>`).join("")}</div>
@@ -373,7 +440,8 @@ function updateTurnUI() {
   const ps = $("#players-summary");
   ps.innerHTML = players.map((pl, i) =>
     `<div class="player-row ${i === current ? 'active' : ''}">
-       <span class="dot" style="background:${pl.color}"></span><span>${pl.name}</span>
+       <span class="pawn-mini-inline">${PAWNS[pl.pawn].emoji}</span>
+       <span>${pl.name}</span>
        <span class="group-tag">${window.QUESTION_PACKS[pl.group].label}</span>
        <span>${Object.keys(pl.wedges).length}/6</span>
      </div>`).join("");
@@ -391,7 +459,6 @@ $("#btn-roll").onclick = () => {
       setTimeout(nextTurn, 1400);
       return;
     }
-    $("#dice-result").textContent = "";
     const el = $("#dice-result");
     el.innerHTML = `<span class="dice-face dice-final">${["⚀","⚁","⚂","⚃","⚄","⚅"][dice - 1]}</span> <span class="dice-info">Cliquez sur la case de destination.</span>`;
     targets.forEach(id => {
@@ -411,7 +478,7 @@ function moveTo(cellId) {
   const walk = () => {
     p.pos = path[step];
     renderBoard();
-    if (step < path.length - 1) { step++; setTimeout(walk, 260); }
+    if (step < path.length - 1) { step++; setTimeout(walk, 240); }
     else { animating = false; setTimeout(() => arrive(cellId), 250); }
   };
   walk();
@@ -443,8 +510,8 @@ function askQuestion(cell, player) {
   } else if (cell.isTheme) {
     const t = pickThemeQuestion(player);
     if (!t) {
-      // Aucun pack à thème activé : la case ★ sert une question de connaissance générale.
-      const cat = RING_CATS[parseInt(cell.id.slice(4), 10)] || CAT_KEYS[0];
+      const idx = parseInt(cell.id.slice(4), 10);
+      const cat = RING_CATS[idx] || CAT_KEYS[0];
       const q = pickQuestion(player, cat);
       catName = CATEGORIES[cat].icon + " " + CATEGORIES[cat].name;
       question = q[1]; options = q.slice(2, 6); correct = q[6];

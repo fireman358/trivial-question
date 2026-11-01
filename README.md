@@ -8,18 +8,22 @@ Le Trivial Pursuit classique a un défaut : ses questions sont calibrées pour d
 
 ### Règles (fidèles à l'original)
 
-- Plateau circulaire en **6 rayons de couleurs**, un par catégorie.
+- Plateau officiel de **73 cases** : moyeu central (départ), 6 rayons de 6 cases, piste circulaire de 36 cases.
+- Les **QG (cases camembert 🧀)** sont en bout de rayon, sur le cercle extérieur — un par couleur.
+- Couleurs alternées partout : jamais deux cases de même couleur adjacentes (anneau et rayons).
 - On lance le **dé**, on avance du nombre de cases, on répond à une **question de la catégorie de la case**.
-- Une **case camembert** (le losange au milieu de chaque rayon) permet de gagner un partenaire si la réponse est juste — **une seule tentative par catégorie**.
+- Un **QG** donne un camembert si la réponse est juste — **une seule tentative par catégorie**.
+- Chaque joueur choisit un **pion unique** (un par catégorie, comme au Monopoly).
 - **Bonne réponse = on rejoue** ; mauvaise réponse = au tour du joueur suivant.
 - Une fois les **6 camemberts** collectés, il faut revenir au **centre** et répondre à une question finale d'une catégorie tirée au sort : **victoire !**
 
 ### Tranches d'âge
 
-Chaque tranche a son propre cursus (~100+ questions, réparties dans les 6 catégories) :
+Chaque tranche a son propre cursus de questions, réparties dans les 6 catégories :
 
 | Tranche | Questions |
 |---|---|
+| 4–5 ans | 92 |
 | 6–8 ans | 109 |
 | 9–11 ans | 119 |
 | 12–15 ans | 128 |
