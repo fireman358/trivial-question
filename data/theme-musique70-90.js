@@ -337,6 +337,582 @@ window.THEME_PACKS.musique7090 = {
      "Tragedy",
      "How Deep",
      0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Fernando » ?",
+     "ABBA",
+     "Queen",
+     "Bee Gees",
+     "Boney M",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Purple Rain » ?",
+     "Prince",
+     "Michael Jackson",
+     "Stevie Wonder",
+     "Rick James",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Radio Ga Ga » ?",
+     "Queen",
+     "The Who",
+     "Pink Floyd",
+     "Beatles",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Imagine » ?",
+     "John Lennon",
+     "Paul McCartney",
+     "Elton John",
+     "David Bowie",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Every Breath You Take » ?",
+     "The Police",
+     "Dire Straits",
+     "Talking Heads",
+     "Simple Minds",
+     0
+    ],
+    [
+     "AR",
+     "Quelle chanteuse a chanté « I Wanna Dance with Somebody » ?",
+     "Whitney Houston",
+     "Madonna",
+     "Cyndi Lauper",
+     "Tina Turner",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Take On Me » ?",
+     "a-ha",
+     "Duran Duran",
+     "Tears for Fears",
+     "Depeche Mode",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Livin' on a Prayer » ?",
+     "Bon Jovi",
+     "Guns N' Roses",
+     "Def Leppard",
+     "Aerosmith",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Sweet Dreams » ?",
+     "Eurythmics",
+     "Depeche Mode",
+     "New Order",
+     "Tears for Fears",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Happy » ?",
+     "Pharrell Williams",
+     "Bruno Mars",
+     "Usher",
+     "Will.i.am",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de Queen parle d'une radio ?",
+     "Radio Ga Ga",
+     "Bohemian",
+     "We Will Rock",
+     "Somebody",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de Michael Jackson parle d'un thriller ?",
+     "Thriller",
+     "Billie Jean",
+     "Beat It",
+     "Bad",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Bee Gees parle d'une nuit de fièvre ?",
+     "Night Fever",
+     "Stayin' Alive",
+     "Tragedy",
+     "How Deep",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Police parle d'un message dans une bouteille ?",
+     "Message in a Bottle",
+     "Roxanne",
+     "Every Breath",
+     "Invisible Sun",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de Duran Duran parle d'un fauve ?",
+     "Hungry Like the Wolf",
+     "Rio",
+     "Girls on Film",
+     "The Reflex",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Dire Straits parle de l'argent pour rien ?",
+     "Money for Nothing",
+     "Sultans of Swing",
+     "Brothers in Arms",
+     "Walk of Life",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de Gloria Gaynor parle de survie ?",
+     "I Will Survive",
+     "Never Can Say",
+     "I Am What I Am",
+     "Reach Out",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Village People parle d'une association ?",
+     "Y.M.C.A.",
+     "In the Navy",
+     "Macho Man",
+     "Go West",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Kool and the Gang parle de célébration ?",
+     "Celebration",
+     "Jungle Boogie",
+     "Ladies Night",
+     "Get Down",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de Marvin Gaye parle de la guérison ?",
+     "Sexual Healing",
+     "Let's Get It On",
+     "What's Going On",
+     "Mercy",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Led Zeppelin parle d'un escalier ?",
+     "Stairway to Heaven",
+     "Kashmir",
+     "Whole Lotta Love",
+     "Black Dog",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Eagles parle d'un hôtel en Californie ?",
+     "Hotel California",
+     "Take It Easy",
+     "Desperado",
+     "Lyin' Eyes",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de Fleetwood Mac parle d'une chaîne ?",
+     "The Chain",
+     "Dreams",
+     "Go Your Own Way",
+     "Landslide",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Blondie parle d'un cœur de verre ?",
+     "Heart of Glass",
+     "Call Me",
+     "One Way or Another",
+     "Rapture",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de Tina Turner parle d'un meilleur ?",
+     "Simply the Best",
+     "Private Dancer",
+     "What's Love",
+     "We Don't Need",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Toto parle de l'Afrique ?",
+     "Africa",
+     "Rosanna",
+     "Hold the Line",
+     "I Won't Hold",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de Rick Astley parle d'un abandon ?",
+     "Never Gonna Give You Up",
+     "Together Forever",
+     "Take Me",
+     "Keep Singing",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des U2 parle d'un dimanche ensanglanté ?",
+     "Sunday Bloody Sunday",
+     "With or Without",
+     "One",
+     "Pride",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Journey parle de ne pas arrêter de croire ?",
+     "Don't Stop Believin'",
+     "Any Way You Want It",
+     "Faithfully",
+     "Separate Ways",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Survivor parle d'un œil de tigre ?",
+     "Eye of the Tiger",
+     "Burning Heart",
+     "The Search",
+     "Moment",
+     0
+    ],
+    [
+     "AL",
+     "Quel album de Michael Jackson s'appelle « Bad » ?",
+     "Bad",
+     "Thriller",
+     "Dangerous",
+     "Off the Wall",
+     0
+    ],
+    [
+     "AL",
+     "Quel album des Eagles s'appelle « Hotel California » ?",
+     "Hotel California",
+     "Desperado",
+     "On the Border",
+     "The Long Run",
+     0
+    ],
+    [
+     "AL",
+     "Quel album des Dire Straits s'appelle « Brothers in Arms » ?",
+     "Brothers in Arms",
+     "Love Over Gold",
+     "Making Movies",
+     "Alchemy",
+     0
+    ],
+    [
+     "AL",
+     "Quel album des Queen s'appelle « A Night at the Opera » ?",
+     "A Night at the Opera",
+     "A Day at the Races",
+     "News of the World",
+     "Jazz",
+     0
+    ],
+    [
+     "ST",
+     "Quel genre a dominé les années 80 avec des synthés ?",
+     "La new wave",
+     "Le punk",
+     "Le reggae",
+     "Le métal",
+     0
+    ],
+    [
+     "ST",
+     "Quel genre a dominé les années 70 avec la funk ?",
+     "Le funk",
+     "Le punk",
+     "Le métal",
+     "Le reggae",
+     0
+    ],
+    [
+     "AN",
+     "Quel chanteur portait toujours des lunettes de soleil ?",
+     "Roy Orbison",
+     "Elton John",
+     "Bono",
+     "Stevie Wonder",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Le Freak » ?",
+     "Chic",
+     "ABBA",
+     "Bee Gees",
+     "Village People",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur est surnommé « Slowhand » ?",
+     "Eric Clapton",
+     "Jimmy Page",
+     "Keith Richards",
+     "Jeff Beck",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Roxanne » ?",
+     "The Police",
+     "The Clash",
+     "Dire Straits",
+     "Talking Heads",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Superstition » ?",
+     "Stevie Wonder",
+     "Marvin Gaye",
+     "James Brown",
+     "Otis Redding",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Another Brick in the Wall » ?",
+     "Pink Floyd",
+     "Led Zeppelin",
+     "The Who",
+     "Genesis",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Girls Just Want to Have Fun » ?",
+     "Cyndi Lauper (seule)",
+     "Madonna",
+     "Pat Benatar",
+     "Sheena Easton",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Blue Eyes »… « I'm Still Standing » ?",
+     "Elton John",
+     "Billy Joel",
+     "Phil Collins",
+     "David Bowie",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Faith » ?",
+     "George Michael",
+     "Prince",
+     "Michael Jackson",
+     "Rick Astley",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « With or Without You » ?",
+     "U2",
+     "The Police",
+     "Simple Minds",
+     "Talking Heads",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Don't You (Forget About Me) » ?",
+     "Simple Minds",
+     "Duran Duran",
+     "The Cure",
+     "Depeche Mode",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Blue Monday » ?",
+     "New Order",
+     "Depeche Mode",
+     "The Cure",
+     "Eurythmics",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Enjoy the Silence » ?",
+     "Depeche Mode",
+     "New Order",
+     "The Cure",
+     "Eurythmics",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Love Will Tear Us Apart » ?",
+     "Joy Division",
+     "New Order",
+     "The Cure",
+     "Echo and the Bunnymen",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « September » ?",
+     "Earth, Wind and Fire",
+     "Chic",
+     "Kool and the Gang",
+     "Commodores",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Careless Whisper » ?",
+     "George Michael",
+     "Elton John",
+     "Phil Collins",
+     "Sting",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « I Love Rock 'n' Roll » ?",
+     "Joan Jett",
+     "Pat Benatar",
+     "Blondie",
+     "The Runaways",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Should I Stay or Should I Go » ?",
+     "The Clash",
+     "The Police",
+     "The Jam",
+     "The Cure",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Rebel Yell » ?",
+     "Billy Idol",
+     "David Bowie",
+     "Iggy Pop",
+     "Sting",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Sultans of Swing » ?",
+     "Dire Straits",
+     "The Police",
+     "Pink Floyd",
+     "Eric Clapton",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Nevermind » comme album ?",
+     "Nirvana",
+     "Pearl Jam",
+     "Soundgarden",
+     "Alice in Chains",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Ten » comme album ?",
+     "Pearl Jam",
+     "Nirvana",
+     "Soundgarden",
+     "Stone Temple",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Black Hole Sun » ?",
+     "Soundgarden",
+     "Nirvana",
+     "Pearl Jam",
+     "Alice in Chains",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Losing My Religion » ?",
+     "R.E.M.",
+     "U2",
+     "The Cure",
+     "The Police",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Common People » ?",
+     "Pulp",
+     "Blur",
+     "Oasis",
+     "Elastica",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Song 2 » ?",
+     "Blur",
+     "Oasis",
+     "Pulp",
+     "Elastica",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Bitter Sweet Symphony » ?",
+     "The Verve",
+     "Oasis",
+     "Blur",
+     "Radiohead",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Firestarter » ?",
+     "The Prodigy",
+     "Chemical Brothers",
+     "Fatboy Slim",
+     "Underworld",
+     0
     ]
    ]
   },
@@ -639,6 +1215,168 @@ window.THEME_PACKS.musique7090 = {
      "Oasis",
      "Pulp",
      0
+    ],
+    [
+     "AR",
+     "Quel album d'Alanis Morissette s'appelle « Jagged Little Pill » ?",
+     "Jagged Little Pill",
+     "Supposed Former Infatuation",
+     "Under Rug Swept",
+     "So-Called Chaos",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Pearl Jam s'appelle « Alive » ?",
+     "Alive",
+     "Even Flow",
+     "Black",
+     "Jeremy",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Pearl Jam s'appelle « Black » ?",
+     "Black",
+     "Alive",
+     "Jeremy",
+     "Even Flow",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Alice in Chains s'appelle « Man in the Box » ?",
+     "Man in the Box",
+     "Would",
+     "Rooster",
+     "Down in a Hole",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson d'Oasis s'appelle « Don't Look Back in Anger » ?",
+     "Don't Look Back in Anger",
+     "Wonderwall",
+     "Champagne Supernova",
+     "Live Forever",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Blur s'appelle « Parklife » ?",
+     "Parklife",
+     "Song 2",
+     "Girls and Boys",
+     "Beetlebum",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Radiohead s'appelle « Karma Police » ?",
+     "Karma Police",
+     "Creep",
+     "Paranoid Android",
+     "No Surprises",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Prodigy s'appelle « Breathe » ?",
+     "Breathe",
+     "Firestarter",
+     "Smack My Bitch",
+     "Poison",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Chemical Brothers s'appelle « Block Rockin' Beats » ?",
+     "Block Rockin' Beats",
+     "Setting Sun",
+     "Hey Boy Hey Girl",
+     "Galvanize",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Green Day s'appelle « When I Come Around » ?",
+     "When I Come Around",
+     "Basket Case",
+     "Good Riddance",
+     "Longview",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Offspring s'appelle « Pretty Fly » ?",
+     "Pretty Fly (For a White Guy)",
+     "Self Esteem",
+     "The Kids Aren't Alright",
+     "Gone Away",
+     0
+    ],
+    [
+     "ST",
+     "Quel genre a dominé les années 90 en Grande-Bretagne ?",
+     "La britpop",
+     "Le grunge",
+     "Le punk",
+     "Le métal",
+     0
+    ],
+    [
+     "ST",
+     "Quel genre a dominé les années 90 aux États-Unis ?",
+     "Le grunge / alternatif",
+     "La britpop",
+     "Le métal",
+     "Le reggae",
+     0
+    ],
+    [
+     "SC",
+     "Quel club de Londres a marqué les années 90 ?",
+     "Le Ministry of Sound",
+     "Fabric",
+     "Heaven",
+     "The End",
+     0
+    ],
+    [
+     "SC",
+     "Quel festival a marqué les années 90 aux États-Unis ?",
+     "Lollapalooza",
+     "Woodstock 99",
+     "Ozzfest",
+     "Tibetan Freedom",
+     0
+    ],
+    [
+     "AN",
+     "Quel groupe a chanté « Buena Vista Social Club » ?",
+     "Buena Vista Social Club (collectif)",
+     "Gipsy Kings",
+     "Manu Chao",
+     "Zuco 103",
+     0
+    ],
+    [
+     "AN",
+     "Quel groupe a chanté « Djobi Djoba » ?",
+     "Gipsy Kings",
+     "Buena Vista",
+     "Manu Chao",
+     "Zuco",
+     0
+    ],
+    [
+     "AN",
+     "Quel chanteur a chanté « Me Gustas Tú » ?",
+     "Manu Chao",
+     "Gipsy Kings",
+     "Celia Cruz",
+     "Zuco 103",
+     0
     ]
    ]
   },
@@ -922,6 +1660,285 @@ window.THEME_PACKS.musique7090 = {
      "Bob Dylan",
      "Elton John",
      "Billy Joel",
+     0
+    ],
+    [
+     "AR",
+     "Quel album des Pink Floyd s'appelle « The Piper at the Gates of Dawn » ?",
+     "The Piper at the Gates of Dawn",
+     "Saucerful of Secrets",
+     "Atom Heart Mother",
+     "Meddle",
+     0
+    ],
+    [
+     "AR",
+     "Quel album des Beatles s'appelle « Revolver » ?",
+     "Revolver",
+     "Rubber Soul",
+     "White Album",
+     "Let It Be",
+     0
+    ],
+    [
+     "AR",
+     "Quel album des Rolling Stones s'appelle « Exile on Main St. » ?",
+     "Exile on Main St.",
+     "Sticky Fingers",
+     "Let It Bleed",
+     "Beggars Banquet",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Rolling Stones s'appelle « Gimme Shelter » ?",
+     "Gimme Shelter",
+     "Sympathy for the Devil",
+     "Paint It Black",
+     "Angie",
+     0
+    ],
+    [
+     "AL",
+     "Quel album des Led Zeppelin s'appelle « IV » (quatre symboles) ?",
+     "Led Zeppelin IV",
+     "II",
+     "III",
+     "Houses of the Holy",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Led Zeppelin s'appelle « When the Levee Breaks » ?",
+     "When the Levee Breaks",
+     "Kashmir",
+     "Stairway",
+     "Rock and Roll",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Rust in Peace » comme album ?",
+     "Megadeth",
+     "Metallica",
+     "Slayer",
+     "Anthrax",
+     0
+    ],
+    [
+     "AL",
+     "Quel album des Metallica s'appelle « Ride the Lightning » ?",
+     "Ride the Lightning",
+     "Master of Puppets",
+     "Kill 'Em All",
+     "And Justice",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de Phil Collins s'appelle « In the Air Tonight » ?",
+     "In the Air Tonight",
+     "Against All Odds",
+     "Sussudio",
+     "Another Day",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « 2112 » comme album ?",
+     "Rush",
+     "Yes",
+     "Genesis",
+     "King Crimson",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Owner of a Lonely Heart » ?",
+     "Yes",
+     "Rush",
+     "Genesis",
+     "Asia",
+     0
+    ],
+    [
+     "ST",
+     "Quel genre a dominé les années 70 avec le rock progressif ?",
+     "Le prog rock",
+     "Le punk",
+     "Le métal",
+     "Le reggae",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « The Lamb Lies Down on Broadway » ?",
+     "Genesis",
+     "Yes",
+     "Rush",
+     "King Crimson",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Court of the Crimson King » ?",
+     "King Crimson",
+     "Yes",
+     "Genesis",
+     "ELP",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Ziggy Stardust » ?",
+     "David Bowie",
+     "Iggy Pop",
+     "Lou Reed",
+     "Mick Jagger",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Heroes » ?",
+     "David Bowie",
+     "Iggy Pop",
+     "Brian Eno",
+     "Lou Reed",
+     0
+    ],
+    [
+     "AR",
+     "Quel chanteur a chanté « Walk on the Wild Side » ?",
+     "Lou Reed",
+     "David Bowie",
+     "Iggy Pop",
+     "John Cale",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Marquee Moon » ?",
+     "Television",
+     "Ramones",
+     "Talking Heads",
+     "Blondie",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Psycho Killer » ?",
+     "Talking Heads",
+     "Television",
+     "Blondie",
+     "Ramones",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Blitzkrieg Bop » ?",
+     "Ramones",
+     "Sex Pistols",
+     "The Clash",
+     "Dead Boys",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « London Calling » ?",
+     "The Clash",
+     "Sex Pistols",
+     "Ramones",
+     "The Jam",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « God Save the Queen » ?",
+     "Sex Pistols",
+     "The Clash",
+     "Ramones",
+     "The Damned",
+     0
+    ],
+    [
+     "ST",
+     "Quel genre est né à Chicago avec Frankie Knuckles ?",
+     "La house",
+     "La techno",
+     "Le garage",
+     "La disco",
+     0
+    ],
+    [
+     "ST",
+     "Quel genre est né à Détroit ?",
+     "La techno",
+     "La house",
+     "Le garage",
+     "La trance",
+     0
+    ],
+    [
+     "AR",
+     "Quel DJ a produit « Strings of Life » ?",
+     "Rhythim is Rhythim (Derrick May)",
+     "Juan Atkins",
+     "Kevin Saunderson",
+     "Jeff Mills",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Planet Rock » ?",
+     "Afrika Bambaataa",
+     "Grandmaster Flash",
+     "Sugarhill Gang",
+     "Kurtis Blow",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson de Grandmaster Flash s'appelle « The Message » ?",
+     "The Message",
+     "White Lines",
+     "Beat Street",
+     "Freedom",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Rapper's Delight » ?",
+     "Sugarhill Gang",
+     "Grandmaster Flash",
+     "Furious Five",
+     "Kurtis Blow",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe a chanté « Autobahn » ?",
+     "Kraftwerk",
+     "Tangerine Dream",
+     "Neu!",
+     "Can",
+     0
+    ],
+    [
+     "SO",
+     "Quelle chanson des Kraftwerk s'appelle « Tour de France » ?",
+     "Tour de France",
+     "Autobahn",
+     "Computer Love",
+     "Pocket Calculator",
+     0
+    ],
+    [
+     "AR",
+     "Quel groupe allemand a influencé la musique électronique ?",
+     "Kraftwerk",
+     "Can",
+     "Neu!",
+     "Tangerine Dream",
      0
     ]
    ]

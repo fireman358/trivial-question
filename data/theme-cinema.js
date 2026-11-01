@@ -292,6 +292,258 @@ window.THEME_PACKS.cinema = {
      "Michael Douglas",
      "Mel Gibson",
      0
+    ],
+    [
+     "FI",
+     "Quel film suit une princesse avec des cheveux très longs ?",
+     "Raiponce",
+     "Frozen",
+     "Vaiana",
+     "Cendrillon",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un prince transformé en bête ?",
+     "La Belle et la Bête",
+     "Raiponce",
+     "Frozen",
+     "Vaiana",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un vieil homme et un garçon avec des ballons ?",
+     "Là-haut",
+     "Coco",
+     "Soul",
+     "Vice-versa",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un garçon qui apprend la musique dans le monde des morts ?",
+     "Coco",
+     "Là-haut",
+     "Soul",
+     "Vice-versa",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un jazzman qui meurt et revient ?",
+     "Soul",
+     "Coco",
+     "Là-haut",
+     "Vice-versa",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit deux frères en Italie (Pixar) ?",
+     "Luca",
+     "Coco",
+     "Là-haut",
+     "Soul",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une ville où vivent des animaux ?",
+     "Zootopie",
+     "Madagascar",
+     "Le Roi lion",
+     "Kirikou",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit des animaux qui s'évadent d'un zoo ?",
+     "Madagascar",
+     "Le Roi lion",
+     "Kirikou",
+     "Zootopie",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un petit africain qui sauve son village ?",
+     "Kirikou",
+     "Le Roi lion",
+     "Madagascar",
+     "Astérix",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un petit éléphant qui apprend à voler ?",
+     "Dumbo",
+     "Bambi",
+     "Pinocchio",
+     "Winnie",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un faon qui grandit dans la forêt ?",
+     "Bambi",
+     "Dumbo",
+     "Pinocchio",
+     "Winnie",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une marionnette qui veut devenir un vrai garçon ?",
+     "Pinocchio",
+     "Dumbo",
+     "Bambi",
+     "Winnie",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit des jouets qui vivent en secret ?",
+     "Toy Story",
+     "Cars",
+     "Ratatouille",
+     "Nemo",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un poisson-clown qui cherche son fils ?",
+     "Nemo",
+     "Ratatouille",
+     "Cars",
+     "Toy Story",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une famille de monstres qui fabriquent des peurs ?",
+     "Monstres et Cie",
+     "Vice-versa",
+     "Soul",
+     "Là-haut",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit des super-héros en famille ?",
+     "Les Indestructibles",
+     "Monstres et Cie",
+     "Vice-versa",
+     "Là-haut",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un panda qui apprend le kung-fu ?",
+     "Kung Fu Panda",
+     "Les Indestructibles",
+     "Zootopie",
+     "Madagascar",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un ogre et un âne ?",
+     "Shrek",
+     "Kung Fu Panda",
+     "Madagascar",
+     "Zootopie",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un dragon et un viking ?",
+     "Dragons",
+     "Shrek",
+     "Kung Fu Panda",
+     "Le Chat Potté",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un ours qui parle et un garçon ?",
+     "Paddington",
+     "Winnie",
+     "Babar",
+     "Baloo",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un garçon et un génie ?",
+     "Aladdin",
+     "Moana",
+     "Mulan",
+     "Frozen",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une guerrière chinoise déguisée ?",
+     "Mulan",
+     "Aladdin",
+     "Moana",
+     "Vaiana",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une fille qui traverse l'océan pour sauver son île ?",
+     "Vaiana",
+     "Moana (même)",
+     "Mulan",
+     "Aladdin",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une reine qui gèle son royaume ?",
+     "Frozen",
+     "Vaiana",
+     "Mulan",
+     "Aladdin",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une princesse qui dort ?",
+     "La Belle au bois dormant",
+     "Frozen",
+     "Cendrillon",
+     "Raiponce",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une fille qui perd sa chaussure ?",
+     "Cendrillon",
+     "La Belle au bois",
+     "Raiponce",
+     "Frozen",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une princesse et sept nains ?",
+     "Blanche-Neige",
+     "Cendrillon",
+     "La Belle au bois",
+     "Raiponce",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un chien-acteur qui ne sait pas qu'il est acteur ?",
+     "Volt",
+     "Bolt (même)",
+     "Pat'Patrouille",
+     "Zootopie",
+     0
     ]
    ]
   },
@@ -585,6 +837,591 @@ window.THEME_PACKS.cinema = {
      "Birdman",
      "Moulin Rouge",
      0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Les Évadés ?",
+     "Frank Darabont",
+     "Steven Spielberg",
+     "Martin Scorsese",
+     "Christopher Nolan",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Andy Dufresne dans Les Évadés ?",
+     "Tim Robbins",
+     "Morgan Freeman",
+     "Tom Hanks",
+     "Russell Crowe",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Red dans Les Évadés ?",
+     "Morgan Freeman",
+     "Tim Robbins",
+     "Tom Hanks",
+     "Clint Eastwood",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Se7en ?",
+     "David Fincher",
+     "Christopher Nolan",
+     "Martin Scorsese",
+     "Quentin Tarantino",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit deux flics qui traquent un tueur aux sept péchés ?",
+     "Se7en",
+     "Zodiac",
+     "The Killer Inside",
+     "Insomnia",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé The Social Network ?",
+     "David Fincher",
+     "Christopher Nolan",
+     "Aaron Sorkin",
+     "Danny Boyle",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit la création de Facebook ?",
+     "The Social Network",
+     "Steve Jobs",
+     "Pirates of Silicon Valley",
+     "The Internship",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Slumdog Millionaire ?",
+     "Danny Boyle",
+     "David Fincher",
+     "Christopher Nolan",
+     "Ridley Scott",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un garçon indien dans un jeu télévisé ?",
+     "Slumdog Millionaire",
+     "Lion",
+     "The Best Exotic",
+     "Gandhi",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Trainspotting ?",
+     "Danny Boyle",
+     "Christopher Nolan",
+     "Ridley Scott",
+     "Guy Ritchie",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit des toxicomanes à Édimbourg ?",
+     "Trainspotting",
+     "Trainspotting 2",
+     "Snatch",
+     "Lock Stock",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Snatch ?",
+     "Guy Ritchie",
+     "Danny Boyle",
+     "Matthew Vaughn",
+     "Christopher Nolan",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un diamant volé à Londres ?",
+     "Snatch",
+     "Lock Stock",
+     "RocknRolla",
+     "The Gentlemen",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé In Bruges ?",
+     "Martin McDonagh",
+     "Guy Ritchie",
+     "Danny Boyle",
+     "Christopher Nolan",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit deux tueurs en fuite à Bruges ?",
+     "In Bruges",
+     "Snatch",
+     "Lock Stock",
+     "Seven Psychopaths",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé The Grand Budapest Hotel ?",
+     "Wes Anderson",
+     "Martin McDonagh",
+     "Quentin Tarantino",
+     "Coen brothers",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un concierge d'hôtel et un groom ?",
+     "The Grand Budapest Hotel",
+     "Moonrise Kingdom",
+     "Rushmore",
+     "The Royal Tenenbaums",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Whiplash ?",
+     "Damien Chazelle",
+     "Justin Hurwitz",
+     "Barry Jenkins",
+     "Jordan Peele",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un batteur et son prof tyrannique ?",
+     "Whiplash",
+     "La La Land",
+     "First Man",
+     "Babylon",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Moonlight ?",
+     "Barry Jenkins",
+     "Damien Chazelle",
+     "Jordan Peele",
+     "Ryan Coogler",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un garçon à Miami qui grandit ?",
+     "Moonlight",
+     "If Beale Street",
+     "Medicine for Melancholy",
+     "Moonlight 2",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Get Out ?",
+     "Jordan Peele",
+     "Barry Jenkins",
+     "Ryan Coogler",
+     "Ari Aster",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un garçon qui découvre le secret de sa petite-amie ?",
+     "Get Out",
+     "Us",
+     "Nope",
+     "Midsommar",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Hereditary ?",
+     "Ari Aster",
+     "Jordan Peele",
+     "Robert Eggers",
+     "Jennifer Kent",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une famille et un esprit maléfique ?",
+     "Hereditary",
+     "Midsommar",
+     "The Witch",
+     "Us",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé The Witch ?",
+     "Robert Eggers",
+     "Ari Aster",
+     "Jordan Peele",
+     "Jennifer Kent",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une famille dans la Nouvelle-Angleterre (1700s) ?",
+     "The Witch",
+     "Hereditary",
+     "Midsommar",
+     "The Lighthouse",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Knives Out ?",
+     "Rian Johnson",
+     "J.J. Abrams",
+     "Joss Whedon",
+     "Bryan Singer",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un détective et une famille riche ?",
+     "Knives Out",
+     "The Grand Budapest",
+     "In Bruges",
+     "See How They Run",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Parasite ?",
+     "Bong Joon-ho",
+     "Park Chan-wook",
+     "Na Hong-jin",
+     "Kim Jee-woon",
+     0
+    ],
+    [
+     "FI",
+     "Quel film coréen suit une famille pauvre qui infiltre une famille riche ?",
+     "Parasite",
+     "Old Boy",
+     "The Host",
+     "Memories of Murder",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué le père dans Parasite ?",
+     "Song Kang-ho",
+     "Choi Min-sik",
+     "Lee Byung-hun",
+     "Choi Woo-shik",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Old Boy ?",
+     "Park Chan-wook",
+     "Bong Joon-ho",
+     "Na Hong-jin",
+     "Kim Jee-woon",
+     0
+    ],
+    [
+     "FI",
+     "Quel film coréen suit un homme enfermé 15 ans ?",
+     "Old Boy",
+     "Parasite",
+     "The Host",
+     "I Saw the Devil",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Portrait de la jeune fille en feu ?",
+     "Céline Sciamma",
+     "Léa Pool",
+     "Deniz Gamze",
+     "Julie Delpy",
+     0
+    ],
+    [
+     "FI",
+     "Quel film français suit une peintre et son modèle ?",
+     "Portrait de la jeune fille en feu",
+     "La Belle Époque",
+     "Girl",
+     "La Fille au bracelet",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Marianne dans Portrait ?",
+     "Noémie Merlant",
+     "Adèle Haenel",
+     "Luàna Bajrami",
+     "Valeria Golino",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Héloïse dans Portrait ?",
+     "Adèle Haenel",
+     "Noémie Merlant",
+     "Luàna Bajrami",
+     "Valeria Golino",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Intouchables ?",
+     "Olivier Nakache et Éric Toledano",
+     "Jean-Pierre Jeunet",
+     "Xavier Dolan",
+     "Michel Gondry",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Driss dans Intouchables ?",
+     "Omar Sy",
+     "François Cluzet",
+     "Audrey Fleurot",
+     "Clotilde Mollet",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Philippe dans Intouchables ?",
+     "François Cluzet",
+     "Omar Sy",
+     "Audrey Fleurot",
+     "Clotilde Mollet",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un milliardaire et son aide ?",
+     "Intouchables",
+     "Le Sens de la fête",
+     "Samba",
+     "Chocolat",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Taxi ?",
+     "Luc Besson (production)",
+     "Gérard Krawczyk (suite)",
+     "Gérard Pirès (le 1)",
+     "Xavier Dolan",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un chauffeur de taxi et sa voiture ?",
+     "Taxi",
+     "Taxi 2",
+     "Taxi 3",
+     "Le Transporteur",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Grand Bleu ?",
+     "Luc Besson",
+     "Gérard Krawczyk",
+     "Gérard Pirès",
+     "Xavier Dolan",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit deux apnéistes ?",
+     "Le Grand Bleu",
+     "Le Transporteur",
+     "Taxi",
+     "Nikita",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé La Haine ?",
+     "Mathieu Kassovitz",
+     "Luc Besson",
+     "Jacques Audiard",
+     "Xavier Dolan",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit trois jeunes dans une banlieue ?",
+     "La Haine",
+     "Le Grand Bleu",
+     "Ma 6-T va crack-er",
+     "Les Misérables (2019)",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Vinz dans La Haine ?",
+     "Vincent Cassel",
+     "Hubert Koundé",
+     "Saïd Taghmaoui",
+     "Abdel Ahmed Ghili",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Un prophète ?",
+     "Jacques Audiard",
+     "Mathieu Kassovitz",
+     "Xavier Dolan",
+     "Céline Sciamma",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un jeune qui monte dans la prison ?",
+     "Un prophète",
+     "La Haine",
+     "Dheepan",
+     "Le Bruit des glaçons",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Malik dans Un prophète ?",
+     "Tahar Rahim",
+     "Niels Arestrup",
+     "Adel Bencherif",
+     "Hocine Nouri",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé De rouille et d'os ?",
+     "Jacques Audiard",
+     "Mathieu Kassovitz",
+     "Xavier Dolan",
+     "Céline Sciamma",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Stéphanie dans De rouille et d'os ?",
+     "Marion Cotillard",
+     "Léa Seydoux",
+     "Virginie Efira",
+     "Adèle Exarchopoulos",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé La Vie d'Adèle ?",
+     "Abdellatif Kechiche",
+     "Céline Sciamma",
+     "Xavier Dolan",
+     "Jacques Audiard",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Adèle dans La Vie d'Adèle ?",
+     "Adèle Exarchopoulos",
+     "Léa Seydoux",
+     "Marion Cotillard",
+     "Virginie Efira",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Mommy ?",
+     "Xavier Dolan",
+     "Jacques Audiard",
+     "Denis Villeneuve",
+     "Céline Sciamma",
+     0
+    ],
+    [
+     "FI",
+     "Quel film canadien suit une mère et son fils ?",
+     "Mommy",
+     "J'ai tué ma mère",
+     "Les Amours imaginaires",
+     "Laurence Anyways",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Incendies ?",
+     "Denis Villeneuve",
+     "Xavier Dolan",
+     "Jacques Audiard",
+     "Jean-Marc Vallée",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit des jumeaux qui cherchent leur père ?",
+     "Incendies",
+     "Mommy",
+     "Prisoners",
+     "Arrival",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Arrival ?",
+     "Denis Villeneuve",
+     "Christopher Nolan",
+     "Ridley Scott",
+     "Xavier Dolan",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit une linguiste qui parle avec des aliens ?",
+     "Arrival",
+     "Contact",
+     "Interstellar",
+     "District 9",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Louise dans Arrival ?",
+     "Amy Adams",
+     "Rebecca Ferguson",
+     "Jeremy Renner",
+     "Forest Whitaker",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Blade Runner 2049 ?",
+     "Denis Villeneuve",
+     "Ridley Scott",
+     "Christopher Nolan",
+     "Zack Snyder",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un chasseur de répliquants dans le futur ?",
+     "Blade Runner 2049",
+     "Blade Runner",
+     "Arrival",
+     "Total Recall",
+     0
     ]
    ]
   },
@@ -877,6 +1714,483 @@ window.THEME_PACKS.cinema = {
      "Intouchables",
      "Amour",
      "La Vie en rose",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Mépris ?",
+     "Jean-Luc Godard",
+     "François Truffaut",
+     "Claude Chabrol",
+     "Agnès Varda",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Camille dans Le Mépris ?",
+     "Brigitte Bardot",
+     "Michèle Morgan",
+     "Anna Karina",
+     "Jeanne Moreau",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé À bout de souffle ?",
+     "Jean-Luc Godard",
+     "François Truffaut",
+     "Claude Chabrol",
+     "Jacques Rivette",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Michel Poiccard dans À bout de souffle ?",
+     "Jean-Paul Belmondo",
+     "Jean Seberg",
+     "Jean-Pierre Melville",
+     "Lino Ventura",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Les 400 coups ?",
+     "François Truffaut",
+     "Jean-Luc Godard",
+     "Alain Resnais",
+     "Claude Chabrol",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Antoine Doinel dans Les 400 coups ?",
+     "Jean-Pierre Léaud",
+     "Jean-Paul Belmondo",
+     "Jean Seberg",
+     "Claude Brasseur",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Hiroshima mon amour ?",
+     "Alain Resnais",
+     "Jean-Luc Godard",
+     "François Truffaut",
+     "Agnès Varda",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Cléo de 5 à 7 ?",
+     "Agnès Varda",
+     "Alain Resnais",
+     "Jean-Luc Godard",
+     "François Truffaut",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Boucher ?",
+     "Claude Chabrol",
+     "Jean-Luc Godard",
+     "François Truffaut",
+     "Claude Sautet",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Samouraï ?",
+     "Jean-Pierre Melville",
+     "Alain Resnais",
+     "Jean-Luc Godard",
+     "Claude Chabrol",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Jef Costello dans Le Samouraï ?",
+     "Alain Delon",
+     "Jean-Paul Belmondo",
+     "Lino Ventura",
+     "Jean Gabin",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Bob le flambeur ?",
+     "Jean-Pierre Melville",
+     "Claude Chabrol",
+     "Jacques Becker",
+     "Henri Verneuil",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Casque d'or ?",
+     "Jacques Becker",
+     "Jean-Pierre Melville",
+     "Claude Chabrol",
+     "Henri Verneuil",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Marie dans Casque d'or ?",
+     "Simone Signoret",
+     "Michèle Morgan",
+     "Brigitte Bardot",
+     "Danielle Darrieux",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé La Grande Illusion ?",
+     "Jean Renoir",
+     "Marcel Carné",
+     "René Clair",
+     "Jacques Feyder",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Boeldieu dans La Grande Illusion ?",
+     "Pierre Fresnay",
+     "Jean Gabin",
+     "Erich von Stroheim",
+     "Marcel Dalio",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Les Enfants du paradis ?",
+     "Marcel Carné",
+     "Jean Renoir",
+     "René Clair",
+     "Jacques Prévert",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Baptiste dans Les Enfants du paradis ?",
+     "Jean-Louis Barrault",
+     "Pierre Brasseur",
+     "Arletty",
+     "Marcel Herrand",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Garance dans Les Enfants du paradis ?",
+     "Arletty",
+     "Maria Casarès",
+     "Jane Marken",
+     "Marcel Herrand",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Quai des brumes ?",
+     "Marcel Carné",
+     "Jean Renoir",
+     "René Clair",
+     "Jacques Becker",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Jean dans Le Quai des brumes ?",
+     "Jean Gabin",
+     "Michèle Morgan",
+     "Pierre Brasseur",
+     "Robert Le Vigan",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé La Règle du jeu ?",
+     "Jean Renoir",
+     "Marcel Carné",
+     "René Clair",
+     "Max Ophüls",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé La Grande Vadrouille ?",
+     "Gérard Oury",
+     "Claude Zidi",
+     "Georges Lautner",
+     "Jean Girault",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Stanislas dans La Grande Vadrouille ?",
+     "Louis de Funès",
+     "Bourvil",
+     "Terry-Thomas",
+     "Claudio Brook",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Corniaud ?",
+     "Gérard Oury",
+     "Claude Zidi",
+     "Georges Lautner",
+     "Jean Girault",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Les Tontons flingueurs ?",
+     "Georges Lautner",
+     "Gérard Oury",
+     "Claude Zidi",
+     "Jean Girault",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Fernand Naudin dans Les Tontons flingueurs ?",
+     "Lino Ventura",
+     "Bernard Blier",
+     "Francis Blanche",
+     "Jean Lefebvre",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Père Noël est une ordure ?",
+     "Jean-Marie Poiré",
+     "Josiane Balasko",
+     "Gérard Oury",
+     "Claude Zidi",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit des animateurs d'une hotline le soir du réveillon ?",
+     "Le Père Noël est une ordure",
+     "Les Bronzés",
+     "Le Père Noël",
+     "La Cité de la peur",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Les Bronzés ?",
+     "Patrice Leconte",
+     "Josiane Balasko",
+     "Christian Clavier",
+     "Marie-Anne Chazel",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit des moniteurs de colonies en Grèce ?",
+     "Les Bronzés",
+     "Les Bronzés font du ski",
+     "Le Père Noël est une ordure",
+     "La Cité de la peur",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé La Cité de la peur ?",
+     "Alain Berbérian",
+     "Les Nuls",
+     "Patrice Leconte",
+     "Claude Zidi",
+     0
+    ],
+    [
+     "FI",
+     "Quel film suit un tueur sur un tournage ?",
+     "La Cité de la peur",
+     "Le Père Noël est une ordure",
+     "Les Bronzés",
+     "Astérix et Cléopâtre",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Astérix et Obélix : Mission Cléopâtre ?",
+     "Alain Chabat",
+     "Claude Zidi",
+     "Gérard Oury",
+     "Patrice Leconte",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Cléopâtre dans Mission Cléopâtre ?",
+     "Monica Bellucci",
+     "Gérard Depardieu",
+     "Christian Clavier",
+     "Jamel Debbouze",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Dîner de cons ?",
+     "Francis Veber",
+     "Claude Zidi",
+     "Gérard Oury",
+     "Patrice Leconte",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Pierre Brochant dans Le Dîner de cons ?",
+     "Thierry Lhermitte",
+     "Jacques Villeret",
+     "Frank Dubosc",
+     "Daniel Prévost",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué François Pignon dans Le Dîner de cons ?",
+     "Jacques Villeret",
+     "Thierry Lhermitte",
+     "Frank Dubosc",
+     "Daniel Prévost",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Placard ?",
+     "Francis Veber",
+     "Alain Chabat",
+     "Patrice Leconte",
+     "Claude Zidi",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué François Pignon dans Le Placard ?",
+     "Daniel Auteuil",
+     "Gérard Depardieu",
+     "Thierry Lhermitte",
+     "Michel Serrault",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Hussard sur le toit ?",
+     "Jean-Paul Rappeneau",
+     "Patrice Leconte",
+     "Claude Berri",
+     "Jean-Jacques Annaud",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Angelo dans Le Hussard sur le toit ?",
+     "Olivier Martinez",
+     "Juliette Binoche",
+     "François Cluzet",
+     "Jean Yanne",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Cyrano de Bergerac ?",
+     "Jean-Paul Rappeneau",
+     "Patrice Leconte",
+     "Claude Berri",
+     "Roger Planchon",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Cyrano dans Cyrano de Bergerac ?",
+     "Gérard Depardieu",
+     "Jacques Weber",
+     "Vincent Perez",
+     "Michel Serrault",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé La Reine Margot ?",
+     "Patrice Chéreau",
+     "Claude Berri",
+     "Jean-Jacques Annaud",
+     "André Téchiné",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Margot dans La Reine Margot ?",
+     "Isabelle Adjani",
+     "Daniel Auteuil",
+     "Vincent Perez",
+     "Virna Lisi",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Tess ?",
+     "Roman Polanski",
+     "Claude Berri",
+     "André Téchiné",
+     "Jacques Demy",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Tess dans Tess ?",
+     "Nastassja Kinski",
+     "Michel Blanc",
+     "Tony Lawson",
+     "John Collin",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Z ?",
+     "Costa-Gavras",
+     "Claude Berri",
+     "André Téchiné",
+     "Jacques Deray",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Missing ?",
+     "Costa-Gavras",
+     "Claude Berri",
+     "André Téchiné",
+     "Jacques Deray",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Ed Horman dans Missing ?",
+     "Jack Lemmon",
+     "Sissy Spacek",
+     "John Shea",
+     "Melvyn Douglas",
+     0
+    ],
+    [
+     "RE",
+     "Qui a réalisé Le Locataire ?",
+     "Roman Polanski",
+     "Alain Resnais",
+     "Jean-Luc Godard",
+     "Claude Chabrol",
+     0
+    ],
+    [
+     "PE",
+     "Qui a joué Trelkovsky dans Le Locataire ?",
+     "Roman Polanski",
+     "Catherine Deneuve",
+     "Isabelle Adjani",
+     "Melvyn Douglas",
      0
     ]
    ]

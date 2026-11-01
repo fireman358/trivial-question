@@ -1,21 +1,21 @@
-# 🧀 Trivial Quest
+# ◈ Trivial Quest
 
 **Trivial Quest** : un jeu de quiz jouable dans le navigateur, inspiré des grands classiques du genre, où **chaque joueur reçoit des questions adaptées à son âge**.
 
 ## ✨ Concept
 
-Les jeux de quiz classiques ont un défaut : leurs questions sont calibrées pour des adultes et les jeunes joueurs décrochent vite. Trivial Quest reprend les mécaniques éprouvées du genre (6 catégories, camemberts à collecter, case centrale) mais **chaque question est servie selon la tranche d'âge du joueur qui répond**.
+Les jeux de quiz classiques ont un défaut : leurs questions sont calibrées pour des adultes et les jeunes joueurs décrochent vite. Trivial Quest reprend les mécaniques éprouvées du genre (6 catégories, diamants à collecter, case centrale) mais **chaque question est servie selon la tranche d'âge du joueur qui répond**.
 
 ### Règles (fidèles à l'original)
 
 - Plateau officiel de **73 cases** : moyeu central (départ), 6 rayons de 6 cases, piste circulaire de 36 cases.
-- Les **QG (cases camembert 🧀)** sont en bout de rayon, sur le cercle extérieur — un par couleur.
+- Les **QG (losanges diamant ◈)** sont en bout de rayon, sur le cercle extérieur — un par couleur.
 - Couleurs alternées partout : jamais deux cases de même couleur adjacentes (anneau et rayons).
 - On lance le **dé**, on avance du nombre de cases, on répond à une **question de la catégorie de la case**.
-- Un **QG** donne un camembert si la réponse est juste — **une seule tentative par catégorie**.
+- Un **QG** donne un diamant si la réponse est juste.
 - Chaque joueur choisit un **pion unique** (un par catégorie, comme au Monopoly).
 - **Bonne réponse = on rejoue** ; mauvaise réponse = au tour du joueur suivant.
-- Une fois les **6 camemberts** collectés, il faut revenir au **centre** et répondre à une question finale d'une catégorie tirée au sort : **victoire !**
+- Une fois les **6 diamants** collectés, il faut revenir au **centre** et répondre à une question finale d'une catégorie tirée au sort : **victoire !**
 
 ### Tranches d'âge
 
