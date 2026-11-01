@@ -3,10 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trivial Pursuit par tranche d'âge</title>
+<title>Trivial Pursuit par tranche d'âge — Edukisto</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div id="studio-splash" aria-hidden="true">
+  <div class="splash-inner">
+    <div class="splash-logo"><svg class="splash-star" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3l5.2 18.2 10.8-5.2-5.2 10.8L61 32l-18.2 5.2 5.2 10.8-10.8-5.2L32 61l-5.2-18.2-10.8 5.2 5.2-10.8L3 32l18.2-5.2-5.2-10.8 10.8 5.2z" fill="#38bdf8"/><path d="M32 32c-1.6-2-3-3.1-4.8-3.1a4.7 4.7 0 1 0 0 9.4c1.8 0 3.2-1.1 4.8-3.1 1.6 2 3 3.1 4.8 3.1a4.7 4.7 0 1 0 0-9.4c-1.8 0-3.2 1.1-4.8 3.1z" stroke="#0f1115" stroke-width="2.2" fill="none"/></svg>Edukisto</div>
+    <div class="splash-sub">présente</div>
+  </div>
+</div>
 
 <div id="app">
 
@@ -31,15 +38,16 @@
     <div class="panel">
       <h2>2. Packs à thème (optionnel)</h2>
       <div id="themes-list"></div>
-      <p class="hint">Un pack à thème remplace les catégories habituelles quand on tombe sur une case à thème (★).</p>
+      <p class="hint">Les cases ★ du plateau servent une question du pack à thème choisi au hasard.</p>
     </div>
 
     <div class="panel">
       <h2>3. Rappel des règles</h2>
       <ul class="rules">
-        <li>On joue avec un dé : avancez du nombre de cases indiqué, dans la direction de votre choix.</li>
+        <li>On joue avec un dé : cliquez sur la case de destination après le lancer.</li>
         <li>Répondez à une question de la catégorie de la case où vous arrivez.</li>
-        <li>Une case <b>camembert</b> (colorée en hexagone) donne un partenaire si vous répondez juste : une seule tentative par catégorie !</li>
+        <li>Les sièges 🧀 (au milieu des rayons) donnent un camembert en cas de bonne réponse — une seule tentative par catégorie !</li>
+        <li>Les cases ↻ « Rejouez » permettent de relancer le dé sans question.</li>
         <li>Quand les 6 camemberts sont collectés, dirigez-vous vers le centre et répondez à une question d'une catégorie tirée au sort : victoire !</li>
         <li>Bonne réponse = on rejoue ; mauvaise réponse = au joueur suivant.</li>
         <li>Chaque question est adaptée à l'âge du joueur qui répond.</li>
@@ -86,6 +94,8 @@
     </div>
   </section>
 
+  <span id="app-version" class="app-version" title="Version de l'application"></span>
+
 </div>
 
 <script src="data/age-6-8.js"></script>
@@ -96,5 +106,13 @@
 <script src="data/theme-disney.js"></script>
 <script src="data/theme-musique.js"></script>
 <script src="game.js"></script>
+<script>
+  (function () {
+    fetch("version.txt", { cache: "no-store" })
+      .then(r => { if (!r.ok) throw new Error("no version"); return r.text(); })
+      .then(v => { document.getElementById("app-version").textContent = v.trim(); })
+      .catch(() => { /* version.txt inaccessible */ });
+  })();
+</script>
 </body>
 </html>
