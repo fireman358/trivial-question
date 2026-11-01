@@ -1,0 +1,15 @@
+{
+  "name": "Trivial Quest — le quiz adapté à tous les âges",
+  "short_name": "Trivial Quest",
+  "description": "Jeu de quiz où chaque joueur reçoit des questions adaptées à son âge. Recharges Disney et Musique.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#333333",
+  "theme_color": "#333333",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

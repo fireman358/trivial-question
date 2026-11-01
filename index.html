@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trivial Quest par tranche d'âge — Edukisto</title>
 <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#333333">
+  <link rel="icon" type="image/png" href="icon-192.png">
 </head>
 <body>
 
@@ -23,6 +26,12 @@
     <button id="btn-newgame-header" class="header-newgame hidden" title="Effacer la partie en cours et revenir à la configuration">↺ Nouvelle partie</button>
     <span id="app-version" class="app-version" title="Version de l'application"></span>
   </header>
+
+<!-- Bannière de mise à jour disponible -->
+<div id="update-banner" class="update-banner hidden">
+  <span>🔄 Une mise à jour est disponible !</span>
+  <button id="btn-update" class="btn-update">Actualiser</button>
+</div>
 
 <div id="app">
 
@@ -141,6 +150,26 @@
       .catch(() => { /* version.txt inaccessible */ });
   })();
   document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script>
+  /* Service worker : installation PWA + mise à jour automatique */
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./sw.js").then(reg => {
+      // détection de mise à jour au démarrage
+      reg.addEventListener("updatefound", () => {
+        const nw = reg.installing;
+        if (nw) nw.addEventListener("statechange", () => {
+          if (nw.state === "installed" && navigator.serviceWorker.controller) {
+            const b = document.getElementById("update-banner");
+            b.classList.remove("hidden");
+            document.getElementById("btn-update").onclick = () => location.reload();
+          }
+        });
+      });
+    });
+    // vérification explicite au démarrage
+    navigator.serviceWorker.ready.then(reg => reg.update());
+  }
 </script>
 </body>
 </html>

@@ -140,6 +140,14 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 #game-screen { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
 #board-wrap { flex: 2 1 380px; min-width: 320px; order: 0; }
 #sidebar { flex: 1 1 300px; min-width: 280px; max-width: 380px; order: 1; }
+/* sidebar en deux colonnes : tour/joueurs à gauche, stats à droite */
+#sidebar { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+#sidebar > .panel:nth-child(-n+2) { grid-column: 1; }
+#sidebar > #stats-panel { grid-column: 2; }
+@media (max-width: 1200px) {
+  #sidebar { grid-template-columns: 1fr; }
+  #sidebar > #stats-panel { grid-column: 1; }
+}
 
 #board {
   width: 100%; height: auto; border-radius: var(--radius);
@@ -165,8 +173,8 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 /* Camembert volant (du plateau vers l'emplacement du joueur) */
 .flying-wedge {
   position: fixed;
-  width: 30px; height: 30px;
-  clip-path: polygon(50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%, 0 15%);
+  width: 26px; height: 34px;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
   z-index: 9998;
   pointer-events: none;
   box-shadow: 0 4px 10px rgba(0,0,0,.4);
@@ -175,9 +183,9 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 /* Camembert display */
 .camembert { display: flex; gap: 6px; margin: 10px 0; }
 .wedge {
-  width: 26px; height: 26px; display: inline-block;
-  clip-path: polygon(50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%, 0 15%);
-  border: 1px solid var(--border);
+  width: 24px; height: 30px; display: inline-block;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  border: none;
 }
 
 /* (les questions s'affichent désormais dans le bandeau du bas) */
@@ -229,7 +237,8 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
   45% { transform: translateY(-9px); }
   100% { transform: translateY(0); }
 }
-.pawn-emoji { font-size: 15px; pointer-events: none; filter: drop-shadow(0 2px 2px rgba(0,0,0,.4)); }
+.pawn-emoji { font-size: 19px; pointer-events: none; filter: drop-shadow(0 2px 2px rgba(0,0,0,.4)); }
+.pawn-label { font-size: 12px; fill: #fff; font-weight: bold; pointer-events: none; }
 
 /* Sélecteur de pion */
 .pawn-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); gap: 8px; margin: 10px 0 6px; }
@@ -365,11 +374,12 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 
 /* ===== Splash de bonne réponse ===== */
 #correct-splash {
-  position: fixed; inset: 0; z-index: 900;
-  background: radial-gradient(circle, rgba(42,157,143,.35), rgba(42,157,143,.15));
-  display: flex; align-items: center; justify-content: center;
+  position: fixed; inset: 0; z-index: 950;
+  background: transparent;   /* ne masque PAS le plateau : le vol du diamant reste visible */
+  display: flex; align-items: flex-start; justify-content: center;
   opacity: 0; pointer-events: none;
   transition: opacity 0.25s ease;
+  padding-top: 12vh;
 }
 #correct-splash.show { opacity: 1; }
 #correct-splash span {
@@ -387,3 +397,17 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 /* ===== Stats de l'écran victoire ===== */
 .win-stats { text-align: left; margin: 16px 0; }
 .win-badge { font-size: 1.2em; }
+
+/* ===== Bannière de mise à jour ===== */
+.update-banner {
+  position: fixed; top: 64px; left: 50%; transform: translateX(-50%);
+  background: #2a9d8f; color: #fff; padding: 10px 18px;
+  border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,.4);
+  display: flex; align-items: center; gap: 12px; z-index: 1000;
+  font-weight: 600;
+}
+.update-banner.hidden { display: none; }
+.btn-update {
+  background: #fff; color: #2a9d8f; border: none; padding: 6px 14px;
+  border-radius: 6px; font-weight: 700; cursor: pointer;
+}

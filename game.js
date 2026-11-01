@@ -10,7 +10,7 @@ const CATEGORIES = {
   D: { name: "Divertissement",    color: "#d5368d", icon: "🎬" }
 };
 const CAT_KEYS = Object.keys(CATEGORIES);
-const HQ_ICON = "🧀";
+const HQ_ICON = "◈";
 
 /* Ordre des couleurs alternées (comme le plateau officiel : jamais deux identiques côte à côte) */
 const RING_CATS = [
@@ -274,6 +274,16 @@ function buildBoard() {
 }
 
 /* ---------- Rendu 2.5D ---------- */
+/* Losange (diamant) : 4 sommets, plus haut que large */
+function diamondPoints(cx, cy, r) {
+  return [
+    (cx) + "," + (cy - r * 1.15),
+    (cx + r * 0.75) + "," + (cy),
+    (cx) + "," + (cy + r * 1.15),
+    (cx - r * 0.75) + "," + (cy)
+  ].join(" ");
+}
+
 function hexPoints(cx, cy, r) {
   const pts = [];
   for (let i = 0; i < 6; i++) {
@@ -326,10 +336,10 @@ function renderBoard() {
     const midR = (HUB_R + RING_R) / 2 + 10;
     const [lx, ly] = polar(midR, ang);
     // largeur disponible du triangle à ce rayon : 2 * midR * tan(demi-angle)
-    const availW = 2 * midR * Math.tan(29 * Math.PI / 180) * 0.9;  // marge de 10 %
+    const availW = 2 * midR * Math.tan(29 * Math.PI / 180) * 0.78; // marge de 22 %
     // largeur estimée du texte : nb caractères × taille × 0.62 (majuscules)
     const chars = info.name.length;
-    const fontPx = Math.min(26, Math.floor(availW / (chars * 0.62)));
+    const fontPx = Math.min(24, Math.floor(availW / (chars * 0.68)));
     let rotate = ang - 90;
     if (ang > 180) rotate += 180;
     out += `<g class="sector-label" transform="translate(${lx} ${ly}) rotate(${rotate})">
@@ -358,8 +368,8 @@ function renderBoard() {
     const grad = "rg-" + (c.isWedge ? c.wedgeCat : c.cat);
     if (c.isWedge) {
       out += `<g id="cell-${c.id}" class="cell wedge-cell">
-        <polygon points="${hexPoints(c.x, c.y + 2.5, 24)}" fill="#00000026"/>
-        <polygon points="${hexPoints(c.x, c.y, 24)}" fill="url(#${grad})" stroke="#2b2b2b" stroke-width="2.5" filter="url(#f-drop)"/>
+        <polygon points="${diamondPoints(c.x, c.y + 2.5, 26)}" fill="#00000026"/>
+        <polygon points="${diamondPoints(c.x, c.y, 26)}" fill="url(#${grad})" stroke="#2b2b2b" stroke-width="2.5" filter="url(#f-drop)"/>
         <text x="${c.x}" y="${c.y + 6}" text-anchor="middle" class="cell-icon">${HQ_ICON}</text>
       </g>`;
     } else {
@@ -375,13 +385,14 @@ function renderBoard() {
   players.forEach((p, i) => {
     const c = board.cells[p.pos];
     if (!c) return;
-    const px = c.x + ((i % 3) - 1) * 14, py = c.y + (Math.floor(i / 3) - 0.5) * 16;
+    const px = c.x + ((i % 3) - 1) * 19, py = c.y + (Math.floor(i / 3) - 0.5) * 20;
     const moving = animating && i === current;
     out += `<g id="pawn-${i}" filter="url(#f-drop)" class="pawn-group ${moving ? "pawn-moving" : ""}">
-      <ellipse cx="${px}" cy="${py + 13}" rx="10" ry="4" fill="#00000033"/>
-      <circle cx="${px}" cy="${py}" r="11" fill="${p.color}" stroke="#1d1d1d" stroke-width="1.5"/>
-      <circle cx="${px - 3.5}" cy="${py - 4}" r="3.2" fill="#ffffffcc"/>
-      <text x="${px}" y="${py - 14}" text-anchor="middle" class="pawn-emoji">${PAWNS[p.pawn].emoji}</text>
+      <ellipse cx="${px}" cy="${py + 17}" rx="13" ry="5" fill="#00000033"/>
+      <circle cx="${px}" cy="${py}" r="14" fill="${p.color}" stroke="#1d1d1d" stroke-width="2"/>
+      <circle cx="${px - 4.5}" cy="${py - 5}" r="4" fill="#ffffffcc"/>
+      <text x="${px}" y="${py + 5}" text-anchor="middle" class="pawn-label">${p.name[0]}</text>
+      <text x="${px}" y="${py - 18}" text-anchor="middle" class="pawn-emoji">${PAWNS[p.pawn].emoji}</text>
     </g>`;
   });
 
@@ -394,7 +405,7 @@ function renderBoard() {
    - longueur exactement égale au dé (pas de trajet raccourci) ;
    - pas de demi-tour immédiat : on ne peut pas rebrousser chemin sur
      la case d'où l'on vient (le pion continue dans sa direction) ;
-   - le moyeu n'est accessible qu'en dernier pas, avec les 6 camemberts. */
+   - le moyeu n'est accessible qu'en dernier pas, avec les 6 diamants. */
 function neighbors(cellId) { return board.adj[cellId] || []; }
 
 function exactPaths(startId, steps, player) {
@@ -415,7 +426,7 @@ function exactPaths(startId, steps, player) {
     }
     frontier = next;
   }
-  // destinations finales : on ne peut s'arrêter au moyeu qu'avec les 6 camemberts
+  // destinations finales : on ne peut s'arrêter au moyeu qu'avec les 6 diamants
   const paths = {};
   for (const path of frontier.values()) {
     const dest = path[path.length - 1];
@@ -530,9 +541,9 @@ function updateTurnUI() {
   const p = players[current];
   $("#turn-title").textContent = `${PAWNS[p.pawn].emoji} Au tour de ${p.name}`;
   const wd = $("#wedges-display");
-  wd.innerHTML = `<div class="camembert">${CAT_KEYS.map(k =>
+  wd.innerHTML = `<div class="diamant">${CAT_KEYS.map(k =>
     `<span class="wedge ${p.wedges[k] ? 'got' : ''}" style="background:${p.wedges[k] ? CATEGORIES[k].color : '#dee2e6'}" title="${catInfo(k).name}"></span>`).join("")}</div>
-    <p class="hint">${Object.keys(p.wedges).length}/6 camemberts</p>`;
+    <p class="hint">${Object.keys(p.wedges).length}/6 diamants</p>`;
   const ps = $("#players-summary");
   ps.innerHTML = players.map((pl, i) =>
     `<div class="player-row ${i === current ? 'active' : ''}">
@@ -623,7 +634,7 @@ function askQuestion(cell, player) {
   const slot = cell.isCenter ? CAT_KEYS[Math.floor(Math.random() * CAT_KEYS.length)] : cell.cat;
   const info = catInfo(slot);
   const q = pickQuestion(player, slot);
-  catName = info.icon + " " + info.name + (cell.isCenter ? " — 🏆 question finale" : cell.isWedge ? " — 🧀 camembert en jeu !" : "");
+  catName = info.icon + " " + info.name + (cell.isCenter ? " — 🏆 question finale" : cell.isWedge ? " — 🧀 diamant en jeu !" : "");
   question = q[1]; options = q.slice(2, 6); correct = q[6];
 
   $("#question-text").textContent = question;
@@ -720,17 +731,17 @@ function answer(btn, isCorrect, cell, player, correct, options) {
     fb.textContent = "✅ Bonne réponse !";
     if (cell.isWedge && !player.wedges[cell.wedgeCat]) {
       player.wedges[cell.wedgeCat] = true;
-      fb.textContent += ` ${player.name} gagne le camembert ${catInfo(cell.wedgeCat).name} !`;
+      fb.textContent += ` ${player.name} gagne le diamant ${catInfo(cell.wedgeCat).name} !`;
       animateWedge(cell, cell.wedgeCat);
     }
     if (cell.isCenter) {
       if (Object.keys(player.wedges).length === 6) return win(player);
-      fb.textContent += " Il vous faut encore tous les camemberts pour gagner au centre !";
+      fb.textContent += " Il vous faut encore tous les diamants pour gagner au centre !";
     }
     updateTurnUI();
     saveGame();
-    showCorrectSplash();
     hideQuestionBanner();
+    showCorrectSplash();
     setTimeout(() => { awaitingRoll = true; $("#btn-roll").disabled = false; $("#dice-result").textContent = ""; }, 1600);
   } else {
     player.stats.wrong++;
@@ -744,7 +755,7 @@ function answer(btn, isCorrect, cell, player, correct, options) {
   }
 }
 
-/* Le camembert gagné quitte le plateau et se loge dans l'emplacement du joueur */
+/* Le diamant gagné quitte le plateau et se loge dans l'emplacement du joueur */
 function animateWedge(cell, catKey) {
   const color = CATEGORIES[catKey].color;
   const svg = $("#board");
@@ -793,7 +804,7 @@ function win(player) {
   hide($("#game-screen"));
   show($("#win-screen"));
   $("#winner-name").textContent = `🏆 ${player.name} remporte la partie !`;
-  $("#winner-sub").textContent = `6 camemberts collectés et question finale réussie. Bravo !`;
+  $("#winner-sub").textContent = `6 diamants collectés et question finale réussie. Bravo !`;
   // Statistiques complètes de tous les joueurs sur l'écran de victoire
   let statsHtml = "";
   players.forEach(p => {
