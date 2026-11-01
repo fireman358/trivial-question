@@ -293,6 +293,55 @@ function hexPoints(cx, cy, r) {
   return pts.join(" ");
 }
 
+/* Auto-fit des labels de secteurs : mesure la boîte réelle de chaque texte
+   (getBBox) et réduit la police jusqu'à ce que TOUTE la boîte soit dans le
+   triangle du secteur — mesure réelle, aucune estimation. */
+function fitSectorLabels(svgEl) {
+  if (!svgEl || !svgEl.querySelectorAll) return;
+  svgEl.querySelectorAll(".sector-label").forEach(g => {
+    if (typeof g.querySelector !== "function" || typeof g.getBBox !== "function") return;
+    const sector = +g.getAttribute("data-sector");
+    if (isNaN(sector)) return;
+    const ang = sector * 60 + 30;
+    const [t1x, t1y] = polar(HUB_R + 6, ang - 29);
+    const [t2x, t2y] = polar(HUB_R + 6, ang + 29);
+    const [b1x, b1y] = polar(RING_R - 4, ang - 29);
+    const [b2x, b2y] = polar(RING_R - 4, ang + 29);
+    const quad = [[t1x, t1y], [t2x, t2y], [b2x, b2y], [b1x, b1y]];
+    const inside = (px, py) => {
+      for (let i = 0; i < 4; i++) {
+        const [ax, ay] = quad[i], [bx, by] = quad[(i + 1) % 4];
+        if ((bx - ax) * (py - ay) - (by - ay) * (px - ax) < -0.5) return false;
+      }
+      return true;
+    };
+    const nums = (g.getAttribute("transform").match(/-?[\d.]+/g) || []).map(Number);
+    const [glx, gly, rot] = nums;
+    const rad = rot * Math.PI / 180, cos = Math.cos(rad), sin = Math.sin(rad);
+    const texts = [...g.querySelectorAll("text")];
+    let guard = 0;
+    while (guard++ < 40) {
+      let ok = true;
+      for (const t of texts) {
+        if (typeof t.getBBox !== "function") return;
+        const bb = t.getBBox();
+        const corners = [[bb.x, bb.y], [bb.x + bb.width, bb.y], [bb.x, bb.y + bb.height], [bb.x + bb.width, bb.y + bb.height]];
+        for (const [cx, cy] of corners) {
+          const px = glx + cx * cos - cy * sin;
+          const py = gly + cx * sin + cy * cos;
+          if (!inside(px, py)) { ok = false; break; }
+        }
+        if (!ok) break;
+      }
+      if (ok) break;
+      texts.forEach(t => {
+        const cur = +t.getAttribute("font-size") || 10;
+        t.setAttribute("font-size", Math.max(6, cur - 1));
+      });
+    }
+  });
+}
+
 function renderBoard() {
   const svg = $("#board");
   let defs = `<defs>
@@ -419,6 +468,7 @@ function renderBoard() {
   });
 
   svg.innerHTML = out;
+  fitSectorLabels(svg);
 }
 
 
