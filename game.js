@@ -319,25 +319,35 @@ function fitSectorLabels(svgEl) {
     const [glx, gly, rot] = nums;
     const rad = rot * Math.PI / 180, cos = Math.cos(rad), sin = Math.sin(rad);
     const texts = [...g.querySelectorAll("text")];
+    const nameText = texts.find(t => t.classList.contains("sector-radial")) || texts[0];
     let guard = 0;
-    while (guard++ < 40) {
-      let ok = true;
+    while (guard++ < 60) {
+      if (typeof nameText.getBBox !== "function") return;
+      const bb = nameText.getBBox();
+      /* 1) dans le triangle (tous les textes) */
+      let insideAll = true;
       for (const t of texts) {
-        if (typeof t.getBBox !== "function") return;
-        const bb = t.getBBox();
-        const corners = [[bb.x, bb.y], [bb.x + bb.width, bb.y], [bb.x, bb.y + bb.height], [bb.x + bb.width, bb.y + bb.height]];
+        const tb = t.getBBox();
+        const corners = [[tb.x, tb.y], [tb.x + tb.width, tb.y], [tb.x, tb.y + tb.height], [tb.x + tb.width, tb.y + tb.height]];
         for (const [cx, cy] of corners) {
           const px = glx + cx * cos - cy * sin;
           const py = gly + cx * sin + cy * cos;
-          if (!inside(px, py)) { ok = false; break; }
+          if (!inside(px, py)) { insideAll = false; break; }
         }
-        if (!ok) break;
+        if (!insideAll) break;
       }
-      if (ok) break;
-      texts.forEach(t => {
-        const cur = +t.getAttribute("font-size") || 10;
-        t.setAttribute("font-size", Math.max(6, cur - 1));
-      });
+      /* 2) remplir la course : longueur du texte ≈ course (±3px) */
+      const len = bb.width;
+      const fills = len >= course - 6;
+      if (insideAll && fills) break;
+      const cur = +nameText.getAttribute("font-size") || 10;
+      if (!insideAll || len > course + 3) {
+        /* trop grand : réduire */
+        texts.forEach(t => t.setAttribute("font-size", Math.max(6, (+t.getAttribute("font-size") || 10) - 1)));
+      } else {
+        /* trop petit : agrandir */
+        texts.forEach(t => t.setAttribute("font-size", Math.min(42, (+t.getAttribute("font-size") || 10) + 1)));
+      }
     }
   });
 }
@@ -391,9 +401,9 @@ function renderBoard() {
     const endR = HUB_R + 16;                    // dernière lettre : bord du logo (HUB_R=72)
     const course = startR - endR;              // course totale disponible
     /* taille pour que : textLen × 0.62 × font = course */
-    let effFont = Math.floor(course / (textLen * 0.62));
-    effFont = Math.max(8, Math.min(30, effFont));
-    const charW = effFont * 0.62;
+    let effFont = Math.floor(course / (textLen * 0.66));
+    effFont = Math.max(8, Math.min(36, effFont));
+    const charW = effFont * 0.66;
     /* sens de lecture : sur la moitié DROITE du plateau (ang entre 0 et 180),
        la lecture naturelle va du centre vers l'extérieur — la DERNIÈRE lettre
        est donc près de l'anneau. Sur la moitié gauche : la première lettre
