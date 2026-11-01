@@ -1,5 +1,5 @@
 /* Trivial Quest — service worker : cache hors-ligne + mise à jour automatique */
-const CACHE = "trivial-quest-v2026-11-01.49";
+const CACHE = "trivial-quest-v2026-11-01.50";
 const ASSETS = [
   "./", "./index.html", "./style.css", "./game.js", "./config.js",
   "./data/age-4-5.js", "./data/age-6-8.js", "./data/age-9-11.js",
@@ -24,11 +24,31 @@ self.addEventListener("activate", (e) => {
 });
 
 /* Réseau d'abord pour version.txt : permet de détecter une mise à jour,
-   puis cache pour tout le reste (fonctionne hors-ligne). */
+   puis cache pour tout le reste (fonctionne hors-ligne).
+   Navigations (ouverture de l'app) : réseau, sinon cache de la requête,
+   sinon cache de index.html — jamais de page « Site inaccessible ». */
 self.addEventListener("fetch", (e) => {
   const url = new URL(e.request.url);
   if (url.pathname.endsWith("version.txt")) {
     e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+    return;
+  }
+  if (e.request.mode === "navigate") {
+    e.respondWith(
+      fetch(e.request).then(resp => {
+        if (resp.ok) {
+          const copy = resp.clone();
+          caches.open(CACHE).then(c => c.put(e.request, copy));
+        }
+        return resp;
+      }).catch(() =>
+        caches.match(e.request).then(cached =>
+          cached || caches.match("./index.html").then(fallback =>
+            fallback || new Response("Hors-ligne : ouvrez l'app une fois en ligne pour compléter le cache.", { status: 503, headers: { "Content-Type": "text/plain; charset=utf-8" } })
+          )
+        )
+      )
+    );
     return;
   }
   e.respondWith(
