@@ -1,0 +1,99 @@
+/* ===== Trivial Pursuit adapté à l'âge — styles ===== */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(135deg, #fdf6ec 0%, #eef4fb 100%);
+  color: #222;
+}
+
+#app { max-width: 1200px; margin: 0 auto; padding: 16px; }
+
+header h1 { margin: 8px 0 4px; font-size: 1.8rem; }
+.subtitle { color: #666; margin-top: 0; }
+
+.panel {
+  background: #fff; border-radius: 12px; padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 16px;
+}
+.panel h2 { margin-top: 0; font-size: 1.1rem; }
+
+.hint { color: #777; font-size: 0.85rem; }
+.rules { padding-left: 18px; font-size: 0.92rem; line-height: 1.5; }
+
+/* Setup */
+.add-player { display: flex; gap: 8px; margin: 10px 0; flex-wrap: wrap; }
+.add-player input {
+  padding: 8px 10px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;
+}
+#new-player-name { flex: 2; min-width: 140px; }
+#new-player-age { flex: 1; min-width: 70px; }
+
+button {
+  padding: 8px 14px; border: none; border-radius: 8px;
+  background: #0d6efd; color: #fff; font-size: 1rem; cursor: pointer;
+}
+button:hover { filter: brightness(1.1); }
+button:disabled { background: #adb5bd; cursor: not-allowed; }
+button.primary { font-size: 1.05rem; padding: 10px 18px; }
+
+.player-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 8px; border-radius: 8px;
+}
+.player-row.active { background: #eef4ff; }
+.player-row .remove { background: none; color: #c00; font-size: 1rem; padding: 0 4px; }
+.dot { width: 14px; height: 14px; border-radius: 50%; display: inline-block; }
+.group-tag { font-size: 0.78rem; background: #f1f3f5; padding: 2px 8px; border-radius: 999px; color: #555; }
+
+.theme-option { padding: 4px 0; }
+
+/* Game layout */
+#game-screen { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+#board-wrap { flex: 2; min-width: 340px; }
+#sidebar { flex: 1; min-width: 300px; }
+
+#board { width: 100%; height: auto; }
+.cell { cursor: default; }
+.cell.reachable { cursor: pointer; stroke: #000 !important; stroke-width: 3 !important; }
+.cell.reachable { animation: pulse 1s infinite alternate; }
+@keyframes pulse { from { opacity: 0.75; } to { opacity: 1; } }
+.wedge-cell { stroke-width: 3; }
+.theme-cell { stroke-dasharray: 4 2; }
+.theme-star { font-size: 13px; fill: #fff; pointer-events: none; }
+.center-label { font-weight: bold; font-size: 14px; fill: #333; }
+.center-sub { font-size: 10px; fill: #777; }
+.pawn-label { font-size: 9px; fill: #fff; font-weight: bold; pointer-events: none; }
+
+/* Camembert display */
+.camembert { display: flex; gap: 6px; margin: 10px 0; }
+.wedge {
+  width: 26px; height: 26px; display: inline-block;
+  clip-path: polygon(50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%, 0 15%);
+  border: 1px solid #999;
+}
+
+/* Questions */
+#question-cat { margin-bottom: 6px; }
+#question-text { font-size: 1.1rem; margin: 8px 0 14px; }
+#answers { display: grid; gap: 8px; grid-template-columns: 1fr 1fr; }
+.answer {
+  background: #f8f9fa; color: #222; border: 1px solid #ddd;
+  text-align: left; line-height: 1.3;
+}
+.answer.correct { background: #2a9d8f; color: #fff; border-color: #1f7d70; }
+.answer.wrong { background: #e63946; color: #fff; border-color: #b02a35; }
+.answer:disabled { cursor: default; }
+#answer-feedback { font-weight: 600; min-height: 1.2em; margin-top: 10px; }
+
+#dice-result { font-size: 1.05rem; font-weight: 600; margin-top: 10px; min-height: 1.4em; }
+
+.hidden { display: none !important; }
+
+/* Win */
+#win-screen .panel { text-align: center; padding: 40px 20px; }
+#winner-name { font-size: 1.6rem; }
+
+@media (max-width: 800px) {
+  #answers { grid-template-columns: 1fr; }
+}

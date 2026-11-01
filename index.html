@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trivial Pursuit par tranche d'âge</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <header>
+    <h1>🧀 Trivial Pursuit adapté à l'âge</h1>
+    <p class="subtitle">Le classique des camemberts, avec des questions calibrées pour chaque joueur.</p>
+  </header>
+
+  <!-- ÉCRAN 1 : Configuration -->
+  <section id="setup-screen">
+    <div class="panel">
+      <h2>1. Ajoutez les joueurs</h2>
+      <div id="players-list"></div>
+      <div class="add-player">
+        <input type="text" id="new-player-name" placeholder="Nom du joueur" maxlength="20">
+        <input type="number" id="new-player-age" placeholder="Âge" min="4" max="120">
+        <button id="btn-add-player">Ajouter</button>
+      </div>
+      <p class="hint">Chaque joueur reçoit des questions correspondant à son âge. L'âge peut rester secret : il n'est jamais affiché pendant la partie.</p>
+    </div>
+
+    <div class="panel">
+      <h2>2. Packs à thème (optionnel)</h2>
+      <div id="themes-list"></div>
+      <p class="hint">Un pack à thème remplace les catégories habituelles quand on tombe sur une case à thème (★).</p>
+    </div>
+
+    <div class="panel">
+      <h2>3. Rappel des règles</h2>
+      <ul class="rules">
+        <li>On joue avec un dé : avancez du nombre de cases indiqué, dans la direction de votre choix.</li>
+        <li>Répondez à une question de la catégorie de la case où vous arrivez.</li>
+        <li>Une case <b>camembert</b> (colorée en hexagone) donne un partenaire si vous répondez juste : une seule tentative par catégorie !</li>
+        <li>Quand les 6 camemberts sont collectés, dirigez-vous vers le centre et répondez à une question d'une catégorie tirée au sort : victoire !</li>
+        <li>Bonne réponse = on rejoue ; mauvaise réponse = au joueur suivant.</li>
+        <li>Chaque question est adaptée à l'âge du joueur qui répond.</li>
+      </ul>
+      <button id="btn-start" class="primary" disabled>Commencer la partie</button>
+    </div>
+  </section>
+
+  <!-- ÉCRAN 2 : Jeu -->
+  <section id="game-screen" class="hidden">
+    <div id="board-wrap">
+      <svg id="board" viewBox="0 0 700 700"></svg>
+    </div>
+
+    <div id="sidebar">
+      <div class="panel">
+        <h2 id="turn-title">Au tour de…</h2>
+        <div id="wedges-display"></div>
+        <button id="btn-roll" class="primary">🎲 Lancer le dé</button>
+        <div id="dice-result"></div>
+      </div>
+
+      <div class="panel hidden" id="question-panel">
+        <h2 id="question-cat"></h2>
+        <p id="question-text"></p>
+        <div id="answers"></div>
+        <p id="answer-feedback"></p>
+      </div>
+
+      <div class="panel">
+        <h2>Joueurs</h2>
+        <div id="players-summary"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÉCRAN 3 : Victoire -->
+  <section id="win-screen" class="hidden">
+    <div class="panel">
+      <h1 id="winner-name">🏆</h1>
+      <p id="winner-sub"></p>
+      <button id="btn-restart" class="primary">Rejouer</button>
+    </div>
+  </section>
+
+</div>
+
+<script src="data/age-6-8.js"></script>
+<script src="data/age-9-11.js"></script>
+<script src="data/age-12-15.js"></script>
+<script src="data/age-16-30.js"></script>
+<script src="data/age-31-plus.js"></script>
+<script src="data/theme-disney.js"></script>
+<script src="data/theme-musique.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
