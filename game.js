@@ -404,18 +404,34 @@ function renderBoard() {
     }
     const longest = Math.max(...lines.map(l => l.length));
     const fontPx = Math.max(10, Math.min(24, Math.floor(availW / (longest * 0.78))));
-    /* Le bloc part de la base du triangle : l'icône près de l'anneau,
-       le nom en dessous, en s'éloignant des cases extérieures. */
-    const iconH = Math.round(fontPx * 1.4);
-    const lineH = fontPx + 2;
+    /* TEXTE RADIAL : le mot s'écrit LE LONG de l'axe du triangle, la
+       première lettre contre le bord extérieur (la base), la dernière
+       vers le centre — comme un rayon, sans toucher le logo central.
+       Repère : après rotate(ang - 90), l'axe x local suit l'axe du rayon ;
+       x négatif = vers le centre, x positif = vers l'extérieur. */
+    const textLen = info.name.length;
+    const charW = fontPx * 0.62;                 // largeur moyenne d'un caractère
+    const startR = RING_R - 42;                  // première lettre : près de la base
+    const endR = startR - textLen * charW;        // dernière lettre : vers le centre
+    /* largeur contrainte : le mot doit tenir entre startR et max(HUB_R+10, endR) */
+    const fitR = Math.max(HUB_R + 12, endR);
+    const maxChars = Math.floor((startR - (HUB_R + 12)) / charW);
+    /* si le mot est trop long pour la course disponible, réduire la police */
+    let effFont = fontPx;
+    if (textLen * charW > startR - (HUB_R + 12)) {
+      effFont = Math.max(8, Math.floor((startR - (HUB_R + 12)) / (textLen * 0.62)));
+    }
+    const eIconH = Math.round(effFont * 1.3);
+    const eCharW = effFont * 0.62;
     let rotate = ang - 90;
     if (ang > 180) rotate += 180;
-    /* repère local : y+ pointe vers l'extérieur (base) après rotation,
-       donc on part du bas du bloc (base) vers le haut (intérieur). */
-    const baseY = Math.floor(blockDepth / 2);      // bord à la base du triangle
-    out += `<g class="sector-label" transform="translate(${lx} ${ly}) rotate(${rotate})">
-      <text x="0" y="${baseY}" text-anchor="middle" class="sector-icon" font-size="${iconH}">${info.icon}</text>
-      ${lines.map((l, i) => `<text x="0" y="${baseY - iconH - 4 - (i + 1) * lineH}" text-anchor="middle" class="sector-cat" font-size="${fontPx}">${l}</text>`).join("")}
+    /* l'ancre du texte : centre de la course du mot */
+    const textMidR = startR - (textLen * eCharW) / 2;
+    const [tx2, ty2] = polar(textMidR, ang);
+    const baseOffset = startR - textMidR;        // x local de la première lettre
+    out += `<g class="sector-label" data-sector="${sector}" transform="translate(${tx2} ${ty2}) rotate(${rotate})">
+      <text x="${baseOffset}" y="${Math.round(effFont * 0.35)}" text-anchor="begin" class="sector-radial" font-size="${effFont}">${info.name}</text>
+      <text x="${baseOffset}" y="${Math.round(-effFont * 0.05)}" text-anchor="begin" class="sector-icon" font-size="${eIconH}">${info.icon}</text>
     </g>`;
   }
   out += `<circle cx="350" cy="352" r="${HUB_R + 14}" fill="#f2e9cf" stroke="#c9b98a" stroke-width="2" opacity="0.8"/>`;
