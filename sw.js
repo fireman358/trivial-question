@@ -1,10 +1,13 @@
 /* Trivial Quest — service worker : cache hors-ligne + mise à jour automatique */
-const CACHE = "trivial-quest-v2026-11-01.36"""""""""""" + "v2026-11-01.25";
+const CACHE = "trivial-quest-v2026-11-01.37""""""""""""" + "v2026-11-01.25";
 const ASSETS = [
   "./", "./index.html", "./style.css", "./game.js", "./config.js",
   "./data/age-4-5.js", "./data/age-6-8.js", "./data/age-9-11.js",
   "./data/age-12-15.js", "./data/age-16-30.js", "./data/age-31-plus.js",
   "./data/theme-disney.js", "./data/theme-musique.js",
+  "./data/theme-starwars.js", "./data/theme-dragonball.js", "./data/theme-series.js",
+  "./data/theme-musique70-90.js", "./data/theme-musique2000.js",
+  "./data/theme-cinema.js", "./data/theme-superheroes.js",
   "./manifest.json", "./version.txt"
 ];
 
