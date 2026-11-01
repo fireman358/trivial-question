@@ -47,7 +47,9 @@ const PAWNS = {
 let players = [];
 let current = 0;
 let awaitingRoll = true;
-let usedQuestions = {};
+// Sac sans remise : chaque question d'un même pool est posée une seule fois
+// avant que le pool ne soit mélangé et réutilisé.
+let drawBags = {};
 // Une seule recharge à la fois : les cartes bonus ne se mélangent pas.
 let activeTheme = null;
 
@@ -395,15 +397,26 @@ function rollDice(cb) {
   }, 100);
 }
 
-/* ---------- Questions ---------- */
+/* ---------- Questions (tirage sans remise par pool) ----------
+   Une question d'un pool donné ne revient qu'après que TOUTES les
+   questions de ce pool ont été posées : on vide le sac, puis on le
+   remélange. Pool = (pack d'âge, catégorie).                    */
+function drawFromBag(bagKey, pool) {
+  if (!drawBags[bagKey] || drawBags[bagKey].length === 0) {
+    drawBags[bagKey] = pool.map((_, i) => i);
+    for (let i = drawBags[bagKey].length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [drawBags[bagKey][i], drawBags[bagKey][j]] = [drawBags[bagKey][j], drawBags[bagKey][i]];
+    }
+  }
+  return pool[drawBags[bagKey].pop()];
+}
+
 function pickQuestion(player, catKey) {
   const pack = window.QUESTION_PACKS[player.group];
-  let pool = pack.questions.filter(q => q[0] === catKey && !usedQuestions[q[1]]);
-  if (pool.length === 0) pool = pack.questions.filter(q => q[0] === catKey);
-  if (pool.length === 0) pool = pack.questions.filter(q => !usedQuestions[q[1]]);
-  const q = pool[Math.floor(Math.random() * pool.length)];
-  usedQuestions[q[1]] = true;
-  return q;
+  let pool = pack.questions.filter(q => q[0] === catKey);
+  if (pool.length === 0) pool = pack.questions.slice();
+  return drawFromBag(player.group + "::" + catKey, pool);
 }
 
 /* Extensions : cartes bonus Disney/Musique/… servies sur la catégorie Divertissement */
@@ -412,16 +425,13 @@ function pickThemeQuestion(player) {
   const pack = window.THEME_PACKS[activeTheme];
   const group = pack.groups[themeGroupFor(player.age)];
   if (!group) return null;
-  let pool = group.questions.filter(q => !usedQuestions["T::" + q[1]]);
-  if (pool.length === 0) pool = group.questions;
-  const q = pool[Math.floor(Math.random() * pool.length)];
-  usedQuestions["T::" + q[1]] = true;
+  const q = drawFromBag("T::" + activeTheme + "::" + themeGroupFor(player.age), group.questions);
   return { theme: pack.label, q };
 }
 
 /* ---------- Tour de jeu ---------- */
 function startGame() {
-  usedQuestions = {};
+  drawBags = {};
   gameOver = false;
   current = 0;
   players.forEach(p => { p.pos = "hub"; p.wedges = {}; });
