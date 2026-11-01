@@ -340,7 +340,11 @@ function renderBoard() {
     const blockDepth = 66;               // profondeur du bloc vers le centre
     const anchorR = baseR - blockDepth / 2;  // centre de gravité du bloc
     const [lx, ly] = polar(anchorR, ang);
-    const availW = 2 * (anchorR - 10) * Math.tan(29 * Math.PI / 180) * 0.72;
+    /* Largeur disponible : calculée au point le PLUS INTÉRIEUR du bloc
+       (la dernière ligne de texte), là où le triangle est le plus étroit.
+       C'est la vraie contrainte, avec marge de sécurité. */
+    const innerR = anchorR - blockDepth / 2 - 6;
+    const availW = 2 * innerR * Math.tan(28 * Math.PI / 180) * 0.62;
     /* Noms longs sur deux lignes : la taille se calcule sur le segment
        le plus long, chaque ligne tient dans le triangle. */
     let lines = [info.name];
