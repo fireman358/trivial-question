@@ -315,6 +315,10 @@ function fitSectorLabels(svgEl) {
     const texts = [...g.querySelectorAll("text")];
     const nameText = texts.find(t => t.classList.contains("sector-radial")) || texts[0];
     if (typeof nameText.getBBox !== "function") return;
+    /* La taille statique de renderBoard (pleine course) est la référence :
+       le fit mesuré ne peut JAMAIS descendre en dessous — il ne sert qu'à
+       corriger les débordements réels (polices différentes selon le support). */
+    const floorSize = +nameText.getAttribute("font-size") || 10;
     const iconText = texts.find(t => t.classList.contains("sector-icon"));
     const insideName = () => {
       const tb = nameText.getBBox();
@@ -331,18 +335,16 @@ function fitSectorLabels(svgEl) {
       nameText.setAttribute("font-size", v);
       if (iconText) iconText.setAttribute("font-size", Math.round(v * 1.25));
     };
-    /* Phase 1 : agrandir tant que le mot ne remplit pas la course */
+    /* Agrandir si la police réelle rend le mot plus court que la course */
     let guard = 0;
-    while (guard++ < 42) {
-      if (nameText.getBBox().width >= course - 6) break;
+    while (guard++ < 42 && nameText.getBBox().width < course - 6) {
       setName(Math.min(44, size() + 1));
     }
-    /* Phase 2 : réduire uniquement si le NOM déborde du triangle ou dépasse la course */
+    /* Réduire uniquement pour un débordement réel, sans jamais passer sous la taille statique */
     guard = 0;
     while (guard++ < 42) {
       const ok = insideName() && nameText.getBBox().width <= course + 3;
-      if (ok) break;
-      if (size() <= 7) break;
+      if (ok || size() <= floorSize) break;
       setName(size() - 1);
     }
   });
