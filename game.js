@@ -2,7 +2,7 @@
 
 /* ---------- Catégories : couleurs du jeu ---------- */
 const CATEGORIES = {
-  G: { name: "Géographie",        color: "#1f6fb2", icon: "🌍" },
+  G: { name: "Géographie",        color: "#1f6fb2", icon: "🗺️" },
   H: { name: "Histoire",          color: "#f2c500", icon: "🏛️" },
   S: { name: "Sciences",          color: "#2e9b4e", icon: "🔬" },
   L: { name: "Sports & Loisirs",  color: "#f07c1e", icon: "⚽" },
