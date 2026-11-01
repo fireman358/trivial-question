@@ -2,14 +2,18 @@
 
 /* ---------- Catégories (fidèles au Trivial Pursuit classique : 6 camemberts) ---------- */
 const CATEGORIES = {
-  G: { name: "Géographie",      color: "#0d6efd" },
-  H: { name: "Histoire",        color: "#f4c20d" },
-  S: { name: "Sciences",        color: "#20c997" },
-  L: { name: "Loisirs & Sports",color: "#fd7e14" },
-  A: { name: "Arts & Littérature", color: "#6f42c1" },
-  D: { name: "Divertissement",  color: "#e83e8c" }
+  G: { name: "Géographie",        color: "#0d6efd", icon: "🌍" },
+  H: { name: "Histoire",          color: "#f4c20d", icon: "🏛️" },
+  S: { name: "Sciences",          color: "#20c997", icon: "🔬" },
+  L: { name: "Loisirs & Sports",  color: "#fd7e14", icon: "⚽" },
+  A: { name: "Arts & Littérature",color: "#6f42c1", icon: "🎨" },
+  D: { name: "Divertissement",    color: "#e83e8c", icon: "🎬" }
 };
 const CAT_KEYS = Object.keys(CATEGORIES);
+
+const ROLL_COLOR = "#8d99ae", ROLL_ICON = "↻";
+const THEME_COLOR = "#343a40", THEME_ICON = "★";
+const HQ_ICON = "🧀";
 
 /* ---------- Tranches d'âge ---------- */
 const AGE_GROUPS = ["6-8", "9-11", "12-15", "16-30", "31+"];
@@ -25,15 +29,21 @@ function ageGroupFor(age) {
 let players = [];
 let current = 0;
 let awaitingRoll = true;
-let usedQuestions = {};   // clé -> true
+let usedQuestions = {};
 let activeThemes = { disney: true, musique: true };
 let board = null;
 let gameOver = false;
+var CATEGORY_ORDER = ["G", "S", "A", "H", "L", "D"];
 
 /* ---------- Utilitaires DOM ---------- */
 const $ = (sel) => document.querySelector(sel);
 const show = (el) => el.classList.remove("hidden");
 const hide = (el) => el.classList.add("hidden");
+function lighten(hex, amt) {
+  const n = parseInt(hex.slice(1), 16);
+  const r = Math.min(255, (n >> 16) + amt), g = Math.min(255, ((n >> 8) & 255) + amt), b = Math.min(255, (n & 255) + amt);
+  return "#" + ((r << 16) | (g << 8) | b).toString(16).padStart(6, "0");
+}
 
 /* ---------- Écran de configuration ---------- */
 function renderSetup() {
@@ -44,7 +54,7 @@ function renderSetup() {
     row.className = "player-row";
     row.innerHTML = `<span class="dot" style="background:${p.color}"></span>
       <span>${p.name}</span>
-      <span class="group-tag">${AGE_GROUPS.includes(p.group) ? window.QUESTION_PACKS[p.group].label : ""}</span>
+      <span class="group-tag">${window.QUESTION_PACKS[p.group].label}</span>
       <button data-i="${i}" class="remove">✕</button>`;
     row.querySelector(".remove").onclick = () => { players.splice(i, 1); refreshSetup(); };
     list.appendChild(row);
@@ -79,9 +89,8 @@ $("#btn-add-player").onclick = () => {
     name, age,
     group: ageGroupFor(age),
     color: PLAYER_COLORS[players.length % PLAYER_COLORS.length],
-    pos: "center",
-    wedges: {},
-    turnOrder: players.length
+    pos: null,
+    wedges: {}
   });
   $("#new-player-name").value = "";
   $("#new-player-age").value = "";
@@ -90,9 +99,15 @@ $("#btn-add-player").onclick = () => {
 
 $("#btn-start").onclick = startGame;
 
-/* ---------- Plateau (rayons de 3 cases, comme le jeu original) ---------- */
-const RING_R = 300, MID_R = 210, INNER_R = 120, CENTER_R = 80;
-const CATEGORY_ORDER = ["G", "S", "A", "H", "L", "D"]; // ordre des rayons
+/* ---------- Plateau (fidèle au jeu original) ----------
+   - Moyeu central (question finale)
+   - 6 rayons de 3 cases : interne / SIÈGE camembert (au milieu) / externe
+   - Anneau extérieur de 36 cases ; « Rejouez » (↻) à l'entrée de chaque rayon,
+     case à thème (★) à l'opposée de chaque sextant
+   - Total : 1 + 18 + 36 = 55 cases, comme le plateau classique                */
+const HUB_R = 68;
+const RING_R = 305, SPOKE_OUT_R = 248, HQ_R = 192, SPOKE_IN_R = 136;
+const CELL_R = 21;
 
 function polar(r, angleDeg) {
   const a = (angleDeg - 90) * Math.PI / 180;
@@ -100,118 +115,155 @@ function polar(r, angleDeg) {
 }
 
 function buildBoard() {
-  board = { cells: {}, ring: [] };
-  const svg = $("#board");
+  board = { cells: {}, adj: {} };
+  const add = (c) => { board.cells[c.id] = c; board.adj[c.id] = []; };
+  const link = (a, b) => { board.adj[a].push(b); board.adj[b].push(a); };
 
-  // Cases de l'anneau extérieur (36 cases)
-  const ringAngles = [];
-  for (let i = 0; i < 36; i++) ringAngles.push(i * 10);
-  ringAngles.forEach((ang, i) => {
-    const [x, y] = polar(RING_R, ang);
-    const cell = {
-      id: "ring" + i, x, y, cat: CATEGORY_ORDER[i % 6],
-      isWedge: i % 6 === 0, isTheme: i % 6 === 3, wedgeCat: CATEGORY_ORDER[i % 6]
-    };
-    board.cells[cell.id] = cell;
-    board.ring.push(cell);
-  });
+  add({ id: "hub", x: 350, y: 350, cat: null, isCenter: true, isWedge: false, isRollAgain: false, isTheme: false });
 
-  // Cases médianes (24 cases) et cases camembert internes (6)
-  CATEGORY_ORDER.forEach((cat, s) => {
-    const ang = s * 60;
-    // case camembert interne (proche du centre)
-    const [wx, wy] = polar(INNER_R, ang + 30);
-    const wedgeCell = { id: "wedge-" + cat, x: wx, y: wy, cat, isWedge: true, wedgeCat: cat, isTheme: false };
-    board.cells[wedgeCell.id] = wedgeCell;
-
-    // deux cases du rayon
-    [MID_R - 40, RING_R - 45].forEach((r, k) => {
-      const [x, y] = polar(r, ang + 30);
-      const id = "mid-" + s + "-" + k;
-      board.cells[id] = { id, x, y, cat, isWedge: false, isTheme: false };
-    });
-  });
-
-  // Centre
-  board.cells["center"] = { id: "center", x: 350, y: 350, cat: null, isCenter: true, isWedge: false, isTheme: false };
-
-  renderBoard();
-}
-
-function renderBoard() {
-  const svg = $("#board");
-  let out = "";
-
-  // anneau central décoratif
-  const [cx0] = polar(0, 0);
-  out += `<circle cx="350" cy="350" r="${CENTER_R}" fill="#fff8e7" stroke="#333" stroke-width="2" id="cell-center"/>
-          <text x="350" y="345" text-anchor="middle" class="center-label">CENTRE</text>
-          <text x="350" y="365" text-anchor="middle" class="center-sub">6 camemberts → victoire</text>`;
-
-  for (const id in board.cells) {
-    const c = board.cells[id];
-    if (c.id === "center") continue;
-    const color = c.isTheme ? "#adb5bd" : CATEGORIES[c.cat].color;
-    const shape = c.isWedge ? "polygon hexsmall" : "circle cell";
-    if (c.isWedge) {
-      const pts = hexPoints(c.x, c.y, 26);
-      out += `<polygon points="${pts}" fill="${color}" stroke="#333" id="cell-${c.id}" class="cell wedge-cell"/>`;
-    } else {
-      out += `<circle cx="${c.x}" cy="${c.y}" r="${c.isTheme ? 18 : 20}" fill="${color}" stroke="#333" id="cell-${c.id}" class="cell ${c.isTheme ? 'theme-cell' : ''}"/>`;
-      if (c.isTheme) out += `<text x="${c.x}" y="${c.y + 5}" text-anchor="middle" class="theme-star">★</text>`;
-    }
+  for (let s = 0; s < 6; s++) {
+    const cat = CATEGORY_ORDER[s];
+    const ang = s * 60 + 30;
+    const [ix, iy] = polar(SPOKE_IN_R, ang);
+    const [hx, hy] = polar(HQ_R, ang);
+    const [ox, oy] = polar(SPOKE_OUT_R, ang);
+    add({ id: "in-" + cat, x: ix, y: iy, cat, isWedge: false, isRollAgain: false, isTheme: false });
+    add({ id: "hq-" + cat, x: hx, y: hy, cat, isWedge: true, wedgeCat: cat, isRollAgain: false, isTheme: false });
+    add({ id: "out-" + cat, x: ox, y: oy, cat, isWedge: false, isRollAgain: false, isTheme: false });
+    link("hub", "in-" + cat);
+    link("in-" + cat, "hq-" + cat);
+    link("hq-" + cat, "out-" + cat);
   }
 
-  // pions
-  players.forEach((p, i) => {
-    const c = board.cells[p.pos];
-    const [px, py] = [c.x + ((i % 3) - 1) * 14, c.y + (Math.floor(i / 3) - 0.5) * 16];
-    out += `<g id="pawn-${i}"><circle cx="${px}" cy="${py}" r="9" fill="${p.color}" stroke="#222" stroke-width="1.5"/>
-            <text x="${px}" y="${py + 3.5}" text-anchor="middle" class="pawn-label">${p.name[0]}</text></g>`;
-  });
+  for (let i = 0; i < 36; i++) {
+    const ang = i * 10;
+    const [x, y] = polar(RING_R, ang);
+    const m = i % 6;
+    add({
+      id: "ring" + i, x, y,
+      cat: (m === 0 || m === 3) ? null : CATEGORY_ORDER[(i + 2) % 6],
+      isWedge: false,
+      isRollAgain: m === 0,
+      isTheme: m === 3
+    });
+  }
+  for (let i = 0; i < 36; i++) {
+    link("ring" + i, "ring" + ((i + 1) % 36));
+    if (i % 6 === 0) link("ring" + i, "out-" + CATEGORY_ORDER[i / 6]);
+  }
 
-  svg.innerHTML = out;
+  renderBoard();
+  renderLegend();
 }
 
+/* ---------- Rendu 2.5D ---------- */
 function hexPoints(cx, cy, r) {
   const pts = [];
   for (let i = 0; i < 6; i++) {
-    const a = i * 60 * Math.PI / 180;
+    const a = (i * 60 + 30) * Math.PI / 180;
     pts.push((cx + r * Math.cos(a)).toFixed(1) + "," + (cy + r * Math.sin(a)).toFixed(1));
   }
   return pts.join(" ");
 }
 
-/* ---------- Déplacement ---------- */
-function neighbors(cellId) {
-  const c = board.cells[cellId];
-  const res = [];
-  if (c.id === "center") {
-    CATEGORY_ORDER.forEach(cat => res.push("wedge-" + cat));
-    return res;
-  }
-  if (c.isWedge) {
-    res.push("center");
-    const s = CATEGORY_ORDER.indexOf(c.cat);
-    res.push("mid-" + s + "-0");
-    res.push("mid-" + s + "-1");
-    const prev = (s + 5) % 6, next = (s + 1) % 6;
-    res.push("mid-" + prev + "-1");
-    res.push("mid-" + next + "-0");
-    return res;
-  }
-  // cases médianes : reconstruire via distance angulaire
-  const all = Object.values(board.cells).filter(x => x.id !== "center");
-  for (const o of all) {
-    if (o.id === cellId) continue;
-    const d = Math.hypot(o.x - c.x, o.y - c.y);
-    if (d < 95) res.push(o.id);
-  }
-  return res;
+function cellPaint(cell) {
+  if (cell.isRollAgain) return { c: ROLL_COLOR, icon: ROLL_ICON };
+  if (cell.isTheme) return { c: THEME_COLOR, icon: THEME_ICON };
+  if (cell.isWedge) return { c: CATEGORIES[cell.wedgeCat].color, icon: HQ_ICON };
+  return { c: CATEGORIES[cell.cat].color, icon: CATEGORIES[cell.cat].icon };
 }
 
+function renderBoard() {
+  const svg = $("#board");
+  let defs = `<defs>
+    <filter id="f-drop" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="f-soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.2" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+    <radialGradient id="rg-hub" cx="38%" cy="35%">
+      <stop offset="0%" stop-color="#fff3c4"/><stop offset="100%" stop-color="#e9b949"/>
+    </radialGradient>
+    <radialGradient id="rg-roll" cx="38%" cy="32%">
+      <stop offset="0%" stop-color="#cfd6e4"/><stop offset="100%" stop-color="${ROLL_COLOR}"/></radialGradient>
+    <radialGradient id="rg-theme" cx="38%" cy="32%">
+      <stop offset="0%" stop-color="#59606a"/><stop offset="100%" stop-color="${THEME_COLOR}"/></radialGradient>
+    <radialGradient id="rg-board" cx="50%" cy="46%">
+      <stop offset="0%" stop-color="#fffdf5"/><stop offset="100%" stop-color="#f3ead6"/></radialGradient>`;
+  for (const k of CAT_KEYS) {
+    defs += `<radialGradient id="rg-${k}" cx="38%" cy="32%">
+      <stop offset="0%" stop-color="${lighten(CATEGORIES[k].color, 90)}"/>
+      <stop offset="100%" stop-color="${CATEGORIES[k].color}"/></radialGradient>`;
+  }
+  defs += `</defs>`;
+
+  let out = defs;
+  out += `<circle cx="350" cy="352" r="336" fill="url(#rg-board)" stroke="#c9b98a" stroke-width="3" filter="url(#f-soft)"/>`;
+  out += `<circle cx="350" cy="352" r="${HUB_R + 16}" fill="#f7efd8" stroke="#c9b98a" stroke-width="2" opacity="0.8"/>`;
+
+  for (const id in board.cells) {
+    const c = board.cells[id];
+    if (c.isCenter) {
+      out += `<g id="cell-hub" class="cell hub-cell">
+        <circle cx="${c.x}" cy="${c.y + 2}" r="${HUB_R}" fill="#00000022"/>
+        <circle cx="${c.x}" cy="${c.y}" r="${HUB_R}" fill="url(#rg-hub)" stroke="#8a6d1d" stroke-width="3" filter="url(#f-drop)"/>
+        <text x="${c.x}" y="${c.y - 4}" text-anchor="middle" class="center-label">CENTRE</text>
+        <text x="${c.x}" y="${c.y + 16}" text-anchor="middle" class="center-sub">6 🧀 → victoire</text>
+      </g>`;
+      continue;
+    }
+    const paint = cellPaint(c);
+    const grad = c.isRollAgain ? "rg-roll" : c.isTheme ? "rg-theme" : "rg-" + (c.isWedge ? c.wedgeCat : c.cat);
+    if (c.isWedge) {
+      out += `<g id="cell-${c.id}" class="cell wedge-cell">
+        <polygon points="${hexPoints(c.x, c.y + 2.5, 25)}" fill="#00000026"/>
+        <polygon points="${hexPoints(c.x, c.y, 25)}" fill="url(#${grad})" stroke="#2b2b2b" stroke-width="2.5" filter="url(#f-drop)"/>
+        <text x="${c.x}" y="${c.y + 6}" text-anchor="middle" class="cell-icon">${HQ_ICON}</text>
+      </g>`;
+    } else {
+      out += `<g id="cell-${c.id}" class="cell">
+        <circle cx="${c.x}" cy="${c.y + 2.5}" r="${CELL_R}" fill="#00000026"/>
+        <circle cx="${c.x}" cy="${c.y}" r="${CELL_R}" fill="url(#${grad})" stroke="#2b2b2b" stroke-width="2" filter="url(#f-drop)"/>
+        <text x="${c.x}" y="${c.y + 6}" text-anchor="middle" class="cell-icon">${paint.icon}</text>
+      </g>`;
+    }
+  }
+
+  players.forEach((p, i) => {
+    const c = board.cells[p.pos];
+    if (!c) return;
+    const px = c.x + ((i % 3) - 1) * 15, py = c.y + (Math.floor(i / 3) - 0.5) * 18;
+    out += `<g id="pawn-${i}" filter="url(#f-drop)">
+      <ellipse cx="${px}" cy="${py + 13}" rx="10" ry="4" fill="#00000033"/>
+      <circle cx="${px}" cy="${py}" r="11" fill="${p.color}" stroke="#1d1d1d" stroke-width="1.5"/>
+      <circle cx="${px - 3.5}" cy="${py - 4}" r="3.2" fill="#ffffffcc"/>
+      <text x="${px}" y="${py + 4}" text-anchor="middle" class="pawn-label">${p.name[0]}</text>
+    </g>`;
+  });
+
+  svg.innerHTML = out;
+}
+
+function renderLegend() {
+  const el = $("#legend");
+  if (!el) return;
+  let html = "<b>Catégories</b><div class='legend-grid'>";
+  for (const k of CAT_KEYS) {
+    html += `<span class="legend-item"><span class="dot" style="background:${CATEGORIES[k].color}"></span>${CATEGORIES[k].icon} ${CATEGORIES[k].name}</span>`;
+  }
+  html += `</div><b>Cases spéciales</b><div class="legend-grid">
+    <span class="legend-item"><span class="dot" style="background:${ROLL_COLOR}"></span>↻ Rejouez : relancez le dé</span>
+    <span class="legend-item"><span class="dot" style="background:${THEME_COLOR}"></span>★ Thème : question Disney / Musique</span>
+    <span class="legend-item">🧀 Siège de catégorie (milieu des rayons) : camembert en jeu</span>
+  </div>`;
+  el.innerHTML = html;
+}
+
+/* ---------- Déplacement (adjacence explicite) ---------- */
+function neighbors(cellId) { return board.adj[cellId] || []; }
+
 function reachable(startId, steps, player) {
-  // Règle officielle : le centre n'est accessible qu'avec les 6 camemberts.
   const hasAllWedges = player && Object.keys(player.wedges).length === 6;
   let frontier = new Set([startId]);
   for (let s = 0; s < steps; s++) {
@@ -223,10 +275,6 @@ function reachable(startId, steps, player) {
     frontier = next;
   }
   frontier.delete(startId);
-  if (frontier.has("center")) {
-    // On ne peut finir au centre que si le trajet est possible : gardé tel quel si permis.
-    return [...frontier].sort((a, b) => (a === "center" ? -1 : b === "center" ? 1 : 0));
-  }
   return [...frontier];
 }
 
@@ -243,7 +291,7 @@ function pickQuestion(player, catKey) {
 
 function pickThemeQuestion(player) {
   const keys = Object.keys(window.THEME_PACKS).filter(k => activeThemes[k]);
-  if (keys.length === 0) return pickQuestion(player, CAT_KEYS[Math.floor(Math.random() * 6)]);
+  if (keys.length === 0) return null;
   const pack = window.THEME_PACKS[keys[Math.floor(Math.random() * keys.length)]];
   let pool = pack.questions.filter(q => !usedQuestions["T::" + q[0]]);
   if (pool.length === 0) pool = pack.questions;
@@ -257,7 +305,7 @@ function startGame() {
   usedQuestions = {};
   gameOver = false;
   current = 0;
-  players.forEach(p => { p.pos = "center"; p.wedges = {}; });
+  players.forEach((p, i) => { p.pos = "ring" + (2 + i * 6); p.wedges = {}; });
   buildBoard();
   hide($("#setup-screen"));
   hide($("#win-screen"));
@@ -284,9 +332,14 @@ function updateTurnUI() {
 $("#btn-roll").onclick = () => {
   if (!awaitingRoll || gameOver) return;
   const dice = 1 + Math.floor(Math.random() * 6);
-  $("#dice-result").textContent = `🎲 ${dice} — choisissez la case de destination.`;
   const p = players[current];
   const targets = reachable(p.pos, dice, p);
+  if (targets.length === 0) {
+    $("#dice-result").textContent = `🎲 ${dice} — aucune case accessible, au tour suivant.`;
+    setTimeout(nextTurn, 1400);
+    return;
+  }
+  $("#dice-result").textContent = `🎲 ${dice} — cliquez sur la case de destination.`;
   targets.forEach(id => {
     const el = $("#cell-" + id);
     if (el) { el.classList.add("reachable"); el.onclick = () => moveTo(id); }
@@ -299,7 +352,14 @@ function moveTo(cellId) {
   const p = players[current];
   p.pos = cellId;
   renderBoard();
-  askQuestion(board.cells[cellId], p);
+  const cell = board.cells[cellId];
+  if (cell.isRollAgain) {
+    $("#dice-result").textContent = "↻ Rejouez ! Relancez le dé.";
+    awaitingRoll = true;
+    $("#btn-roll").disabled = false;
+    return;
+  }
+  askQuestion(cell, p);
 }
 
 function askQuestion(cell, player) {
@@ -309,22 +369,24 @@ function askQuestion(cell, player) {
   let catName, question, options, correct;
 
   if (cell.isCenter) {
-    // Question finale : catégorie au hasard
     const cat = CAT_KEYS[Math.floor(Math.random() * CAT_KEYS.length)];
     const q = pickQuestion(player, cat);
-    catName = "🏆 Question finale — " + CATEGORIES[cat].name;
+    catName = "🏆 Question finale — " + CATEGORIES[cat].icon + " " + CATEGORIES[cat].name;
     question = q[1]; options = q.slice(2, 6); correct = q[6];
-    panel.dataset.final = "1";
   } else if (cell.isTheme) {
     const t = pickThemeQuestion(player);
-    catName = "⭐ " + t.theme;
-    question = t.q[0]; options = t.q.slice(1, 5); correct = t.q[5];
-    panel.dataset.final = "0";
+    if (!t) {
+      const cat = cell.cat || CAT_KEYS[0];
+      const q = pickQuestion(player, cat);
+      catName = CATEGORIES[cat].name; question = q[1]; options = q.slice(2, 6); correct = q[6];
+    } else {
+      catName = "⭐ " + t.theme;
+      question = t.q[0]; options = t.q.slice(1, 5); correct = t.q[5];
+    }
   } else {
     const q = pickQuestion(player, cell.cat);
-    catName = CATEGORIES[cell.cat].name + (cell.isWedge ? " — 🧀 camembert en jeu !" : "");
+    catName = CATEGORIES[cell.cat].icon + " " + CATEGORIES[cell.cat].name + (cell.isWedge ? " — 🧀 camembert en jeu !" : "");
     question = q[1]; options = q.slice(2, 6); correct = q[6];
-    panel.dataset.final = "0";
   }
 
   $("#question-cat").textContent = catName;
@@ -353,15 +415,13 @@ function answer(btn, isCorrect, cell, player, correct, options) {
       player.wedges[cell.wedgeCat] = true;
       fb.textContent += ` ${player.name} gagne le camembert ${CATEGORIES[cell.wedgeCat].name} !`;
     }
-    if (cell.isCenter && Object.keys(player.wedges).length === 6) {
-      return win(player);
-    }
     if (cell.isCenter) {
+      if (Object.keys(player.wedges).length === 6) return win(player);
       fb.textContent += " Il vous faut encore tous les camemberts pour gagner au centre !";
     }
     updateTurnUI();
     awaitingRoll = false;
-    setTimeout(() => { awaitingRoll = true; $("#btn-roll").disabled = false; hide($("#question-panel")); $("#dice-result").textContent=""; }, 1600);
+    setTimeout(() => { awaitingRoll = true; $("#btn-roll").disabled = false; hide($("#question-panel")); $("#dice-result").textContent = ""; }, 1600);
   } else {
     btn.classList.add("wrong");
     const correctBtn = [...document.querySelectorAll(".answer")].find(b => b.textContent === options[correct]);
