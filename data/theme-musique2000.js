@@ -403,11 +403,11 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quelle chanteuse a chanté « Cruel Summer »… quel groupe ?",
-     "Banarama (80s)… aucun 2000s",
-     "Ariana",
-     "Taylor",
-     "Katy",
+     "Quelle chanteuse a eu un hit avec « Cruel Summer » en 2023",
+     "Taylor Swift",
+     "Ariana Grande",
+     "Katy Perry",
+     "Dua Lipa",
      0
     ],
     [
@@ -493,7 +493,7 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel chanteur a chanté « Price Tag »… quelle chanteuse ?",
+     "Quelle chanteuse a sorti « Price Tag » avec B.o.B",
      "Jessie J",
      "Ariana Grande",
      "Nicki Minaj",
@@ -502,11 +502,11 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel chanteur a chanté « Let It Go »… quelle chanteuse de Disney ?",
+     "Quelle chanteuse prête sa voix à Elsa pour « Libérée, délivrée »",
      "Idina Menzel",
      "Demi Lovato",
      "Adele",
-     "Ariana",
+     "Ariana Grande",
      0
     ],
     [
@@ -574,11 +574,11 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel groupe a chanté « Viva la Vida » (déjà)… quel album ?",
-     "Viva la Vida",
+     "Sur quel album de Coldplay figure « Viva la Vida »",
+     "Viva la Vida or Death and All His Friends",
      "X&Y",
-     "Mylo",
-     "Ghost",
+     "Mylo Xyloto",
+     "Ghost Stories",
      0
     ],
     [
@@ -610,7 +610,7 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel chanteur a chanté « Love Yourself » (déjà)… « Sorry » ?",
+     "Qui a co-écrit et interprété « Love Yourself »",
      "Justin Bieber",
      "Ed Sheeran",
      "Shawn Mendes",
@@ -619,8 +619,8 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel groupe a chanté « Vamos a la Playa »… quel duo espagnol des années 2000 ?",
-     "Los del Río (90s)… aucun",
+     "Quel groupe a sorti « Vamos a la Playa » version dance des années 2000",
+     "Righeira",
      "Las Ketchup",
      "Enrique Iglesias",
      "Ricky Martin",
@@ -637,34 +637,34 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quelle chanson des Killers s'appelle « Human » ?",
-     "Human",
-     "Mr. Brightside",
-     "All These",
-     "Somebody",
+     "Qui a sorti la chanson « Human » ?",
+     "Killers",
+     "Pharrell Williams",
+     "Bruno Mars",
+     "Ed Sheeran",
      0
     ],
     [
      "AR",
-     "Quelle chanson des Kings of Leon s'appelle « Use Somebody » (déjà)… quel album contient-elle ?",
+     "Sur quel album des Kings of Leon figure « Use Somebody »",
      "Only by the Night",
      "Because of the Times",
-     "Aha Shake",
-     "Mechanical",
+     "Aha Shake Heartbreak",
+     "Mechanical Bull",
      0
     ],
     [
      "AR",
-     "Quel chanteur a chanté « Happy » (déjà)… quel album « G I R L » ?",
+     "Sur quel album de Pharrell Williams figure « Happy »",
      "G I R L",
-     "Happy (single seul)",
+     "In My Mind",
      "Girl",
-     "Frontin",
+     "Frontin'",
      0
     ],
     [
      "AR",
-     "Quelle chanson de Taylor Swift s'appelle « Love Story » (déjà)… quel album « Fearless » ?",
+     "Sur quel album de Taylor Swift figure « Love Story »",
      "Fearless",
      "1989",
      "Red",
@@ -673,7 +673,7 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quelle chanteuse a chanté « Bring Me to Life »… quel groupe ?",
+     "Quel groupe a sorti « Bring Me to Life »",
      "Evanescence",
      "Paramore",
      "Flyleaf",
@@ -691,20 +691,20 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quelle chanson de Black Eyed Peas s'appelle « Where Is the Love » ?",
-     "Where Is the Love",
-     "I Gotta Feeling",
-     "Boom Boom Pow",
-     "Meet Me Halfway",
+     "Qui a sorti la chanson « Where Is the Love » ?",
+     "Black Eyed Peas",
+     "Pharrell Williams",
+     "Bruno Mars",
+     "Ed Sheeran",
      0
     ],
     [
      "AR",
-     "Quelle chanson de Fergie s'appelle « Big Girls Don't Cry » ?",
-     "Big Girls Don't Cry",
-     "Fergalicious",
-     "Glamorous",
-     "London Bridge",
+     "Qui a sorti la chanson « Big Girls Don't Cry » ?",
+     "Fergie",
+     "Pharrell Williams",
+     "Bruno Mars",
+     "Ed Sheeran",
      0
     ],
     [
@@ -718,7 +718,7 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel duo a chanté « What I've Done »… quel groupe ?",
+     "Quel groupe a sorti « What I've Done »",
      "Linkin Park",
      "Nickelback",
      "Three Days Grace",
@@ -754,47 +754,47 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel groupe a chanté « Bring Me to Life » (déjà)… quel chanteur fait le rap ?",
+     "Qui chante la partie rap dans « Bring Me to Life » d'Evanescence",
      "Paul McCoy",
-     "Chester",
+     "Chester Bennington",
      "Mike Shinoda",
      "Amy Lee",
      0
     ],
     [
      "AR",
-     "Quelle chanson de Maroon 5 s'appelle « She Will Be Loved » ?",
-     "She Will Be Loved",
-     "This Love",
-     "Makes Me Wonder",
-     "Payphone",
+     "Qui a sorti la chanson « She Will Be Loved » ?",
+     "Maroon 5",
+     "Pharrell Williams",
+     "Bruno Mars",
+     "Ed Sheeran",
      0
     ],
     [
      "AR",
-     "Quelle chanson de Maroon 5 s'appelle « Payphone » ?",
-     "Payphone",
-     "One More Night",
-     "Sugar",
-     "Animals",
+     "Qui a sorti la chanson « Payphone » ?",
+     "Maroon 5",
+     "Pharrell Williams",
+     "Bruno Mars",
+     "Ed Sheeran",
      0
     ],
     [
      "AR",
-     "Quelle chanson de Train s'appelle « Drive By » ?",
-     "Drive By",
-     "Hey Soul Sister",
-     "Drops of Jupiter",
-     "Calling All Angels",
+     "Qui a sorti la chanson « Drive By » ?",
+     "Train",
+     "Pharrell Williams",
+     "Bruno Mars",
+     "Ed Sheeran",
      0
     ],
     [
      "AR",
-     "Quelle chanson de Train s'appelle « Drops of Jupiter » ?",
-     "Drops of Jupiter",
-     "Hey Soul Sister",
-     "Drive By",
-     "Meet Virginia",
+     "Qui a sorti la chanson « Drops of Jupiter » ?",
+     "Train",
+     "Pharrell Williams",
+     "Bruno Mars",
+     "Ed Sheeran",
      0
     ],
     [
@@ -808,7 +808,7 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel chanteur a chanté « Wonderful World »… quel James a chanté « You're Beautiful » (déjà) ?",
+     "Quel chanteur britannique a sorti « You're Beautiful »",
      "James Blunt",
      "James Morrison",
      "Daniel Powter",
@@ -844,11 +844,11 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel groupe a chanté « Naive » (déjà)… quel album « Inside In/Inside Out » ?",
-     "The Kooks",
-     "Arctic Monkeys",
-     "The Fratellis",
-     "The View",
+     "Sur quel album des Kooks figure « Naive »",
+     "Inside In/Inside Out",
+     "Konk",
+     "Junk of the Heart",
+     "Listen",
      0
     ],
     [
@@ -889,20 +889,20 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quelle chanson des Gorillaz s'appelle « Feel Good Inc. » ?",
-     "Feel Good Inc.",
-     "Clint Eastwood",
-     "DARE",
-     "Kids with Guns",
+     "Qui a sorti la chanson « Feel Good Inc. » ?",
+     "Gorillaz",
+     "Pharrell Williams",
+     "Bruno Mars",
+     "Ed Sheeran",
      0
     ],
     [
      "AR",
-     "Quelle chanson des Gorillaz s'appelle « Clint Eastwood » ?",
-     "Clint Eastwood",
-     "Feel Good Inc.",
-     "DARE",
-     "19-2000",
+     "Qui a sorti la chanson « Clint Eastwood » ?",
+     "Gorillaz",
+     "Pharrell Williams",
+     "Bruno Mars",
+     "Ed Sheeran",
      0
     ],
     [
@@ -957,7 +957,7 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel groupe français de métal a chanté « The Algorithm »… quel groupe français a chanté « New Rocks »… quel groupe de rock français a popularisé « Le Chant des cygnes »… quel groupe a sorti l'album « Jeanne » ?",
+     "Quel groupe de métal français est connu mondialement pour « L'Enfant sauvage »",
      "Gojira",
      "Dionysos",
      "Indochine",
@@ -993,11 +993,11 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "SO",
-     "Quelle chanson de Bruno Mars s'appelle « Uptown Funk »… quelle chanson de Mark Ronson avec Bruno Mars a fait danser le monde ?",
-     "Uptown Funk",
-     "24K Magic",
-     "Treasure",
-     "Locked Out of Heaven",
+     "Qui a sorti « Uptown Funk » avec Bruno Mars",
+     "Mark Ronson",
+     "Daft Punk",
+     "Pharrell Williams",
+     "Justin Timberlake",
      0
     ],
     [
@@ -1011,8 +1011,8 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AL",
-     "Quel album de Beyoncé porte le nom de son réseau… quelle plateforme a sorti « Lemonade » en exclusivité ?",
-     "HBO/Tidal",
+     "Sur quelle plateforme l'album « Lemonade » de Beyoncé est-il d'abord sorti",
+     "Tidal",
      "Spotify",
      "Netflix",
      "YouTube",
@@ -1182,11 +1182,11 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AL",
-     "Quel album de Beyoncé s'appelle « Lemonade » ?",
-     "Lemonade",
-     "B'Day",
-     "I Am Sasha Fierce",
-     "Renaissance",
+     "Qui a sorti l'album « Lemonade » ?",
+     "Beyoncé",
+     "Kendrick Lamar",
+     "Mark Ronson",
+     "Kanye West",
      0
     ],
     [
@@ -1560,92 +1560,92 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "SO",
-     "Quelle chanson des Chainsmokers s'appelle « Paris » ?",
-     "Paris",
-     "Closer",
-     "Something Just Like This",
-     "Roses",
+     "Qui a sorti la chanson « Paris » ?",
+     "Chainsmokers",
+     "Kendrick Lamar",
+     "Mark Ronson",
+     "Kanye West",
      0
     ],
     [
      "SO",
-     "Quelle chanson des Coldplay et Chainsmokers s'appelle « Something Just Like This » ?",
-     "Something Just Like This",
-     "Paris",
-     "Closer",
-     "Roses",
+     "Qui a sorti la chanson « Something Just Like This » ?",
+     "Coldplay et Chainsmokers",
+     "Kendrick Lamar",
+     "Mark Ronson",
+     "Kanye West",
      0
     ],
     [
      "SO",
-     "Quelle chanson des Arctic Monkeys s'appelle « Do I Wanna Know » ?",
-     "Do I Wanna Know",
-     "505",
-     "R U Mine",
-     "Fluorescent",
+     "Qui a sorti la chanson « Do I Wanna Know » ?",
+     "Arctic Monkeys",
+     "Kendrick Lamar",
+     "Mark Ronson",
+     "Kanye West",
      0
     ],
     [
      "SO",
-     "Quelle chanson des Strokes s'appelle « Last Nite » ?",
-     "Last Nite",
-     "Someday",
-     "Reptilia",
-     "12:51",
+     "Qui a sorti la chanson « Last Nite » ?",
+     "Strokes",
+     "Kendrick Lamar",
+     "Mark Ronson",
+     "Kanye West",
      0
     ],
     [
      "SO",
-     "Quelle chanson des Franz Ferdinand s'appelle « Take Me Out » ?",
-     "Take Me Out",
-     "The Dark of the Matinée",
-     "Michael",
-     "This Fire",
+     "Qui a sorti la chanson « Take Me Out » ?",
+     "Franz Ferdinand",
+     "Kendrick Lamar",
+     "Mark Ronson",
+     "Kanye West",
      0
     ],
     [
      "AL",
-     "Quel album d'Adele s'appelle « 25 » ?",
-     "25",
-     "21",
-     "19",
-     "30",
+     "Qui a sorti l'album « 25 » ?",
+     "Adele",
+     "Kendrick Lamar",
+     "Mark Ronson",
+     "Kanye West",
      0
     ],
     [
      "AL",
-     "Quel album d'Adele s'appelle « 30 » ?",
-     "30",
-     "25",
-     "21",
-     "19",
+     "Qui a sorti l'album « 30 » ?",
+     "Adele",
+     "Kendrick Lamar",
+     "Mark Ronson",
+     "Kanye West",
      0
     ],
     [
      "AL",
-     "Quel album de Beyoncé s'appelle « Renaissance » ?",
-     "Renaissance",
-     "Lemonade",
-     "B'Day",
-     "I Am… Sasha",
+     "Qui a sorti l'album « Renaissance » ?",
+     "Beyoncé",
+     "Kendrick Lamar",
+     "Mark Ronson",
+     "Kanye West",
      0
     ],
     [
      "AL",
-     "Quel album de Taylor Swift s'appelle « Folklore » ?",
-     "Folklore",
-     "Evermore",
-     "1989",
-     "Midnights",
+     "Qui a sorti l'album « Folklore » ?",
+     "Taylor Swift",
+     "Kendrick Lamar",
+     "Mark Ronson",
+     "Kanye West",
      0
     ],
     [
      "AL",
-     "Quel album de Taylor Swift s'appelle « Midnights » ?",
-     "Midnights",
-     "Folklore",
-     "1989",
-     "Lover",
+     "Qui a sorti l'album « Midnights » ?",
+     "Taylor Swift",
+     "Kendrick Lamar",
+     "Mark Ronson",
+     "Kanye West",
      0
     ],
     [
@@ -1794,29 +1794,29 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "SO",
-     "Quelle chanson des Daft Punk s'appelle « One More Time » ?",
-     "One More Time",
-     "Get Lucky",
-     "Around the World",
-     "Harder Better",
+     "Qui a sorti la chanson « One More Time » ?",
+     "Daft Punk",
+     "Kendrick Lamar",
+     "Mark Ronson",
+     "Kanye West",
      0
     ],
     [
      "SO",
-     "Quelle chanson des Daft Punk s'appelle « Da Funk » ?",
-     "Da Funk",
-     "Around the World",
-     "One More Time",
-     "Burnin'",
+     "Qui a sorti la chanson « Da Funk » ?",
+     "Daft Punk",
+     "Kendrick Lamar",
+     "Mark Ronson",
+     "Kanye West",
      0
     ],
     [
      "AL",
-     "Quel album des Daft Punk s'appelle « Discovery » ?",
-     "Discovery",
-     "Homework",
-     "Human After All",
-     "RAM",
+     "Qui a sorti l'album « Discovery » ?",
+     "Daft Punk",
+     "Kendrick Lamar",
+     "Mark Ronson",
+     "Kanye West",
      0
     ]
    ]
@@ -1853,10 +1853,10 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quelle chanteuse est surnommée « La Reine de la scène française »… quelle artiste française a marqué les années 2000 avec « Moi… Lolita »… quelle chanteuse a sorti « Sans contrefaçon » ?",
-     "Mylène Farmer",
+     "Quelle chanteuse française a marqué les années 2000 avec « Moi... Lolita »",
      "Alizée",
-     "Nolwenn",
+     "Mylène Farmer",
+     "Nolwenn Leroy",
      "Lorie",
      0
     ],
@@ -1871,11 +1871,11 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "SO",
-     "Quelle chanson de Coldplay s'appelle « Viva la Vida » ?",
-     "Viva la Vida",
-     "Yellow",
-     "The Scientist",
-     "Paradise",
+     "Qui a sorti la chanson « Viva la Vida » ?",
+     "Coldplay",
+     "Orelsan",
+     "Nine Inch Nails",
+     "Arctic Monkeys",
      0
     ],
     [
@@ -1889,11 +1889,11 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AL",
-     "Quel album de Kanye West s'appelle « Yeezus »… quel album a un cover vide ?",
+     "Quel album de Kanye West a une pochote quasi vide",
      "Yeezus",
      "Graduation",
-     "808s",
-     "MBDTF",
+     "808s and Heartbreak",
+     "My Beautiful Dark Twisted Fantasy",
      0
     ],
     [
@@ -1925,7 +1925,7 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AN",
-     "Quel groupe a surpris en diffusant un album par drone (… quel groupe a diffusé un album via une vidéo boxée) ?",
+     "Quel groupe a distribué son album « In Rainbows » en paiement libre",
      "Radiohead",
      "Nine Inch Nails",
      "Arcade Fire",
@@ -1952,16 +1952,16 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel groupe a sorti « Whatever People Say I Am »… quel groupe britpop a marqué les années 2000 ?",
+     "Quel groupe a sorti l'album « Whatever People Say I Am, That's What I'm Not »",
      "Arctic Monkeys",
-     "Libertines",
+     "The Libertines",
      "Franz Ferdinand",
      "Kaiser Chiefs",
      0
     ],
     [
      "SO",
-     "Quelle chanson des Arctic Monkeys parle d'un éclair… d'un Teddy picker ?",
+     "Quelle chanson des Arctic Monkeys parle d'un pickpocket du dancefloor",
      "I Bet You Look Good on the Dancefloor",
      "Fluorescent Adolescent",
      "505",
@@ -2060,11 +2060,11 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AL",
-     "Quel album de Daft Punk s'appelle « Random Access Memories » ?",
-     "Random Access Memories",
-     "Discovery",
-     "Homework",
-     "Human After All",
+     "Qui a sorti l'album « Random Access Memories » ?",
+     "Daft Punk",
+     "Orelsan",
+     "Coldplay",
+     "Nine Inch Nails",
      0
     ],
     [
@@ -2078,7 +2078,7 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel groupe a chanté « Chandelier »… quelle chanteuse ?",
+     "Qui a interprété « Chandelier »",
      "Sia",
      "Rihanna",
      "Adele",
@@ -2087,47 +2087,47 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel groupe a chanté « Do I Wanna Know » (déjà)… quel album « AM » ?",
-     "Arctic Monkeys",
-     "The Strokes",
-     "Franz Ferdinand",
-     "Kasabian",
-     0
-    ],
-    [
-     "AL",
-     "Quel album des Arctic Monkeys s'appelle « AM » ?",
+     "Sur quel album des Arctic Monkeys figure « Do I Wanna Know »",
      "AM",
-     "Whatever People Say",
-     "Favourite Worst Nightmare",
+     "Suck It and See",
      "Humbug",
+     "Tranquility Base Hotel",
      0
     ],
     [
      "AL",
-     "Quel album des Strokes s'appelle « Is This It » ?",
-     "Is This It",
-     "Room on Fire",
-     "First Impressions",
-     "Angles",
+     "Qui a sorti l'album « AM » ?",
+     "Arctic Monkeys",
+     "Orelsan",
+     "Coldplay",
+     "Nine Inch Nails",
      0
     ],
     [
      "AL",
-     "Quel album des White Stripes s'appelle « Elephant » ?",
-     "Elephant",
-     "White Blood Cells",
-     "Icky Thump",
-     "De Stijl",
+     "Qui a sorti l'album « Is This It » ?",
+     "Strokes",
+     "Orelsan",
+     "Coldplay",
+     "Nine Inch Nails",
+     0
+    ],
+    [
+     "AL",
+     "Qui a sorti l'album « Elephant » ?",
+     "White Stripes",
+     "Orelsan",
+     "Coldplay",
+     "Nine Inch Nails",
      0
     ],
     [
      "SO",
-     "Quelle chanson des White Stripes s'appelle « Icky Thump » ?",
-     "Icky Thump",
-     "Seven Nation Army",
-     "My Doorbell",
-     "The Denial Twist",
+     "Qui a sorti la chanson « Icky Thump » ?",
+     "White Stripes",
+     "Orelsan",
+     "Coldplay",
+     "Nine Inch Nails",
      0
     ],
     [
@@ -2231,11 +2231,11 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AN",
-     "Quelle chanson des Coldplay s'appelle « Viva la Vida » ?",
-     "Viva la Vida",
-     "Yellow",
-     "The Scientist",
-     "Paradise",
+     "Quel duo électro français a sorti « One More Time » en 2000 ?",
+     "Daft Punk",
+     "Air",
+     "Justice",
+     "Cassius",
      0
     ],
     [
@@ -2276,11 +2276,11 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AL",
-     "Quel album des Muse s'appelle « Black Holes and Revelations » ?",
-     "Black Holes and Revelations",
-     "Absolution",
-     "Origin of Symmetry",
-     "The Resistance",
+     "Qui a sorti l'album « Black Holes and Revelations » ?",
+     "Muse",
+     "Orelsan",
+     "Coldplay",
+     "Nine Inch Nails",
      0
     ],
     [
@@ -2339,20 +2339,20 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quelle chanson des Daft Punk s'appelle « One More Time » ?",
-     "One More Time",
-     "Get Lucky",
-     "Around the World",
-     "Harder Better",
+     "Qui a sorti la chanson « One More Time » ?",
+     "Daft Punk",
+     "Orelsan",
+     "Coldplay",
+     "Nine Inch Nails",
      0
     ],
     [
      "AR",
-     "Quel album des Daft Punk s'appelle « Discovery » ?",
-     "Discovery",
-     "Homework",
-     "Human After All",
-     "RAM",
+     "Qui a sorti l'album « Discovery » ?",
+     "Daft Punk",
+     "Orelsan",
+     "Coldplay",
+     "Nine Inch Nails",
      0
     ],
     [
@@ -2447,11 +2447,11 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel groupe a chanté « Take Me Out » (déjà)… quel album « Franz Ferdinand » ?",
+     "Quel groupe écossais a sorti « Take Me Out »",
      "Franz Ferdinand",
-     "You Could Have It",
-     "Tonight",
-     "Right Thoughts",
+     "The Strokes",
+     "Arctic Monkeys",
+     "Kasabian",
      0
     ],
     [
@@ -2465,7 +2465,7 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel groupe a chanté « Ruby » (déjà)… quel album « Yours Truly, Angry Mob » ?",
+     "Sur quel album des Kaiser Chiefs figure « Ruby »",
      "Yours Truly, Angry Mob",
      "Employment",
      "The Future Is Medieval",
@@ -2474,19 +2474,19 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel groupe a chanté « Naive » (déjà)… quel single « She Moves in Her Own Way » (déjà)… quel album « Konk » ?",
+     "Sur quel album des Kooks figure « She Moves in Her Own Way »",
+     "Inside In/Inside Out",
      "Konk",
-     "Inside In",
      "Junk of the Heart",
      "Listen",
      0
     ],
     [
      "AR",
-     "Quel groupe a chanté « Pinoy… quel album des Killers s'appelle « Hot Fuss » ?",
+     "Quel est le premier album des Killers",
      "Hot Fuss",
      "Sam's Town",
-     "Day & Age",
+     "Day and Age",
      "Battle Born",
      0
     ],
@@ -2537,10 +2537,10 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel groupe a chanté « Naive » (déjà)… quel groupe gallois a chanté « The Race for Life »… quel groupe a chanté « Isn't ItFunny »… quel groupe gallois a chanté « Local Boy in the Photograph » ?",
+     "Quel groupe gallois a chanté « Local Boy in the Photograph »",
      "Stereophonics",
-     "Manic Street",
-     "Super Furry",
+     "Manic Street Preachers",
+     "Super Furry Animals",
      "Catatonia",
      0
     ],
@@ -2573,7 +2573,7 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel groupe a chanté « Alphaville… quel groupe a chanté « Big in Japan » ?",
+     "Quel groupe allemand des années 80 a chanté « Big in Japan »",
      "Alphaville",
      "A-ha",
      "Talk Talk",
@@ -2582,7 +2582,7 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel groupe a chanté « Take On Me » (déjà)… quel groupe norvégien ?",
+     "Quel groupe norvégien a chanté « Take On Me »",
      "a-ha",
      "Alphaville",
      "Talk Talk",
@@ -2600,16 +2600,16 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel groupe a chanté « Subdivisions »… quel groupe canadien a chanté « Tom Sawyer » ?",
+     "Quel groupe canadien de rock progressif a chanté « Tom Sawyer »",
      "Rush",
      "Yes",
      "Genesis",
-     "ELP",
+     "Emerson, Lake and Palmer",
      0
     ],
     [
      "AR",
-     "Quel groupe a chanté « Owner of a Lonely Heart » (déjà)… quel album « 90125 » ?",
+     "Sur quel album de Yes figure « Owner of a Lonely Heart »",
      "90125",
      "Drama",
      "Big Generator",
@@ -2627,7 +2627,7 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quel chanteur a chanté « Sussudio » (déjà)… quel album « No Jacket Required » ?",
+     "Sur quel album de Phil Collins figure « Sussudio »",
      "No Jacket Required",
      "Face Value",
      "Both Sides",
@@ -2672,11 +2672,11 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quelle chanson des Pet Shop Boys s'appelle « Go West » ?",
-     "Go West",
-     "West End Girls",
-     "Always on My Mind",
-     "It's a Sin",
+     "Qui a sorti la chanson « Go West » ?",
+     "Pet Shop Boys",
+     "Orelsan",
+     "Coldplay",
+     "Nine Inch Nails",
      0
     ],
     [
@@ -2699,11 +2699,11 @@ window.THEME_PACKS.musique2000 = {
     ],
     [
      "AR",
-     "Quelle chanson des Erasure s'appelle « Sometimes » ?",
-     "Sometimes",
-     "A Little Respect",
-     "Chains of Love",
-     "Oh L'Amour",
+     "Qui a sorti la chanson « Sometimes » ?",
+     "Erasure",
+     "Orelsan",
+     "Coldplay",
+     "Nine Inch Nails",
      0
     ],
     [

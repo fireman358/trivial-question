@@ -412,7 +412,7 @@ window.THEME_PACKS.musique = {
     ],
     [
      "AR",
-     "Quel duo a chanté « Je t'aime… moi non plus » ?",
+     "Quel duo a chanté « Je t'aime... moi non plus » ?",
      "Serge Gainsbourg et Jane Birkin",
      "Jacques Brel et Maddly",
      "Charles Aznavour et Dalida",
@@ -475,8 +475,8 @@ window.THEME_PACKS.musique = {
     ],
     [
      "AR",
-     "Qui mange du pain dans « Il pleut, il mouille »... quel animal s'abrite dans « Il pleut bergère » ?",
-     "La bergère et son ménage",
+     "Dans « Il pleut, il mouille », qui mange du pain sous son manteau ?",
+     "La bergère",
      "Le facteur",
      "Le boulanger",
      "Le berger",
@@ -520,8 +520,8 @@ window.THEME_PACKS.musique = {
     ],
     [
      "SO",
-     "Comment continue « Promenons-nous dans les bois, pendant que le loup n'y est pas »... que fait le loup selon la chanson ?",
-     "Il mange les gens",
+     "Dans « Promenons-nous dans les bois », que fait le loup pendant la chanson ?",
+     "Il s'habille",
      "Il dort",
      "Il chante",
      "Il danse",
@@ -529,11 +529,11 @@ window.THEME_PACKS.musique = {
     ],
     [
      "SO",
-     "Comment continue « Il était un petit navire » ... qui n'avait jamais navigué ?",
-     "Un petit navire",
-     "Un gros bateau",
-     "Un pirate",
-     "Un mousse",
+     "Comment continue « Il était un petit navire, qui n'avait jamais... » ?",
+     "Navigué",
+     "Vogué",
+     "Coulé",
+     "Flotté",
      0
     ],
     [
@@ -547,20 +547,20 @@ window.THEME_PACKS.musique = {
     ],
     [
      "SO",
-     "Dans « Ah les crocodiles », qui gagne à la fin ... contre qui les crocodiles partent-ils en guerre ?",
-     "Contre les éléphants",
-     "Contre les hippopotames",
-     "Contre les lions",
-     "Contre les zèbres",
+     "Dans « Ah les crocodiles », contre quels animaux les crocodiles partent-ils en guerre ?",
+     "Les éléphants",
+     "Les hippopotames",
+     "Les lions",
+     "Les zèbres",
      0
     ],
     [
      "SO",
-     "Comment continue « Cadet Rousselle a trois... » ?",
-     "Maisons",
-     "Chapeaux",
-     "Chemises",
-     "Chaussures",
+     "Dans « Cadet Rousselle », combien de maisons possède-t-il ?",
+     "Trois",
+     "Deux",
+     "Cinq",
+     "Aucune",
      0
     ],
     [
@@ -574,11 +574,11 @@ window.THEME_PACKS.musique = {
     ],
     [
      "SO",
-     "Comment continue « Un jour dans son potager, le père... » de la chanson du Père Nicolas ?",
-     "Nicolas",
-     "Martin",
-     "Jacques",
-     "Guillaume",
+     "Comment s'appelle le héros de la chanson qui se cache dans son potager ?",
+     "Père Nicolas",
+     "Père Martin",
+     "Père Jacques",
+     "Père Guillaume",
      0
     ],
     [
@@ -592,7 +592,7 @@ window.THEME_PACKS.musique = {
     ],
     [
      "SO",
-     "Comment finit « Une souris verte » ... que fait-on avec la souris à la fin ?",
+     "Dans « Une souris verte », que fait-on de la souris à la fin de la chanson ?",
      "On la montre à ces messieurs",
      "On la relâche",
      "On la garde",
@@ -619,11 +619,11 @@ window.THEME_PACKS.musique = {
     ],
     [
      "SO",
-     "Comment continue « Dans sa maison un grand cerf » ... que fait le cerf ?",
-     "Il regardait par la fenêtre",
-     "Il dormait profondément",
-     "Il mangeait de l'herbe",
-     "Il chantait une chanson",
+     "Dans « Dans sa maison un grand cerf », que regardait le cerf par la fenêtre ?",
+     "Une souris qui courait",
+     "Un lapin",
+     "Un oiseau",
+     "La neige",
      0
     ],
     [
@@ -646,10 +646,10 @@ window.THEME_PACKS.musique = {
     ],
     [
      "SO",
-     "Comment continue « Savez-vous planter les choux » ... comment les plante-t-on ?",
+     "Comment continue « Savez-vous planter les choux... » ?",
      "À la mode de chez nous",
      "Avec une pelle",
-     "Dans le jardin",
+     "Dans le potager",
      "Au printemps",
      0
     ],
@@ -709,7 +709,7 @@ window.THEME_PACKS.musique = {
     ],
     [
      "SO",
-     "Comment finit « Ding din dong » ... que fait la cloche ?",
+     "Dans « Ding din dong », que fait la petite cloche ?",
      "Elle sonne",
      "Elle dort",
      "Elle danse",
@@ -853,7 +853,7 @@ window.THEME_PACKS.musique = {
     ],
     [
      "AR",
-     "Quelle chanson commence par « Au clair de la lune, mon ami... » ?",
+     "« Au clair de la lune, mon ami... » : comment s'appelle cet ami de la chanson ?",
      "Pierrot",
      "Jean",
      "Jacques",
@@ -907,11 +907,11 @@ window.THEME_PACKS.musique = {
     ],
     [
      "MD",
-     "D'où vient la chanson « Pirouette Cacahuète » ... dans quel pays chante-t-on cette comptine ?",
-     "En France",
-     "En Belgique",
-     "En Italie",
-     "En Espagne",
+     "« Pirouette Cacahuète » est une comptine chantée surtout dans quel pays ?",
+     "La France",
+     "L'Italie",
+     "L'Espagne",
+     "L'Allemagne",
      0
     ]
    ]
@@ -1898,7 +1898,7 @@ window.THEME_PACKS.musique = {
     ],
     [
      "AR",
-     "Qui a chanté « Je t'aime… moi non plus » en duo avec Jane Birkin ?",
+     "Qui a chanté « Je t'aime... moi non plus » en duo avec Jane Birkin ?",
      "Serge Gainsbourg",
      "Brigitte Bardot",
      "Jacques Dutronc",

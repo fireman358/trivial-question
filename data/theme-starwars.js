@@ -502,11 +502,11 @@ window.THEME_PACKS.starwars = {
     ],
     [
      "PE",
-     "Qui a tué la mère de Rey (… qui a laissé Rey sur Jakku) ?",
-     "Ses parents (inconnus)",
-     "Palpatine",
+     "Qui a laissé Rey sur la planète Jakku quand elle était enfant ?",
+     "Ses parents",
      "Luke",
-     "Kylo",
+     "Kylo Ren",
+     "L'Empereur",
      0
     ],
     [
@@ -529,11 +529,11 @@ window.THEME_PACKS.starwars = {
     ],
     [
      "CU",
-     "Quel animal de compagnie Chewbacca a-t-il… quel est le cri de Chewbacca ?",
-     "Un rugissement",
-     "Un aboiement",
-     "Un chant",
-     "Un sifflement",
+     "Comment s'appelle le fidèle ami Wookie de Han Solo ?",
+     "Chewbacca",
+     "Wicket",
+     "Jar Jar",
+     "Greedo",
      0
     ],
     [
@@ -565,11 +565,11 @@ window.THEME_PACKS.starwars = {
     ],
     [
      "JE",
-     "Comment s'appelle l'apprenti de Yoda qui devient dark Vador… le jeune padawan de Qui-Gon ?",
-     "Anakin",
-     "Obi-Wan",
+     "Qui est le jeune padawan de Qui-Gon Jinn devenu Dark Vador ?",
+     "Anakin Skywalker",
+     "Obi-Wan Kenobi",
      "Luke",
-     "Mace",
+     "Mace Windu",
      0
     ],
     [
@@ -655,11 +655,11 @@ window.THEME_PACKS.starwars = {
     ],
     [
      "PE",
-     "Qui est la mère adoptive de Rey… qui laisse Rey sur Jakku ?",
-     "Unkonwu (ses parents)",
-     "Luke",
-     "Leia",
-     "Han",
+     "Dans la saga, qui est le grand méchant maître de Kylo Ren ?",
+     "Snoke",
+     "Palpatine",
+     "Vader",
+     "Hux",
      0
     ],
     [
@@ -682,7 +682,7 @@ window.THEME_PACKS.starwars = {
     ],
     [
      "FI",
-     "Comment s'appelle l'épisode où Anakin devient chevalier Jedi… où les clones attaquent ?",
+     "Quel épisode montre l'attaque des clones",
      "L'Attaque des clones",
      "La Menace fantôme",
      "La Revanche des Sith",
@@ -826,7 +826,7 @@ window.THEME_PACKS.starwars = {
     ],
     [
      "PL",
-     "Quelle est la planète où vivent les droïdes B1… les usines de droïdes ?",
+     "Sur quelle planète les droïdes de combat sont-ils fabriqués",
      "Geonosis",
      "Kamino",
      "Mustafar",
@@ -835,11 +835,11 @@ window.THEME_PACKS.starwars = {
     ],
     [
      "VE",
-     "Quel vaisseau a la forme d'un croissant… quel destroyer a une forme triangulaire ?",
+     "Quel vaisseau de l'Empire a la forme d'un triangle",
      "Le Star Destroyer",
-     "Le Faucon",
+     "Le Faucon Millenium",
      "Le TIE",
-     "L'Étoile",
+     "L'Étoile de la Mort",
      0
     ],
     [
@@ -889,8 +889,8 @@ window.THEME_PACKS.starwars = {
     ],
     [
      "PE",
-     "Comment s'appelle le pilote qui teste le speeder sur Tatooine… le pilote de la Résistance ?",
-     "Poe",
+     "Qui est le meilleur pilote de la Résistance",
+     "Poe Dameron",
      "Finn",
      "Rey",
      "Rose",
@@ -1515,11 +1515,11 @@ window.THEME_PACKS.starwars = {
     ],
     [
      "CU",
-     "Quel droïde s'exprime en bip dans la série Andor… quel droïde aide Cassian ?",
+     "Quel droïde accompagne Cassian Andor dans la série « Andor »",
+     "B2EMO",
      "K-2SO",
      "R2-D2",
-     "C-3PO",
-     "B2EMO",
+     "Chopper",
      0
     ],
     [
@@ -1542,11 +1542,11 @@ window.THEME_PACKS.starwars = {
     ],
     [
      "VE",
-     "Quel est le chasseur personnel de Vader… de l'Empereur ?",
-     "Le Lambda-class shuttle",
+     "Dans quel vaisseau Vader poursuit-il Luke dans la tranchée de l'Étoile de la Mort",
+     "Son TIE Advanced",
      "Le Faucon",
-     "Le TIE",
-     "Le Destroyer",
+     "Un Star Destroyer",
+     "Le Slave I",
      0
     ],
     [
@@ -1596,9 +1596,9 @@ window.THEME_PACKS.starwars = {
     ],
     [
      "VE",
-     "Quel est le nom du Faucon en Corellien… quel type de vaisseau est le Faucon ?",
-     "Un cargo YT-1300",
-     "Un X-wing",
+     "Quel type de vaisseau est le Faucon Millenium",
+     "Un cargo Corellien YT-1300",
+     "Un chasseur X-wing",
      "Un destroyer",
      "Un TIE",
      0
@@ -1677,7 +1677,7 @@ window.THEME_PACKS.starwars = {
     ],
     [
      "CU",
-     "Comment s'appelle le droïde qui accompagne les héros dans Andor… B2EMO ?",
+     "Comment s'appelle le droïde qui vit avec la famille de Cassian Andor",
      "B2EMO",
      "K-2SO",
      "R2-D2",
@@ -1686,10 +1686,10 @@ window.THEME_PACKS.starwars = {
     ],
     [
      "JE",
-     "Qui est l'apprenti de Vader dans les romans… qui est le grand inquisiteur ?",
+     "Qui dirige les Inquisiteurs chargés de chasser les Jedi",
      "Le Grand Inquisiteur",
      "Ahsoka",
-     "Bariss",
+     "Barris",
      "Starkiller",
      0
     ],
@@ -2141,11 +2141,11 @@ window.THEME_PACKS.starwars = {
     ],
     [
      "JE",
-     "Quel est le nom complet de Darth Plagueis… quel titre porte-t-il ?",
-     "Le Sage",
-     "Le Seigneur Noir",
-     "Le Maître",
-     "Le Sage Sith",
+     "Darth Plagueis est un maître de quel côté de la Force",
+     "Le côté obscur",
+     "Le côté lumineux",
+     "Les deux",
+     "Aucun",
      0
     ],
     [
@@ -2159,11 +2159,11 @@ window.THEME_PACKS.starwars = {
     ],
     [
      "VE",
-     "Quel effet sonore du Faucon a été créé avec un moteur… quel bruit fait l'hyperdrive ?",
-     "Un bruit d'éléphant (mélange)",
-     "Un sifflement",
-     "Un grondement",
-     "Un silence",
+     "Comment s'appelle la vitesse supraluminique des vaisseaux",
+     "L'hyperdrive",
+     "Le warp",
+     "Le saut spatial",
+     "La turbopoussée",
      0
     ],
     [

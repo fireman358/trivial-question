@@ -939,7 +939,7 @@ window.THEME_PACKS.superheroes = {
     ],
     [
      "MA",
-     "Quelle héroïne Marvel a des pouvoirs de Wanda… contrôle la réalité ?",
+     "Quelle héroïne Marvel contrôle la réalité par la magie",
      "Scarlet Witch",
      "Captain Marvel",
      "Jean Grey",
@@ -1056,11 +1056,11 @@ window.THEME_PACKS.superheroes = {
     ],
     [
      "MY",
-     "Quel pierre… quel artifact Marvel efface la moitié de l'univers ?",
-     "Le Gant de l'infini",
+     "Quel objet permet à Thanos d'effacer la moitié de l'univers",
+     "Le Gant de l'Infini",
      "Le Mjolnir",
      "Le Tesseract",
-     "L'Eye of Agamotto",
+     "L'Œil d'Agamotto",
      0
     ],
     [
@@ -1110,7 +1110,7 @@ window.THEME_PACKS.superheroes = {
     ],
     [
      "ME",
-     "Quel méchant de Batman a un sourire… quel méchant est un clown ?",
+     "Quel méchant de Batman est un clown au sourire marqué",
      "Le Joker",
      "Le Penguin",
      "Le Riddler",
@@ -1128,11 +1128,11 @@ window.THEME_PACKS.superheroes = {
     ],
     [
      "EQ",
-     "Quelle équipe Marvel protège le multivers… quelle équipe surveille le temps ?",
-     "Les Guardians… les Avengers",
+     "Quelle équipe Marvel surveille le flux temporel",
+     "Les Avengers du Temps",
      "Les X-Men",
-     "Les Inhumans",
-     "Les Eternals",
+     "Les Inhumains",
+     "Les Eternels",
      0
     ],
     [
@@ -1416,7 +1416,7 @@ window.THEME_PACKS.superheroes = {
     ],
     [
      "MA",
-     "Quel héros Marvel a un animal… un faucon comme partenaire ?",
+     "Quel héros Marvel est accompagné d'un faucon",
      "Falcon",
      "Hawkeye",
      "Winter Soldier",
@@ -1425,7 +1425,7 @@ window.THEME_PACKS.superheroes = {
     ],
     [
      "DC",
-     "Quelle héroïne DC a une corde… un lasso magique ?",
+     "Quelle héroïne DC possède le Lasso de Vérité",
      "Wonder Woman",
      "Supergirl",
      "Batgirl",
@@ -1587,9 +1587,9 @@ window.THEME_PACKS.superheroes = {
     ],
     [
      "ME",
-     "Quel méchant DC suit un culte de l'Ordre Noir… est un alien ?",
+     "Quel méchant tyrannique de DC règne sur Apokolip",
      "Darkseid",
-     "Thanos (Marvel)",
+     "Thanos",
      "Brainiac",
      "Zod",
      0
@@ -1749,7 +1749,7 @@ window.THEME_PACKS.superheroes = {
     ],
     [
      "MA",
-     "Quel héros Marvel est un ancien marine… ancien soldat avec des armes ?",
+     "Quel anti-héros Marvel est un vétéran qui punit les criminels",
      "Punisher",
      "Daredevil",
      "Luke Cage",
@@ -2456,7 +2456,7 @@ window.THEME_PACKS.superheroes = {
     ],
     [
      "MA",
-     "Quel héros Marvel est un ancien soldat… ancien marine ?",
+     "Quel héros Marvel est un ancien soldat devenu justicier solitaire",
      "Punisher",
      "Daredevil",
      "Luke Cage",

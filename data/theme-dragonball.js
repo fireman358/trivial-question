@@ -862,10 +862,10 @@ window.THEME_PACKS.dragonball = {
     ],
     [
      "GU",
-     "Comment s'appelle le fils de Tortue Géniale… qui a formé Goku et Krilin ?",
-     "Tortue Géniale lui-même",
+     "Quel maître a entraîné Goku et Krilin enfants",
+     "Tortue Géniale",
      "Karin",
-     "Kamé",
+     "Kami",
      "Kaio",
      0
     ],
@@ -1128,10 +1128,10 @@ window.THEME_PACKS.dragonball = {
     ],
     [
      "DR",
-     "Quelles boules de cristal Noirs invoquent Cumber… invoquent le dragon maléfique ?",
+     "Comment s'appellent les boules de cristal noires qui invoquent un dragon maléfique",
      "Les Dark Dragon Balls",
      "Les Super boules",
-     "Les Black boules",
+     "Les boules de glace",
      "Les Hyper boules",
      0
     ],
@@ -1979,11 +1979,11 @@ window.THEME_PACKS.dragonball = {
     ],
     [
      "PL",
-     "Quelle est la planète de Bierus… où vit Beerus avant Super ?",
-     "Sa planète natale est inconnue",
-     "Namek",
-     "Terre",
-     "Kaioshin",
+     "Quelle est la fonction de Beerus dans l'univers Dragon Ball",
+     "Dieu de la destruction",
+     "Roi des Saiyens",
+     "Gardien de la Terre",
+     "Maître du temps",
      0
     ],
     [

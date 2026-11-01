@@ -277,7 +277,7 @@ window.THEME_PACKS.series = {
     ],
     [
      "SE",
-     "Quelle série française suit des héros de la mythologie grecque adaptée… suit les aventures d'un jeune héros et d'une héroïne à Paris ?",
+     "Quelle série d'animation française suit deux héros masqués à Paris",
      "Miraculous",
      "Zorro",
      "Wakfu",
@@ -286,11 +286,11 @@ window.THEME_PACKS.series = {
     ],
     [
      "SE",
-     "Quelle série suit un garçon avec une éponge dans un monde sous-marin… quel dessin anime suit une éponge et ses amis ?",
+     "Quel dessin animé suit une éponge qui vit sous l'eau",
      "Bob l'éponge",
      "Les Simpson",
      "Dora",
-     "Phinéas",
+     "Phinéas et Ferb",
      0
     ],
     [
@@ -664,10 +664,10 @@ window.THEME_PACKS.series = {
     ],
     [
      "SE",
-     "Quelle série suit un ours polaire… un ours qui perd sa calotte ?",
-     "Bernard (série)",
+     "Quel dessin animé suit un ours polaire maladroit",
+     "Bernard",
      "Oggy",
-     "Tom",
+     "Tom et Jerry",
      "Waldo",
      0
     ],
@@ -700,10 +700,10 @@ window.THEME_PACKS.series = {
     ],
     [
      "SE",
-     "Quelle série suit une équipe de saumon… de chat et souris français ?",
-     "Tom et Jerry (pas français)",
-     "Oggy",
-     "Les As",
+     "Quel dessin animé français suit un chat bleu attaqué par trois cafards",
+     "Oggy et les Cafards",
+     "Tom et Jerry",
+     "Les As de la jungle",
      "Kirikou",
      0
     ],
@@ -826,8 +826,8 @@ window.THEME_PACKS.series = {
     ],
     [
      "SE",
-     "Quelle série suit un chat qui tombe du ciel… un chat du ciel ?",
-     "Un chat du ciel… aucun connu",
+     "Quel dessin animé suit un chat magicien venu d'un autre monde",
+     "Sailor Moon",
      "Tom",
      "Garfield",
      "Oggy",
@@ -1632,9 +1632,9 @@ window.THEME_PACKS.series = {
     ],
     [
      "SE",
-     "Quelle série suit des vendangeurs… des braconniers du futur ?",
-     "Timeless (pas ça)… aucune",
+     "Quelle série suit un homme qui voyage dans le temps pour changer le futur",
      "Travelers",
+     "Timeless",
      "12 Monkeys",
      "Continuum",
      0
@@ -1970,7 +1970,7 @@ window.THEME_PACKS.series = {
     ],
     [
      "QU",
-     "Dans Mad Men, quel slogan Don invente pour Coca… pour une marque de cigarettes ?",
+     "Dans « Mad Men », quel slogan Don Draper invente-t-il pour une marque de cigarettes",
      "« It's toasted »",
      "« Just Do It »",
      "« Think Different »",
@@ -2456,7 +2456,7 @@ window.THEME_PACKS.series = {
     ],
     [
      "SE",
-     "Quelle série israélienne suit des soldats… une unité d'élite ?",
+     "Quelle série israélienne suit une unité d'élite en infiltration",
      "Fauda",
      "Shtisel",
      "Tehran",
@@ -2519,10 +2519,10 @@ window.THEME_PACKS.series = {
     ],
     [
      "SE",
-     "Quelle série française suit un espion… la DGSE ?",
+     "Quelle série française suit des agents de la DGSE en mission secrète",
      "Le Bureau des Légendes",
      "Lupin",
-     "La Casa",
+     "La Casa de Papel",
      "Bref",
      0
     ],
@@ -2555,7 +2555,7 @@ window.THEME_PACKS.series = {
     ],
     [
      "SE",
-     "Quelle série suit une équipe de braconniers… des gangsters dans l'Amérique des années 20 ?",
+     "Quelle série suit des gangsters pendant la prohibition aux États-Unis",
      "Boardwalk Empire",
      "Peaky Blinders",
      "The Knick",

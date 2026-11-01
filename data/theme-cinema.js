@@ -97,8 +97,8 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "PE",
-     "Qui a prêté sa voix à Shrek en VF… en VO ?",
-     "Mike Myers (VO)",
+     "Qui prête sa voix à Shrek en version originale",
+     "Mike Myers",
      "Eddie Murphy",
      "Antonio Banderas",
      "John Lithgow",
@@ -169,7 +169,7 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "PE",
-     "Quelle actrice a joué Hermione… la Belle dans La Belle et la Bête (2017) ?",
+     "Quelle actrice a joué Hermione puis la Belle dans « La Belle et la Bête » (2017)",
      "Emma Watson",
      "Anne Hathaway",
      "Lily James",
@@ -556,7 +556,7 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit un dragon qui crache du feu… un dragon et un viking ?",
+     "Quel film d'animation suit l'amitié entre un dragon et un jeune Viking",
      "Dragons",
      "Shrek",
      "Kung Fu Panda",
@@ -565,9 +565,9 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit un ours avec un chapeau rouge… un ours qui parle ?",
+     "Quel film suit un ours poli qui arrive à Londres avec son chapeau rouge",
      "Paddington",
-     "Winnie",
+     "Winnie l'ourson",
      "Babar",
      "Baloo",
      0
@@ -655,7 +655,7 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit un lion qui devient roi (déjà)… quel studio ?",
+     "« Le Roi lion » a été produit par quel studio",
      "Disney",
      "DreamWorks",
      "Pixar",
@@ -700,9 +700,9 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit un ours qui parle avec un chapeau… un ours jaune avec un chapeau rouge ?",
+     "Quel film d'animation suit un ours jaune au chapeau rouge",
      "Paddington",
-     "Winnie",
+     "Winnie l'ourson",
      "Babar",
      "Baloo",
      0
@@ -727,7 +727,7 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit une girafe… un hippopotame… un lion dans un zoo ?",
+     "Quel film suit des animaux du zoo de Central Park échoués à Madagascar",
      "Madagascar",
      "Kirikou",
      "Zootopie",
@@ -745,8 +745,8 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit un dragon qui devient ami avec un viking (déjà)… quel est le nom du dragon ?",
-     "Kroc-Mignet",
+     "Comment s'appelle le dragon de Harold dans « Dragons »",
+     "Krokmou",
      "Toothless",
      "Drago",
      "Furet",
@@ -754,8 +754,8 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit un ogre vert avec un âne (déjà)… quel est le nom de l'âne ?",
-     "Non spécifié",
+     "Comment s'appelle le cheval parlant qui fait des grimaces dans « Shrek »",
+     "l'Âne (Donkey)",
      "Câlin",
      "Bouffi",
      "Papy",
@@ -763,8 +763,8 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit une équipe de super-héros en famille (déjà)… quel est le nom du héros principal ?",
-     "Mr. Indestructible",
+     "Comment s'appelle le patriarche de la famille Indestructible",
+     "M. Indestructible",
      "Frozone",
      "Violette",
      "Flèche",
@@ -772,25 +772,25 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit des monstres qui fabriquent des peurs (déjà)… quel est le nom du monstre bleu ?",
+     "Comment s'appelle le grand monstre bleu poilu de « Monstres et Cie »",
      "Bob",
      "Sulley",
      "Randall",
-     "Yeti",
+     "Le Yéti",
      0
     ],
     [
      "FI",
-     "Quel film suit un rat qui cuisine (déjà)… quel est le nom du rat ?",
-     "Remy",
-     "Emile",
+     "Comment s'appelle le rat qui cuisine dans « Ratatouille »",
+     "Rémy",
+     "Émile",
      "Django",
      "Linguini",
      0
     ],
     [
      "FI",
-     "Quel film suit un vieil homme et un garçon qui volent (déjà)… quel est le nom du garçon ?",
+     "Comment s'appelle le jeune explorateur qui accompagne Carl dans « Là-haut »",
      "Russell",
      "Kevin",
      "Dug",
@@ -799,7 +799,7 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit un poisson-clown qui cherche son fils (déjà)… quel est le nom du fils ?",
+     "Comment s'appelle le petit poisson-clown enlevé dans « Le Monde de Nemo »",
      "Nemo",
      "Marlin",
      "Nigel",
@@ -808,7 +808,7 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit des jouets qui vivent (déjà)… quel est le jouet cow-boy ?",
+     "Comment s'appelle le cow-boy en tissu de « Toy Story »",
      "Woody",
      "Buzz",
      "Rex",
@@ -817,25 +817,25 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit des voitures qui parlent (déjà)… quel est le nom de la voiture rouge ?",
-     "Flash",
+     "Comment s'appelle la voiture de course rouge de « Cars »",
+     "Flash McQueen",
+     "Doc Hudson",
      "Cébidou",
-     "Doc",
      "Sally",
      0
     ],
     [
      "FI",
-     "Quel film suit une ville où vivent des animaux (déjà)… quel est le nom du héros ?",
+     "Comment s'appelle la lapine policière de « Zootopie »",
      "Judy Hopps",
-     "Nick",
+     "Nick Wilde",
      "Gazelle",
      "Bellwether",
      0
     ],
     [
      "FI",
-     "Quel film suit un panda qui apprend le kung-fu (déjà)… quel est le nom du panda ?",
+     "Comment s'appelle le panda de « Kung Fu Panda »",
      "Po",
      "Shifu",
      "Tai Lung",
@@ -844,16 +844,16 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit un ogre vert et un âne (déjà)… quel est le nom de la princesse ?",
+     "Comment s'appelle la princesse de « Shrek »",
      "Fiona",
      "Doris",
-     "Blanche",
+     "Blanche-Neige",
      "Raiponce",
      0
     ],
     [
      "FI",
-     "Quel film suit une famille de monstres (déjà)… quel est le nom de la petite fille ?",
+     "Comment s'appelle la petite fille de « Monstres et Cie »",
      "Boo",
      "Cece",
      "Lila",
@@ -862,7 +862,7 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit un émotion… des émotions dans une tête (déjà)… quelle est l'émotion principale ?",
+     "Dans « Vice-versa », quelle émission guide Riley en premier",
      "Joie",
      "Tristesse",
      "Peur",
@@ -871,7 +871,7 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit un garçon qui entre dans le monde des morts (déjà)… quel est le nom du garçon ?",
+     "Comment s'appelle le garçon de « Coco »",
      "Miguel",
      "Hector",
      "Ernesto",
@@ -880,7 +880,7 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit une princesse qui gèle (déjà)… quel est le nom de sa sœur ?",
+     "Dans « La Reine des neiges », comment s'appelle la sœur d'Elsa",
      "Anna",
      "Elsa",
      "Olaf",
@@ -889,25 +889,25 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit une guerrière chinoise (déjà)… quel est le nom du dragon ?",
+     "Comment s'appelle le petit dragon de « Mulan »",
      "Mushu",
      "Khan",
      "Cri-Kee",
-     "Shan",
+     "Shan Yu",
      0
     ],
     [
      "FI",
-     "Quel film suit un ours polaire qui perd sa calotte (déjà)… quel est le nom du film ?",
-     "Bernard",
-     "Zig et Sharko",
-     "Tom",
-     "Oggy",
+     "Quel film d'animation sorti en 2024 suit un jeune loup et un ours polaire",
+     "Flow",
+     "Bernard et Bianca",
+     "Vice-versa 2",
+     "Sahel",
      0
     ],
     [
      "FI",
-     "Quel film suit un garçon et un dragon sur une île mystérieuse (Pixar 2024)… quel film Pixar suit des émotions qui reviennent ?",
+     "Quel film Pixar de 2024 suite « Vice-versa »",
      "Vice-versa 2",
      "Soul 2",
      "Luca 2",
@@ -921,7 +921,7 @@ window.THEME_PACKS.cinema = {
    "questions": [
     [
      "FI",
-     "Quel film suit un chocobo… un avocat qui plonge dans les rêves ?",
+     "Quel film de Nolan suit un avocat qui entre dans les rêves des autres",
      "Inception",
      "Interstellar",
      "Shutter Island",
@@ -1110,7 +1110,7 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit un jazz… un pianiste et une actrice à Los Angeles ?",
+     "Quel film musical suit un pianiste de jazz et une actrice à Los Angeles",
      "La La Land",
      "Whiplash",
      "Birdman",
@@ -1812,11 +1812,11 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "FI",
-     "Quel film suit un champion de boxe qui devient pauvre (déjà)… quel réalisateur ?",
-     "Sylvester Stallone (acteur-réalisateur)",
-     "John Avildsen",
+     "Qui a réalisé « Rocky » (1976)",
+     "John G. Avildsen",
+     "Sylvester Stallone",
      "Ryan Coogler",
-     "Creed",
+     "Martin Scorsese",
      0
     ]
    ]
@@ -1952,11 +1952,11 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "CO",
-     "Quel film français suit deux troubadours… deux musiciens qui voyagent ?",
-     "Le Fabuleux Destin d'Amélie Poulain",
+     "Quel film musical français suit deux artistes de rue dans Paris",
      "Les Choristes",
-     "La Vie en rose",
-     "Le Havre",
+     "Le Fabuleux Destin d'Amélie Poulain",
+     "La Môme",
+     "Once",
      0
     ],
     [
@@ -2024,20 +2024,20 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "SF",
-     "Quel film a popularisé le philosophique « voulez-vous un merguez »… quel film pose « la réalité est-elle une simulation » ?",
+     "Quel film pose la question « la réalité est-elle une simulation »",
      "Matrix",
      "Inception",
      "Total Recall",
-     "Existenz",
+     "eXistenZ",
      0
     ],
     [
      "CO",
-     "Quel film suit un tueur qui protège une plante… une jeune femme ?",
-     "Léon",
-     "Nikita",
-     "Le Grand Bleu",
-     "Le Cinquième Élément",
+     "Dans « Léon », qui le tueur protège-t-il",
+     "une jeune fille",
+     "une femme âgée",
+     "un chien",
+     "une plante",
      0
     ],
     [
@@ -2600,16 +2600,16 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "RE",
-     "Qui a réalisé Le Samouraï (déjà)… quel acteur joue Jef ?",
+     "Qui joue le tueur Jef Costello dans « Le Samouraï »",
      "Alain Delon",
-     "Belmondo",
+     "Jean-Paul Belmondo",
      "Lino Ventura",
      "Jean Gabin",
      0
     ],
     [
      "RE",
-     "Qui a réalisé Le Mépris (déjà)… quel acteur joue Paul ?",
+     "Qui joue le scénariste Paul dans « Le Mépris »",
      "Michel Piccoli",
      "Brigitte Bardot",
      "Jack Palance",
@@ -2618,7 +2618,7 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "RE",
-     "Qui a réalisé À bout de souffle (déjà)… quel acteur joue Michel ?",
+     "Qui joue le petit truand Michel Poiccard dans « À bout de souffle »",
      "Jean-Paul Belmondo",
      "Jean Seberg",
      "Jean-Pierre Melville",
@@ -2627,43 +2627,43 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "RE",
-     "Qui a réalisé Les 400 coups (déjà)… quel acteur joue Antoine ?",
+     "Qui joue le jeune Antoine Doinel dans « Les 400 coups »",
      "Jean-Pierre Léaud",
-     "Belmondo",
-     "Jean Seberg",
+     "Jean-Paul Belmondo",
      "Claude Brasseur",
+     "Gérard Depardieu",
      0
     ],
     [
      "RE",
-     "Qui a réalisé Hiroshima mon amour (déjà)… quel acteur joue l'Allemand ?",
+     "Qui joue le décorateur français dans « Hiroshima mon amour »",
      "Eiji Okada",
      "Emmanuelle Riva",
      "Alain Resnais",
-     " none",
+     "Gérard Depardieu",
      0
     ],
     [
      "RE",
-     "Qui a réalisé Cléo de 5 à 7 (déjà)… quel acteur joue Cléo ?",
+     "Qui joue la chanteuse Cléo dans « Cléo de 5 à 7 »",
      "Corinne Marchand",
      "Agnès Varda",
      "Dorothée Blanck",
-     "Michel Legrand",
+     "Anna Karina",
      0
     ],
     [
      "RE",
-     "Qui a réalisé Le Boucher (déjà)… quel acteur joue Popaul ?",
+     "Qui joue le boucher Popaul dans « Le Boucher »",
      "Jean Yanne",
-     "Chabrol",
      "Stéphane Audran",
-     "Antoine",
+     "Claude Chabrol",
+     "Michel Piccoli",
      0
     ],
     [
      "RE",
-     "Qui a réalisé Bob le flambeur (déjà)… quel acteur joue Bob ?",
+     "Qui joue Bob, le flambeur, dans « Bob le flambeur »",
      "Roger Duchesne",
      "Isabelle Corey",
      "Daniel Cauchet",
@@ -2672,16 +2672,16 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "RE",
-     "Qui a réalisé Casque d'or (déjà)… quel acteur joue Manda ?",
+     "Qui joue le menuisier Manda dans « Casque d'or »",
      "Gérard Philipe",
-     "Michèle Morgan",
      "Simone Signoret",
+     "Serge Reggiani",
      "Jacques Becker",
      0
     ],
     [
      "RE",
-     "Qui a réalisé La Grande Illusion (déjà)… quel acteur joue Maréchal ?",
+     "Qui joue le Maréchal dans « La Grande Illusion »",
      "Jean Gabin",
      "Pierre Fresnay",
      "Erich von Stroheim",
@@ -2690,7 +2690,7 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "RE",
-     "Qui a réalisé Les Enfants du paradis (déjà)… quel acteur joue Frédérick ?",
+     "Qui joue l'acteur Frédérick Lemaître dans « Les Enfants du paradis »",
      "Pierre Brasseur",
      "Jean-Louis Barrault",
      "Arletty",
@@ -2699,16 +2699,16 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "RE",
-     "Qui a réalisé Le Quai des brumes (déjà)… quel acteur joue Lucien ?",
-     "Pierre Brasseur",
+     "Qui joue Lucien, le peintre de « Le Quai des brumes »",
      "Jean Gabin",
+     "Pierre Brasseur",
      "Michèle Morgan",
      "Robert Le Vigan",
      0
     ],
     [
      "RE",
-     "Qui a réalisé La Règle du jeu (déjà)… quel acteur joue Octave ?",
+     "Qui joue Octave dans « La Règle du jeu »",
      "Jean Renoir",
      "Marcel Dalio",
      "Nora Grégor",
@@ -2717,7 +2717,7 @@ window.THEME_PACKS.cinema = {
     ],
     [
      "RE",
-     "Qui a réalisé La Grande Vadrouille (déjà)… quel acteur joue Augustin ?",
+     "Qui joue Augustin, le peintre en bâtiment de « La Grande Vadrouille »",
      "Bourvil",
      "Louis de Funès",
      "Terry-Thomas",
