@@ -1,10 +1,10 @@
-# 🧀 Trivial Pursuit adapté à l'âge
+# 🧀 Trivial Quest
 
-Un jeu de type **Trivial Pursuit** jouable dans le navigateur, où **chaque joueur reçoit des questions adaptées à son âge**.
+**Trivial Quest** : un jeu de quiz jouable dans le navigateur, inspiré des grands classiques du genre, où **chaque joueur reçoit des questions adaptées à son âge**.
 
 ## ✨ Concept
 
-Le Trivial Pursuit classique a un défaut : ses questions sont calibrées pour des adultes et les jeunes joueurs décrochent vite. Ce jeu reprend les **règles et le plateau emblématiques** du jeu original (6 catégories, camemberts, case centrale) mais **chaque question est servie selon la tranche d'âge du joueur qui répond**.
+Les jeux de quiz classiques ont un défaut : leurs questions sont calibrées pour des adultes et les jeunes joueurs décrochent vite. Trivial Quest reprend les mécaniques éprouvées du genre (6 catégories, camemberts à collecter, case centrale) mais **chaque question est servie selon la tranche d'âge du joueur qui répond**.
 
 ### Règles (fidèles à l'original)
 

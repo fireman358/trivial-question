@@ -1,6 +1,6 @@
-/* ===== Trivial Pursuit adapté à l'âge — moteur de jeu ===== */
+/* ===== Trivial Quest adapté à l'âge — moteur de jeu ===== */
 
-/* ---------- Catégories : couleurs officielles du Trivial Pursuit ---------- */
+/* ---------- Catégories : couleurs du jeu ---------- */
 const CATEGORIES = {
   G: { name: "Géographie",        color: "#1f6fb2", icon: "🌍" },
   H: { name: "Histoire",          color: "#f2c500", icon: "🏛️" },
