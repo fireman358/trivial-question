@@ -34,15 +34,6 @@ window.THEME_PACKS.disney = {
     ],
     [
      "HP",
-     "Quel super-héros vole avec une cape rouge et un logo « S » ?",
-     "Superman",
-     "Batman",
-     "Spider-Man",
-     "Hulk",
-     0
-    ],
-    [
-     "HP",
      "Quel jouet est un cowboy dans « Toy Story » ?",
      "Woody",
      "Buzz",
@@ -70,15 +61,6 @@ window.THEME_PACKS.disney = {
     ],
     [
      "HP",
-     "Quel Pokémon jaune fait « Pika Pika » ?",
-     "Pikachu",
-     "Salamèche",
-     "Carapuce",
-     "Bulbizarre",
-     0
-    ],
-    [
-     "HP",
      "Quelle princesse chante « Libérée, délivrée » ?",
      "Elsa",
      "Anna",
@@ -88,20 +70,11 @@ window.THEME_PACKS.disney = {
     ],
     [
      "HP",
-     "Quel héros vit dans un ananas sous la mer ?",
-     "Bob l'éponge",
-     "Patrick",
-     "Sandy",
-     "Carlo",
-     0
-    ],
-    [
-     "HP",
      "Comment s'appelle la petite sirène ?",
      "Ariel",
      "Elsa",
      "Belle",
-     "Moana",
+     "Vaiana",
      0
     ],
     [
@@ -120,6 +93,96 @@ window.THEME_PACKS.disney = {
      "Olaf",
      "Kristoff",
      "Sven",
+     0
+    ],
+    [
+     "HP",
+     "Comment s'appelle l'héroïne qui traverse l'océan pour sauver son île ?",
+     "Vaiana",
+     "Elsa",
+     "Belle",
+     "Jasmine",
+     0
+    ],
+    [
+     "HP",
+     "Comment s'appelle le héros de « Aladdin » ?",
+     "Aladdin",
+     "Jafar",
+     "Rajah",
+     "Iago",
+     0
+    ],
+    [
+     "HP",
+     "Dans « Encanto », quelle héroïne n'a pas de pouvoir magique ?",
+     "Mirabel",
+     "Luisa",
+     "Isabela",
+     "Pepa",
+     0
+    ],
+    [
+     "HP",
+     "Qui tombe amoureux d'une bête dans un château ?",
+     "Belle",
+     "Aurore",
+     "Cendrillon",
+     "Ariel",
+     0
+    ],
+    [
+     "HP",
+     "Qui est le papa de Simba ?",
+     "Mufasa",
+     "Scar",
+     "Rafiki",
+     "Zazu",
+     0
+    ],
+    [
+     "HP",
+     "Qui doit sauver la Chine dans « Mulan » ?",
+     "Mulan",
+     "Shang",
+     "Mushu",
+     "Chi-Fu",
+     0
+    ],
+    [
+     "HP",
+     "Qui devient un vrai garçon grâce à une fée bleue ?",
+     "Pinocchio",
+     "Geppetto",
+     "Jiminy",
+     "Figaro",
+     0
+    ],
+    [
+     "HP",
+     "Quelle princesse travaille pour sa marâtre ?",
+     "Cendrillon",
+     "Aurore",
+     "Belle",
+     "Ariel",
+     0
+    ],
+    [
+     "HP",
+     "Quel robot de soin gonflable aide Hiro dans « Les Nouveaux Héros » ?",
+     "Baymax",
+     "WALL-E",
+     "EVE",
+     "Sonic",
+     0
+    ],
+    [
+     "HP",
+     "Quel garçon est élevé par des loups dans « Le Livre de la jungle » ?",
+     "Mowgli",
+     "Tarzan",
+     "Simba",
+     "Peter Pan",
      0
     ],
     [
@@ -196,294 +259,6 @@ window.THEME_PACKS.disney = {
     ],
     [
      "FL",
-     "Quel film Disney met en scène une belle et une bête ?",
-     "La Belle et la Bête",
-     "Cendrillon",
-     "Raiponce",
-     "Mulan",
-     0
-    ],
-    [
-     "FL",
-     "Dans quel film une fille va au bal et perd sa chaussure ?",
-     "Cendrillon",
-     "Blanche-Neige",
-     "Raiponce",
-     "Aurore",
-     0
-    ],
-    [
-     "CH",
-     "Qui chante « Un jour mon prince viendra » ?",
-     "Blanche-Neige",
-     "Cendrillon",
-     "Ariel",
-     "Belle",
-     0
-    ],
-    [
-     "CH",
-     "Quelle chanson du « Roi lion » ouvre le film ?",
-     "Le cercle de la vie",
-     "Hakuna Matata",
-     "L'amour brille sous les étoiles",
-     "Sonnez les trompettes",
-     0
-    ],
-    [
-     "CH",
-     "Comment s'appelle la devise chantée par Timon et Pumbaa ?",
-     "Hakuna Matata",
-     "Circle of Life",
-     "Souviens-toi",
-     "Long live the king",
-     0
-    ],
-    [
-     "CH",
-     "Quelle chanson d'Elsa est devenue un hit mondial ?",
-     "Libérée, délivrée",
-     "L'amour est un cadeau",
-     "Froid ancestral",
-     "Le premier cri",
-     0
-    ],
-    [
-     "CH",
-     "Quelle chanson d'« Aladdin » a remporté l'Oscar ?",
-     "A Whole New World",
-     "Friend Like Me",
-     "Prince Ali",
-     "Arabian Nights",
-     0
-    ],
-    [
-     "CH",
-     "Qui chante « Sous l'océan » dans La Petite Sirène ?",
-     "Sébastien",
-     "Ariel",
-     "Ursula",
-     "Éric",
-     0
-    ],
-    [
-     "ME",
-     "Comment s'appelle la sorcière de « La Petite Sirène » ?",
-     "Ursula",
-     "Maléfique",
-     "Gothel",
-     "Cruella",
-     0
-    ],
-    [
-     "ME",
-     "Qui est le méchant lion du « Roi lion » ?",
-     "Scar",
-     "Mufasa",
-     "Simba",
-     "Nala",
-     0
-    ],
-    [
-     "ME",
-     "Quelle méchante veut la fourrure des dalmatiens ?",
-     "Cruella",
-     "Maléfique",
-     "Ursula",
-     "Gothel",
-     0
-    ],
-    [
-     "ME",
-     "Comment s'appelle la sorcière de « La Belle au bois dormant » ?",
-     "Maléfique",
-     "Ursula",
-     "Gothel",
-     "Jafar",
-     0
-    ],
-    [
-     "ME",
-     "Quel capitaine a un crochet et déteste Peter Pan ?",
-     "Capitaine Crochet",
-     "Barbe Noire",
-     "Jack Sparrow",
-     "Long John Silver",
-     0
-    ],
-    [
-     "ST",
-     "Quel parc Disney a ouvert en 1955 en Californie ?",
-     "Disneyland",
-     "Disney World",
-     "Disneyland Paris",
-     "Tokyo Disneyland",
-     0
-    ],
-    [
-     "ST",
-     "Quelle année est sorti « Steamboat Willie », le premier Mickey ?",
-     "1928",
-     "1935",
-     "1945",
-     "1955",
-     0
-    ],
-    [
-     "ST",
-     "Qui a créé Mickey Mouse avec Walt Disney ?",
-     "Ub Iwerks",
-     "Roy Disney",
-     "Walt lui seul",
-     "Carl Barks",
-     0
-    ],
-    [
-     "AN",
-     "Comment s'appelle le crabe conseiller d'Ariel ?",
-     "Sébastien",
-     "Dobby",
-     "Flotsam",
-     "Ravi",
-     0
-    ],
-    [
-     "AN",
-     "Quel est le nom du tigre de Jasmine ?",
-     "Rajah",
-     "Abu",
-     "Iago",
-     "Sabor",
-     0
-    ],
-    [
-     "AN",
-     "Dans « Le Roi lion », quel animal est Timon ?",
-     "Un suricate",
-     "Un phacochère",
-     "Une mangouste",
-     "Un lémurien",
-     0
-    ],
-    [
-     "AN",
-     "Comment s'appelle le poisson à la mémoire défaillante dans « Nemo » ?",
-     "Dory",
-     "Nemo",
-     "Marlin",
-     "Jacques",
-     0
-    ],
-    [
-     "AN",
-     "Quel est le nom du renne de Kristoff ?",
-     "Sven",
-     "Olaf",
-     "Max",
-     "Bruno",
-     0
-    ],
-    [
-     "AN",
-     "Dans « Bambi », comment s'appelle le lièvre ami de Bambi ?",
-     "Panpan",
-     "Fleuri",
-     "Féline",
-     "Pistache",
-     0
-    ],
-    [
-     "AN",
-     "Dans « Dumbo », qui encourage l'éléphant à voler ?",
-     "Timothy, une souris",
-     "Un corbeau",
-     "Un moineau",
-     "Une hirondelle",
-     0
-    ],
-    [
-     "AN",
-     "Quel dragon accompagne Mulan ?",
-     "Mushu",
-     "Smaug",
-     "Elliott",
-     "Dodie",
-     0
-    ],
-    [
-     "HP",
-     "Comment s'appelle l'héroïne qui traverse l'océan pour sauver son île ?",
-     "Vaiana",
-     "Elsa",
-     "Belle",
-     "Jasmine",
-     0
-    ],
-    [
-     "HP",
-     "Comment s'appelle le héros de « Aladdin » ?",
-     "Aladdin",
-     "Jafar",
-     "Rajah",
-     "Iago",
-     0
-    ],
-    [
-     "HP",
-     "Dans « Encanto », quelle héroïne n'a pas de pouvoir magique ?",
-     "Mirabel",
-     "Luisa",
-     "Isabela",
-     "Pepa",
-     0
-    ],
-    [
-     "HP",
-     "Qui tombe amoureux d'une bête dans un château ?",
-     "Belle",
-     "Aurore",
-     "Cendrillon",
-     "Ariel",
-     0
-    ],
-    [
-     "HP",
-     "Qui est le papa de Simba ?",
-     "Mufasa",
-     "Scar",
-     "Rafiki",
-     "Zazu",
-     0
-    ],
-    [
-     "HP",
-     "Qui doit sauver la Chine dans « Mulan » ?",
-     "Mulan",
-     "Shang",
-     "Mushu",
-     "Chi-Fu",
-     0
-    ],
-    [
-     "HP",
-     "Qui devient un vrai garçon grâce à une fée bleue ?",
-     "Pinocchio",
-     "Geppetto",
-     "Jiminy",
-     "Figaro",
-     0
-    ],
-    [
-     "HP",
-     "Quelle princesse travaille pour sa marâtre ?",
-     "Cendrillon",
-     "Aurore",
-     "Belle",
-     "Ariel",
-     0
-    ],
-    [
-     "FL",
      "Dans « Le Monde de Nemo », comment s'appelle le papa de Nemo ?",
      "Marlin",
      "Jacques",
@@ -516,24 +291,6 @@ window.THEME_PACKS.disney = {
      "Cendrillon",
      "Belle",
      "Ariel",
-     0
-    ],
-    [
-     "FL",
-     "Quel garçon est élevé par des loups dans « Le Livre de la jungle » ?",
-     "Mowgli",
-     "Tarzan",
-     "Simba",
-     "Peter Pan",
-     0
-    ],
-    [
-     "FL",
-     "Que veut devenir Pinocchio ?",
-     "Un vrai garçon",
-     "Un vrai chat",
-     "Un chevalier",
-     "Un géant",
      0
     ],
     [
@@ -618,12 +375,75 @@ window.THEME_PACKS.disney = {
      0
     ],
     [
+     "FL",
+     "Dans quel film Dumbo apprend-il à voler ?",
+     "Dumbo",
+     "Bambi",
+     "Peter Pan",
+     "Pinocchio",
+     0
+    ],
+    [
+     "FL",
+     "Quel Disney suit un cerf et ses amis de la forêt ?",
+     "Bambi",
+     "Dumbo",
+     "Nemo",
+     "Oliver",
+     0
+    ],
+    [
+     "FL",
+     "Quel Pixar suit des monstres verts et bleus qui font peur aux enfants ?",
+     "Monstres et Cie",
+     "Nemo",
+     "Cars",
+     "Là-haut",
+     0
+    ],
+    [
+     "FL",
+     "Dans « 101 Dalmatiens », qui est la méchante ?",
+     "Cruella",
+     "Maléfique",
+     "Ursula",
+     "Gothel",
+     0
+    ],
+    [
+     "FL",
+     "Quel Disney se passe dans la jungle avec un ours qui chante ?",
+     "Le Livre de la jungle",
+     "Le Roi lion",
+     "Tarzan",
+     "Bambi",
+     0
+    ],
+    [
      "CH",
-     "Que signifie « Hakuna Matata » ?",
-     "Aucun souci",
-     "Bon voyage",
-     "Joyeux anniversaire",
-     "Merci beaucoup",
+     "Quelle chanson du « Roi lion » ouvre le film ?",
+     "Le cercle de la vie",
+     "Hakuna Matata",
+     "L'amour brille sous les étoiles",
+     "Sonnez les trompettes",
+     0
+    ],
+    [
+     "CH",
+     "Comment s'appelle la devise chantée par Timon et Pumbaa ?",
+     "Hakuna Matata",
+     "Circle of Life",
+     "Souviens-toi",
+     "Long live the king",
+     0
+    ],
+    [
+     "CH",
+     "Quelle chanson d'Elsa est devenue un hit mondial ?",
+     "Libérée, délivrée",
+     "L'amour est un cadeau",
+     "Froid ancestral",
+     "Le premier cri",
      0
     ],
     [
@@ -673,15 +493,6 @@ window.THEME_PACKS.disney = {
     ],
     [
      "CH",
-     "Dans « La Belle et la Bête », qui chante « C'est la fête » ?",
-     "Lumière",
-     "Big Ben",
-     "Madame Samovar",
-     "Gaston",
-     0
-    ],
-    [
-     "CH",
      "Quelle chanson d'« Aladdin » chante-t-on sur le tapis volant ?",
      "Ce rêve bleu",
      "Ami comme moi",
@@ -709,20 +520,65 @@ window.THEME_PACKS.disney = {
     ],
     [
      "CH",
-     "Dans « Le Livre de la jungle », quelle chanson les éléphants chantent-ils ?",
-     "La marche des éléphants",
-     "Hé ho",
-     "Il en faut peu",
-     "Le cercle de la vie",
-     0
-    ],
-    [
-     "CH",
      "Dans « La Reine des neiges », quelle chanson Olaf chante-t-il sur l'été ?",
      "En été",
      "Libérée, délivrée",
      "Froid ancestral",
      "L'amour est un cadeau",
+     0
+    ],
+    [
+     "CH",
+     "Qui chante « Sous l'océan » dans La Petite Sirène ?",
+     "Sébastien",
+     "Ariel",
+     "Ursula",
+     "Éric",
+     0
+    ],
+    [
+     "ME",
+     "Comment s'appelle la sorcière de « La Petite Sirène » ?",
+     "Ursula",
+     "Maléfique",
+     "Gothel",
+     "Cruella",
+     0
+    ],
+    [
+     "ME",
+     "Qui est le méchant lion du « Roi lion » ?",
+     "Scar",
+     "Mufasa",
+     "Simba",
+     "Nala",
+     0
+    ],
+    [
+     "ME",
+     "Quelle méchante veut la fourrure des dalmatiens ?",
+     "Cruella",
+     "Maléfique",
+     "Ursula",
+     "Gothel",
+     0
+    ],
+    [
+     "ME",
+     "Comment s'appelle la sorcière de « La Belle au bois dormant » ?",
+     "Maléfique",
+     "Ursula",
+     "Gothel",
+     "Jafar",
+     0
+    ],
+    [
+     "ME",
+     "Quel capitaine a un crochet et déteste Peter Pan ?",
+     "Capitaine Crochet",
+     "Barbe Noire",
+     "Jack Sparrow",
+     "Long John Silver",
      0
     ],
     [
@@ -777,6 +633,15 @@ window.THEME_PACKS.disney = {
      "Shere Khan",
      "Baloo",
      "Bagheera",
+     0
+    ],
+    [
+     "ME",
+     "Quelle méchante enlève Raiponce pour ses pouvoirs ?",
+     "Gothel",
+     "Maléfique",
+     "Ursula",
+     "Cruella",
      0
     ],
     [
@@ -843,10 +708,37 @@ window.THEME_PACKS.disney = {
      0
     ],
     [
+     "ST",
+     "Qui est le chien jaune ami de Mickey ?",
+     "Dingo",
+     "Donald",
+     "Pluto",
+     "Pat Hibulaire",
+     0
+    ],
+    [
+     "ST",
+     "Quel parc Disney a ouvert en 1955 en Californie ?",
+     "Disneyland",
+     "Disney World",
+     "Disneyland Paris",
+     "Tokyo Disneyland",
+     0
+    ],
+    [
+     "ST",
+     "Quelle année est sorti « Steamboat Willie », le premier Mickey ?",
+     "1928",
+     "1935",
+     "1945",
+     "1955",
+     0
+    ],
+    [
      "AN",
      "Quel poisson est Nemo ?",
      "Un poisson-clown",
-     "Un requin",
+     "Un poisson rouge",
      "Une morue",
      "Un thon",
      0
@@ -899,8 +791,8 @@ window.THEME_PACKS.disney = {
     [
      "AN",
      "Quels animaux tirent le carrosse de Cendrillon après la magie ?",
-     "Des chevaux",
      "Des souris",
+     "Des chevaux normaux",
      "Des chiens",
      "Des lapins",
      0
@@ -913,6 +805,114 @@ window.THEME_PACKS.disney = {
      "Gideon",
      "Médor",
      0
+    ],
+    [
+     "AN",
+     "Quel animal est Heihei dans « Vaiana » ?",
+     "Un coq",
+     "Un chien",
+     "Un chat",
+     "Un poisson",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est Olaf ?",
+     "Un bonhomme de neige",
+     "Un renard",
+     "Un yeti",
+     "Un ours",
+     0
+    ],
+    [
+     "AN",
+     "Comment s'appelle le crabe conseiller d'Ariel ?",
+     "Sébastien",
+     "Dobby",
+     "Flotsam",
+     "Ravi",
+     0
+    ],
+    [
+     "AN",
+     "Quel est le nom du tigre de Jasmine ?",
+     "Rajah",
+     "Abu",
+     "Iago",
+     "Sabor",
+     0
+    ],
+    [
+     "AN",
+     "Dans « Le Roi lion », quel animal est Timon ?",
+     "Un suricate",
+     "Un phacochère",
+     "Une mangouste",
+     "Un lémurien",
+     0
+    ],
+    [
+     "AN",
+     "Quel dragon accompagne Mulan ?",
+     "Mushu",
+     "Smaug",
+     "Elliott",
+     "Dodie",
+     0
+    ],
+    [
+     "AN",
+     "Dans « Bambi », comment s'appelle le lièvre ami de Bambi ?",
+     "Panpan",
+     "Fleuri",
+     "Féline",
+     "Pistache",
+     0
+    ],
+    [
+     "AN",
+     "Dans « Dumbo », qui encourage l'éléphant à voler ?",
+     "Timothy, une souris",
+     "Un corbeau",
+     "Un moineau",
+     "Une hirondelle",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est Pumbaa dans « Le Roi lion » ?",
+     "Un phacochère",
+     "Un suricate",
+     "Un sanglier",
+     "Un cochon d'Inde",
+     0
+    ],
+    [
+     "CH",
+     "Quelle chanson Blanche-Neige chante-t-elle en attendant son prince ?",
+     "Un jour mon prince viendra",
+     "Sifflez bossez",
+     "Hé ho",
+     "Avec un sourire",
+     0
+    ],
+    [
+     "CH",
+     "Quelle berceuse la maman de Dumbo chante-t-elle pour l'endormir ?",
+     "Mon petit bébé",
+     "Sifflez bossez",
+     "C'est la fête",
+     "Hakuna Matata",
+     0
+    ],
+    [
+     "CH",
+     "Dans « Monstres et Cie », qu'est-ce qui fait rire Boo avec Bob ?",
+     "Les jeux et gestes rigolos",
+     "Les cris de Randall",
+     "La danse de Mike",
+     "Les blagues de Celia",
+     0
     ]
    ]
   },
@@ -921,47 +921,11 @@ window.THEME_PACKS.disney = {
    "questions": [
     [
      "HP",
-     "Dans « Harry Potter », quelle est la maison de Harry ?",
-     "Gryffondor",
-     "Serpentard",
-     "Poufsouffle",
-     "Serdaigle",
-     0
-    ],
-    [
-     "HP",
-     "Qui est le roi du Wakanda dans Marvel ?",
-     "Black Panther",
-     "Iron Man",
-     "Thor",
-     "Captain America",
-     0
-    ],
-    [
-     "HP",
-     "Dans « One Piece », quel est le rêve de Luffy ?",
-     "Devenir roi des pirates",
-     "Devenir Hokage",
-     "Attraper tous les Pokémon",
-     "Venger son père",
-     0
-    ],
-    [
-     "HP",
-     "Quel est le vrai nom de Spider-Man ?",
-     "Peter Parker",
-     "Bruce Wayne",
-     "Clark Kent",
-     "Tony Stark",
-     0
-    ],
-    [
-     "HP",
-     "Quel anime suit un chasseur de démons nommé Tanjiro ?",
-     "Demon Slayer",
-     "Jujutsu Kaisen",
-     "Chainsaw Man",
-     "Solo Leveling",
+     "Dans « Star Wars », quel est le vrai nom de Darth Vader ?",
+     "Anakin Skywalker",
+     "Luke Skywalker",
+     "Obi-Wan",
+     "Palpatine",
      0
     ],
     [
@@ -975,281 +939,11 @@ window.THEME_PACKS.disney = {
     ],
     [
      "HP",
-     "Dans « Avatar », comment s'appelle le monde du film ?",
-     "Pandora",
-     "Reach",
-     "Endor",
-     "Tatooine",
-     0
-    ],
-    [
-     "FL",
-     "Quel studio a animé la série « Arcane » ?",
-     "Fortiche",
-     "MAPPA",
-     "Ufotable",
-     "Studio Bones",
-     0
-    ],
-    [
-     "FL",
-     "Dans « Squid Game », quel est le premier jeu ?",
-     "Un, deux, trois, soleil",
-     "Le dalgona",
-     "Le tir à la corde",
-     "Les billes",
-     0
-    ],
-    [
-     "FL",
-     "Quel Pixar de 2020 suit un pianiste qui découvre l'au-delà ?",
-     "Soul",
-     "Coco",
-     "Vice-versa",
-     "Là-haut",
-     0
-    ],
-    [
-     "FL",
-     "Dans « Stranger Things », comment s'appelle le monde parallèle ?",
-     "Le monde à l'envers",
-     "Le Nether",
-     "La dimension X",
-     "Le vide",
-     0
-    ],
-    [
-     "FL",
-     "Quel film Pixar met en scène des émotions dans la tête d'une fille ?",
-     "Vice-versa",
-     "Soul",
-     "Luca",
-     "Coco",
-     0
-    ],
-    [
-     "FL",
-     "Dans « Hunger Games », quel symbole porte Katniss ?",
-     "Le geai moqueur",
-     "L'aigle",
-     "Le loup",
-     "Le serpent",
-     0
-    ],
-    [
-     "FL",
-     "Quel manga a vendu le plus d'exemplaires au monde ?",
-     "One Piece",
-     "Naruto",
-     "Dragon Ball",
-     "Détective Conan",
-     0
-    ],
-    [
-     "FL",
-     "Quel Disney suit une famille colombienne avec des pouvoirs ?",
-     "Encanto",
-     "Luca",
-     "Turning Red",
-     "Soul",
-     0
-    ],
-    [
-     "CH",
-     "Quelle chanson de « Coco » a remporté l'Oscar ?",
-     "Remember Me",
-     "Un Poco Loco",
-     "La Llorona",
-     "Proud Corazón",
-     0
-    ],
-    [
-     "CH",
-     "Qui a composé la musique du « Roi lion » (film 1994) ?",
-     "Hans Zimmer",
-     "Elton John et Hans Zimmer",
-     "Alan Menken",
-     "John Williams",
-     0
-    ],
-    [
-     "CH",
-     "Dans « Raiponce », que fait la chevelure magique ?",
-     "Elle guérit et rajeunit",
-     "Elle rend invisible",
-     "Elle donne des forces",
-     "Elle change de couleur",
-     0
-    ],
-    [
-     "CH",
-     "Qui a composé les chansons de « Tarzan » ?",
-     "Phil Collins",
-     "Elton John",
-     "Alan Menken",
-     "Hans Zimmer",
-     0
-    ],
-    [
-     "CH",
-     "Dans « La Reine des neiges », quel est le métier de Kristoff ?",
-     "Livreur de glace",
-     "Bûcheron",
-     "Pêcheur",
-     "Forgeron",
-     0
-    ],
-    [
-     "ME",
-     "Dans « Breaking Bad », quel est l'alias de Walter White ?",
-     "Heisenberg",
-     "Jesse",
-     "Gus",
-     "Saul",
-     0
-    ],
-    [
-     "ME",
-     "Quel film du MCU a introduit Black Panther ?",
-     "Captain America: Civil War",
-     "Avengers",
-     "Iron Man 3",
-     "Thor",
-     0
-    ],
-    [
-     "ME",
-     "Quel padawan devient Darth Vader ?",
-     "Anakin Skywalker",
-     "Luke Skywalker",
-     "Obi-Wan Kenobi",
-     "Palpatine",
-     0
-    ],
-    [
-     "ME",
-     "Dans « L'Attaque des Titans », que mangent les titans ?",
-     "Des humains",
-     "Des arbres",
-     "Des pierres",
-     "Du poisson",
-     0
-    ],
-    [
-     "ME",
-     "Qui est le méchant de « Mulan » ?",
-     "Shan Yu",
-     "Jafar",
-     "Hades",
-     "Frollo",
-     0
-    ],
-    [
-     "ST",
-     "Quel studio a produit « Neon Genesis Evangelion » ?",
-     "Gainax",
-     "Toei",
-     "Madhouse",
-     "Sunrise",
-     0
-    ],
-    [
-     "ST",
-     "Quel studio japonais a réalisé « Le Voyage de Chihiro » ?",
-     "Studio Ghibli",
-     "Toei",
-     "Madhouse",
-     "Kyoto Animation",
-     0
-    ],
-    [
-     "ST",
-     "Quel studio a créé « Shrek » ?",
-     "DreamWorks",
-     "Pixar",
-     "Disney",
-     "Ghibli",
-     0
-    ],
-    [
-     "ST",
-     "Quel Disney de 1937 est le premier long-métrage d'animation ?",
-     "Blanche-Neige et les Sept Nains",
-     "Pinocchio",
-     "Bambi",
-     "Dumbo",
-     0
-    ],
-    [
-     "ST",
-     "Quelle actrice double Vaiana en version originale ?",
-     "Auli'i Cravalho",
-     "Moana Chen",
-     "Nicole Scherzinger",
-     "Zendaya",
-     0
-    ],
-    [
-     "AN",
-     "Dans « The Last of Us », quel champignon cause l'apocalypse ?",
-     "Le cordyceps",
-     "L'amanite",
-     "L'ergot",
-     "La moisissure noire",
-     0
-    ],
-    [
-     "AN",
-     "Quel animal est Baymax dans « Les Nouveaux Héros » ?",
-     "Un robot de soin",
-     "Un humanoïde",
-     "Un animal",
-     "Un androïde militaire",
-     0
-    ],
-    [
-     "AN",
-     "Dans « Là-haut », quel chien porte un collier traducteur ?",
-     "Dug",
-     "Kevin",
-     "Alpha",
-     "Bêta",
-     0
-    ],
-    [
-     "AN",
-     "Quel est l'autre nom de Stitch ?",
-     "Expérience 626",
-     "Expérience 515",
-     "Robot 3000",
-     "Unité 42",
-     0
-    ],
-    [
-     "AN",
-     "Dans « Le Livre de la jungle », quel est le nom du tigre méchant ?",
-     "Shere Khan",
-     "Bagheera",
-     "Baloo",
-     "Kaa",
-     0
-    ],
-    [
-     "HP",
-     "Qui est le frère adoptif de Thor dans Marvel ?",
-     "Loki",
-     "Odin",
-     "Hulk",
+     "Qui est le roi du Wakanda dans Marvel ?",
+     "Black Panther",
      "Iron Man",
-     0
-    ],
-    [
-     "HP",
-     "Quel super-héros manie un marteau ?",
      "Thor",
      "Captain America",
-     "Hulk",
-     "Black Widow",
      0
     ],
     [
@@ -1263,65 +957,56 @@ window.THEME_PACKS.disney = {
     ],
     [
      "HP",
-     "Dans « Batman », quel est le vrai nom du héros ?",
-     "Bruce Wayne",
-     "Clark Kent",
-     "Barry Allen",
-     "Hal Jordan",
+     "Quel super-héros manie un marteau ?",
+     "Thor",
+     "Captain America",
+     "Hulk",
+     "Black Widow",
      0
     ],
     [
      "HP",
-     "Quel sorcier porte une cicatrice en éclair sur le front ?",
-     "Harry Potter",
-     "Ron",
-     "Draco",
-     "Neville",
+     "Qui est le frère adoptif de Thor dans Marvel ?",
+     "Loki",
+     "Odin",
+     "Hulk",
+     "Iron Man",
      0
     ],
     [
      "HP",
-     "Dans « Le Seigneur des anneaux », qui porte l'Anneau jusqu'au Mordor ?",
-     "Frodon",
-     "Sam",
-     "Aragorn",
-     "Legolas",
+     "Dans « Les Indestructibles », quel est le pouvoir de Violette ?",
+     "Les boucliers et l'invisibilité",
+     "La super-force",
+     "L'élasticité",
+     "La vitesse",
      0
     ],
     [
      "HP",
-     "Dans « Zelda », comment s'appelle la princesse ?",
-     "Zelda",
-     "Impa",
-     "Midona",
-     "Urbasa",
+     "Dans « Star Wars », qui est le premier mentor de Luke ?",
+     "Obi-Wan Kenobi",
+     "Palpatine",
+     "Vader",
+     "Boba Fett",
      0
     ],
     [
      "HP",
-     "Quel chasseur de démons a une sœur transformée en démon ?",
-     "Tanjiro",
-     "Inosuke",
-     "Zenitsu",
-     "Giyu",
+     "Dans « Hercules », quel est le père du héros ?",
+     "Zeus",
+     "Hadès",
+     "Poséidon",
+     "Hermès",
      0
     ],
     [
      "HP",
-     "Quel est le pouvoir principal de Deku dans « My Hero Academia » ?",
-     "Le One For All",
-     "Le feu",
-     "La glace",
-     "L'invisibilité",
-     0
-    ],
-    [
-     "HP",
-     "Dans « One Piece », quel est le sabreur de l'équipage ?",
-     "Zorro",
-     "Sanji",
-     "Usopp",
-     "Brook",
+     "Dans « Là-haut », qui est le jeune explorateur qui accompagne Carl ?",
+     "Russell",
+     "Kevin",
+     "Dug",
+     "Charles",
      0
     ],
     [
@@ -1335,29 +1020,29 @@ window.THEME_PACKS.disney = {
     ],
     [
      "HP",
-     "Dans « Demon Slayer », quel style de souffle Tanjiro utilise-t-il ?",
-     "L'eau",
-     "Le feu",
-     "Le vent",
-     "La foudre",
+     "Dans « Ratatouille », qui est le seul chef qui croit en Remy ?",
+     "Linguini",
+     "Skinner",
+     "Ego",
+     "Colette",
      0
     ],
     [
-     "FL",
-     "Dans « Le Monde de Nemo », où Nemo est-il emmené ?",
-     "Chez un dentiste",
-     "Dans un zoo",
-     "Dans un aquarium public",
-     "En pleine mer",
+     "HP",
+     "Quel est le vrai nom de Spider-Man ?",
+     "Peter Parker",
+     "Tony Stark",
+     "Steve Rogers",
+     "Bruce Wayne",
      0
     ],
     [
-     "FL",
-     "Dans « Soul », quel est le métier de Joe ?",
-     "Pianiste",
-     "Boulanger",
-     "Astronaute",
-     "Chirurgien",
+     "HP",
+     "Dans « La Reine des neiges », quel est le métier de Kristoff ?",
+     "Livreur de glace",
+     "Bûcheron",
+     "Pêcheur",
+     "Forgeron",
      0
     ],
     [
@@ -1371,6 +1056,15 @@ window.THEME_PACKS.disney = {
     ],
     [
      "FL",
+     "Dans « Soul », quel est le métier de Joe ?",
+     "Pianiste",
+     "Boulanger",
+     "Astronaute",
+     "Chirurgien",
+     0
+    ],
+    [
+     "FL",
      "Dans « Turning Red », quel animal devient Mei ?",
      "Un panda rouge",
      "Un tigre",
@@ -1380,110 +1074,155 @@ window.THEME_PACKS.disney = {
     ],
     [
      "FL",
-     "Quelle série animée française suit des héros masqués à Paris ?",
-     "Miraculous",
-     "Wakfu",
-     "Code Lyoko",
-     "Zorro",
+     "Dans « Star Wars », sur quelle planète est né Anakin ?",
+     "Tatooine",
+     "Coruscant",
+     "Naboo",
+     "Hoth",
      0
     ],
     [
      "FL",
-     "Dans « Star Wars », qui est le premier mentor de Luke ?",
-     "Obi-Wan Kenobi",
-     "Palpatine",
-     "Vader",
-     "Boba Fett",
+     "Quel film Pixar met en scène des émotions dans la tête d'une fille ?",
+     "Vice-versa",
+     "Soul",
+     "Luca",
+     "Coco",
      0
     ],
     [
      "FL",
-     "Quel film Ghibli met en scène deux sœurs et un esprit de la forêt ?",
-     "Mon voisin Totoro",
-     "Kiki la petite sorcière",
-     "Le Voyage de Chihiro",
-     "Ponyo",
+     "Quel film d'animation Disney de 2021 suit la famille Madrigal ?",
+     "Encanto",
+     "Luca",
+     "Turning Red",
+     "Soul",
      0
     ],
     [
      "FL",
-     "Dans « Vaiana », quel demi-dieu vole avec un hameçon magique ?",
-     "Maui",
-     "Te Fiti",
-     "Tamatoa",
-     "Kakamora",
-     0
-    ],
-    [
-     "FL",
-     "Quel anime se déroule dans un lycée pour héros ?",
-     "My Hero Academia",
-     "One Piece",
-     "Naruto",
-     "Dragon Ball",
-     0
-    ],
-    [
-     "FL",
-     "Dans « Le Voyage de Chihiro », en quoi les parents se transforment-ils ?",
-     "En cochons",
-     "En chiens",
-     "En statues",
-     "En ombres",
-     0
-    ],
-    [
-     "FL",
-     "Dans « Le Voyage de Chihiro », comment s'appelle le garçon qui aide Chihiro ?",
-     "Haku",
-     "Kaonashi",
-     "Zeniba",
-     "Boh",
-     0
-    ],
-    [
-     "FL",
-     "Dans « Arcane », comment s'appelle la sœur de Vi ?",
-     "Powder (Jinx)",
-     "Caitlyn",
-     "Mel",
-     "Sevika",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de 1979 suit un vaisseau nommé Nostromo ?",
-     "Alien",
-     "Star Wars",
-     "2001",
-     "Interstellar",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de Ridley Scott de 1982 se déroule en 2019 à Los Angeles ?",
-     "Blade Runner",
-     "Alien",
-     "Gladiator",
-     "Prometheus",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de 1999 découvre que le monde est une simulation ?",
-     "Matrix",
-     "Inception",
-     "eXistenZ",
-     "Dark City",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de 1977 démarre la saga Star Wars ?",
-     "Un nouvel espoir",
+     "Dans quel film Star Wars apparaît Yoda pour la première fois ?",
      "L'Empire contre-attaque",
+     "Un nouvel espoir",
      "Le Retour du Jedi",
      "La Menace fantôme",
+     0
+    ],
+    [
+     "FL",
+     "Dans « Le Monde de Nemo », où Nemo est-il emmené ?",
+     "Chez un dentiste",
+     "Dans un zoo",
+     "Dans un aquarium public",
+     "En pleine mer",
+     0
+    ],
+    [
+     "FL",
+     "Quel Marvel de 2018 se déroule au Wakanda ?",
+     "Black Panther",
+     "Avengers",
+     "Captain Marvel",
+     "Thor",
+     0
+    ],
+    [
+     "FL",
+     "Quel Pixar de 2020 suit un pianiste qui découvre l'au-delà ?",
+     "Soul",
+     "Coco",
+     "Vice-versa",
+     "Là-haut",
+     0
+    ],
+    [
+     "FL",
+     "Dans « La Petite Sirène », avec qui Ariel échange-t-elle sa voix ?",
+     "Ursula",
+     "Éric",
+     "Sébastien",
+     "Son père",
+     0
+    ],
+    [
+     "FL",
+     "Quel film Marvel réunit Iron Man, Captain America et Thor pour la première fois ?",
+     "Avengers",
+     "Spider-Man",
+     "Black Panther",
+     "Guardians of the Galaxy",
+     0
+    ],
+    [
+     "FL",
+     "Dans « Raiponce », qui est la mère voleuse d'enfants ?",
+     "Gothel",
+     "Maléfique",
+     "Ursula",
+     "Cruella",
+     0
+    ],
+    [
+     "FL",
+     "Quel Pixar suit des monstres verts et bleus qui font peur aux enfants ?",
+     "Monstres et Cie",
+     "Nemo",
+     "Cars",
+     "Là-haut",
+     0
+    ],
+    [
+     "FL",
+     "Dans « Star Wars », quel chasseur de primes porte une armure Mandalorienne ?",
+     "Boba Fett",
+     "Jango Fett",
+     "Darth Maul",
+     "Grievous",
+     0
+    ],
+    [
+     "FL",
+     "Dans « Encanto », quel don a Luisa ?",
+     "La super-force",
+     "La météo",
+     "La guérison",
+     "Les fleurs",
+     0
+    ],
+    [
+     "FL",
+     "Dans « Encanto », quel don a Mirabel ?",
+     "Aucun don magique",
+     "La météo",
+     "La force",
+     "La cuisine",
+     0
+    ],
+    [
+     "FL",
+     "Quel Disney suit un garçon et sa grand-mère dans le monde des morts ?",
+     "Coco",
+     "Soul",
+     "Vice-versa",
+     "Luca",
+     0
+    ],
+    [
+     "FL",
+     "Dans « Là-haut », quel oiseau géant Russell protège-t-il ?",
+     "Kevin",
+     "Doug",
+     "Charlie",
+     "Snipe",
+     0
+    ],
+    [
+     "FL",
+     "Quel film Disney de 2010 réadapte le conte de Raiponce ?",
+     "Raiponce",
+     "En avant",
+     "La Reine des neiges",
+     "Vaiana",
      0
     ],
     [
@@ -1506,20 +1245,11 @@ window.THEME_PACKS.disney = {
     ],
     [
      "CH",
-     "Dans « La Petite Sirène », quelle chanson Ursula chante-t-elle ?",
-     "Pauvres âmes en perdition",
-     "Sous l'océan",
-     "Partir là-bas",
-     "Embrasse-la",
-     0
-    ],
-    [
-     "CH",
-     "Quelle chanson d'« Aladdin » interprète le génie pour présenter Aladdin ?",
-     "Prince Ali",
-     "Ce rêve bleu",
-     "Arabian Nights",
-     "Ami comme moi",
+     "Quelle chanson de « Coco » a remporté l'Oscar ?",
+     "Remember Me",
+     "Un Poco Loco",
+     "La Llorona",
+     "Proud Corazón",
      0
     ],
     [
@@ -1550,6 +1280,60 @@ window.THEME_PACKS.disney = {
      0
     ],
     [
+     "CH",
+     "Dans « La Petite Sirène », quelle chanson Ursula chante-t-elle ?",
+     "Pauvres âmes en perdition",
+     "Sous l'océan",
+     "Partir là-bas",
+     "Embrasse-la",
+     0
+    ],
+    [
+     "CH",
+     "Quelle chanson d'« Aladdin » interprète le génie pour présenter Aladdin ?",
+     "Prince Ali",
+     "Ce rêve bleu",
+     "Arabian Nights",
+     "Ami comme moi",
+     0
+    ],
+    [
+     "CH",
+     "Qui a composé la musique du « Roi lion » (film 1994) ?",
+     "Hans Zimmer",
+     "Elton John et Hans Zimmer",
+     "Alan Menken",
+     "John Williams",
+     0
+    ],
+    [
+     "CH",
+     "Qui a composé la musique de « Star Wars » ?",
+     "John Williams",
+     "Hans Zimmer",
+     "Ennio Morricone",
+     "Alan Silvestri",
+     0
+    ],
+    [
+     "CH",
+     "Qui a composé les chansons de « Tarzan » ?",
+     "Phil Collins",
+     "Elton John",
+     "Alan Menken",
+     "Hans Zimmer",
+     0
+    ],
+    [
+     "CH",
+     "Quelle chanson de « Vaiana » raconte les exploits du demi-dieu ?",
+     "Un mérite exceptionnel",
+     "Le bleu de l'océan",
+     "Shiny",
+     "Je suis Vaiana",
+     0
+    ],
+    [
      "ME",
      "Quel méchant Marvel a rassemblé les Infinity Stones ?",
      "Thanos",
@@ -1569,38 +1353,20 @@ window.THEME_PACKS.disney = {
     ],
     [
      "ME",
-     "Dans « Star Wars », quel seigneur noir respire bruyamment ?",
+     "Dans « Star Wars », quel seigneur Sith respire bruyamment ?",
      "Darth Vader",
      "Palpatine",
      "Kylo Ren",
-     "Boba Fett",
+     "Darth Maul",
      0
     ],
     [
      "ME",
-     "Dans « Demon Slayer », quel est le démon le plus puissant ?",
-     "Muzan Kibutsuji",
-     "Rui",
-     "Enmu",
-     "Akaza",
-     0
-    ],
-    [
-     "ME",
-     "Dans « Harry Potter », qui est le seigneur des ténèbres ?",
-     "Voldemort",
-     "Dumbledore",
-     "Snape",
-     "Hagrid",
-     0
-    ],
-    [
-     "ME",
-     "Quel titan a dévoré la mère d'Eren ?",
-     "Un titan souriant",
-     "Le Titan Bestial",
-     "Le Titan Colossal",
-     "Le Titan Cuirassé",
+     "Qui est le maître Sith de Darth Vader ?",
+     "Palpatine",
+     "Dooku",
+     "Maul",
+     "Snoke",
      0
     ],
     [
@@ -1614,25 +1380,70 @@ window.THEME_PACKS.disney = {
     ],
     [
      "ME",
-     "Quel robot venu du futur veut tuer Sarah Connor ?",
-     "Le Terminator",
-     "RoboCop",
-     "HAL 9000",
-     "Le replicant",
+     "Quel méchant Marvel à casque violet cherche les Infinity Stones ?",
+     "Thanos",
+     "Loki",
+     "Ultron",
+     "Vision",
      0
     ],
     [
      "ME",
-     "Quel tueur masqué hante Haddonfield à Halloween ?",
-     "Michael Myers",
-     "Jason Voorhees",
-     "Freddy Krueger",
-     "Leatherface",
+     "Dans « Hercules », quel oncle veut tuer le héros ?",
+     "Hadès",
+     "Zeus",
+     "Arès",
+     "Poséidon",
+     0
+    ],
+    [
+     "ME",
+     "Dans « Monstres et Cie », quel reptile rival de Bob ?",
+     "Randall",
+     "Sullivant",
+     "Waternoose",
+     "Fungus",
+     0
+    ],
+    [
+     "ME",
+     "Dans « Star Wars », quel apprenti de Vader cherche Skywalker ?",
+     "Kylo Ren",
+     "Hux",
+     "Phasma",
+     "Snoke",
+     0
+    ],
+    [
+     "ME",
+     "Quelle armée de robots menace la galaxie dans Star Wars ?",
+     "Les droïdes de combat",
+     "Les clones",
+     "Les rebelles",
+     "Les Ewoks",
+     0
+    ],
+    [
+     "ME",
+     "Dans « 1,001 Dalmatiens », qui est la méchante ?",
+     "Cruella",
+     "Maléfique",
+     "Ursula",
+     "Gothel",
+     0
+    ],
+    [
+     "ME",
+     "Qui est le méchant dans « Toy Story 3 » ?",
+     "Lotso",
+     "Zurg",
+     "Sid",
+     "Al",
      0
     ],
     [
      "ST",
-     "Quel studio produit les films Avengers ?",
+     "Quel studio produit les films Marvel ?",
      "Marvel Studios",
      "DC",
      "Pixar",
@@ -1650,20 +1461,20 @@ window.THEME_PACKS.disney = {
     ],
     [
      "ST",
-     "Quelle plateforme diffuse les séries Marvel et Star Wars ?",
-     "Disney+",
-     "Netflix",
-     "Prime Video",
-     "Apple TV",
-     0
-    ],
-    [
-     "ST",
      "Qui a créé l'univers de Star Wars ?",
      "George Lucas",
      "Steven Spielberg",
      "James Cameron",
      "Stan Lee",
+     0
+    ],
+    [
+     "ST",
+     "Quelle plateforme diffuse les séries Marvel et Star Wars ?",
+     "Disney+",
+     "Netflix",
+     "Prime Video",
+     "Apple TV",
      0
     ],
     [
@@ -1677,65 +1488,74 @@ window.THEME_PACKS.disney = {
     ],
     [
      "ST",
-     "Quel studio a produit l'anime « Demon Slayer » ?",
-     "Ufotable",
-     "MAPPA",
-     "Toei",
-     "Bones",
+     "Quelle société a acquis Marvel en 2009 ?",
+     "Disney",
+     "Warner",
+     "Paramount",
+     "Sony",
      0
     ],
     [
      "ST",
-     "Dans quel pays se trouve le Studio Ghibli ?",
-     "Au Japon",
-     "En Corée",
-     "En Chine",
-     "En Thaïlande",
+     "Quelle société a acquis Lucasfilm et Star Wars en 2012 ?",
+     "Disney",
+     "Warner",
+     "Fox",
+     "Netflix",
      0
     ],
     [
      "ST",
-     "Quel film d'animation Ghibli a remporté l'Oscar en 2003 ?",
-     "Le Voyage de Chihiro",
-     "Mon voisin Totoro",
-     "Le Château ambulant",
-     "Ponyo",
+     "Quel studio a créé « Toy Story », le premier long-métrage en images de synthèse ?",
+     "Pixar",
+     "DreamWorks",
+     "Disney",
+     "Ghibli",
+     0
+    ],
+    [
+     "ST",
+     "Dans quel pays se déroule « Coco » ?",
+     "Au Mexique",
+     "En Espagne",
+     "Au Brésil",
+     "Au Pérou",
+     0
+    ],
+    [
+     "ST",
+     "Quel film d'animation a remporté l'Oscar 2024 ?",
+     "Le Garçon et le Héron",
+     "Spider-Man: Across the Spider-Verse",
+     "Nimona",
+     "Élémentaire",
+     1
+    ],
+    [
+     "ST",
+     "En quelle année est sorti le premier « Toy Story » ?",
+     "1995",
+     "1989",
+     "2001",
+     "1992",
+     0
+    ],
+    [
+     "ST",
+     "Quel Disney de 1937 est le premier long-métrage d'animation ?",
+     "Blanche-Neige et les Sept Nains",
+     "Pinocchio",
+     "Bambi",
+     "Fantasia",
      0
     ],
     [
      "AN",
-     "Quel animal est Appa dans « Avatar » ?",
-     "Un bison volant",
-     "Un dragon",
-     "Un loup",
-     "Un aigle",
-     0
-    ],
-    [
-     "AN",
-     "Quel animal est Chopper dans « One Piece » ?",
-     "Un renne",
-     "Un chat",
-     "Un chien",
-     "Un singe",
-     0
-    ],
-    [
-     "AN",
-     "Dans « Vice-versa », quel est le nom de l'ami imaginaire de Riley ?",
-     "Bing Bong",
-     "Bobby",
-     "Bingo",
-     "Binga",
-     0
-    ],
-    [
-     "AN",
-     "Quelle est la chouette d'Harry Potter ?",
-     "Hedwige",
-     "Errol",
-     "Hermès",
-     "Pattenrond",
+     "Quel bébé des Indestructibles développe des pouvoirs multiples ?",
+     "Jack-Jack",
+     "Violet",
+     "Dash",
+     "Frozone",
      0
     ],
     [
@@ -1758,65 +1578,245 @@ window.THEME_PACKS.disney = {
     ],
     [
      "AN",
-     "Dans « Avatar : le dernier maître de l'air », quel animal est Momo ?",
-     "Un lémurien volant",
-     "Un singe",
-     "Un chat",
-     "Un écureuil",
+     "Dans « Star Wars », quel être vert et petit est puissant dans la Force ?",
+     "Yoda",
+     "Chewbacca",
+     "R2-D2",
+     "Wicket",
      0
     ],
     [
      "AN",
-     "Quel est le nom du chien magique d'Adventure Time ?",
-     "Jake",
-     "Finn",
-     "Bubblegum",
-     "BMO",
+     "Quel animal est Chewbacca dans Star Wars ?",
+     "Un Wookiee",
+     "Un Ewok",
+     "Un droïde",
+     "Un Tauntaun",
+     0
+    ],
+    [
+     "AN",
+     "Comment s'appelle le droïde doré de Star Wars ?",
+     "C-3PO",
+     "R2-D2",
+     "BB-8",
+     "D-O",
+     0
+    ],
+    [
+     "AN",
+     "Comment s'appelle le droïde rond et blanc de la trilogie récente ?",
+     "BB-8",
+     "C-3PO",
+     "R2-D2",
+     "K-2SO",
+     0
+    ],
+    [
+     "AN",
+     "Dans « Là-haut », quel chien porte un collier traducteur ?",
+     "Dug",
+     "Alpha",
+     "Bêta",
+     "Gamma",
+     0
+    ],
+    [
+     "AN",
+     "Dans « Monstres et Cie », comment s'appelle le grand monstre poilu bleu ?",
+     "Sullivant (Sully)",
+     "Randall",
+     "Bob",
+     "Yeti",
+     0
+    ],
+    [
+     "AN",
+     "Dans « Vice-versa », quel est le nom de l'ami imaginaire de Riley ?",
+     "Bing Bong",
+     "Bobby",
+     "Bingo",
+     "Binga",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est Abu, le compagnon d'Aladdin ?",
+     "Un singe",
+     "Un tigre",
+     "Un perroquet",
+     "Un serpent",
+     0
+    ],
+    [
+     "AN",
+     "Quel perroquet méchant accompagne Jafar ?",
+     "Iago",
+     "Zazu",
+     "Scuttle",
+     "Archimède",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est le compagnon de Mulan ?",
+     "Un dragon (Mushu)",
+     "Un tigre",
+     "Un cheval seulement",
+     "Un chat",
+     0
+    ],
+    [
+     "AN",
+     "Quel cheval ailé accompagne Hercule ?",
+     "Pégase",
+     "Phil",
+     "Bouffon",
+     "Cerbère",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est Pascal, l'ami de Raiponce ?",
+     "Un caméléon",
+     "Un lapin",
+     "Un oiseau",
+     "Une souris",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est Sven dans La Reine des neiges ?",
+     "Un renne",
+     "Un cheval",
+     "Un chien",
+     "Un loup",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est Flounder, l'ami d'Ariel ?",
+     "Un poisson",
+     "Un crabe",
+     "Une mouette",
+     "Une étoile de mer",
      0
     ],
     [
      "HP",
-     "Quelle équipe Marvel protège la galaxie ?",
-     "Les Guardians of the Galaxy",
-     "Les Avengers",
-     "Les X-Men",
-     "Les Fantastiques",
+     "Dans « Star Wars », comment s'appelle la sœur jumelle de Luke ?",
+     "Leia",
+     "Padmé",
+     "Rey",
+     "Ahsoka",
      0
     ],
     [
      "HP",
-     "Dans « Naruto », quel est le rêve du héros ?",
-     "Devenir Hokage",
-     "Devenir roi des pirates",
-     "Attraper tous les Pokémon",
-     "Venger son clan",
+     "Quel Jedi vert et petit forme Luke dans l'Empire contre-attaque ?",
+     "Yoda",
+     "Obi-Wan",
+     "Qui-Gon",
+     "Mace",
      0
     ],
     [
      "HP",
-     "Qui est l'homme d'acier capable de voler ?",
-     "Superman",
-     "Batman",
-     "Flash",
-     "Aquaman",
+     "Dans « Thor », quel est le nom de son marteau ?",
+     "Mjolnir",
+     "Stormbreaker",
+     "Gungnir",
+     "Necrosword",
      0
     ],
     [
      "FL",
-     "Dans « Stranger Things », quel monde parallèle effraie Hawkins ?",
-     "Le monde à l'envers",
-     "La dimension X",
-     "Le Nether",
-     "Le vide",
+     "Dans « Zootopie », quel animal est l'héroïne police ?",
+     "Une lapine",
+     "Une renarde",
+     "Une chatte",
+     "Une ourse",
      0
     ],
     [
      "FL",
-     "Quel film Pixar suit un garçon et sa grand-mère dans le monde des morts ?",
+     "Dans « La Reine des neiges », dans quel royaume vivent Elsa et Anna ?",
+     "Arendelle",
+     "Corona",
+     "Agrabah",
+     "Weselton",
+     0
+    ],
+    [
+     "FL",
+     "Dans « Raiponce », comment s'appelle le cheval du palais qui poursuit Flynn ?",
+     "Maximus",
+     "Sven",
+     "Philippe",
+     "Angus",
+     0
+    ],
+    [
+     "FL",
+     "Quel Pixar de 2017 se déroule au Mexique pour le jour des morts ?",
      "Coco",
-     "Soul",
      "Vice-versa",
      "Luca",
+     "Soul",
+     0
+    ],
+    [
+     "ME",
+     "Dans « Vaiana », quel crabe géant collectionne les trésors ?",
+     "Tamatoa",
+     "Te Kā",
+     "Kakamora",
+     "Maui",
+     0
+    ],
+    [
+     "ME",
+     "Qui est la vraie méchante de « Zootopie » ?",
+     "Le maire Bellweather",
+     "Le chef Bogo",
+     "Le maire Lionheart",
+     "Clawhauser",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est Judy Hopps dans Zootopie ?",
+     "Une lapine",
+     "Une renarde",
+     "Une souris",
+     "Une chatte",
+     0
+    ],
+    [
+     "AN",
+     "Dans « Vice-versa 2 », quelle nouvelle émotion prend le contrôle de Riley adolescente ?",
+     "L'anxiété",
+     "La joie",
+     "La peur",
+     "Le dégoût",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est le renard de Zootopie ami de Judy ?",
+     "Nick Wilde",
+     "Finnick",
+     "Gazelle",
+     "Clawhauser",
+     0
+    ],
+    [
+     "ST",
+     "Quelle série Star Wars suit un chasseur et l'enfant Grogu ?",
+     "The Mandalorian",
+     "Andor",
+     "Obi-Wan Kenobi",
+     "Ahsoka",
      0
     ]
    ]
@@ -1824,15 +1824,6 @@ window.THEME_PACKS.disney = {
   "22+": {
    "label": "22 ans et plus",
    "questions": [
-    [
-     "HP",
-     "Quel film Disney de 1937 est le premier long-métrage d'animation ?",
-     "Blanche-Neige et les Sept Nains",
-     "Pinocchio",
-     "Bambi",
-     "Fantasia",
-     0
-    ],
     [
      "HP",
      "Quelle actrice a joué Mary Poppins en 1964 ?",
@@ -1844,25 +1835,25 @@ window.THEME_PACKS.disney = {
     ],
     [
      "HP",
-     "Quel film a lancé la carrière d'Audrey Hepburn en 1953 ?",
-     "Vacances romaines",
-     "Sabrina",
-     "Diamants sur canapé",
-     "My Fair Lady",
+     "Quel film Disney de 1937 est le premier long-métrage d'animation ?",
+     "Blanche-Neige et les Sept Nains",
+     "Pinocchio",
+     "Bambi",
+     "Fantasia",
      0
     ],
     [
      "HP",
-     "Qui est la première princesse Disney au cinéma ?",
-     "Blanche-Neige",
-     "Cendrillon",
-     "Aurore",
-     "Belle",
+     "Quel acteur a joué Jack Sparrow chez Disney ?",
+     "Johnny Depp",
+     "Orlando Bloom",
+     "Geoffrey Rush",
+     "Kevin McNally",
      0
     ],
     [
      "HP",
-     "Quel acteur a interprété l'archéologue Indiana Jones ?",
+     "Quel acteur a joué Indiana Jones chez Lucasfilm (Disney) ?",
      "Harrison Ford",
      "Sean Connery",
      "Michael Douglas",
@@ -1870,84 +1861,327 @@ window.THEME_PACKS.disney = {
      0
     ],
     [
-     "FL",
-     "Quel film de Coppola de 1972 met en scène Marlon Brando ?",
-     "Le Parrain",
-     "Apocalypse Now",
-     "Le Mépris",
-     "Serpico",
+     "HP",
+     "Quel acteur a joué Han Solo dans Star Wars ?",
+     "Harrison Ford",
+     "Mark Hamill",
+     "Carrie Fisher",
+     "Billy Dee Williams",
+     0
+    ],
+    [
+     "HP",
+     "Qui a joué Maleficent en 2014 chez Disney ?",
+     "Angelina Jolie",
+     "Emma Watson",
+     "Charlize Theron",
+     "Cate Blanchett",
+     0
+    ],
+    [
+     "HP",
+     "Qui a joué Belle dans le remake 2017 de « La Belle et la Bête » ?",
+     "Emma Watson",
+     "Anne Hathaway",
+     "Lily James",
+     "Keira Knightley",
+     0
+    ],
+    [
+     "HP",
+     "Qui a joué Cruella dans le film Disney de 2021 ?",
+     "Emma Stone",
+     "Emma Watson",
+     "Margot Robbie",
+     "Charlize Theron",
+     0
+    ],
+    [
+     "HP",
+     "Qui a joué Aladdin dans le remake Disney de 2019 ?",
+     "Mena Massoud",
+     "Will Smith",
+     "Naomi Scott",
+     "Marwan Kenzari",
+     0
+    ],
+    [
+     "HP",
+     "Qui a joué le génie dans « Aladdin » (2019) ?",
+     "Will Smith",
+     "Robin Williams",
+     "Dwayne Johnson",
+     "Eddie Murphy",
      0
     ],
     [
      "FL",
-     "Quel film de Gérard Oury a réuni Bourvil et Louis de Funès en 1966 ?",
-     "La Grande Vadrouille",
-     "Le Corniaud",
-     "La Folie des grandeurs",
-     "Les Aventures de Rabbi Jacob",
+     "Quel Disney de 1940 montre une marionnette dont le nez grandit ?",
+     "Pinocchio",
+     "Dumbo",
+     "Bambi",
+     "Fantasia",
      0
     ],
     [
      "FL",
-     "Quel film d'Alfred Hitchcock a popularisé la douche sanglante ?",
-     "Psychose",
-     "Vertigo",
-     "Fenêtre sur cour",
-     "Les Oiseaux",
+     "Quel Disney de 1941 suit un petit éléphant aux grandes oreilles ?",
+     "Dumbo",
+     "Bambi",
+     "Pinocchio",
+     "Fantasia",
      0
     ],
     [
      "FL",
-     "Quel film de Stanley Kubrick met en scène un hôtel hanté ?",
-     "Shining",
-     "Vol au-dessus d'un nid de coucou",
-     "Orange mécanique",
-     "Eyes Wide Shut",
+     "Quel Disney de 1942 suit un faon dans la forêt ?",
+     "Bambi",
+     "Dumbo",
+     "Pinocchio",
+     "Cendrillon",
      0
     ],
     [
      "FL",
-     "Quel western de Sergio Leone met en scène Clint Eastwood en poncho ?",
-     "Pour une poignée de dollars",
-     "Le Bon, la Brute et le Truand",
-     "Il était une fois dans l'Ouest",
-     "Pour quelques dollars de plus",
+     "Quel Disney de 1950 met en scène une pantoufle de verre ?",
+     "Cendrillon",
+     "Blanche-Neige",
+     "Aurore",
+     "Belle",
      0
     ],
     [
      "FL",
-     "Quel film de Robert Zemeckis met en scène un homme qui traverse l'histoire américaine ?",
-     "Forrest Gump",
-     "Retour vers le futur",
-     "Seul au monde",
-     "Cast Away",
+     "Quel Disney de 1959 endort sa princesse pour cent ans ?",
+     "La Belle au bois dormant",
+     "Cendrillon",
+     "Blanche-Neige",
+     "La Petite Sirène",
      0
     ],
     [
      "FL",
-     "Quel film de science-fiction de 1968 met en scène un monolithe ?",
-     "2001, l'Odyssée de l'espace",
-     "Orange mécanique",
-     "Star Wars",
-     "Rencontres du 3e type",
+     "Quel Disney de 1961 met en scène 101 dalmatiens ?",
+     "Les 101 Dalmatiens",
+     "Lady et le Tramp",
+     "Les Aristochats",
+     "Le Livre de la jungle",
      0
     ],
     [
      "FL",
-     "Quel film musical de 1952 montre Gene Kelly chantant sous la pluie ?",
-     "Chantons sous la pluie",
-     "Un Américain à Paris",
-     "West Side Story",
-     "My Fair Lady",
+     "Quel Disney de 1967 se passe dans la jungle indienne ?",
+     "Le Livre de la jungle",
+     "Robin des Bois",
+     "Les Aristochats",
+     "Bernard et Bianca",
+     0
+    ],
+    [
+     "FL",
+     "Quel Disney de 1973 met en scène un renard voleur ?",
+     "Robin des Bois",
+     "Le Livre de la jungle",
+     "Rox et Rouky",
+     "Les Aristochats",
+     0
+    ],
+    [
+     "FL",
+     "Quel Disney de 1981 met en scène un renard et un chien amis ?",
+     "Rox et Rouky",
+     "Robin des Bois",
+     "Basil détective",
+     "Oliver",
+     0
+    ],
+    [
+     "FL",
+     "Quel Disney de 1989 fait d'une sirène une princesse ?",
+     "La Petite Sirène",
+     "Bernard et Bianca",
+     "Oliver",
+     "La Belle et la Bête",
+     0
+    ],
+    [
+     "FL",
+     "Quel Disney de 1991 réunit une belle et une bête au château ?",
+     "La Belle et la Bête",
+     "La Petite Sirène",
+     "Aladdin",
+     "Le Roi lion",
+     0
+    ],
+    [
+     "FL",
+     "Quel Disney de 1992 met en scène un génie dans une lampe ?",
+     "Aladdin",
+     "La Belle et la Bête",
+     "Le Roi lion",
+     "Hercule",
+     0
+    ],
+    [
+     "FL",
+     "Quel Disney de 1994 se déroule dans la savane ?",
+     "Le Roi lion",
+     "Pocahontas",
+     "Tarzan",
+     "Mulan",
+     0
+    ],
+    [
+     "FL",
+     "Quel Disney de 1995 suit une jeune fille autochtone américaine ?",
+     "Pocahontas",
+     "Le Roi lion",
+     "Mulan",
+     "Tarzan",
+     0
+    ],
+    [
+     "FL",
+     "Quel Disney de 1998 sauve la Chine ?",
+     "Mulan",
+     "Tarzan",
+     "Kuzco",
+     "Hercule",
+     0
+    ],
+    [
+     "FL",
+     "Quel Disney de 1999 suit un enfant élevé par des gorilles ?",
+     "Tarzan",
+     "Mulan",
+     "Kuzco",
+     "Atlantis",
+     0
+    ],
+    [
+     "FL",
+     "Quel Disney de 2002 se passe à Hawaï avec une expérience alien ?",
+     "Lilo et Stitch",
+     "Atlantis",
+     "Kuzco",
+     "Frère des ours",
+     0
+    ],
+    [
+     "FL",
+     "Quel Pixar de 1995 fut le premier film en images de synthèse ?",
+     "Toy Story",
+     "1,001 Dalmatiens",
+     "Bugs",
+     "Fourmiz",
+     0
+    ],
+    [
+     "FL",
+     "Quel Pixar de 2003 recherche un petit poisson clown ?",
+     "Le Monde de Nemo",
+     "Toy Story",
+     "Là-haut",
+     "Cars",
+     0
+    ],
+    [
+     "FL",
+     "Quel Pixar de 2007 suit une ratte qui cuisine à Paris ?",
+     "Ratatouille",
+     "Nemo",
+     "WALL-E",
+     "Vice-versa",
+     0
+    ],
+    [
+     "FL",
+     "Quel Pixar de 2008 suit un robot qui nettoie la Terre ?",
+     "WALL-E",
+     "Ratatouille",
+     "Nemo",
+     "Là-haut",
+     0
+    ],
+    [
+     "FL",
+     "Quel Pixar de 2009 vole une maison avec des ballons ?",
+     "Là-haut",
+     "WALL-E",
+     "Ratatouille",
+     "Nemo",
+     0
+    ],
+    [
+     "FL",
+     "Quel Pixar de 2015 met des émotions dans une tête ?",
+     "Vice-versa",
+     "Soul",
+     "Coco",
+     "Là-haut",
+     0
+    ],
+    [
+     "FL",
+     "Quel Pixar de 2020 suit un pianiste dans l'au-delà ?",
+     "Soul",
+     "Vice-versa",
+     "Coco",
+     "Luca",
+     0
+    ],
+    [
+     "FL",
+     "Quel Star Wars de 1977 ouvrit la saga ?",
+     "Un nouvel espoir",
+     "L'Empire contre-attaque",
+     "Le Retour du Jedi",
+     "La Menace fantôme",
+     0
+    ],
+    [
+     "FL",
+     "Quel Marvel de 2008 lança l'univers cinématographique Marvel ?",
+     "Iron Man",
+     "Thor",
+     "Captain America",
+     "Hulk",
+     0
+    ],
+    [
+     "FL",
+     "Quel Marvel de 2012 réunit les héros pour la première fois ?",
+     "Avengers",
+     "Iron Man 3",
+     "Thor 2",
+     "Captain America 2",
+     0
+    ],
+    [
+     "FL",
+     "Quel Marvel de 2018 se déroule au Wakanda ?",
+     "Black Panther",
+     "Avengers",
+     "Captain Marvel",
+     "Thor",
+     0
+    ],
+    [
+     "FL",
+     "Quel Marvel de 2019 clôtura l'ère du Blip ?",
+     "Avengers: Endgame",
+     "Infinity War",
+     "Far From Home",
+     "Thor 4",
      0
     ],
     [
      "CH",
-     "Dans « Le Livre de la jungle », quelle chanson dit qu'il faut de tout pour faire un monde ?",
-     "The Bare Necessities (Il en faut peu pour être heureux)",
-     "I Wanna Be Like You",
-     "Trust in Me",
-     "La marche des éléphants",
+     "Quelle chanson d'« Aladdin » a remporté l'Oscar ?",
+     "A Whole New World",
+     "Friend Like Me",
+     "Prince Ali",
+     "Arabian Nights",
      0
     ],
     [
@@ -1961,65 +2195,182 @@ window.THEME_PACKS.disney = {
     ],
     [
      "CH",
-     "Quelle comédie musicale de Webber met en scène un fantôme ?",
-     "Le Fantôme de l'Opéra",
-     "Cats",
-     "Starlight Express",
-     "Evita",
+     "Quelle chanson de « Pocahontas » a remporté l'Oscar ?",
+     "L'air du vent",
+     "Couleurs du vent",
+     "Au fil du temps",
+     "Écoute ton cœur",
      0
     ],
     [
      "CH",
-     "Quelle comédie musicale reprend les chansons d'ABBA ?",
-     "Mamma Mia !",
-     "We Will Rock You",
-     "Jersey Boys",
-     "Rock of Ages",
+     "Qui a composé les chansons de « La Petite Sirène » et « La Belle et la Bête » ?",
+     "Alan Menken",
+     "Phil Collins",
+     "Elton John",
+     "Hans Zimmer",
      0
     ],
     [
      "CH",
-     "Qui a mis en scène la comédie musicale « Le Roi Lion » à Broadway ?",
-     "Julie Taymor",
-     "Andrew Lloyd Webber",
-     "Cameron Mackintosh",
-     "Trevor Nunn",
+     "Qui a composé les chansons du « Roi lion » avec Elton John ?",
+     "Tim Rice",
+     "Alan Menken",
+     "Phil Collins",
+     "Randy Newman",
+     0
+    ],
+    [
+     "CH",
+     "Qui a composé la musique de « Star Wars » ?",
+     "John Williams",
+     "Hans Zimmer",
+     "Alan Silvestri",
+     "Danny Elfman",
+     0
+    ],
+    [
+     "CH",
+     "Qui a composé la musique des films Marvel ?",
+     "Alan Silvestri",
+     "John Williams",
+     "Hans Zimmer",
+     "Randy Newman",
+     0
+    ],
+    [
+     "CH",
+     "Quel mot compliqué chante Mary Poppins ?",
+     "Supercalifragilisticexpialidocious",
+     "Bibbidi-Bobbidi-Boo",
+     "Hakuna Matata",
+     "Zip-a-Dee-Doo-Dah",
+     0
+    ],
+    [
+     "CH",
+     "Quelle chanson de « Pinocchio » invite à faire un vœu vers l'étoile ?",
+     "Quand on prie la bonne étoile",
+     "C'est la fête",
+     "Bibbidi-Bobbidi-Boo",
+     "Hakuna Matata",
+     0
+    ],
+    [
+     "CH",
+     "Quelle chanson du « Livre de la jungle » dit qu'il faut de tout pour faire un monde ?",
+     "Il en faut peu pour être heureux",
+     "Hé ho",
+     "Trust in Me",
+     "La marche des éléphants",
      0
     ],
     [
      "ME",
-     "Quel acteur a interprété l'inspecteur « Dirty Harry » ?",
-     "Clint Eastwood",
-     "Steve McQueen",
-     "Charles Bronson",
-     "Burt Lancaster",
+     "Qui est la méchante de « La Belle au bois dormant » ?",
+     "Maléfique",
+     "Ursula",
+     "Cruella",
+     "Gothel",
      0
     ],
     [
      "ME",
-     "Quel acteur britannique a joué James Bond le plus longtemps au XXe siècle ?",
-     "Roger Moore",
-     "Sean Connery",
-     "Pierce Brosnan",
-     "Timothy Dalton",
+     "Qui est le méchant de « La Petite Sirène » ?",
+     "Ursula",
+     "Jafar",
+     "Maléfique",
+     "Hadès",
      0
     ],
     [
      "ME",
-     "Dans « Le Seigneur des anneaux », qui a forgé l'Anneau unique ?",
-     "Sauron",
-     "Saroumane",
-     "Gandalf",
-     "Gollum",
+     "Qui est le méchant de « Aladdin » ?",
+     "Jafar",
+     "Ursula",
+     "Hadès",
+     "Scar",
      0
     ],
     [
      "ME",
-     "Quel acteur a joué Hannibal Lecter dans « Le Silence des agneaux » ?",
-     "Anthony Hopkins",
-     "Al Pacino",
-     "Robert De Niro",
-     "Jack Nicholson",
+     "Qui est le méchant du « Roi lion » ?",
+     "Scar",
+     "Mufasa",
+     "Rafiki",
+     "Shere Khan",
+     0
+    ],
+    [
+     "ME",
+     "Qui est le méchant de « Hercule » ?",
+     "Hadès",
+     "Zeus",
+     "Phil",
+     "Arès",
+     0
+    ],
+    [
+     "ME",
+     "Qui est la méchante de « Raiponce » ?",
+     "Gothel",
+     "Maléfique",
+     "Ursula",
+     "Cruella",
+     0
+    ],
+    [
+     "ME",
+     "Qui est le méchant de « Toy Story 3 » ?",
+     "Lotso",
+     "Zurg",
+     "Sid",
+     "Al",
+     0
+    ],
+    [
+     "ME",
+     "Qui est l'ennemi de Buzz dans « Toy Story 2 » ?",
+     "Zurg",
+     "Lotso",
+     "Sid",
+     "Al",
+     0
+    ],
+    [
+     "ME",
+     "Quel méchant Star Wars dit « Je suis ton père » ?",
+     "Darth Vader",
+     "Palpatine",
+     "Kylo Ren",
+     "Maul",
+     0
+    ],
+    [
+     "ME",
+     "Quel empereur Sith manipule la République dans Star Wars ?",
+     "Palpatine",
+     "Vader",
+     "Dooku",
+     "Snoke",
+     0
+    ],
+    [
+     "ME",
+     "Quel méchant Marvel a claqué ses doigts pour détruire la moitié de l'univers ?",
+     "Thanos",
+     "Ultron",
+     "Loki",
+     "Red Skull",
+     0
+    ],
+    [
+     "ME",
+     "Quel robot malveillant créé par Stark menace le monde dans « L'Âge d'Ultron » ?",
+     "Ultron",
+     "Vision",
+     "Jarvis",
+     "Zemo",
      0
     ],
     [
@@ -2060,668 +2411,317 @@ window.THEME_PACKS.disney = {
     ],
     [
      "ST",
-     "Quel studio a produit les courts-métrages « Looney Tunes » ?",
-     "Warner Bros",
-     "Disney",
-     "MGM",
-     "Paramount",
+     "Quel parc Disney a ouvert en 1955 en Californie ?",
+     "Disneyland",
+     "Disney World",
+     "Disneyland Paris",
+     "Tokyo Disneyland",
+     0
+    ],
+    [
+     "ST",
+     "Qui a créé Mickey Mouse avec Walt Disney ?",
+     "Ub Iwerks",
+     "Roy Disney",
+     "Carl Barks",
+     "Floyd Gottfredson",
+     0
+    ],
+    [
+     "ST",
+     "Quelle année est sorti « Steamboat Willie » ?",
+     "1928",
+     "1923",
+     "1932",
+     "1935",
+     0
+    ],
+    [
+     "ST",
+     "Quel service de streaming appartient à Disney ?",
+     "Disney+",
+     "Hulu Max",
+     "Paramount+",
+     "Peacock",
+     0
+    ],
+    [
+     "ST",
+     "Quel studio appartient à Disney et produit « Toy Story » ?",
+     "Pixar",
+     "DreamWorks",
+     "Illumination",
+     "Aardman",
+     0
+    ],
+    [
+     "ST",
+     "Quelle franchise spatiale appartient à Disney depuis 2012 ?",
+     "Star Wars",
+     "Star Trek",
+     "Dune",
+     "Alien",
+     0
+    ],
+    [
+     "ST",
+     "Quel univers de super-héros appartient à Disney ?",
+     "Marvel",
+     "DC",
+     "Image",
+     "Dark Horse",
+     0
+    ],
+    [
+     "ST",
+     "Quel film d'animation a remporté le premier Oscar de la catégorie (2002) ?",
+     "Shrek",
+     "Monstres et Cie",
+     "Le Voyage de Chihiro",
+     "Lilo et Stitch",
+     0
+    ],
+    [
+     "ST",
+     "Combien de films compte la saga Skywalker Star Wars ?",
+     "Neuf",
+     "Sept",
+     "Six",
+     "Douze",
+     0
+    ],
+    [
+     "ST",
+     "Quel label Disney produit les films pour adultes (Deadpool, Alien) ?",
+     "20th Century Studios",
+     "Touchstone",
+     "Hollywood Pictures",
+     "Miramax",
+     0
+    ],
+    [
+     "ST",
+     "Quel film Disney de 1959 met en scène trois fées qui élèvent une princesse ?",
+     "La Belle au bois dormant",
+     "Cendrillon",
+     "Blanche-Neige",
+     "La Belle et la Bête",
      0
     ],
     [
      "AN",
-     "Quel dessin animé belge met en scène des petits êtres bleus ?",
-     "Les Schtroumpfs",
-     "Les Snorks",
-     "Ben 10",
-     "Les Barbapapa",
+     "Comment s'appelle le chien de Mickey ?",
+     "Pluto",
+     "Pat Hibulaire",
+     "Dingo",
+     "Riri",
      0
     ],
     [
      "AN",
-     "Quel est le nom du chien d'Obélix ?",
-     "Idéfix",
-     "Milou",
-     "Pif",
-     "Beau-Richard",
+     "Quel canard riche de Donaldville a pour ennemi Flairsou ?",
+     "Picsou",
+     "Gontran",
+     "Géo",
+     "Popop",
      0
     ],
     [
      "AN",
-     "Quel cheval accompagne Lucky Luke ?",
-     "Jolly Jumper",
-     "Philibert",
-     "Tornado",
-     "Cocosette",
-     0
-    ],
-    [
-     "AN",
-     "Quel animal est Rantanplan dans Lucky Luke ?",
+     "Quel animal est Dingo, l'ami de Mickey ?",
      "Un chien",
-     "Un cheval",
+     "Un canard",
+     "Une vache",
      "Un chat",
-     "Un rat",
      0
     ],
     [
      "AN",
-     "Dans « Les Aristochats », quel est le nom du chat de gouttière ?",
-     "Thomas O'Malley",
-     "Berlioz",
-     "Toulouse",
-     "Napoléon",
+     "Quel animal est Clarabelle, l'amie de Minnie ?",
+     "Une vache",
+     "Une chèvre",
+     "Une jument",
+     "Une oie",
      0
     ],
     [
      "AN",
-     "Quel perroquet méchant accompagne Jafar ?",
+     "Quel ours du Livre de la Jungle chante « Il en faut peu pour être heureux » ?",
+     "Baloo",
+     "Bagheera",
+     "Kaa",
+     "Shere Khan",
+     0
+    ],
+    [
+     "AN",
+     "Quel tigre menace Mowgli dans le Livre de la Jungle ?",
+     "Shere Khan",
+     "Bagheera",
+     "Baloo",
+     "Kaa",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est Tigrou dans Winnie l'ourson ?",
+     "Un tigre",
+     "Un ours",
+     "Un âne",
+     "Un kangourou",
+     0
+    ],
+    [
+     "AN",
+     "Quel âne gris est l'ami de Winnie l'ourson ?",
+     "Bourricot",
+     "Cochonnet",
+     "Tigrou",
+     "Hibou",
+     0
+    ],
+    [
+     "AN",
+     "Comment s'appelle le corbeau de Maléfique ?",
+     "Diablo",
      "Iago",
      "Zazu",
      "Scuttle",
-     "Archimède",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est Lucifer, le chat de Cendrillon ?",
+     "Un chat",
+     "Un chien",
+     "Un souris",
+     "Un corbeau",
+     0
+    ],
+    [
+     "AN",
+     "Quels sont les prénoms des deux souris qui aident Cendrillon ?",
+     "Jacques et Gus",
+     "Mary et Bob",
+     "Bibidi et Bobbidi",
+     "Tom et Jerry",
+     0
+    ],
+    [
+     "AN",
+     "Dans « Le Livre de la jungle », quels oiseaux chantent en groupe avec Mowgli ?",
+     "Les vautours",
+     "Les corbeaux",
+     "Les mouettes",
+     "Les pigeons",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est Bruce, le requin de Nemo qui refuse de manger de poisson ?",
+     "Un requin",
+     "Une raie",
+     "Une morue",
+     "Un thon",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est Dory dans Nemo ?",
+     "Un poisson-chirurgien bleu",
+     "Un poisson-clown",
+     "Une murène",
+     "Une tortue",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est Crush dans Nemo ?",
+     "Une tortue de mer",
+     "Un requin",
+     "Un dauphin",
+     "Une raie",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est Nigel dans Nemo ?",
+     "Une pélican",
+     "Un goéland",
+     "Un cormoran",
+     "Une mouette",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est Kevin dans Là-haut ?",
+     "Un oiseau",
+     "Un chien",
+     "Un renard",
+     "Un serpent",
+     0
+    ],
+    [
+     "AN",
+     "Dans « Les Aristochats », comment s'appelle la chatte maman ?",
+     "Duchesse",
+     "Bijou",
+     "Féline",
+     "Perle",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est Thomas O'Malley dans Les Aristochats ?",
+     "Un chat de gouttière",
+     "Un chien errant",
+     "Un rat",
+     "Un pigeon",
+     0
+    ],
+    [
+     "AN",
+     "Quel animal est le fidèle destrier de Hercule ?",
+     "Pégase",
+     "Cerbère",
+     "Hydra",
+     "Bouc",
      0
     ],
     [
      "HP",
-     "Quel acteur a joué Rick dans « Casablanca » ?",
-     "Humphrey Bogart",
-     "Cary Grant",
-     "James Stewart",
-     "Clark Gable",
+     "Qui a joué la méchante belle-mère dans le remake « Cendrillon » (2015) ?",
+     "Cate Blanchett",
+     "Helena Bonham Carter",
+     "Angelina Jolie",
+     "Emma Thompson",
      0
     ],
     [
      "HP",
-     "Quel acteur a joué Fernand Naudin dans « Les Tontons flingueurs » ?",
-     "Lino Ventura",
-     "Jean Gabin",
-     "Alain Delon",
-     "Belmondo",
+     "Qui a interprété la Bête dans « La Belle et la Bête » de 2017 ?",
+     "Dan Stevens",
+     "Luke Evans",
+     "Josh Gad",
+     "Kevin Kline",
      0
     ],
     [
      "HP",
-     "Quelle actrice a joué Scarlett O'Hara dans « Autant en emporte le vent » ?",
-     "Vivien Leigh",
-     "Ingrid Bergman",
-     "Ava Gardner",
-     "Lana Turner",
-     0
-    ],
-    [
-     "HP",
-     "Quel acteur a joué Michael Corleone dans « Le Parrain » ?",
-     "Al Pacino",
-     "Marlon Brando",
-     "Robert De Niro",
-     "James Caan",
-     0
-    ],
-    [
-     "HP",
-     "Quel acteur a joué dans « À bout de souffle » ?",
-     "Jean-Paul Belmondo",
-     "Jean Gabin",
-     "Lino Ventura",
-     "Alain Delon",
-     0
-    ],
-    [
-     "HP",
-     "Quelle actrice a joué Holly Golightly dans « Diamants sur canapé » ?",
-     "Audrey Hepburn",
-     "Marilyn Monroe",
-     "Grace Kelly",
-     "Elizabeth Taylor",
-     0
-    ],
-    [
-     "HP",
-     "Quel acteur a joué Atticus Finch dans « Du silence et des ombres » ?",
-     "Gregory Peck",
-     "Humphrey Bogart",
-     "Cary Grant",
-     "Henry Fonda",
-     0
-    ],
-    [
-     "HP",
-     "Quel acteur a joué le Joker en 1989 chez Tim Burton ?",
-     "Jack Nicholson",
-     "Heath Ledger",
-     "Cesar Romero",
-     "Joaquin Phoenix",
-     0
-    ],
-    [
-     "HP",
-     "Quel acteur a joué Superman en 1978 ?",
-     "Christopher Reeve",
-     "George Reeves",
-     "Dean Cain",
-     "Brandon Routh",
-     0
-    ],
-    [
-     "HP",
-     "Quelle actrice française a joué dans « Les Enfants du paradis » ?",
-     "Arletty",
-     "Michèle Morgan",
-     "Simone Signoret",
-     "Edwige Feuillère",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de Melville avec Alain Delon suit un tueur solitaire ?",
-     "Le Samouraï",
-     "Le Cercle rouge",
-     "Bob le flambeur",
-     "Un flic",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de Chabrol de 1958 annonce la Nouvelle Vague ?",
-     "Le Beau Serge",
-     "À bout de souffle",
-     "Les 400 coups",
-     "Hiroshima mon amour",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de Truffaut suit un jeune garçon à Paris ?",
-     "Les 400 coups",
-     "Le Blé en herbe",
-     "Zéro de conduite",
-     "Poil de carotte",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de Godard de 1960 marque la Nouvelle Vague ?",
-     "À bout de souffle",
-     "Hiroshima mon amour",
-     "Les 400 coups",
-     "Cléo de 5 à 7",
-     0
-    ],
-    [
-     "FL",
-     "Quel western de Clint Eastwood de 1992 a remporté l'Oscar du meilleur film ?",
-     "Impitoyable",
-     "Le Chacal",
-     "L'Inspecteur Harry",
-     "Josey Wales",
-     0
-    ],
-    [
-     "FL",
-     "Quel film d'Hitchcock de 1958 tourne autour d'un vertige ?",
-     "Sueurs froides (Vertigo)",
-     "Psychose",
-     "Fenêtre sur cour",
-     "Les Oiseaux",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de Kassovitz de 1995 se déroule dans une banlieue parisienne ?",
-     "La Haine",
-     "Taxi",
-     "Les Rivières pourpres",
-     "Le Pacte des loups",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de Jeunet de 2001 suit une serveuse imaginative à Montmartre ?",
-     "Le Fabuleux Destin d'Amélie Poulain",
-     "Chocolat",
-     "Un long dimanche de fiançailles",
-     "Delicatessen",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de 1976 raconte l'histoire du boxeur Rocky Balboa ?",
-     "Rocky",
-     "Raging Bull",
-     "Million Dollar Baby",
-     "Cinderella Man",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de Coppola de 1979 se déroule au Vietnam ?",
-     "Apocalypse Now",
-     "Platoon",
-     "Full Metal Jacket",
-     "Good Morning Vietnam",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de 1937 de Jean Renoir dénonce la guerre ?",
-     "La Grande Illusion",
-     "La Marseillaise",
-     "La Bête humaine",
-     "Le Crime de M. Lange",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de 1945 de Marcel Carné est un classique français ?",
-     "Les Enfants du paradis",
-     "La Grande Illusion",
-     "Le Quai des brumes",
-     "La Règle du jeu",
+     "Qui a joué Mulan dans le remake Disney de 2020 ?",
+     "Liu Yifei",
+     "Zhang Ziyi",
+     "Constance Wu",
+     "Gemma Chan",
      0
     ],
     [
      "CH",
-     "Quelle chanson Sam chante-t-il dans « Casablanca » ?",
-     "As Time Goes By",
-     "La Marseillaise",
-     "Blue Moon",
-     "Over the Rainbow",
-     0
-    ],
-    [
-     "CH",
-     "Qui a composé la musique de « Les Parapluies de Cherbourg » ?",
-     "Michel Legrand",
-     "Serge Gainsbourg",
-     "Michel Berger",
-     "Francis Lai",
-     0
-    ],
-    [
-     "CH",
-     "Qui a composé la musique de « Love Story » ?",
-     "Francis Lai",
-     "Ennio Morricone",
-     "John Barry",
-     "Henry Mancini",
-     0
-    ],
-    [
-     "CH",
-     "Qui a composé les musiques des westerns de Leone ?",
-     "Ennio Morricone",
-     "John Williams",
-     "Nino Rota",
-     "John Barry",
-     0
-    ],
-    [
-     "CH",
-     "Qui a composé la musique du « Parrain » ?",
-     "Nino Rota",
-     "Ennio Morricone",
-     "John Williams",
-     "Henry Mancini",
-     0
-    ],
-    [
-     "CH",
-     "Qui a composé « Moon River » pour « Diamants sur canapé » ?",
-     "Henry Mancini",
-     "Michel Legrand",
-     "John Barry",
-     "Burt Bacharach",
-     0
-    ],
-    [
-     "CH",
-     "Qui a composé la musique de « Titanic » ?",
-     "James Horner",
-     "Hans Zimmer",
-     "John Barry",
-     "Alan Silvestri",
-     0
-    ],
-    [
-     "CH",
-     "Qui a composé la musique d'« E.T. » ?",
-     "John Williams",
-     "John Barry",
-     "Hans Zimmer",
-     "Alan Silvestri",
-     0
-    ],
-    [
-     "CH",
-     "Quelle chanson d'Édith Piaf accompagne l'ambiance d'« Inception » ?",
-     "Non, je ne regrette rien",
-     "La Vie en rose",
-     "Milord",
-     "Hymne à l'amour",
-     0
-    ],
-    [
-     "ME",
-     "Quel animal est le méchant de « Les Dents de la mer » ?",
-     "Un requin blanc",
-     "Une orque",
-     "Un calmar",
-     "Un crocodile",
-     0
-    ],
-    [
-     "ME",
-     "Quel archéologue rival d'Indiana Jones travaille avec les nazis ?",
-     "Belloq",
-     "Sallah",
-     "Brody",
-     "Donovan",
-     0
-    ],
-    [
-     "ME",
-     "Quel ordinateur malveillant bloque l'astronaute Dave ?",
-     "HAL 9000",
-     "Skynet",
-     "Mother",
-     "Colossus",
-     0
-    ],
-    [
-     "ME",
-     "Quel méchant de comics est le clown criminel de Gotham ?",
-     "Le Joker",
-     "Double Face",
-     "L'Épouvantail",
-     "Bane",
-     0
-    ],
-    [
-     "ME",
-     "Quel acteur a joué l'inspecteur « Dirty Harry » ?",
-     "Clint Eastwood",
-     "Steve McQueen",
-     "Charles Bronson",
-     "Burt Lancaster",
-     0
-    ],
-    [
-     "ST",
-     "Quelle société a produit les dessins animés originaux de « Tom et Jerry » ?",
-     "MGM",
-     "Warner",
-     "Disney",
-     "Paramount",
-     0
-    ],
-    [
-     "ST",
-     "Quel festival de cinéma est le plus ancien ?",
-     "Venise",
-     "Cannes",
-     "Berlin",
-     "Locarno",
-     0
-    ],
-    [
-     "ST",
-     "Quel acteur a joué James Bond en premier au cinéma ?",
-     "Sean Connery",
-     "Roger Moore",
-     "Daniel Craig",
-     "Pierce Brosnan",
-     0
-    ],
-    [
-     "ST",
-     "Quel studio a produit « Le Magicien d'Oz » en 1939 ?",
-     "MGM",
-     "Warner",
-     "Disney",
-     "RKO",
-     0
-    ],
-    [
-     "ST",
-     "Quel pays a inventé le cinéma ?",
-     "La France",
-     "Les États-Unis",
-     "L'Angleterre",
-     "L'Italie",
-     0
-    ],
-    [
-     "ST",
-     "Qui a inventé le cinématographe ?",
-     "Les frères Lumière",
-     "Thomas Edison",
-     "Georges Méliès",
-     "Louis Le Prince",
-     0
-    ],
-    [
-     "ST",
-     "Qui a réalisé « Le Voyage dans la Lune » en 1902 ?",
-     "Georges Méliès",
-     "Les frères Lumière",
-     "Louis Feuillade",
-     "Alice Guy",
-     0
-    ],
-    [
-     "ST",
-     "Qui fut la première réalisatrice de l'histoire du cinéma ?",
-     "Alice Guy",
-     "Germaine Dulac",
-     "Agnès Varda",
-     "Dorothy Arzner",
-     0
-    ],
-    [
-     "ST",
-     "Comment s'appelle le quartier des studios à Los Angeles ?",
-     "Hollywood",
-     "Broadway",
-     "Soho",
-     "Montmartre",
-     0
-    ],
-    [
-     "ST",
-     "Quel studio a produit les « Looney Tunes » ?",
-     "Warner Bros",
-     "Disney",
-     "MGM",
-     "Paramount",
-     0
-    ],
-    [
-     "AN",
-     "Quel chien blanc accompagne Tintin ?",
-     "Milou",
-     "Idéfix",
-     "Rantanplan",
-     "Jolly Jumper",
-     0
-    ],
-    [
-     "AN",
-     "Quel chat poursuit Jerry dans les dessins animés MGM ?",
-     "Tom",
-     "Sylvestre",
-     "Félix",
-     "Grosminet",
-     0
-    ],
-    [
-     "AN",
-     "Quel canari jaune est la cible de Sylvestre ?",
-     "Titi",
-     "Gérard",
-     "Piou",
-     "Coco",
-     0
-    ],
-    [
-     "AN",
-     "Quel cheval accompagne Zorro ?",
-     "Tornado",
-     "Jolly Jumper",
-     "Philibert",
-     "Tucker",
-     0
-    ],
-    [
-     "AN",
-     "Quel dauphin est le héros d'une série américaine ?",
-     "Flipper",
-     "Lassie",
-     "Rex",
-     "Rin Tin Tin",
-     0
-    ],
-    [
-     "AN",
-     "Quel chien est le héros de la série « Lassie » ?",
-     "Un colley",
-     "Un berger allemand",
-     "Un labrador",
-     "Un caniche",
-     0
-    ],
-    [
-     "AN",
-     "Quel ours roux est l'ami de Christopher Robin ?",
-     "Winnie l'ourson",
-     "Baloo",
-     "Paddington",
-     "Nounours",
-     0
-    ],
-    [
-     "AN",
-     "Quel animal est Babar ?",
-     "Un éléphant",
-     "Un lion",
-     "Un ours",
-     "Un hippopotame",
-     0
-    ],
-    [
-     "AN",
-     "Quel lapin gris demande « Quoi de neuf, docteur ? »",
-     "Bugs Bunny",
-     "Lola Bunny",
-     "Roger Rabbit",
-     "Peter Rabbit",
-     0
-    ],
-    [
-     "AN",
-     "Quel chien enquête dans une série policière autrichienne ?",
-     "Rex",
-     "Lassie",
-     "Flipper",
-     "Milou",
-     0
-    ],
-    [
-     "HP",
-     "Quel acteur a joué aux côtés de De Funès dans « Le Corniaud » ?",
-     "Bourvil",
-     "Jean Gabin",
-     "Yves Montand",
-     "Pierre Brasseur",
-     0
-    ],
-    [
-     "HP",
-     "Quelle actrice française a joué dans « Le Mépris » de Godard ?",
-     "Brigitte Bardot",
-     "Jeanne Moreau",
-     "Catherine Deneuve",
-     "Anouk Aimée",
-     0
-    ],
-    [
-     "HP",
-     "Quel acteur joue le rôle de Harry dans « Le Huitième Jour » ?",
-     "Daniel Auteuil",
-     "Benoît Poelvoorde",
-     "Pascal Duquenne",
-     "Dany Boon",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de 1966 avec De Funès se déroule pendant la Seconde Guerre mondiale ?",
-     "La Grande Vadrouille",
-     "Le Corniaud",
-     "La Folie des grandeurs",
-     "Les Aventures de Rabbi Jacob",
-     0
-    ],
-    [
-     "FL",
-     "Quel classique de Jacques Tati est sorti en 1953 ?",
-     "Les Vacances de Monsieur Hulot",
-     "Jour de fête",
-     "Playtime",
-     "Trafic",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de 1960 avec Jean-Paul Belmondo a marqué la Nouvelle Vague ?",
-     "À bout de souffle",
-     "Le Doulos",
-     "Le Guépard",
-     "Pierrot le Fou",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de Tarantino de 1994 a remporté la Palme d'or ?",
-     "Pulp Fiction",
-     "Reservoir Dogs",
-     "Jackie Brown",
-     "Kill Bill",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de 1994 suit un homme simple et sa route vers le succès ?",
-     "Forrest Gump",
-     "Les Évadés",
-     "Pulp Fiction",
-     "Quatre mariages et un enterrement",
-     0
-    ],
-    [
-     "FL",
-     "Quel film de Spielberg de 1982 rencontre un extra-terrestre ?",
-     "E.T.",
-     "Rencontres du troisième type",
-     "Jurassic Park",
-     "A.I.",
-     0
-    ],
-    [
-     "ST",
-     "Quel pays a inventé le cinématographe en 1895 ?",
-     "La France",
-     "Les États-Unis",
-     "L'Angleterre",
-     "L'Italie",
-     0
-    ],
-    [
-     "ST",
-     "Quel festival de cinéma a lieu chaque mois de mai ?",
-     "Le Festival de Cannes",
-     "Le Festival de Venise",
-     "Le Festival de Berlin",
-     "Le Festival de Locarno",
+     "Quel mot inventé chante Mary Poppins en haut d'un toit ?",
+     "Supercalifragilisticexpialidocious",
+     "Bibbidi-Bobbidi-Boo",
+     "Hakuna Matata",
+     "Zip-a-Dee-Doo-Dah",
      0
     ]
    ]
