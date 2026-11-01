@@ -82,13 +82,6 @@
         <div id="dice-result"></div>
       </div>
 
-      <div class="panel hidden" id="question-panel">
-        <h2 id="question-cat"></h2>
-        <p id="question-text"></p>
-        <div id="answers"></div>
-        <p id="answer-feedback"></p>
-      </div>
-
       <div class="panel">
         <h2>Joueurs</h2>
         <div id="players-summary"></div>
@@ -118,13 +111,18 @@
   <p class="small">Trivial Quest · © <span id="year"></span> David Demoulin</p>
 </footer>
 
-<!-- Bandeau question : slide depuis le bas -->
+<!-- Bandeau question : slide depuis le bas (question + réponses + timer) -->
 <div id="question-banner" aria-hidden="true">
-  <span id="banner-cat"></span>
-  <div id="question-timerwrap" class="hidden">
-    <div id="question-timerbar"></div>
-    <span id="question-timertext"></span>
+  <div class="banner-head">
+    <span id="banner-cat"></span>
+    <div id="question-timerwrap" class="hidden">
+      <div id="question-timerbar"></div>
+      <span id="question-timertext"></span>
+    </div>
   </div>
+  <p id="question-text"></p>
+  <div id="answers"></div>
+  <p id="answer-feedback"></p>
 </div>
 
 <script src="config.js"></script>

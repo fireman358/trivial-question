@@ -589,8 +589,6 @@ function arrive(cellId) {
 }
 
 function askQuestion(cell, player) {
-  const panel = $("#question-panel");
-  show(panel);
   $("#answer-feedback").textContent = "";
   let catName, question, options, correct;
 
@@ -600,8 +598,6 @@ function askQuestion(cell, player) {
   catName = info.icon + " " + info.name + (cell.isCenter ? " — 🏆 question finale" : cell.isWedge ? " — 🧀 camembert en jeu !" : "");
   question = q[1]; options = q.slice(2, 6); correct = q[6];
 
-  $("#question-cat").textContent = catName;
-  $("#question-cat").style.color = info.color;
   $("#question-text").textContent = question;
 
   const answers = $("#answers");
@@ -706,7 +702,7 @@ function answer(btn, isCorrect, cell, player, correct, options) {
     updateTurnUI();
     saveGame();
     hideQuestionBanner();
-    setTimeout(() => { awaitingRoll = true; $("#btn-roll").disabled = false; hide($("#question-panel")); $("#dice-result").textContent = ""; }, 1600);
+    setTimeout(() => { awaitingRoll = true; $("#btn-roll").disabled = false; $("#dice-result").textContent = ""; }, 1600);
   } else {
     player.stats.wrong++;
     recordCatStat(player, cell, "wrong");
@@ -746,7 +742,6 @@ function animateWedge(cell, catKey) {
 function nextTurn() {
   stopTimer();
   hideQuestionBanner();
-  hide($("#question-panel"));
   $("#dice-result").textContent = "";
   current = (current + 1) % players.length;
   awaitingRoll = true;
