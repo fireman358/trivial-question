@@ -333,13 +333,12 @@ function renderBoard() {
     /* Icône + nom sur deux lignes, dans le sens de la lecture.
        La taille du texte s'adapte au nom : elle est calculée pour que le
        nom le plus long tienne dans la largeur du triangle à ce rayon. */
-    /* Deux lignes de texte placées dans la bande dégagée du triangle :
-       entre le moyeu (HUB_R) et la première rangée de cases (SPOKE_R[0]).
-       L'icône en haut (zone étroite près du moyeu), le nom en dessous. */
-    const bandMid = (HUB_R + SPOKE_R[0]) / 2;   // centre de la bande libre
+    /* Texte placé près du bord extérieur du triangle (la base, côté anneau) :
+       c'est la zone la plus large, libre de toute case. */
+    const bandMid = RING_R - 62;
     const [lx, ly] = polar(bandMid, ang);
-    // largeur du triangle au centre de la bande
-    const availW = 2 * bandMid * Math.tan(29 * Math.PI / 180) * 0.7;
+    // largeur du triangle à ce rayon (moins une marge pour les cases voisines)
+    const availW = 2 * (bandMid - 26) * Math.tan(29 * Math.PI / 180) * 0.72;
     /* Noms longs sur deux lignes : la taille se calcule sur le segment
        le plus long, chaque ligne tient dans le triangle. */
     let lines = [info.name];
@@ -349,7 +348,7 @@ function renderBoard() {
       lines = [words.slice(0, mid).join(" "), words.slice(mid).join(" ")];
     }
     const longest = Math.max(...lines.map(l => l.length));
-    const fontPx = Math.max(9, Math.min(20, Math.floor(availW / (longest * 0.78))));
+    const fontPx = Math.max(10, Math.min(24, Math.floor(availW / (longest * 0.78))));
     /* Centrage : le bloc (icône + lignes) est réparti symétriquement
        autour du point central du triangle. */
     const iconH = Math.round(fontPx * 1.4);
