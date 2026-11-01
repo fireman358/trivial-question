@@ -300,6 +300,8 @@ function fitSectorLabels(svgEl) {
     const [b1x, b1y] = polar(RING_R - 4, ang - 29);
     const [b2x, b2y] = polar(RING_R - 4, ang + 29);
     const quad = [[t1x, t1y], [t2x, t2y], [b2x, b2y], [b1x, b1y]];
+    /* course radiale disponible pour le texte (bord moyeu → bord anneau) */
+    const course = RING_R - HUB_R - 14;
     const inside = (px, py) => {
       for (let i = 0; i < 4; i++) {
         const [ax, ay] = quad[i], [bx, by] = quad[(i + 1) % 4];
