@@ -124,8 +124,8 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 
 /* Game layout */
 #game-screen { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
-#board-wrap { flex: 2; min-width: 340px; }
-#sidebar { flex: 1; min-width: 300px; }
+#sidebar { flex: 1; min-width: 300px; max-width: 360px; order: 0; }
+#board-wrap { flex: 2; min-width: 340px; order: 1; }
 
 #board { width: 100%; height: auto; border-radius: var(--radius); }
 .cell { cursor: default; }

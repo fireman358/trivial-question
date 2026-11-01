@@ -186,9 +186,10 @@ function buildBoard() {
     }
   }
 
-  // 6 rayons de 6 cases (36) : jamais la couleur du QG du rayon
+  // 6 rayons de 6 cases (36), alignés sur les QG (intersection rayon/anneau).
+  // Les cases d'anneau non-QG tombent naturellement ENTRE deux rayons.
   for (let s = 0; s < 6; s++) {
-    const ang = s * 60 + 30;
+    const ang = s * 60;
     const own = CATEGORY_ORDER[s];
     const others = CAT_KEYS.filter(k => k !== own);
     const cats = [...others, others[0]];
@@ -200,6 +201,7 @@ function buildBoard() {
       link(prev, id);
       prev = id;
     }
+    // le bout du rayon rejoint le QG, à l'intersection avec l'anneau
     link(prev, "ring" + (s * 6));
   }
 
@@ -248,7 +250,7 @@ function renderBoard() {
       out += `<g id="cell-hub" class="cell hub-cell">
         <circle cx="${c.x}" cy="${c.y + 2}" r="${HUB_R}" fill="#00000022"/>
         <circle cx="${c.x}" cy="${c.y}" r="${HUB_R}" fill="#333333" stroke="#38bdf8" stroke-width="3" filter="url(#f-drop)"/>
-        <g transform="translate(${c.x - 34} ${c.y - 34}) scale(1.06)">${EDUKISTO_MARK}</g>
+        <g transform="translate(${c.x - HUB_R} ${c.y - HUB_R}) scale(${(HUB_R * 2) / 64})">${EDUKISTO_MARK}</g>
         <circle cx="${c.x}" cy="${c.y}" r="${HUB_R - 3}" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.35"/>
       </g>`;
       continue;
@@ -301,37 +303,37 @@ function renderLegend() {
 }
 
 /* ---------- Déplacement : EXACTEMENT le nombre du dé ----------
-   BFS sur les états (case, pas restant) : on ne retient que les trajets
-   de longueur exactement égale au dé. Le moyeu n'est accessible qu'en
-   dernier pas et uniquement avec les 6 camemberts.                        */
+   BFS par couches sur les états (case courante, case précédente) :
+   - longueur exactement égale au dé (pas de trajet raccourci) ;
+   - pas de demi-tour immédiat : on ne peut pas rebrousser chemin sur
+     la case d'où l'on vient (le pion continue dans sa direction) ;
+   - le moyeu n'est accessible qu'en dernier pas, avec les 6 camemberts. */
 function neighbors(cellId) { return board.adj[cellId] || []; }
 
 function exactPaths(startId, steps, player) {
   const hasAllWedges = player && Object.keys(player.wedges).length === 6;
-  let frontier = new Map([[startId, null]]);   // cellule -> parent (couche précédente)
-  const layers = [frontier];
+  // état : "case|précédente" -> chemin complet depuis le départ
+  let frontier = new Map([[startId + "|", [startId]]]);
   for (let s = 0; s < steps; s++) {
     const next = new Map();
-    const isLast = s === steps - 1;
-    for (const [cell] of frontier) {
+    for (const [state, path] of frontier) {
+      const cell = state.split("|")[0];
+      const prev = state.split("|")[1];
       for (const n of neighbors(cell)) {
-        const c = board.cells[n];
-        if (c.isCenter && !(isLast && hasAllWedges)) continue; // moyeu : dernier pas + 6 camemberts
-        if (!next.has(n)) next.set(n, cell);
+        if (n === prev) continue;                    // pas de demi-tour immédiat
+        // le moyeu se traverse librement en cours de route
+        const key = n + "|" + cell;
+        if (!next.has(key)) next.set(key, [...path, n]);
       }
     }
     frontier = next;
-    layers.push(frontier);
   }
+  // destinations finales : on ne peut s'arrêter au moyeu qu'avec les 6 camemberts
   const paths = {};
-  for (const [cell] of frontier) {
-    const path = [cell];
-    let c = cell;
-    for (let s = layers.length - 1; s > 0; s--) {
-      c = layers[s].get(c);
-      path.unshift(c);
-    }
-    paths[cell] = path;   // longueur exacte : steps + 1 cases
+  for (const path of frontier.values()) {
+    const dest = path[path.length - 1];
+    if (board.cells[dest].isCenter && !hasAllWedges) continue;
+    if (!paths[dest]) paths[dest] = path;
   }
   return paths;
 }
