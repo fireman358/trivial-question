@@ -333,12 +333,14 @@ function renderBoard() {
     /* Icône + nom sur deux lignes, dans le sens de la lecture.
        La taille du texte s'adapte au nom : elle est calculée pour que le
        nom le plus long tienne dans la largeur du triangle à ce rayon. */
-    /* Texte placé près du bord extérieur du triangle (la base, côté anneau) :
-       c'est la zone la plus large, libre de toute case. */
-    const bandMid = RING_R - 62;
-    const [lx, ly] = polar(bandMid, ang);
-    // largeur du triangle à ce rayon (moins une marge pour les cases voisines)
-    const availW = 2 * (bandMid - 26) * Math.tan(29 * Math.PI / 180) * 0.72;
+    /* Texte ancré à la base du triangle (côté anneau extérieur) :
+       la première ligne touche la base, les suivantes s'étendent vers
+       l'intérieur du plateau — jamais sur les cases de l'anneau. */
+    const baseR = RING_R - 40;            // sommet du bloc : contre la base
+    const blockDepth = 66;               // profondeur du bloc vers le centre
+    const anchorR = baseR - blockDepth / 2;  // centre de gravité du bloc
+    const [lx, ly] = polar(anchorR, ang);
+    const availW = 2 * (anchorR - 10) * Math.tan(29 * Math.PI / 180) * 0.72;
     /* Noms longs sur deux lignes : la taille se calcule sur le segment
        le plus long, chaque ligne tient dans le triangle. */
     let lines = [info.name];
@@ -349,17 +351,18 @@ function renderBoard() {
     }
     const longest = Math.max(...lines.map(l => l.length));
     const fontPx = Math.max(10, Math.min(24, Math.floor(availW / (longest * 0.78))));
-    /* Centrage : le bloc (icône + lignes) est réparti symétriquement
-       autour du point central du triangle. */
+    /* Le bloc part de la base du triangle : l'icône près de l'anneau,
+       le nom en dessous, en s'éloignant des cases extérieures. */
     const iconH = Math.round(fontPx * 1.4);
     const lineH = fontPx + 2;
-    const blockH = iconH + 4 + lines.length * lineH;
-    const top = -Math.floor(blockH / 2);           // sommet du bloc
     let rotate = ang - 90;
     if (ang > 180) rotate += 180;
+    /* repère local : y+ pointe vers l'extérieur (base) après rotation,
+       donc on part du bas du bloc (base) vers le haut (intérieur). */
+    const baseY = Math.floor(blockDepth / 2);      // bord à la base du triangle
     out += `<g class="sector-label" transform="translate(${lx} ${ly}) rotate(${rotate})">
-      <text x="0" y="${top + iconH}" text-anchor="middle" class="sector-icon" font-size="${iconH}">${info.icon}</text>
-      ${lines.map((l, i) => `<text x="0" y="${top + iconH + 6 + (i + 1) * lineH}" text-anchor="middle" class="sector-cat" font-size="${fontPx}">${l}</text>`).join("")}
+      <text x="0" y="${baseY}" text-anchor="middle" class="sector-icon" font-size="${iconH}">${info.icon}</text>
+      ${lines.map((l, i) => `<text x="0" y="${baseY - iconH - 4 - (i + 1) * lineH}" text-anchor="middle" class="sector-cat" font-size="${fontPx}">${l}</text>`).join("")}
     </g>`;
   }
   out += `<circle cx="350" cy="352" r="${HUB_R + 14}" fill="#f2e9cf" stroke="#c9b98a" stroke-width="2" opacity="0.8"/>`;
