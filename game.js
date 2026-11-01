@@ -303,8 +303,8 @@ function renderBoard() {
   for (let sector = 0; sector < 6; sector++) {
     const slot = CAT_KEYS[sector];
     const info = catInfo(slot);
-    const ang = sector * 60;               // le rayon central du secteur
-    const a1 = ang - 30, a2 = ang + 30;    // limites angulaires (entre les rayons voisins)
+    const ang = sector * 60 + 30;          // centre de l'espace VIDE entre deux rayons
+    const a1 = ang - 29, a2 = ang + 29;    // limites calées entre les rayons voisins (60° d'écart)
     // Triangle : sommet au bord du moyeu, base élargie sur l'anneau extérieur
     const [t1x, t1y] = polar(HUB_R + 6, a1);
     const [t2x, t2y] = polar(HUB_R + 6, a2);
