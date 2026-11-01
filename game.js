@@ -296,17 +296,29 @@ function renderBoard() {
   let out = defs;
   out += `<circle cx="350" cy="352" r="350" fill="url(#rg-board)" stroke="#c9b98a" stroke-width="3" filter="url(#f-soft)"/>`;
 
-  /* Légende intégrée : une catégorie par secteur vide (triangle entre deux rayons),
-     avec sa couleur et son icône — suit la recharge active via catInfo(). */
+  /* Légende intégrée : chaque secteur (triangle entre deux rayons) est rempli
+     de la couleur de sa catégorie, avec le nom en grand dans le sens de lecture.
+     Suit la recharge active via catInfo(). */
   for (let sector = 0; sector < 6; sector++) {
     const slot = CAT_KEYS[sector];
     const info = catInfo(slot);
-    const ang = sector * 60 + 30;           // centre du secteur (les rayons sont à sector*60)
-    const [lx, ly] = polar(96, ang);        // point proche du centre, dans la zone vide
-    const [tx, ty] = polar(40, ang);        // point de fuite pour orienter le texte
-    const rotate = ang - 90;                // texte radial, lisible du centre vers l'extérieur
+    const ang = sector * 60;                // le rayon du secteur est à sector*60
+    // triangle : sommet au centre du plateau, base sur le cercle intérieur des rayons
+    const a1 = ang - 30, a2 = ang + 30;     // limites angulaires du secteur
+    const [x1, y1] = polar(HUB_R + 12, a1);
+    const [x2, y2] = polar(HUB_R + 12, a2);
+    const [bx, by] = polar(SPOKE_R[0] - 8, a1);
+    const [cx, cy] = polar(SPOKE_R[0] - 8, a2);
+    out += `<polygon class="sector-fill"
+      points="350,350 ${x1},${y1} ${bx},${by} ${cx},${cy} ${x2},${y2}"
+      fill="${info.color}" opacity="0.85"/>`;
+    // Nom de la catégorie : texte incliné perpendiculairement au rayon,
+    // toujours dans le sens de la lecture (jamais à l'envers).
+    const [lx, ly] = polar((HUB_R + SPOKE_R[0]) / 2 + 4, ang);
+    let rotate = -(ang);              // texte perpendiculaire au rayon
+    if (ang > 90 && ang < 270) rotate += 180;  // moitié basse : retourner pour rester lisible
     out += `<g class="sector-label" transform="translate(${lx} ${ly}) rotate(${rotate})">
-      <text x="0" y="0" text-anchor="middle" class="sector-cat">${info.icon} ${info.name}</text>
+      <text x="0" y="0" text-anchor="middle" class="sector-cat">${info.name}</text>
     </g>`;
   }
   out += `<circle cx="350" cy="352" r="${HUB_R + 14}" fill="#f2e9cf" stroke="#c9b98a" stroke-width="2" opacity="0.8"/>`;
@@ -493,6 +505,7 @@ function startGame() {
   hide($("#setup-screen"));
   hide($("#win-screen"));
   show($("#game-screen"));
+  show($("#btn-newgame-header"));
   updateTurnUI();
   saveGame();
 }
@@ -758,7 +771,7 @@ function win(player) {
 }
 
 /* Nouvelle partie : efface la sauvegarde et revient à la configuration */
-$("#btn-newgame").onclick = () => {
+function newGame() {
   stopTimer();
   hideQuestionBanner();
   clearSave();
@@ -773,8 +786,10 @@ $("#btn-newgame").onclick = () => {
   show($("#setup-screen"));
   hide($("#game-screen"));
   hide($("#win-screen"));
+  hide($("#btn-newgame-header"));
   renderSetup();
-};
+}
+$("#btn-newgame-header").onclick = newGame;
 
 $("#btn-restart").onclick = () => {
   show($("#setup-screen"));
