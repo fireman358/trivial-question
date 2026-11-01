@@ -110,6 +110,16 @@ window.QUESTION_PACKS["6-8"] = {
 ["D","Comment s'appelle le monstre vert et gentil chez Pixar ?","Sulley","Mike Wazowski","Bob","Nemo",0],
 ["D","Quel héros de dessin animé vit dans un ananas sous la mer ?","Bob l'éponge","Patrick","Sandy","Carlo",0],
 ["D","Quelle princesse Disney chante « Libérée, délivrée » ?","Elsa","Anna","Aurora","Mulan",0],
-["D","Comment s'appelle le robot de Pixar qui nettoie la Terre ?","WALL-E","R2-D2","Baymax","EVE",0]
+["D","Comment s'appelle le robot de Pixar qui nettoie la Terre ?","WALL-E","R2-D2","Baymax","EVE",0],
+["G","Quelle est la capitale de la Belgique ?","Bruxelles","Anvers","Liège","Namur",0],
+["G","Combien de régions y a-t-il en Belgique ?","Trois","Deux","Quatre","Cinq",0],
+["G","Dans quelle région se trouve Seneffe ?","La Wallonie","La Flandre","Bruxelles","La région germanophone",0],
+["H","Quelles sont les trois langues officielles de la Belgique ?","Français, néerlandais, allemand","Français, anglais, allemand","Néerlandais, anglais, espagnol","Français, italien, néerlandais",0],
+["H","Quel roi des Belges a régné de 1951 à 1993 ?","Baudouin Ier","Albert II","Léopold III","Philippe",0],
+["S","Quel est le nom du fameux chat belge de Philippe Geluck ?","Le Chat","Garfield","Tom","Hello Kitty",0],
+["L","Quel sport est très populaire en Belgique, avec le célèbre circuit de Spa-Francorchamps ?","La formule 1","Le base-ball","Le cricket","Le hockey sur glace",0],
+["A","Quel dessinateur belge a créé Tintin ?","Hergé","Morris","Peyo","Goscinny",0],
+["A","Qui a créé les Schtroumpfs ?","Peyo","Hergé","Morris","Franquin",0],
+["D","Quel plat est une spécialité belge ?","Les frites","La pizza","Le sushi","Le kebab",0],
   ]
 };

@@ -124,6 +124,17 @@ window.QUESTION_PACKS["31+"] = {
 ["D","Quel cinéaste français est célèbre pour ses « comédies morales » ?","Éric Rohmer","François Truffaut","Claude Chabrol","Alain Resnais",0],
 ["D","Quel film de Luc Besson met en scène une fillette et un tueur à gages ?","Léon","Nikita","Le Grand Bleu","Le Cinquième Élément",0],
 ["D","Quel film de Gérard Oury se déroule pendant la Seconde Guerre mondiale ?","La Grande Vadrouille","Les Aventures de Rabbi Jacob","Le Corniaud","La Folie des grandeurs",0],
-["D","Quel acteur britannique a joué James Bond le plus longtemps au XXe siècle ?","Roger Moore","Sean Connery","Pierce Brosnan","Timothy Dalton",0]
+["D","Quel acteur britannique a joué James Bond le plus longtemps au XXe siècle ?","Roger Moore","Sean Connery","Pierce Brosnan","Timothy Dalton",0],
+["G","Quel fleuve traverse Namur et Liège ?","La Meuse","L'Escaut","La Lys","L'Yser",0],
+["G","Quel est le plus grand port d'Europe situé en Belgique ?","Anvers","Rotterdam","Hambourg","Le Havre",0],
+["H","Quelle période de l'histoire belge s'appelle « la question royale » ?","Le débat sur le retour de Léopold III après 1945","L'indépendance de 1830","La guerre des Boers","La révolution industrielle",0],
+["H","Quel souverain belge est resté chef de l'État pendant la Seconde Guerre mondiale ?","Léopold III","Albert Ier","Baudouin","Charles",0],
+["S","Quelle chaîne belge diffusait « Le Jardin extraordinaire » ?","La RTBF","TF1","RTL","France 2",0],
+["L","Quel coureur cycliste belge a remporté cinq Tours de France ?","Eddy Merckx","Fausto Coppi","Jacques Anquetil","Raymond Poulidor",0],
+["A","Quel chanteur belge a interprété « Ça plane pour moi » ?","Plastic Bertrand","Jacques Brel","Maurane","Salvatore Adamo",0],
+["A","Quelle chanteuse belge a interprété « Sur la vie » et a marqué la chanson française ?","Maurane","Céline Dion","Sylvie Vartan","France Gall",0],
+["D","Quel film belge de 1992 avec Benoît Poelvoorde est un faux documentaire sur des tueurs ?","C'est arrivé près de chez vous","Le Huitième Jour","Dédé à travers les brumes","Les Gens de la lune",0],
+["D","Quel dessinateur belge est célèbre pour le personnage de « Gaston Lagaffe » ?","Franquin","Hergé","Peyo","Morris",0],
+["D","Quel grand festival de théâtre de rue a lieu chaque été en Wallonie ?","Les Chiroux (Liège)","Le Festival de Spa","Les Féeries du Bois","Les Estivales",0],
   ]
 };

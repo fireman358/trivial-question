@@ -129,6 +129,18 @@ window.QUESTION_PACKS["12-15"] = {
 ["D","Quel film d'animation suit un garçon qui entre dans le monde des morts au Mexique ?","Coco","Le Livre de la vie","Kubo","Vice-versa",0],
 ["D","Dans « Hunger Games », quel symbole porte Katniss ?","Le geai moqueur","L'aigle","Le loup","Le serpent",0],
 ["D","Quel est le nom du chien d'Obélix ?","Idéfix","Dogmatix","Milou","Pif",0],
-["D","Quel super-héros Marvel grimpe aux murs de New York ?","Spider-Man","Iron Man","Daredevil","Hulk",0]
+["D","Quel super-héros Marvel grimpe aux murs de New York ?","Spider-Man","Iron Man","Daredevil","Hulk",0],
+["G","Quel est le point culminant de la Belgique ?","Le signal de Botrange","Le Baraque de Fraiture","Le Kemmelberg","Le Mont Saint-Aubin",0],
+["G","Dans quelle province se trouve Seneffe ?","Le Hainaut","Le Brabant wallon","La province de Liège","La province de Namur",0],
+["H","Quel événement belge célèbre-t-on chaque 21 juillet ?","La fête nationale belge","L'armistice","La révolution industrielle","L'indépendance du Congo",0],
+["H","Quel roi des Belges est surnommé le « roi-chevalier » ?","Albert Ier","Léopold II","Baudouin","Léopold Ier",0],
+["H","Quel ascenseur de bateaux du Hainaut est l'un des plus hauts du monde ?","Celui de Strépy-Thieu","Celui de Fontinettes","Celui de Ronquières","Celui du Sart",0],
+["S","Quelle était la monnaie de la Belgique avant l'euro ?","Le franc belge","Le florin","Le mark","La livre",0],
+["L","Quel coureur cycliste belge a remporté cinq Tours de France ?","Eddy Merckx","Lance Armstrong","Bernard Hinault","Philippe Gilbert",0],
+["L","Quel club de football bruxellois est surnommé « les Mauves » ?","Anderlecht","Le Standard de Liège","Le Club de Bruges","La Gantoise",0],
+["A","Quel maître flamand a peint « L'Agneau mystique » ?","Jan van Eyck","Rubens","Brueghel","Jérôme Bosch",0],
+["A","Quel peintre anversais du 17e siècle a peint « La Descente de croix » ?","Rubens","Van Eyck","Rembrandt","Vermeer",0],
+["D","Quelle série belge met en scène un cow-boy qui tire plus vite que son ombre ?","Lucky Luke","Tintin","Les Schtroumpfs","Gaston Lagaffe",0],
+["D","Quel festival musical belge de Dour a lieu chaque été ?","Le Dour Festival","Rock en Seine","Les Vieilles Charrues","Main Square",0],
   ]
 };

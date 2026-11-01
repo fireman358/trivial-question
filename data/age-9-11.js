@@ -120,6 +120,18 @@ window.QUESTION_PACKS["9-11"] = {
 ["D","Quel Disney montre une princesse enfermée dans une tour aux cheveux très longs ?","Raiponce","Frozen","Vaiana","Mulan",0],
 ["D","Quel super-héros est un milliardaire de Gotham ?","Batman","Iron Man","Superman","Hulk",0],
 ["D","Dans « 101 Dalmatiens », qui est la méchante ?","Cruella","Maléfique","Ursula","Gothel",0],
-["D","Quel Pixar se passe au Mexique et parle du jour des morts ?","Coco","Vice-versa","Luca","Nemo",0]
+["D","Quel Pixar se passe au Mexique et parle du jour des morts ?","Coco","Vice-versa","Luca","Nemo",0],
+["G","Combien de provinces compte la Belgique ?","Dix","Cinq","Onze","Huit",0],
+["G","Quel est le plus long fleuve qui traverse la Belgique ?","La Meuse","L'Escaut","La Sambre","La Lys",0],
+["G","Quel ville belge possède le plus grand port d'Europe ?","Anvers","Gand","Bruges","Ostende",0],
+["H","En quelle année la Belgique est-elle devenue indépendante ?","1830","1789","1914","1950",0],
+["H","Qui était le premier roi des Belges ?","Léopold Ier","Baudouin","Albert Ier","Léopold II",0],
+["H","Quel monument bruxellois est un petit garçon qui urine ?","Le Manneken-Pis","L'Atomium","La Grand-Place","Le Bois de la Cambre",0],
+["S","Quel est le nom du célèbre parc d'attractions belge près de Wavre ?","Walibi","Disneyland","Europa-Park","Efteling",0],
+["L","Quel circuit automobile belge accueille le Grand Prix de F1 ?","Spa-Francorchamps","Zolder","Nivelles","Heusden",0],
+["A","Quel dessinateur belge a créé Lucky Luke ?","Morris","Hergé","Peyo","Franquin",0],
+["A","Quel musée bruxellois est dédié à la bande dessinée ?","Le Centre Belge de la Bande Dessinée","Le Louvre","Le Prado","L'Orsay",0],
+["D","Quelle est la forme de l'Atomium à Bruxelles ?","Des boules reliées par des tubes","Une pyramide","Une tour carrée","Un dôme",0],
+["D","Quel personnage de bande dessinée belge a un chien nommé Milou ?","Tintin","Spirou","Gaston","Blake",0],
   ]
 };

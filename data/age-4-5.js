@@ -93,6 +93,14 @@ window.QUESTION_PACKS["4-5"] = {
 ["D","Qui est le garçon qui ne veut jamais grandir et peut voler ?","Peter Pan","Pinocchio","Aladdin","Hercule",0],
 ["D","Quelle princesse habite sous la mer et chante avec un crabe ?","Ariel","Elsa","Belle","Jasmine",0],
 ["D","Quel film Disney a des monstres verts et bleus qui font peur aux enfants ?","Monstres et Cie","Nemo","Cars","Là-haut",0],
-["D","Quel garçon a un nez qui grandit quand il ment ?","Pinocchio","Peter Pan","Simba","Mowgli",0]
+["D","Quel garçon a un nez qui grandit quand il ment ?","Pinocchio","Peter Pan","Simba","Mowgli",0],
+["G","Dans quel pays habitons-nous quand on vit à Seneffe ?","La Belgique","La France","L'Italie","L'Espagne",0],
+["G","Quelle est la capitale de la Belgique ?","Bruxelles","Anvers","Liège","Gand",0],
+["G","De quelles couleurs est le drapeau belge ?","Noir, jaune et rouge","Bleu, blanc et rouge","Vert, blanc et rouge","Noir, rouge et or",0],
+["H","Quelle langue parle-t-on principalement à Seneffe ?","Le français","Le néerlandais","L'allemand","L'anglais",0],
+["S","Quel temps fait-il souvent en Belgique ?","Il pleut souvent","Il neige toujours","Il fait toujours très chaud","Il y a toujours du sable",0],
+["L","Quel célèbre personnage belge est un jeune reporter avec un chien ?","Tintin","Astérix","Lucky Luke","Gaston",0],
+["A","Quel célèbre dessinateur belge a créé Tintin ?","Hergé","Morris","Goscinny","Walt Disney",0],
+["D","Quel chat belge jaune, créé par Philippe Geluck, fait de l'humour ?","Le Chat","Garfield","Tom","Félix",0],
   ]
 };

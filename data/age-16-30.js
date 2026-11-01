@@ -125,6 +125,15 @@ window.QUESTION_PACKS["16-30"] = {
 ["D","Quelle série d'animation met en scène Rick Sanchez ?","Rick et Morty","Futurama","BoJack Horseman","The Boondocks",0],
 ["D","Dans la série « Chernobyl », quel réacteur explose ?","Le réacteur n°4","Le réacteur n°1","Le réacteur n°2","La turbine n°3",0],
 ["D","Quel film a remporté l'Oscar du meilleur film en 2020 ?","Parasite","1917","Joker","Once Upon a Time in Hollywood",0],
-["D","Dans « Dark », quel village allemand est au cœur de l'intrigue ?","Winden","Windsor","Windhuk","Wittenberg",0]
+["D","Dans « Dark », quel village allemand est au cœur de l'intrigue ?","Winden","Windsor","Windhuk","Wittenberg",0],
+["G","Quel est le plus grand port d'Europe, situé en Belgique ?","Anvers","Rotterdam","Hambourg","Marseille",0],
+["G","Dans quelle province wallonne se situe Seneffe ?","Le Hainaut","Le Brabant wallon","Namur","Liège",0],
+["H","Quel événement belge de 1958 a eu lieu à Bruxelles avec l'Atomium ?","L'Exposition universelle","L'indépendance du Congo","La fête nationale","Le traité de Rome",0],
+["H","Quelle crise politique belge a duré 541 jours en 2010-2011 ?","L'absence de gouvernement fédéral","La question royale","La scission du pays","La réforme du CEB",0],
+["S","Quel organisme public belge diffuse les chaînes La Une et Tipik ?","La RTBF","France Télévisions","RTL","BFM",0],
+["L","Quelle joueuse de tennis belge a remporté l'US Open en 2009 ?","Kim Clijsters","Justine Henin","Yanina Wickmayer","Alison Van Uytvanck",0],
+["A","Quel chanteur belge est mondialement connu pour « Alors on danse » et « Papaoutai » ?","Stromae","Angèle","Damso","Roméo Elvis",0],
+["D","Quel acteur belge a joué dans « Le Huitième Jour » et « C'est arrivé près de chez vous » ?","Benoît Poelvoorde","Dany Boon","Omar Sy","Jean Dujardin",0],
+["D","Quel duo d'humoristes belges des Snuls faisait des sketches parodiques dans les années 90 ?","Les Snuls (sur RTBF)","Vivement Dimanche","Le Bunker","Strip-tease",0],
   ]
 };

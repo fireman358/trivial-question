@@ -48,7 +48,15 @@ let players = [];
 let current = 0;
 let awaitingRoll = true;
 let usedQuestions = {};
-let activeThemes = { disney: false, musique: false };
+// Une seule recharge à la fois : les cartes bonus ne se mélangent pas.
+let activeTheme = null;
+
+/* Tranche d'âge pour les recharges (plus larges que le jeu de base) */
+function themeGroupFor(age) {
+  if (age <= 12) return "4-12";
+  if (age <= 21) return "13-21";
+  return "22+";
+}
 let board = null;
 let gameOver = false;
 let animating = false;
@@ -89,9 +97,10 @@ function renderSetup() {
     const id = "theme-" + key;
     const div = document.createElement("div");
     div.className = "theme-option";
-    div.innerHTML = `<input type="checkbox" id="${id}" ${activeThemes[key] ? "checked" : ""}>
-      <label for="${id}">⭐ ${pack.label} — ${pack.questions.length} questions</label>`;
-    div.querySelector("input").onchange = (e) => { activeThemes[key] = e.target.checked; };
+    const total = Object.values(pack.groups).reduce((a, g) => a + g.questions.length, 0);
+    div.innerHTML = `<input type="radio" name="theme-pack" id="${id}" ${activeTheme === key ? "checked" : ""}>
+      <label for="${id}">${pack.icon} <b>${pack.label}</b> — ${total} questions (3 tranches d'âge)</label>`;
+    div.querySelector("input").onchange = (e) => { activeTheme = e.target.checked ? key : null; };
     themes.appendChild(div);
   });
 
@@ -300,10 +309,18 @@ function renderLegend() {
   for (const k of CAT_KEYS) {
     html += `<span class="legend-item"><span class="dot" style="background:${CATEGORIES[k].color}"></span>${CATEGORIES[k].icon} ${CATEGORIES[k].name}</span>`;
   }
-  html += `</div><b>Case spéciale</b><div class="legend-grid">
+  html += `</div><b>Case spéciale</b><div class='legend-grid'>
     <span class="legend-item">🧀 QG (bout de chaque rayon, sur le cercle) : camembert de la couleur en jeu</span>
+    <span class="legend-item">🎬 Divertissement : si une recharge est activée, carte bonus possible</span>
     <span class="legend-item">Le dé impose le nombre exact de pas</span>
   </div>`;
+  if (activeTheme) {
+    const pack = window.THEME_PACKS[activeTheme];
+    html += `</div><b>${pack.icon} Recharge active : ${pack.label}</b><div class='legend-grid'>`;
+    for (const k in pack.categories) {
+      html += `<span class="legend-item">• ${pack.categories[k]}</span>`;
+    }
+  }
   el.innerHTML = html;
 }
 
@@ -391,13 +408,14 @@ function pickQuestion(player, catKey) {
 
 /* Extensions : cartes bonus Disney/Musique/… servies sur la catégorie Divertissement */
 function pickThemeQuestion(player) {
-  const keys = Object.keys(window.THEME_PACKS).filter(k => activeThemes[k]);
-  if (keys.length === 0) return null;
-  const pack = window.THEME_PACKS[keys[Math.floor(Math.random() * keys.length)]];
-  let pool = pack.questions.filter(q => !usedQuestions["T::" + q[0]]);
-  if (pool.length === 0) pool = pack.questions;
+  if (!activeTheme) return null;
+  const pack = window.THEME_PACKS[activeTheme];
+  const group = pack.groups[themeGroupFor(player.age)];
+  if (!group) return null;
+  let pool = group.questions.filter(q => !usedQuestions["T::" + q[1]]);
+  if (pool.length === 0) pool = group.questions;
   const q = pool[Math.floor(Math.random() * pool.length)];
-  usedQuestions["T::" + q[0]] = true;
+  usedQuestions["T::" + q[1]] = true;
   return { theme: pack.label, q };
 }
 
@@ -492,7 +510,7 @@ function askQuestion(cell, player) {
     const t = pickThemeQuestion(player);
     if (t) {
       catName = "⭐ " + t.theme + " (carte bonus)";
-      question = t.q[0]; options = t.q.slice(1, 5); correct = t.q[5];
+      question = t.q[1]; options = t.q.slice(2, 6); correct = t.q[6];
     } else {
       const q = pickQuestion(player, "D");
       catName = CATEGORIES.D.icon + " " + CATEGORIES.D.name + (cell.isWedge ? " — 🧀 camembert en jeu !" : "");
@@ -529,6 +547,7 @@ function answer(btn, isCorrect, cell, player, correct, options) {
     if (cell.isWedge && !player.wedges[cell.wedgeCat]) {
       player.wedges[cell.wedgeCat] = true;
       fb.textContent += ` ${player.name} gagne le camembert ${CATEGORIES[cell.wedgeCat].name} !`;
+      animateWedge(cell, cell.wedgeCat);
     }
     if (cell.isCenter) {
       if (Object.keys(player.wedges).length === 6) return win(player);
@@ -543,6 +562,30 @@ function answer(btn, isCorrect, cell, player, correct, options) {
     fb.textContent = `❌ Mauvaise réponse. C'était : ${options[correct]}.`;
     setTimeout(() => { nextTurn(); }, 2000);
   }
+}
+
+/* Le camembert gagné quitte le plateau et se loge dans l'emplacement du joueur */
+function animateWedge(cell, catKey) {
+  const color = CATEGORIES[catKey].color;
+  const svg = $("#board");
+  const rect = svg.getBoundingClientRect();
+  const scale = rect.width / 700;
+  const from = { x: cell.x * scale + rect.left, y: cell.y * scale + rect.top };
+  const slot = document.querySelector(`#wedges-display .wedge[title="${CATEGORIES[catKey].name}"]`);
+  const chip = document.createElement("div");
+  chip.className = "flying-wedge";
+  chip.style.background = color;
+  document.body.appendChild(chip);
+  const to = slot ? slot.getBoundingClientRect() : { left: window.innerWidth - 100, top: 40, width: 26, height: 26 };
+  chip.style.left = from.x - 13 + "px";
+  chip.style.top = from.y - 13 + "px";
+  const dx = (to.left + to.width / 2) - from.x;
+  const dy = (to.top + to.height / 2) - from.y;
+  chip.animate([
+    { transform: "translate(0,0) scale(1)", opacity: 0.95 },
+    { transform: `translate(${dx * 0.5}px, ${dy * 0.5 - 60}px) scale(1.5)`, opacity: 1, offset: 0.5 },
+    { transform: `translate(${dx}px, ${dy}px) scale(0.55)`, opacity: 0.9 }
+  ], { duration: 1100, easing: "cubic-bezier(.3,.7,.4,1)" }).onfinish = () => { chip.remove(); updateTurnUI(); };
 }
 
 function nextTurn() {

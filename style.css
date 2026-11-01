@@ -142,12 +142,22 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 .center-sub { font-size: 10px; fill: #6b5312; }
 .pawn-label { font-size: 9px; fill: #fff; font-weight: bold; pointer-events: none; }
 
-/* Légende (dans la sidebar) */
-#legend { font-size: 0.85rem; }
-#legend .legend-grid { display: flex; flex-direction: column; gap: 4px; margin: 6px 0 8px; }
-.legend-item { display: inline-flex; align-items: center; gap: 6px; }
-.legend-item .dot { width: 12px; height: 12px; }
-#legend b { display: block; margin-top: 4px; color: var(--accent); }
+/* Légende (colonne de gauche) — même corps que les questions */
+#legend { font-size: 1.1rem; line-height: 1.5; }
+#legend .legend-grid { display: flex; flex-direction: column; gap: 6px; margin: 8px 0 12px; }
+.legend-item { display: inline-flex; align-items: center; gap: 8px; }
+.legend-item .dot { width: 15px; height: 15px; }
+#legend b { display: block; margin-top: 6px; color: var(--accent); font-size: 1.05rem; }
+
+/* Camembert volant (du plateau vers l'emplacement du joueur) */
+.flying-wedge {
+  position: fixed;
+  width: 30px; height: 30px;
+  clip-path: polygon(50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%, 0 15%);
+  z-index: 9998;
+  pointer-events: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,.4);
+}
 
 /* Camembert display */
 .camembert { display: flex; gap: 6px; margin: 10px 0; }
