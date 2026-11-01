@@ -337,6 +337,582 @@ window.THEME_PACKS.superheroes = {
      "Punisher",
      "Jessica Jones",
      0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a un arc et un masque ?",
+     "Hawkeye",
+     "Green Arrow",
+     "Bullseye",
+     "Punisher",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel utilise des toiles ?",
+     "Spider-Man",
+     "Ant-Man",
+     "Vision",
+     "Hawkeye",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC a une bague magique ?",
+     "Green Lantern",
+     "Flash",
+     "Aquaman",
+     "Cyborg",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC court à la vitesse de la lumière ?",
+     "Flash",
+     "Superman",
+     "Wonder Woman",
+     "Shazam",
+     0
+    ],
+    [
+     "ME",
+     "Quel méchant de Batman jette des cartes ?",
+     "Le Joker",
+     "Le Penguin",
+     "Two-Face",
+     "Riddler",
+     0
+    ],
+    [
+     "ME",
+     "Quel méchant de Batman aime les oiseaux ?",
+     "Le Penguin",
+     "Le Joker",
+     "Two-Face",
+     "Bane",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit un héros avec un costume noir ?",
+     "Black Panther",
+     "Spider-Man",
+     "Iron Man",
+     "Thor",
+     0
+    ],
+    [
+     "MY",
+     "Quel héros Marvel est le dieu du tonnerre ?",
+     "Thor",
+     "Odin",
+     "Loki",
+     "Heimdall",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel s'est fait bombarder par un rayon gamma ?",
+     "Hulk",
+     "Thor",
+     "Iron Man",
+     "Cap",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC vit dans une cité sous-marine ?",
+     "Aquaman",
+     "Mera",
+     "Flash",
+     "Cyborg",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel vit dans le Queens ?",
+     "Spider-Man",
+     "Daredevil",
+     "Luke Cage",
+     "Iron Fist",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC vit à Gotham ?",
+     "Batman",
+     "Superman",
+     "Flash",
+     "Aquaman",
+     0
+    ],
+    [
+     "DC",
+     "Quel est le nom de la ville de Superman ?",
+     "Metropolis",
+     "Gotham",
+     "Central City",
+     "Star City",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit un héros qui voyage entre les dimensions ?",
+     "Doctor Strange",
+     "Thor 2",
+     "Ant-Man",
+     "Captain Marvel",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a une armure nano ?",
+     "Iron Man",
+     "War Machine",
+     "Hulk",
+     "Vision",
+     0
+    ],
+    [
+     "MY",
+     "Quel matériau compose le costume de Black Panther ?",
+     "Le vibranium",
+     "L'adamantium",
+     "L'uru",
+     "Le nanotech",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a des flèches ?",
+     "Hawkeye",
+     "Green Arrow",
+     "Bullseye",
+     "Swordsman",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC a une cape et un uniforme rouge ?",
+     "Superman",
+     "Flash",
+     "Batman",
+     "Shazam",
+     0
+    ],
+    [
+     "ME",
+     "Quel méchant de Spider-Man jette des bombes citrouilles ?",
+     "Le Bouffon vert",
+     "Doc Octopus",
+     "Vulture",
+     "Mysterio",
+     0
+    ],
+    [
+     "ME",
+     "Quel méchant de Batman a un chapeau haut-de-forme ?",
+     "Le Penguin",
+     "Le Joker",
+     "Two-Face",
+     "Freeze",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a des pouvoirs de plante ?",
+     "Groot",
+     "Vision",
+     "Hulk",
+     "Thor",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel est un raton laveur ?",
+     "Rocket",
+     "Groot",
+     "Star-Lord",
+     "Drax",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC est un demi-Atlante et un demi-humain ?",
+     "Aquaman",
+     "Flash",
+     "Shazam",
+     "Cyborg",
+     0
+    ],
+    [
+     "EQ",
+     "Quelle équipe Marvel suit un groupe de gardiens de la galaxie ?",
+     "Les Guardians",
+     "Les Avengers",
+     "Les X-Men",
+     "Les Eternals",
+     0
+    ],
+    [
+     "MY",
+     "Quel est le vrai nom de Spider-Man ?",
+     "Peter Parker",
+     "Miles Morales",
+     "Gwen Stacy",
+     "Eddie Brock",
+     0
+    ],
+    [
+     "DC",
+     "Quel est le vrai nom de Batman ?",
+     "Bruce Wayne",
+     "Clark Kent",
+     "Barry Allen",
+     "Hal Jordan",
+     0
+    ],
+    [
+     "MA",
+     "Quel est le vrai nom d'Iron Man ?",
+     "Tony Stark",
+     "Steve Rogers",
+     "Bruce Banner",
+     "Clint Barton",
+     0
+    ],
+    [
+     "MA",
+     "Quel est le vrai nom de Thor ?",
+     "Thor Odinson",
+     "Loki Laufeyson",
+     "Odin Borson",
+     "Heimdall",
+     0
+    ],
+    [
+     "MA",
+     "Quel est le vrai nom de Black Widow ?",
+     "Natasha Romanoff",
+     "Yelena Belova",
+     "Wanda Maximoff",
+     "Carol Danvers",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC suit une équipe de super-héros femmes ?",
+     "Birds of Prey",
+     "Wonder Woman",
+     "Aquaman",
+     "Shazam",
+     0
+    ],
+    [
+     "ME",
+     "Quel méchant Marvel est un robot ?",
+     "Ultron",
+     "Thanos",
+     "Loki",
+     "Red Skull",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la planète de Thor ?",
+     "Asgard",
+     "Krypton",
+     "Tatooine",
+     "Namek",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la planète de Superman ?",
+     "Krypton",
+     "Asgard",
+     "Tatooine",
+     "Namek",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel devient vert ?",
+     "Hulk",
+     "Thor",
+     "Loki",
+     "Vision",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC a un costume avec un éclair ?",
+     "Flash",
+     "Superman",
+     "Batman",
+     "Wonder Woman",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a un costume avec une araignée ?",
+     "Spider-Man",
+     "Ant-Man",
+     "Hawkeye",
+     "Falcon",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC a un costume avec une chauve-souris ?",
+     "Batman",
+     "Superman",
+     "Flash",
+     "Aquaman",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit un héros en armure rouge et or ?",
+     "Iron Man",
+     "War Machine",
+     "Hulk",
+     "Thor",
+     0
+    ],
+    [
+     "EQ",
+     "Quelle équipe DC suit des super-vilains forcés de travailler ensemble ?",
+     "La Suicide Squad",
+     "La Justice League",
+     "Teen Titans",
+     "Le Legion",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel est plus fort quand il est en colère ?",
+     "Hulk",
+     "Thor",
+     "Iron Man",
+     "Cap",
+     0
+    ],
+    [
+     "DC",
+     "Quelle héroïne DC vole avec des ailes ?",
+     "Hawkgirl",
+     "Wonder Woman",
+     "Supergirl",
+     "Zatanna",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a une panoplie d'armes ?",
+     "Punisher",
+     "Daredevil",
+     "Iron Fist",
+     "Luke Cage",
+     0
+    ],
+    [
+     "DC",
+     "Quel méchant DC est un clown ?",
+     "Le Joker",
+     "Le Penguin",
+     "Two-Face",
+     "Freeze",
+     0
+    ],
+    [
+     "MA",
+     "Quel méchant Marvel est un dieu de la malice ?",
+     "Loki",
+     "Thanos",
+     "Ultron",
+     "Red Skull",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit un dieu de la malice qui devient ami ?",
+     "Thor : Ragnarok",
+     "Thor 1",
+     "Avengers",
+     "Loki (série)",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la force de Black Panther (super-pouvoir) ?",
+     "La force surhumaine (via l'herbe)",
+     "La vitesse",
+     "La magie",
+     "La taille",
+     0
+    ],
+    [
+     "DC",
+     "Quelle est la ville de Flash ?",
+     "Central City",
+     "Metropolis",
+     "Gotham",
+     "Star City",
+     0
+    ],
+    [
+     "MA",
+     "Quelle est la ville de Daredevil ?",
+     "Hell's Kitchen (NY)",
+     "Metropolis",
+     "Gotham",
+     "Central",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC est un millionaire qui joue au héros la nuit ?",
+     "Batman",
+     "Superman",
+     "Flash",
+     "Green Arrow",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel est un millionaire qui joue au héros ?",
+     "Iron Man",
+     "Spider-Man",
+     "Thor",
+     "Hulk",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a un costume avec une étoile ?",
+     "Captain America",
+     "Iron Man",
+     "Thor",
+     "Hulk",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit des héros qui se battent entre eux ?",
+     "Civil War",
+     "Infinity War",
+     "Endgame",
+     "Ultron",
+     0
+    ],
+    [
+     "DC",
+     "Quel film DC suit un héros contre un méchant qui rit ?",
+     "The Dark Knight",
+     "Batman Begins",
+     "The Batman",
+     "Joker",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a un symbiote ?",
+     "Venom",
+     "Spider-Man",
+     "Carnage",
+     "Anti-Venom",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la faiblesse de Venom ?",
+     "Le son et le feu",
+     "L'eau",
+     "La kryptonite",
+     "La magie",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel est un ancien soldat avec un bras métallique ?",
+     "Bucky (Winter Soldier)",
+     "Falcon",
+     "Cap",
+     "Hawkeye",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la force de Scarlet Witch ?",
+     "Elle modifie la réalité",
+     "Elle vole",
+     "Elle est invisible",
+     "Elle entend tout",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel contrôle la glace ?",
+     "Iceman",
+     "Human Torch",
+     "Storm",
+     "Vision",
+     0
+    ],
+    [
+     "DC",
+     "Quelle héroïne DC est la cousine de Superman ?",
+     "Supergirl",
+     "Power Girl",
+     "Superboy",
+     "Stargirl",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel est le prince d'un pays africain ?",
+     "Black Panther",
+     "Luke Cage",
+     "Storm",
+     "Killmonger",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC est le gardien d'une ville sous-marine ?",
+     "Aquaman",
+     "Mera",
+     "Tempest",
+     "Aqualad",
+     0
+    ],
+    [
+     "ME",
+     "Quel méchant de Batman a un masque noir ?",
+     "Bane",
+     "Two-Face",
+     "Freeze",
+     "Joker",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la vraie identité de Scarlet Witch ?",
+     "Wanda Maximoff",
+     "Natasha Romanoff",
+     "Carol Danvers",
+     "Jane Foster",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a un costume avec un symbole d araignée rouge et bleu ?",
+     "Spider-Man (classique)",
+     "Venom",
+     "Miles",
+     "Scarlet",
+     0
     ]
    ]
   },
@@ -675,6 +1251,573 @@ window.THEME_PACKS.superheroes = {
      "La Suicide Squad",
      "Le Legion",
      0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a été capturé en Afghanistan ?",
+     "Iron Man",
+     "Hawkeye",
+     "Thor",
+     "Cap",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a été congelé pendant 70 ans ?",
+     "Captain America",
+     "Bucky",
+     "Falcon",
+     "Red Skull",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC a vu ses parents tués devant lui ?",
+     "Batman",
+     "Superman",
+     "Flash",
+     "Green Arrow",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC a été envoyé sur Terre bébé ?",
+     "Superman",
+     "Batman",
+     "Flash",
+     "Shazam",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a grandi au Wakanda ?",
+     "Black Panther",
+     "Storm",
+     "Killmonger",
+     "Shuri",
+     0
+    ],
+    [
+     "ME",
+     "Quel méchant Marvel a un gant magique ?",
+     "Thanos",
+     "Ultron",
+     "Loki",
+     "Dormammu",
+     0
+    ],
+    [
+     "ME",
+     "Quel méchant DC est un génie du puzzle ?",
+     "Le Riddler",
+     "Le Joker",
+     "Two-Face",
+     "Penguin",
+     0
+    ],
+    [
+     "EQ",
+     "Quelle équipe DC suit des adolescents super-héros ?",
+     "Les Teen Titans",
+     "La Justice League",
+     "La Suicide Squad",
+     "Le Legion",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC suit une équipe de méchants recrutés par le gouvernement ?",
+     "Suicide Squad",
+     "Justice League",
+     "Birds of Prey",
+     "The Batman",
+     0
+    ],
+    [
+     "MA",
+     "Quel film Marvel réunit les Avengers contre Thanos ?",
+     "Infinity War",
+     "Endgame",
+     "Civil War",
+     "Ultron",
+     0
+    ],
+    [
+     "DC",
+     "Quel film DC suit une équipe avec un humain, un cyber et une amazone ?",
+     "Justice League",
+     "Suicide Squad",
+     "Teen Titans",
+     "Birds",
+     0
+    ],
+    [
+     "MY",
+     "Quelle pierre contrôle l'esprit ?",
+     "La Pierre de l'Esprit",
+     "La Pierre de l'Âme",
+     "Reality",
+     "Space",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a des flèches explosives ?",
+     "Hawkeye",
+     "Green Arrow",
+     "Bullseye",
+     "Kate Bishop",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC est un archer vert ?",
+     "Green Arrow",
+     "Flash",
+     "Aquaman",
+     "Hawkman",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit un héros avec des dix anneaux ?",
+     "Shang-Chi",
+     "Iron Man 3",
+     "Eternals",
+     "Doctor Strange 2",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la planète où Thanos vit à la fin d'Infinity War ?",
+     "Le Jardin",
+     "Titan",
+     "Vormir",
+     "Knowhere",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC devient un enfant quand il dit son nom ?",
+     "Shazam",
+     "Superman",
+     "Flash",
+     "Cyborg",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC suit le retour de Michael Keaton en Batman ?",
+     "The Flash (2023)",
+     "The Batman",
+     "Batgirl",
+     "Justice League",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a un animal… un faucon comme partenaire ?",
+     "Falcon",
+     "Hawkeye",
+     "Winter Soldier",
+     "Bucky",
+     0
+    ],
+    [
+     "DC",
+     "Quelle héroïne DC a une corde… un lasso magique ?",
+     "Wonder Woman",
+     "Supergirl",
+     "Batgirl",
+     "Hawkgirl",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a un costume avec une araignée noire (autre) ?",
+     "Miles Morales (Spider-Man)",
+     "Venom",
+     "Carnage",
+     "Scarlet Spider",
+     0
+    ],
+    [
+     "ME",
+     "Quel méchant Marvel mange des planètes ?",
+     "Galactus",
+     "Thanos",
+     "Ultron",
+     "Ego",
+     0
+    ],
+    [
+     "ME",
+     "Quel méchant Marvel est un mutant magnétique ?",
+     "Magneto",
+     "Professeur X",
+     "Mystique",
+     "Apocalypse",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit des héros contre un titan ?",
+     "Infinity War",
+     "Endgame",
+     "Civil War",
+     "Ultron",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC suit un héros contre un méchant avec un masque de fer ?",
+     "The Dark Knight Rises",
+     "Batman Begins",
+     "The Batman",
+     "Joker",
+     0
+    ],
+    [
+     "MY",
+     "Quelle pierre a été détruite par Thanos en premier (Endgame) ?",
+     "La Pierre de l'Espace",
+     "Reality",
+     "Soul",
+     "Time",
+     0
+    ],
+    [
+     "EQ",
+     "Quelle équipe Marvel suit des mutants qui protègent un monde qui les craint ?",
+     "Les X-Men",
+     "Les Avengers",
+     "Les Inhumans",
+     "Les Eternals",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC est un alien avec un anneau ?",
+     "Hal Jordan (Green Lantern)",
+     "Kyle Rayner",
+     "John Stewart",
+     "Alan Scott",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit une équipe qui protège la galaxie ?",
+     "Guardians of the Galaxy",
+     "Avengers",
+     "Thor",
+     "Captain Marvel",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la force du Gant de l'infini ?",
+     "Il permet de modifier la réalité",
+     "Il détruit tout",
+     "Il crée la vie",
+     "Il arrête le temps",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC a un pouvoir de vitesse qui lui permet de voyager dans le temps ?",
+     "Flash",
+     "Superman",
+     "Shazam",
+     "Wonder Woman",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel est un ancien soldat avec un bouclier ?",
+     "Captain America",
+     "Bucky",
+     "Falcon",
+     "Hawkeye",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit un héros contre un magicien maléfique ?",
+     "Doctor Strange",
+     "Thor 2",
+     "Eternals",
+     "Shang-Chi",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel est le fils d'Odin ?",
+     "Thor",
+     "Loki (adoptif)",
+     "Heimdall",
+     "Balder",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit un héros avec dix anneaux ?",
+     "Shang-Chi",
+     "Iron Man 3",
+     "Eternals",
+     "Doctor Strange 2",
+     0
+    ],
+    [
+     "DC",
+     "Quelle héroïne DC a un lasso magique ?",
+     "Wonder Woman",
+     "Supergirl",
+     "Batgirl",
+     "Hawkgirl",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit des héros qui se battent entre eux (ami contre ami) ?",
+     "Civil War",
+     "Infinity War",
+     "Endgame",
+     "Ultron",
+     0
+    ],
+    [
+     "ME",
+     "Quel méchant DC suit un culte de l'Ordre Noir… est un alien ?",
+     "Darkseid",
+     "Thanos (Marvel)",
+     "Brainiac",
+     "Zod",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel est le maître des arts martiaux (K'un-Lun) ?",
+     "Iron Fist",
+     "Shang-Chi",
+     "Daredevil",
+     "Luke Cage",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la force de Vision ?",
+     "Il contrôle la Pierre de l'Esprit",
+     "Il vole",
+     "Il est invisible",
+     "Il entend tout",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit un héros qui se déplace entre les mondes ?",
+     "Doctor Strange 2",
+     "Loki",
+     "What If",
+     "NWH",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC est un vengeur de la nuit avec un side-kick ?",
+     "Batman (avec Robin)",
+     "Superman",
+     "Flash",
+     "Green Arrow",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC suit le side-kick de Batman (film récent) ?",
+     "Aucun film Robin récent",
+     "The Batman",
+     "Joker",
+     "Birds",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la force de Deadpool ?",
+     "Le pouvoir de guérison",
+     "L'immortalité totale",
+     "La magie",
+     "Le vol",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit un anti-héros avec des katanas ?",
+     "Deadpool",
+     "Wolverine",
+     "Punisher",
+     "Venom",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a un pouvoir de contrôle des machines ?",
+     "Vision",
+     "Iron Man",
+     "Ultron",
+     "Magneto",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC suit un héros contre une équipe de méchants (seul) ?",
+     "The Batman",
+     "Justice League",
+     "Suicide Squad",
+     "Birds",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la vraie identité de Venom (hôte) ?",
+     "Eddie Brock",
+     "Cletus Kasady",
+     "Flash Thompson",
+     "Mac Gargan",
+     0
+    ],
+    [
+     "MA",
+     "Quel acteur a joué Wolverine dans X-Men ?",
+     "Hugh Jackman",
+     "Ryan Reynolds",
+     "Daniel Craig",
+     "Chris Evans",
+     0
+    ],
+    [
+     "DC",
+     "Quel acteur a joué le Joker en 1989 ?",
+     "Jack Nicholson",
+     "Heath Ledger",
+     "Mark Hamill",
+     "Cesar Romero",
+     0
+    ],
+    [
+     "MA",
+     "Quel acteur a joué Thanos ?",
+     "Josh Brolin",
+     "Vin Diesel (voix Groot)",
+     "Bradley Cooper",
+     "Terry Notary",
+     0
+    ],
+    [
+     "DC",
+     "Quel acteur a joué Catwoman dans le film de 1992 ?",
+     "Michelle Pfeiffer",
+     "Halle Berry",
+     "Anne Hathaway",
+     "Zoe Kravitz",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la vraie force de Wonder Woman ?",
+     "Elle est une Amazone demi-déesse",
+     "Elle est alien",
+     "Elle est une mutante",
+     "Elle est magicienne",
+     0
+    ],
+    [
+     "MA",
+     "Quel comic a introduit les Gardiens de la Galaxie (équipe moderne) ?",
+     "Annihilation: Conquest",
+     "Guardians #1 (2008)",
+     "Thanos",
+     "Nova",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel de 2022 suit un héros nordique contre Gorr ?",
+     "Thor : Love and Thunder",
+     "Thor 3",
+     "Doctor Strange 2",
+     "NWH",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel est un ancien marine… ancien soldat avec des armes ?",
+     "Punisher",
+     "Daredevil",
+     "Luke Cage",
+     "Iron Fist",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel est un surfeur d'argent ?",
+     "Silver Surfer",
+     "Thor",
+     "Herald",
+     "Galactus",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit une équipe qui affronte des aliens (shawarma) ?",
+     "Avengers (la scène du shawarma)",
+     "Guardians",
+     "Thor 3",
+     "NWH",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel a un pouvoir de météo ?",
+     "Storm",
+     "Thor",
+     "Iceman",
+     "Vision",
+     0
+    ],
+    [
+     "DC",
+     "Quel héros DC a un pouvoir de la nature (plantes) ?",
+     "Swamp Thing",
+     "Aquaman",
+     "Flash",
+     "Green",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la force de Silver Surfer ?",
+     "Le Power Cosmic",
+     "La magie",
+     "La vitesse",
+     "La force",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel suit un héros qui voyage dans le multivers ?",
+     "Doctor Strange 2",
+     "NWH",
+     "Loki",
+     "What If",
+     0
+    ],
+    [
+     "MA",
+     "Quel méchant Marvel a brisé le bouclier de Captain America ?",
+     "Thanos",
+     "Ultron",
+     "Loki",
+     "Bucky",
+     0
     ]
    ]
   },
@@ -967,6 +2110,618 @@ window.THEME_PACKS.superheroes = {
      "Grant Gustin",
      "Tom Cavanagh",
      "Nikolaj Coster",
+     0
+    ],
+    [
+     "MA",
+     "Quel comic a introduit Iron Man ?",
+     "Tales of Suspense #39",
+     "Iron Man #1",
+     "Avengers #1",
+     "Journey into Mystery",
+     0
+    ],
+    [
+     "MA",
+     "Quel comic a introduit Thor ?",
+     "Journey into Mystery #83",
+     "Thor #1",
+     "Avengers #1",
+     "Tales of Suspense",
+     0
+    ],
+    [
+     "DC",
+     "Quel comic a introduit Flash (âge d'argent) ?",
+     "Showcase #4",
+     "Flash Comics #1",
+     "All Flash",
+     "Action Comics",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel a été le plus rentable hors Endgame ?",
+     "Infinity War",
+     "No Way Home",
+     "The Avengers",
+     "Civil War",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la vraie identité de Loki ?",
+     "Le dieu nordique de la malice",
+     "Un alien",
+     "Un humain",
+     "Un magicien",
+     0
+    ],
+    [
+     "DC",
+     "Quel est le vrai nom de Wonder Woman ?",
+     "Diana Prince",
+     "Diana of Themyscira",
+     "Diana Trevor",
+     "Diana Prince Trevor",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC a connu la « Snyder Cut » ?",
+     "Justice League",
+     "Avengers",
+     "The Batman",
+     "Man of Steel",
+     0
+    ],
+    [
+     "MY",
+     "Quel est le surnom de Thanos ?",
+     "Le Titan Fou (Mad Titan)",
+     "Le Gant",
+     "Le Méchant",
+     "Le Général",
+     0
+    ],
+    [
+     "MA",
+     "Qui a créé les X-Men avec Stan Lee ?",
+     "Jack Kirby",
+     "Steve Ditko",
+     "John Byrne",
+     "Chris Claremont",
+     0
+    ],
+    [
+     "DC",
+     "Qui a créé Watchmen ?",
+     "Alan Moore",
+     "Frank Miller",
+     "Grant Morrison",
+     "Neil Gaiman",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC suit un héros dans un monde dystopique (comics) ?",
+     "Watchmen (film)",
+     "V pour Vendetta",
+     "The Dark Knight",
+     "Joker",
+     0
+    ],
+    [
+     "MY",
+     "Quel est le point faible de Batman (humain) ?",
+     "Aucun super-pouvoir",
+     "La kryptonite",
+     "La magie",
+     "L'eau",
+     0
+    ],
+    [
+     "DC",
+     "Quel comic culte de Frank Miller suit Batman vieux ?",
+     "The Dark Knight Returns",
+     "Year One",
+     "The Killing Joke",
+     "Hush",
+     0
+    ],
+    [
+     "MA",
+     "Quel comic culte Marvel suit un affrontement entre héros ?",
+     "Civil War (2006)",
+     "Secret Wars",
+     "Infinity Gauntlet",
+     "House of M",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC de 2005 a relancé Batman ?",
+     "Batman Begins",
+     "The Dark Knight",
+     "Batman v Superman",
+     "The Batman",
+     0
+    ],
+    [
+     "MA",
+     "Quel film Marvel de 2008 a lancé l'univers ciné ?",
+     "Iron Man",
+     "Hulk",
+     "Thor",
+     "Captain America",
+     0
+    ],
+    [
+     "DC",
+     "Quelle série animée des années 90 a marqué Batman ?",
+     "Batman : la série animée",
+     "The New Batman Adventures",
+     "Batman Beyond",
+     "Justice League",
+     0
+    ],
+    [
+     "MY",
+     "Quelle substance rend faible Superman ?",
+     "La kryptonite",
+     "L'adamantium",
+     "Le vibranium",
+     "L'eau",
+     0
+    ],
+    [
+     "MA",
+     "Quelle équipe Marvel a été créée en 1963 par Lee et Kirby ?",
+     "Les Avengers",
+     "Les X-Men",
+     "Les 4 Fantastiques",
+     "Les Inhumains",
+     0
+    ],
+    [
+     "MA",
+     "Quel comic a introduit les Avengers ?",
+     "Avengers #1 (1963)",
+     "Tales of Suspense",
+     "Journey into Mystery",
+     "X-Men #1",
+     0
+    ],
+    [
+     "DC",
+     "Quel comic a introduit la Justice League ?",
+     "The Brave and the Bold #28",
+     "Justice League #1",
+     "Showcase",
+     "Action Comics",
+     0
+    ],
+    [
+     "MA",
+     "Quel comic a introduit Hulk ?",
+     "The Incredible Hulk #1",
+     "Tales to Astonish",
+     "Avengers",
+     "Journey",
+     0
+    ],
+    [
+     "DC",
+     "Quel comic a introduit Green Lantern (Hal) ?",
+     "Showcase #22",
+     "Green Lantern #1",
+     "Brave and Bold",
+     "Action Comics",
+     0
+    ],
+    [
+     "MA",
+     "Quel acteur a joué le premier Hulk (TV) ?",
+     "Lou Ferrigno",
+     "Bill Bixby",
+     "Eric Bana",
+     "Mark Ruffalo",
+     0
+    ],
+    [
+     "DC",
+     "Quel acteur a joué Batman dans les années 60 ?",
+     "Adam West",
+     "Burt Ward",
+     "Michael Keaton",
+     "Val Kilmer",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel a été le plus rentable de 2018 ?",
+     "Black Panther",
+     "Infinity War",
+     "Deadpool 2",
+     "Ant-Man 2",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC a été le plus rentable de 2018 ?",
+     "Aquaman",
+     "Wonder Woman",
+     "Shazam",
+     "Joker",
+     0
+    ],
+    [
+     "DC",
+     "Quel comic a introduit Green Arrow ?",
+     "More Fun Comics #73",
+     "Action Comics",
+     "Detective",
+     "Adventure",
+     0
+    ],
+    [
+     "MA",
+     "Quel comic a introduit Daredevil ?",
+     "Daredevil #1",
+     "Amazing Spider-Man",
+     "Tales of Suspense",
+     "Journey",
+     0
+    ],
+    [
+     "DC",
+     "Quel comic a introduit Aquaman ?",
+     "More Fun Comics #73",
+     "Action Comics",
+     "Detective",
+     "Adventure",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC de 2019 suit un clown ?",
+     "Joker",
+     "The Batman",
+     "Shazam",
+     "Birds",
+     0
+    ],
+    [
+     "MA",
+     "Quel film Marvel de 2016 suit un anti-héros avec un masque ?",
+     "Deadpool",
+     "Venom",
+     "Punisher",
+     "Wolverine",
+     0
+    ],
+    [
+     "DC",
+     "Quelle série animée suit la Justice League ?",
+     "Justice League (animated)",
+     "Super Friends",
+     "Batman Beyond",
+     "Teen Titans",
+     0
+    ],
+    [
+     "MA",
+     "Quelle série animée suit les X-Men (90s) ?",
+     "X-Men : The Animated Series",
+     "Spider-Man TAS",
+     "Avengers EMH",
+     "Iron Man TAS",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel de 2021 suit un anti-héros vénimeux ?",
+     "Venom 2",
+     "Deadpool 2",
+     "Morbius",
+     "NWH",
+     0
+    ],
+    [
+     "DC",
+     "Quel film DC de 2022 suit un anti-héros égyptien ?",
+     "Black Adam",
+     "The Batman",
+     "Shazam 2",
+     "Flash",
+     0
+    ],
+    [
+     "MA",
+     "Quel film Marvel de 2021 suit un maître de kung-fu ?",
+     "Shang-Chi",
+     "Doctor Strange 2",
+     "Eternals",
+     "NWH",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la vraie force de Doctor Strange ?",
+     "La magie (Arts Mystiques)",
+     "Le vol",
+     "La force",
+     "La vitesse",
+     0
+    ],
+    [
+     "MA",
+     "Quel héros Marvel est un ancien soldat… ancien marine ?",
+     "Punisher",
+     "Daredevil",
+     "Luke Cage",
+     "Iron Fist",
+     0
+    ],
+    [
+     "DC",
+     "Quel comic culte suit un monde où les super-héros sont devenus fous ?",
+     "Watchmen",
+     "Kingdom Come",
+     "The Boys",
+     "Red Son",
+     0
+    ],
+    [
+     "MA",
+     "Quel comic culte suit un affrontement entre héros ?",
+     "Civil War (2006)",
+     "Secret Wars",
+     "Infinity Gauntlet",
+     "House of M",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel de 2021 suit une équipe de héros cosmiques ?",
+     "Eternals",
+     "Shang-Chi",
+     "Doctor Strange 2",
+     "NWH",
+     0
+    ],
+    [
+     "MY",
+     "Quel est le vrai nom de Black Adam ?",
+     "Teth-Adam",
+     "Billy Batson",
+     "Khem-Adam",
+     "Ahk-Ton",
+     0
+    ],
+    [
+     "DC",
+     "Quel est le vrai nom de Shazam ?",
+     "Billy Batson",
+     "Teth-Adam",
+     "Freddy Freeman",
+     "Darla Dudley",
+     0
+    ],
+    [
+     "MA",
+     "Qui a créé les Avengers dans les comics ?",
+     "Stan Lee et Jack Kirby",
+     "Stan Lee seul",
+     "Steve Ditko",
+     "John Byrne",
+     0
+    ],
+    [
+     "MY",
+     "Quelle est la faiblesse de Venom ?",
+     "Le son et le feu",
+     "L'eau",
+     "La kryptonite",
+     "La magie",
+     0
+    ],
+    [
+     "MA",
+     "Quel comic a introduit Captain America ?",
+     "Captain America Comics #1",
+     "Avengers",
+     "Tales of Suspense",
+     "Journey",
+     0
+    ],
+    [
+     "MA",
+     "Quel acteur a joué Captain America ?",
+     "Chris Evans",
+     "Chris Hemsworth",
+     "Chris Pratt",
+     "Sebastian Stan",
+     0
+    ],
+    [
+     "DC",
+     "Quelle actrice a joué Wonder Woman ?",
+     "Gal Gadot",
+     "Lynda Carter",
+     "Katie Cassidy",
+     "Adrianne Palicki",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC de 2017 a eu un remplacement de réalisateur ?",
+     "Justice League",
+     "Wonder Woman",
+     "Aquaman",
+     "Shazam",
+     0
+    ],
+    [
+     "MA",
+     "Quel film Marvel de 2014 suit un arbre et un raton ?",
+     "Guardians of the Galaxy",
+     "Guardians 2",
+     "Avengers",
+     "Thor 2",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC de 2022 suit le chevalier noir (version artistique) ?",
+     "The Batman",
+     "Joker",
+     "Black Adam",
+     "Flash",
+     0
+    ],
+    [
+     "DC",
+     "Quelle actrice a joué Harley Quinn ?",
+     "Margot Robbie",
+     "Cara Delevingne",
+     "Karen Gillan",
+     "Emma Roberts",
+     0
+    ],
+    [
+     "MA",
+     "Quel acteur a joué Star-Lord ?",
+     "Chris Pratt",
+     "Chris Evans",
+     "Chris Hemsworth",
+     "Dave Bautista",
+     0
+    ],
+    [
+     "MA",
+     "Quel acteur a joué Loki ?",
+     "Tom Hiddleston",
+     "Chris Hemsworth",
+     "Cate Blanchett",
+     "Anthony Hopkins",
+     0
+    ],
+    [
+     "MY",
+     "Quel comic a introduit le multivers (concept clé) ?",
+     "Flash of Two Worlds",
+     "Crisis",
+     "Multiversity",
+     "Aucun",
+     0
+    ],
+    [
+     "MA",
+     "Quelle équipe Marvel a été créée en 1961 ?",
+     "Les 4 Fantastiques",
+     "Les Avengers",
+     "X-Men",
+     "Inhumans",
+     0
+    ],
+    [
+     "DC",
+     "Quel comic a introduit Teen Titans ?",
+     "The Brave and the Bold #60",
+     "Teen Titans #1",
+     "Showcase",
+     "Action",
+     0
+    ],
+    [
+     "FI",
+     "Quel film Marvel de 2018 suit un roi africain ?",
+     "Black Panther",
+     "Thor 3",
+     "Infinity War",
+     "Deadpool 2",
+     0
+    ],
+    [
+     "MY",
+     "Quel est le nom du père de Black Panther (roi précédent) ?",
+     "T'Chaka",
+     "T'Challa",
+     "Killmonger",
+     "M'Baku",
+     0
+    ],
+    [
+     "MA",
+     "Quel comic a introduit Deadpool ?",
+     "The New Mutants #98",
+     "Deadpool #1",
+     "X-Force",
+     "Cable",
+     0
+    ],
+    [
+     "DC",
+     "Quel comic a introduit Harley Quinn ?",
+     "Batman Adventures #12",
+     "Batman #1",
+     "Detective",
+     "Suicide",
+     0
+    ],
+    [
+     "MA",
+     "Quel acteur a joué Deadpool ?",
+     "Ryan Reynolds",
+     "Hugh Jackman",
+     "Josh Brolin",
+     "Morena Baccarin",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC de 2023 suit un héros qui voyage dans le temps ?",
+     "The Flash",
+     "Aquaman 2",
+     "Shazam 2",
+     "Blue Beetle",
+     0
+    ],
+    [
+     "MA",
+     "Quel film Marvel de 2021 suit un héros avec un symbiote noir ?",
+     "Venom 2",
+     "Deadpool 2",
+     "Morbius",
+     "NWH",
+     0
+    ],
+    [
+     "FI",
+     "Quel film DC de 2022 suit un anti-héros avec des pouvoirs égyptiens ?",
+     "Black Adam",
+     "Shazam 2",
+     "The Batman",
+     "Flash",
+     0
+    ],
+    [
+     "MA",
+     "Quel film Marvel de 2023 suit un héros qui voyage dans le multivers (3 Tom) ?",
+     "NWH",
+     "Doctor Strange 2",
+     "Loki",
+     "What If",
+     0
+    ],
+    [
+     "DC",
+     "Quel film DC de 2023 suit un héros bleu (insecte) ?",
+     "Blue Beetle",
+     "The Flash",
+     "Aquaman 2",
+     "Shazam 2",
      0
     ]
    ]
