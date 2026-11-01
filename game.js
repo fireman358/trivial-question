@@ -307,22 +307,15 @@ function renderBoard() {
 function renderLegend() {
   const el = $("#legend");
   if (!el) return;
-  let html = "<b>Catégories</b><div class='legend-grid'>";
-  for (const k of CAT_KEYS) {
-    html += `<span class="legend-item"><span class="dot" style="background:${CATEGORIES[k].color}"></span>${CATEGORIES[k].icon} ${CATEGORIES[k].name}</span>`;
+  let html = `<b>Catégories ${activeTheme ? "— recharge " + window.THEME_PACKS[activeTheme].icon + " " + window.THEME_PACKS[activeTheme].label : ""}</b><div class='legend-grid'>`;
+  for (const slot of CAT_KEYS) {
+    const info = catInfo(slot);
+    html += `<span class="legend-item"><span class="dot" style="background:${info.color}"></span>${info.icon} ${info.name}</span>`;
   }
   html += `</div><b>Case spéciale</b><div class='legend-grid'>
     <span class="legend-item">🧀 QG (bout de chaque rayon, sur le cercle) : camembert de la couleur en jeu</span>
-    <span class="legend-item">🎬 Divertissement : si une recharge est activée, carte bonus possible</span>
     <span class="legend-item">Le dé impose le nombre exact de pas</span>
   </div>`;
-  if (activeTheme) {
-    const pack = window.THEME_PACKS[activeTheme];
-    html += `</div><b>${pack.icon} Recharge active : ${pack.label}</b><div class='legend-grid'>`;
-    for (const k in pack.categories) {
-      html += `<span class="legend-item">• ${pack.categories[k]}</span>`;
-    }
-  }
   el.innerHTML = html;
 }
 
@@ -397,6 +390,25 @@ function rollDice(cb) {
   }, 100);
 }
 
+/* ---------- Catégories actives ----------
+   Sans recharge : les 6 catégories du jeu de base.
+   Avec recharge : les 6 catégories du thème prennent place sur les
+   couleurs du plateau (la couleur du slot garde sa position, seul le
+   nom de la catégorie change). Toutes les questions viennent du pack. */
+function activeCatKeys() {
+  if (activeTheme) return Object.keys(window.THEME_PACKS[activeTheme].categories);
+  return CAT_KEYS;
+}
+function catInfo(slotKey) {
+  const idx = CAT_KEYS.indexOf(slotKey);
+  if (activeTheme) {
+    const pack = window.THEME_PACKS[activeTheme];
+    const k = activeCatKeys()[idx];
+    return { key: k, name: pack.categories[k], color: CATEGORIES[slotKey].color, icon: pack.icon };
+  }
+  return { key: slotKey, name: CATEGORIES[slotKey].name, color: CATEGORIES[slotKey].color, icon: CATEGORIES[slotKey].icon };
+}
+
 /* ---------- Questions (tirage sans remise par pool) ----------
    Une question d'un pool donné ne revient qu'après que TOUTES les
    questions de ce pool ont été posées : on vide le sac, puis on le
@@ -412,22 +424,22 @@ function drawFromBag(bagKey, pool) {
   return pool[drawBags[bagKey].pop()];
 }
 
-function pickQuestion(player, catKey) {
+function pickQuestion(player, slotKey) {
+  const info = catInfo(slotKey);
+  if (activeTheme) {
+    const pack = window.THEME_PACKS[activeTheme];
+    const group = pack.groups[themeGroupFor(player.age)];
+    let pool = group.questions.filter(q => q[0] === info.key);
+    if (pool.length === 0) pool = group.questions.slice();
+    return drawFromBag("T::" + activeTheme + "::" + themeGroupFor(player.age) + "::" + info.key, pool);
+  }
   const pack = window.QUESTION_PACKS[player.group];
-  let pool = pack.questions.filter(q => q[0] === catKey);
+  let pool = pack.questions.filter(q => q[0] === info.key);
   if (pool.length === 0) pool = pack.questions.slice();
-  return drawFromBag(player.group + "::" + catKey, pool);
+  return drawFromBag(player.group + "::" + info.key, pool);
 }
 
-/* Extensions : cartes bonus Disney/Musique/… servies sur la catégorie Divertissement */
-function pickThemeQuestion(player) {
-  if (!activeTheme) return null;
-  const pack = window.THEME_PACKS[activeTheme];
-  const group = pack.groups[themeGroupFor(player.age)];
-  if (!group) return null;
-  const q = drawFromBag("T::" + activeTheme + "::" + themeGroupFor(player.age), group.questions);
-  return { theme: pack.label, q };
-}
+
 
 /* ---------- Tour de jeu ---------- */
 function startGame() {
@@ -447,7 +459,7 @@ function updateTurnUI() {
   $("#turn-title").textContent = `${PAWNS[p.pawn].emoji} Au tour de ${p.name}`;
   const wd = $("#wedges-display");
   wd.innerHTML = `<div class="camembert">${CAT_KEYS.map(k =>
-    `<span class="wedge ${p.wedges[k] ? 'got' : ''}" style="background:${p.wedges[k] ? CATEGORIES[k].color : '#dee2e6'}" title="${CATEGORIES[k].name}"></span>`).join("")}</div>
+    `<span class="wedge ${p.wedges[k] ? 'got' : ''}" style="background:${p.wedges[k] ? CATEGORIES[k].color : '#dee2e6'}" title="${catInfo(k).name}"></span>`).join("")}</div>
     <p class="hint">${Object.keys(p.wedges).length}/6 camemberts</p>`;
   const ps = $("#players-summary");
   ps.innerHTML = players.map((pl, i) =>
@@ -510,30 +522,14 @@ function askQuestion(cell, player) {
   $("#answer-feedback").textContent = "";
   let catName, question, options, correct;
 
-  if (cell.isCenter) {
-    const cat = CAT_KEYS[Math.floor(Math.random() * CAT_KEYS.length)];
-    const q = pickQuestion(player, cat);
-    catName = "🏆 Question finale — " + CATEGORIES[cat].icon + " " + CATEGORIES[cat].name;
-    question = q[1]; options = q.slice(2, 6); correct = q[6];
-  } else if (cell.cat === "D") {
-    // Extensions activées ? Les cartes bonus servent la catégorie Divertissement.
-    const t = pickThemeQuestion(player);
-    if (t) {
-      catName = "⭐ " + t.theme + " (carte bonus)";
-      question = t.q[1]; options = t.q.slice(2, 6); correct = t.q[6];
-    } else {
-      const q = pickQuestion(player, "D");
-      catName = CATEGORIES.D.icon + " " + CATEGORIES.D.name + (cell.isWedge ? " — 🧀 camembert en jeu !" : "");
-      question = q[1]; options = q.slice(2, 6); correct = q[6];
-    }
-  } else {
-    const q = pickQuestion(player, cell.cat);
-    catName = CATEGORIES[cell.cat].icon + " " + CATEGORIES[cell.cat].name + (cell.isWedge ? " — 🧀 camembert en jeu !" : "");
-    question = q[1]; options = q.slice(2, 6); correct = q[6];
-  }
+  const slot = cell.isCenter ? CAT_KEYS[Math.floor(Math.random() * CAT_KEYS.length)] : cell.cat;
+  const info = catInfo(slot);
+  const q = pickQuestion(player, slot);
+  catName = info.icon + " " + info.name + (cell.isCenter ? " — 🏆 question finale" : cell.isWedge ? " — 🧀 camembert en jeu !" : "");
+  question = q[1]; options = q.slice(2, 6); correct = q[6];
 
   $("#question-cat").textContent = catName;
-  $("#question-cat").style.color = cell.cat ? CATEGORIES[cell.cat].color : "#38bdf8";
+  $("#question-cat").style.color = info.color;
   $("#question-text").textContent = question;
 
   const answers = $("#answers");
@@ -556,7 +552,7 @@ function answer(btn, isCorrect, cell, player, correct, options) {
     fb.textContent = "✅ Bonne réponse !";
     if (cell.isWedge && !player.wedges[cell.wedgeCat]) {
       player.wedges[cell.wedgeCat] = true;
-      fb.textContent += ` ${player.name} gagne le camembert ${CATEGORIES[cell.wedgeCat].name} !`;
+      fb.textContent += ` ${player.name} gagne le camembert ${catInfo(cell.wedgeCat).name} !`;
       animateWedge(cell, cell.wedgeCat);
     }
     if (cell.isCenter) {
