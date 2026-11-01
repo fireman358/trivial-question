@@ -139,9 +139,11 @@ function buildBoard() {
     const ang = i * 10;
     const [x, y] = polar(RING_R, ang);
     const m = i % 6;
+    // Chaque sextant contient 4 cases de la même catégorie que son rayon,
+    // sauf l'entrée (Rejouez ↻) et la case opposée (thème ★).
     add({
       id: "ring" + i, x, y,
-      cat: (m === 0 || m === 3) ? null : CATEGORY_ORDER[(i + 2) % 6],
+      cat: (m === 0 || m === 3) ? null : CATEGORY_ORDER[Math.floor(i / 6)],
       isWedge: false,
       isRollAgain: m === 0,
       isTheme: m === 3
