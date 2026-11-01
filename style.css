@@ -149,11 +149,6 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 }
 .cell { cursor: default; }
 .cell.reachable { cursor: pointer; stroke: #fff !important; stroke-width: 3 !important; }
-.cell.reachable { animation: pulse 1s infinite alternate; }
-@keyframes pulse {
-  from { opacity: 0.75; }
-  to { opacity: 1; }
-}
 .wedge-cell polygon { stroke-width: 3; }
 .cell-icon { font-size: 13px; pointer-events: none; user-select: none; }
 .center-label { font-weight: bold; font-size: 14px; fill: #3a2c05; }
@@ -323,14 +318,15 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 .muted { opacity: .55; font-size: .78rem; }
 
 /* ===== Visibilité renforcée des cases de destination ===== */
-.cell.reachable { animation: reach-pulse 0.9s infinite alternate; transform-box: fill-box; transform-origin: center; cursor: pointer; }
+.cell.reachable { cursor: pointer; }
 .cell.reachable circle, .cell.reachable polygon {
   stroke: #ffffff !important; stroke-width: 3.5 !important;
   filter: drop-shadow(0 0 10px rgba(255,255,255,.85));
+  animation: reach-glow 1.1s ease-in-out infinite alternate;
 }
-@keyframes reach-pulse {
-  from { opacity: 0.65; transform: scale(1); }
-  to   { opacity: 1;    transform: scale(1.12); }
+@keyframes reach-glow {
+  from { filter: drop-shadow(0 0 4px rgba(255,255,255,.45)); }
+  to   { filter: drop-shadow(0 0 12px rgba(255,255,255,.95)); }
 }
 
 /* ===== Bouton Nouvelle partie ===== */
