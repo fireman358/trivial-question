@@ -109,6 +109,13 @@ function renderSetup() {
     div.querySelector("input").onchange = (e) => { activeTheme = e.target.checked ? key : null; };
     themes.appendChild(div);
   });
+  // Option « aucune recharge » : revenir au jeu de base
+  const noneDiv = document.createElement("div");
+  noneDiv.className = "theme-option";
+  noneDiv.innerHTML = `<input type="radio" name="theme-pack" id="theme-none" ${activeTheme === null ? "checked" : ""}>
+    <label for="theme-none">🎓 <b>Culture générale</b> — jeu de base, sans recharge</label>`;
+  noneDiv.querySelector("input").onchange = (e) => { if (e.target.checked) activeTheme = null; };
+  themes.appendChild(noneDiv);
 
   renderPawnPicker();
   $("#btn-start").disabled = players.length < GAME_CONFIG.minPlayers;
@@ -722,6 +729,7 @@ function answer(btn, isCorrect, cell, player, correct, options) {
     }
     updateTurnUI();
     saveGame();
+    showCorrectSplash();
     hideQuestionBanner();
     setTimeout(() => { awaitingRoll = true; $("#btn-roll").disabled = false; $("#dice-result").textContent = ""; }, 1600);
   } else {
@@ -760,6 +768,13 @@ function animateWedge(cell, catKey) {
   ], { duration: 1100, easing: "cubic-bezier(.3,.7,.4,1)" }).onfinish = () => { chip.remove(); updateTurnUI(); };
 }
 
+/* Splash de bonne réponse : flash plein écran bref */
+function showCorrectSplash() {
+  const splash = $("#correct-splash");
+  splash.classList.add("show");
+  setTimeout(() => splash.classList.remove("show"), 900);
+}
+
 function nextTurn() {
   stopTimer();
   hideQuestionBanner();
@@ -773,10 +788,34 @@ function nextTurn() {
 function win(player) {
   gameOver = true;
   clearSave();
+  stopTimer();
+  hideQuestionBanner();
   hide($("#game-screen"));
   show($("#win-screen"));
   $("#winner-name").textContent = `🏆 ${player.name} remporte la partie !`;
   $("#winner-sub").textContent = `6 camemberts collectés et question finale réussie. Bravo !`;
+  // Statistiques complètes de tous les joueurs sur l'écran de victoire
+  let statsHtml = "";
+  players.forEach(p => {
+    const st = p.stats || { correct: 0, wrong: 0, timeout: 0, byCat: {} };
+    const total = st.correct + st.wrong + st.timeout;
+    const pct = total ? Math.round(st.correct / total * 100) : 0;
+    statsHtml += `<div class="stats-player">
+      <div class="stats-head"><span class="pawn-mini-inline">${PAWNS[p.pawn].emoji}</span> <b>${p.name}</b>${p === player ? ' <span class="win-badge">🏆</span>' : ''}
+        <span class="stats-pct">${pct}%</span></div>
+      <div class="stats-line">✅ ${st.correct} · ❌ ${st.wrong} · ⏰ ${st.timeout} <span class="muted">(${total} questions)</span></div>
+      <div class="stats-cats">`;
+    CAT_KEYS.forEach(k => {
+      const c = st.byCat[k];
+      if (!c) return;
+      const info = catInfo(k);
+      const t = c.correct + c.wrong + c.timeout;
+      const cp = t ? Math.round(c.correct / t * 100) : 0;
+      statsHtml += `<span class="stats-cat"><span class="dot" style="background:${info.color}"></span>${info.icon} ${info.name} : ${cp}% (${c.correct}/${t})</span>`;
+    });
+    statsHtml += `</div></div>`;
+  });
+  $("#win-stats").innerHTML = statsHtml;
 }
 
 /* Nouvelle partie : efface la sauvegarde et revient à la configuration */

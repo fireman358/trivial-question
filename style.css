@@ -366,3 +366,28 @@ button.primary { font-size: 1.05rem; padding: 10px 18px; }
 .header-newgame:hover { background: rgba(248,113,113,.28); }
 /* la version suit le bouton, à droite */
 .app-version { margin-left: 0 !important; }
+
+/* ===== Splash de bonne réponse ===== */
+#correct-splash {
+  position: fixed; inset: 0; z-index: 900;
+  background: radial-gradient(circle, rgba(42,157,143,.35), rgba(42,157,143,.15));
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+#correct-splash.show { opacity: 1; }
+#correct-splash span {
+  font-size: 4rem; font-weight: 900; color: #fff;
+  text-shadow: 0 4px 16px rgba(0,0,0,.5);
+  animation: splash-pop 0.9s ease;
+}
+@keyframes splash-pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  35% { transform: scale(1.15); opacity: 1; }
+  70% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+/* ===== Stats de l'écran victoire ===== */
+.win-stats { text-align: left; margin: 16px 0; }
+.win-badge { font-size: 1.2em; }
