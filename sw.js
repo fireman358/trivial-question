@@ -1,7 +1,7 @@
 /* Trivial Quest — service worker : cache hors-ligne + mise à jour automatique */
-const CACHE = "trivial-quest-v2026-11-01.51";
+const CACHE = "trivial-quest-v2026-11-04.52";
 const ASSETS = [
-  "./", "./index.html", "./style.css", "./game.js", "./config.js",
+  "./", "./index.html", "./style.css", "./board.js", "./game.js", "./config.js",
   "./data/age-4-5.js", "./data/age-6-8.js", "./data/age-9-11.js",
   "./data/age-12-15.js", "./data/age-16-30.js", "./data/age-31-plus.js",
   "./data/theme-disney.js", "./data/theme-musique.js",

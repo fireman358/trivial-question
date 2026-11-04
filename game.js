@@ -12,18 +12,7 @@ const CATEGORIES = {
 const CAT_KEYS = Object.keys(CATEGORIES);
 const HQ_ICON = "◈";
 
-/* Ordre des couleurs alternées (comme le plateau officiel : jamais deux identiques côte à côte) */
-const RING_CATS = [
-  "G","S","A","H","L","D",
-  "A","D","G","L","S","H",
-  "L","H","S","D","A","G",
-  "D","G","H","A","L","S",
-  "H","L","D","S","G","A",
-  "S","A","L","G","H","D"
-];
-
 /* ---------- Tranches d'âge ---------- */
-const AGE_GROUPS = ["4-5", "6-8", "9-11", "12-15", "16-30", "31+"];
 function ageGroupFor(age) {
   if (age <= 5) return "4-5";
   if (age <= 8) return "6-8";
@@ -55,7 +44,6 @@ let activeTheme = null;
 
 /* Timer de réponse + persistance */
 let questionTimer = null;
-let timeLeft = 0;
 
 /* Tranche d'âge pour les recharges (plus larges que le jeu de base) */
 function themeGroupFor(age) {
@@ -67,17 +55,44 @@ let board = null;
 let gameOver = false;
 let animating = false;
 let lastPaths = {};
-var CATEGORY_ORDER = ["G", "S", "A", "H", "L", "D"];
+let pendingPawn = null;
+/* Boutons de la question en cours : on garde la référence vers le bouton
+   correct (le texte de deux options peut être identique). */
+let answerButtons = [];
 
 
 /* ---------- Utilitaires DOM ---------- */
 const $ = (sel) => document.querySelector(sel);
 const show = (el) => el.classList.remove("hidden");
 const hide = (el) => el.classList.add("hidden");
+
+/* Échappe une chaîne avant toute injection dans du HTML : les noms de joueurs
+   sont saisis par l'utilisateur et rechargés depuis localStorage. */
+function esc(value) {
+  return String(value).replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+}
+
+/* Mélange de Fisher-Yates (uniforme, contrairement à sort(() => Math.random() - .5)). */
+function shuffledIndexes(n) {
+  const arr = Array.from({ length: n }, (_, i) => i);
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
 function lighten(hex, amt) {
   const n = parseInt(hex.slice(1), 16);
   const r = Math.min(255, (n >> 16) + amt), g = Math.min(255, ((n >> 8) & 255) + amt), b = Math.min(255, (n & 255) + amt);
   return "#" + ((r << 16) | (g << 8) | b).toString(16).padStart(6, "0");
+}
+
+/* Libellé d'une tranche d'âge, sans planter si le pack est absent. */
+function groupLabel(group) {
+  const pack = window.QUESTION_PACKS && window.QUESTION_PACKS[group];
+  return pack && pack.label ? pack.label : group;
 }
 
 /* ---------- Écran de configuration ---------- */
@@ -87,10 +102,10 @@ function renderSetup() {
   players.forEach((p, i) => {
     const row = document.createElement("div");
     row.className = "player-row";
-    row.innerHTML = `<span class="dot" style="background:${p.color}"></span>
-      <span>${p.name}</span>
-      <span class="group-tag">${window.QUESTION_PACKS[p.group].label}</span>
-      <span class="pawn-tag">${PAWNS[p.pawn].emoji} ${PAWNS[p.pawn].name}</span>
+    row.innerHTML = `<span class="dot" style="background:${esc(p.color)}"></span>
+      <span>${esc(p.name)}</span>
+      <span class="group-tag">${esc(groupLabel(p.group))}</span>
+      <span class="pawn-tag">${esc(PAWNS[p.pawn].emoji)} ${esc(PAWNS[p.pawn].name)}</span>
       <button data-i="${i}" class="remove">✕</button>`;
     row.querySelector(".remove").onclick = () => { players.splice(i, 1); refreshSetup(); };
     list.appendChild(row);
@@ -137,16 +152,16 @@ function renderPawnPicker() {
     };
   });
 }
-let pendingPawn = null;
-
 function refreshSetup() { renderSetup(); }
 
 $("#btn-add-player").onclick = () => {
   const name = $("#new-player-name").value.trim();
   const age = parseInt($("#new-player-age").value, 10);
   if (!name) return alert("Donnez un nom au joueur.");
-  if (!age || age < 4 || age > 120) return alert("Donnez un âge valide (4 à 120).");
-  if (players.length >= 6) return alert("Maximum 6 joueurs.");
+  if (!age || age < GAME_CONFIG.minAge || age > GAME_CONFIG.maxAge)
+    return alert(`Donnez un âge valide (${GAME_CONFIG.minAge} à ${GAME_CONFIG.maxAge}).`);
+  if (players.length >= GAME_CONFIG.maxPlayers)
+    return alert(`Maximum ${GAME_CONFIG.maxPlayers} joueurs.`);
   if (!pendingPawn) return alert("Choisissez un pion (cliquez sur un pion libre).");
   if (players.some(p => p.pawn === pendingPawn)) return alert("Ce pion est déjà pris.");
   players.push({
@@ -164,12 +179,16 @@ $("#btn-add-player").onclick = () => {
   refreshSetup();
 };
 
+/* Version du format de sauvegarde : une partie d'un ancien format est ignorée
+   plutôt que rechargée de travers. */
+const SAVE_VERSION = 2;
+
 /* ---------- Persistance localStorage ---------- */
 function saveGame() {
   try {
     if (!GAME_CONFIG.storageKey) return;
     localStorage.setItem(GAME_CONFIG.storageKey, JSON.stringify({
-      players, current, activeTheme, gameOver, drawBags, v: 1
+      players, current, activeTheme, gameOver, drawBags, v: SAVE_VERSION
     }));
   } catch (e) { /* localStorage indisponible */ }
 }
@@ -178,6 +197,7 @@ function loadGame() {
     const raw = localStorage.getItem(GAME_CONFIG.storageKey);
     if (!raw) return false;
     const snap = JSON.parse(raw);
+    if (snap.v !== SAVE_VERSION) return false;
     if (!snap.players || snap.players.length < GAME_CONFIG.minPlayers) return false;
     players = snap.players;
     current = snap.current || 0;
@@ -211,7 +231,9 @@ $("#btn-start").onclick = startGame;
    - Piste circulaire extérieure (36) : les 6 QG en bout de rayon,
      les 30 autres cases alternent les catégories                      */
 const HUB_R = 78;
-const RING_R = 322, SPOKE_R = [148, 185, 222, 259, 296];
+const RING_R = 322;
+/* 6 cases par rayon, du moyeu (111) jusqu'au QG de l'anneau (322). */
+const SPOKE_R = [111, 148, 185, 222, 259, 296];
 const CELL_R = 13;
 
 function polar(r, angleDeg) {
@@ -220,48 +242,18 @@ function polar(r, angleDeg) {
 }
 
 function buildBoard() {
-  board = { cells: {}, adj: {} };
-  const add = (c) => { board.cells[c.id] = c; board.adj[c.id] = []; };
-  const link = (a, b) => { board.adj[a].push(b); board.adj[b].push(a); };
-
-  add({ id: "hub", x: 350, y: 350, cat: null, isCenter: true, isWedge: false });
-
-  // Piste circulaire (36) : QG en bout de rayon (i multiple de 6), sinon catégorie alternée
-  for (let i = 0; i < 36; i++) {
-    const ang = i * 10;
-    const [x, y] = polar(RING_R, ang);
-    if (i % 6 === 0) {
-      const qgCat = CATEGORY_ORDER[i / 6];
-      add({ id: "ring" + i, x, y, cat: qgCat, isWedge: true, wedgeCat: qgCat });
-    } else {
-      add({ id: "ring" + i, x, y, cat: (i % 6 === 3) ? null : RING_CATS[i], isWedge: false, isRollAgain: i % 6 === 3 });
-    }
+  // Topologie partagée avec les tests (board.js) : on n'ajoute ici que les
+  // coordonnées à l'écran, qui ne concernent que le rendu.
+  board = BoardGraph.buildBoardGraph();
+  for (const id in board.cells) {
+    const c = board.cells[id];
+    let xy;
+    if (c.isCenter) xy = [350, 350];
+    else if (c.ring !== undefined) xy = polar(RING_R, c.ring * 10);
+    else xy = polar(SPOKE_R[c.k], c.spoke * 60);
+    c.x = xy[0];
+    c.y = xy[1];
   }
-
-  // 6 rayons de 6 cases (36), alignés sur les QG (intersection rayon/anneau).
-  // Couleurs en carré latin : à distance égale du centre, chaque rayon porte
-  // une catégorie différente — un dé donné ne peut jamais tomber deux fois
-  // sur la même catégorie. La case interne (k=0) porte la couleur du rayon,
-  // la case externe (k=5) jamais (elle jouxte le QG de cette même couleur).
-  // Décalages du carré latin : tous distincts entre rayons (latin) et choisis
-  // pour que la case externe (k=5) ne porte jamais la couleur du QG du rayon.
-  const SHIFT = [2, 4, 0, 3, 5, 1];
-  for (let s = 0; s < 6; s++) {
-    const ang = s * 60;
-    const shift = SHIFT[s];
-    let prev = "hub";
-    for (let k = 0; k < SPOKE_R.length; k++) {
-      const [x, y] = polar(SPOKE_R[k], ang);
-      const id = "sp" + s + "-" + k;
-      add({ id, x, y, cat: CAT_KEYS[(shift + k) % 6], isWedge: false });
-      link(prev, id);
-      prev = id;
-    }
-    link(prev, "ring" + (s * 6));
-  }
-
-  for (let i = 0; i < 36; i++) link("ring" + i, "ring" + ((i + 1) % 36));
-
   renderBoard();
 }
 
@@ -469,7 +461,20 @@ function renderBoard() {
     }
   }
 
-  // pions 2.5D
+  // Les pions vivent dans une couche dédiée : pendant un déplacement, seule
+  // cette couche est redessinée (le plateau statique n'est plus reconstruit).
+  out += `<g id="pawn-layer"></g>`;
+
+  svg.innerHTML = out;
+  fitSectorLabels(svg);
+  renderPawns();
+}
+
+/* Couche des pions : le seul morceau de SVG redessiné à chaque pas. */
+function renderPawns() {
+  const layer = $("#pawn-layer");
+  if (!layer) return;
+  let out = "";
   players.forEach((p, i) => {
     const c = board.cells[p.pos];
     if (!c) return;
@@ -477,15 +482,13 @@ function renderBoard() {
     const moving = animating && i === current;
     out += `<g id="pawn-${i}" filter="url(#f-drop)" class="pawn-group ${moving ? "pawn-moving" : ""}">
       <ellipse cx="${px}" cy="${py + 17}" rx="13" ry="5" fill="#00000033"/>
-      <circle cx="${px}" cy="${py}" r="14" fill="${p.color}" stroke="#1d1d1d" stroke-width="2"/>
+      <circle cx="${px}" cy="${py}" r="14" fill="${esc(p.color)}" stroke="#1d1d1d" stroke-width="2"/>
       <circle cx="${px - 4.5}" cy="${py - 5}" r="4" fill="#ffffffcc"/>
-      <text x="${px}" y="${py + 5}" text-anchor="middle" class="pawn-label">${p.name[0]}</text>
-      <text x="${px}" y="${py - 18}" text-anchor="middle" class="pawn-emoji">${PAWNS[p.pawn].emoji}</text>
+      <text x="${px}" y="${py + 5}" text-anchor="middle" class="pawn-label">${esc(p.name.slice(0, 1))}</text>
+      <text x="${px}" y="${py - 18}" text-anchor="middle" class="pawn-emoji">${esc(PAWNS[p.pawn].emoji)}</text>
     </g>`;
   });
-
-  svg.innerHTML = out;
-  fitSectorLabels(svg);
+  layer.innerHTML = out;
 }
 
 
@@ -495,34 +498,11 @@ function renderBoard() {
    - pas de demi-tour immédiat : on ne peut pas rebrousser chemin sur
      la case d'où l'on vient (le pion continue dans sa direction) ;
    - le moyeu n'est accessible qu'en dernier pas, avec les 6 diamants. */
-function neighbors(cellId) { return board.adj[cellId] || []; }
-
 function exactPaths(startId, steps, player) {
-  const hasAllWedges = player && Object.keys(player.wedges).length === 6;
-  // état : "case|précédente" -> chemin complet depuis le départ
-  let frontier = new Map([[startId + "|", [startId]]]);
-  for (let s = 0; s < steps; s++) {
-    const next = new Map();
-    for (const [state, path] of frontier) {
-      const cell = state.split("|")[0];
-      const prev = state.split("|")[1];
-      for (const n of neighbors(cell)) {
-        if (n === prev) continue;                    // pas de demi-tour immédiat
-        // le moyeu se traverse librement en cours de route
-        const key = n + "|" + cell;
-        if (!next.has(key)) next.set(key, [...path, n]);
-      }
-    }
-    frontier = next;
-  }
-  // destinations finales : on ne peut s'arrêter au moyeu qu'avec les 6 diamants
-  const paths = {};
-  for (const path of frontier.values()) {
-    const dest = path[path.length - 1];
-    if (board.cells[dest].isCenter && !hasAllWedges) continue;
-    if (!paths[dest]) paths[dest] = path;
-  }
-  return paths;
+  return BoardGraph.reachableDestinations(board, startId, steps, {
+    hasAllWedges: !!player && Object.keys(player.wedges).length === 6,
+    allowHubTransit: GAME_CONFIG.allowHubTransit !== false
+  });
 }
 
 /* ---------- Animation du dé ---------- */
@@ -544,20 +524,24 @@ function dieFaceHTML(n) {
 
 function rollDice(cb) {
   const el = $("#dice-result");
-  let spins = 0;
+  const spinMs = GAME_CONFIG.diceSpinMs;
+  const totalSpins = GAME_CONFIG.diceSpins;
+  let done = 0;
   const interval = setInterval(() => {
     const d = 1 + Math.floor(Math.random() * 6);
     el.innerHTML = dieFaceHTML(d);
-    el.firstChild.firstChild.classList.add("die-tumble");
-    spins++;
-    if (spins >= 10) {
+    const face = el.querySelector(".die-face");
+    if (face) face.classList.add("die-tumble");
+    done++;
+    if (done >= totalSpins) {
       clearInterval(interval);
       const final = 1 + Math.floor(Math.random() * 6);
       el.innerHTML = dieFaceHTML(final);
-      el.firstChild.firstChild.classList.add("die-land");
+      const landed = el.querySelector(".die-face");
+      if (landed) landed.classList.add("die-land");
       setTimeout(() => cb(final), 400);
     }
-  }, 100);
+  }, spinMs);
 }
 
 /* ---------- Catégories actives ----------
@@ -631,43 +615,46 @@ function updateTurnUI() {
   $("#turn-title").textContent = `${PAWNS[p.pawn].emoji} Au tour de ${p.name}`;
   const wd = $("#wedges-display");
   wd.innerHTML = `<div class="diamant">${CAT_KEYS.map(k =>
-    `<span class="wedge ${p.wedges[k] ? 'got' : ''}" style="background:${p.wedges[k] ? CATEGORIES[k].color : '#dee2e6'}" title="${catInfo(k).name}"></span>`).join("")}</div>
+    `<span class="wedge ${p.wedges[k] ? 'got' : ''}" style="background:${p.wedges[k] ? CATEGORIES[k].color : '#dee2e6'}" title="${esc(catInfo(k).name)}"></span>`).join("")}</div>
     <p class="hint">${Object.keys(p.wedges).length}/6 diamants</p>`;
   const ps = $("#players-summary");
   ps.innerHTML = players.map((pl, i) =>
     `<div class="player-row ${i === current ? 'active' : ''}">
-       <span class="pawn-mini-inline">${PAWNS[pl.pawn].emoji}</span>
-       <span>${pl.name}</span>
-       <span class="group-tag">${window.QUESTION_PACKS[pl.group].label}</span>
+       <span class="pawn-mini-inline">${esc(PAWNS[pl.pawn].emoji)}</span>
+       <span>${esc(pl.name)}</span>
+       <span class="group-tag">${esc(groupLabel(pl.group))}</span>
        <span>${Object.keys(pl.wedges).length}/6</span>
      </div>`).join("");
   renderStats();
+}
+
+/* Bloc de statistiques d'un joueur (partagé entre le panneau et l'écran de victoire) */
+function playerStatsHtml(p, winner) {
+  const st = p.stats || { correct: 0, wrong: 0, timeout: 0, byCat: {} };
+  const total = st.correct + st.wrong + st.timeout;
+  const pct = total ? Math.round(st.correct / total * 100) : 0;
+  const crown = winner && p === winner ? ' <span class="win-badge">🏆</span>' : "";
+  let cats = "";
+  CAT_KEYS.forEach(k => {
+    const c = st.byCat[k];
+    if (!c) return;
+    const info = catInfo(k);
+    const t = c.correct + c.wrong + c.timeout;
+    const cp = t ? Math.round(c.correct / t * 100) : 0;
+    cats += `<span class="stats-cat"><span class="dot" style="background:${esc(info.color)}"></span>${esc(info.icon)} ${esc(info.name)} : ${cp}% (${c.correct}/${t})</span>`;
+  });
+  return `<div class="stats-player">
+      <div class="stats-head"><span class="pawn-mini-inline">${esc(PAWNS[p.pawn].emoji)}</span> <b>${esc(p.name)}</b>${crown}
+        <span class="stats-pct">${pct}%</span></div>
+      <div class="stats-line">✅ ${st.correct} · ❌ ${st.wrong} · ⏰ ${st.timeout} <span class="muted">(${total} questions)</span></div>
+      <div class="stats-cats">${cats}</div></div>`;
 }
 
 /* Statistiques par joueur : global + détail par catégorie */
 function renderStats() {
   const el = $("#stats-display");
   if (!el || !GAME_CONFIG.statsEnabled) return;
-  let html = "";
-  players.forEach(p => {
-    const st = p.stats || { correct: 0, wrong: 0, timeout: 0, byCat: {} };
-    const total = st.correct + st.wrong + st.timeout;
-    const pct = total ? Math.round(st.correct / total * 100) : 0;
-    html += `<div class="stats-player">
-      <div class="stats-head"><span class="pawn-mini-inline">${PAWNS[p.pawn].emoji}</span> <b>${p.name}</b>
-        <span class="stats-pct">${pct}%</span></div>
-      <div class="stats-line">✅ ${st.correct} · ❌ ${st.wrong} · ⏰ ${st.timeout} <span class="muted">(${total} q.)</span></div>
-      <div class="stats-cats">`;
-    CAT_KEYS.forEach(k => {
-      const c = st.byCat[k];
-      if (!c) return;
-      const info = catInfo(k);
-      const t = c.correct + c.wrong + c.timeout;
-      const cp = t ? Math.round(c.correct / t * 100) : 0;
-      html += `<span class="stats-cat"><span class="dot" style="background:${info.color}"></span>${info.icon} ${info.name} : ${cp}% (${c.correct}/${t})</span>`;
-    });
-    html += `</div></div>`;
-  });
+  const html = players.map(p => playerStatsHtml(p, null)).join("");
   el.innerHTML = html || "<p class='hint'>Les statistiques apparaîtront après les premières questions.</p>";
 }
 
@@ -689,13 +676,42 @@ $("#btn-roll").onclick = () => {
     el.querySelector(".die-face").classList.add("die-land");
     targets.forEach(id => {
       const cell = $("#cell-" + id);
-      if (cell) { cell.classList.add("reachable"); cell.onclick = () => moveTo(id); }
+      if (!cell) return;
+      const target = board.cells[id];
+      cell.classList.add("reachable");
+      cell.onclick = () => moveTo(id);
+      /* Les cases jouables sont aussi atteignables au clavier. */
+      cell.setAttribute("tabindex", "0");
+      cell.setAttribute("role", "button");
+      cell.setAttribute("aria-label", cellLabel(target) + " — y aller");
+      cell.onkeydown = (e) => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); moveTo(id); }
+      };
     });
   });
 };
 
+/* Libellé lisible d'une case (lecteurs d'écran). */
+function cellLabel(cell) {
+  if (cell.isCenter) return "Centre du plateau";
+  if (cell.isRollAgain) return "Relancer le dé";
+  const info = catInfo(cell.isWedge ? cell.wedgeCat : cell.cat);
+  return cell.isWedge ? info.name + " (diamant)" : info.name;
+}
+
+function clearReachable() {
+  document.querySelectorAll(".reachable").forEach(el => {
+    el.classList.remove("reachable");
+    el.onclick = null;
+    el.onkeydown = null;
+    el.removeAttribute("tabindex");
+    el.removeAttribute("role");
+    el.removeAttribute("aria-label");
+  });
+}
+
 function moveTo(cellId) {
-  document.querySelectorAll(".reachable").forEach(el => { el.classList.remove("reachable"); el.onclick = null; });
+  clearReachable();
   const p = players[current];
   const path = lastPaths[cellId];
   if (!path || path.length < 2) { arrive(cellId); return; }
@@ -703,7 +719,7 @@ function moveTo(cellId) {
   let step = 1;
   const walk = () => {
     p.pos = path[step];
-    renderBoard();
+    renderPawns();
     if (step < path.length - 1) { step++; setTimeout(walk, GAME_CONFIG.pawnStepMs); }
     else { animating = false; saveGame(); setTimeout(() => arrive(cellId), 250); }
   };
@@ -726,31 +742,45 @@ function arrive(cellId) {
 
 function askQuestion(cell, player) {
   $("#answer-feedback").textContent = "";
-  let catName, question, options, correct;
 
   const slot = cell.isCenter ? CAT_KEYS[Math.floor(Math.random() * CAT_KEYS.length)] : cell.cat;
   const info = catInfo(slot);
   const q = pickQuestion(player, slot);
-  catName = info.icon + " " + info.name + (cell.isCenter ? " — 🏆 question finale" : cell.isWedge ? " — ◈ diamant en jeu !" : "");
-  question = q[1]; options = q.slice(2, 6); correct = q[6];
+  const catName = info.icon + " " + info.name +
+    (cell.isCenter ? " — 🏆 question finale" : cell.isWedge ? " — ◈ diamant en jeu !" : "");
+  const question = q[1];
+  const options = q.slice(2, 6);
+  const correct = q[6];
 
   $("#question-text").textContent = question;
 
   const answers = $("#answers");
   answers.innerHTML = "";
-  const order = [0, 1, 2, 3].sort(() => Math.random() - 0.5);
-  order.forEach(i => {
+  answerButtons = [];
+  /* Mélange uniforme : la bonne réponse est en position 0 dans presque
+     tout le contenu source, l'ordre affiché ne doit donc rien laisser filtrer. */
+  shuffledIndexes(options.length).forEach(i => {
     const btn = document.createElement("button");
     btn.className = "answer";
     btn.textContent = options[i];
-    btn.onclick = () => answer(btn, i === correct, cell, player, correct, options);
+    btn.dataset.index = String(i);
+    btn.onclick = () => answer(btn, i === correct, cell, player);
     answers.appendChild(btn);
+    answerButtons.push({ btn, index: i, isCorrect: i === correct, text: options[i] });
   });
 
   /* Bandeau de question + timer */
   showQuestionBanner(catName, cell.cat ? CATEGORIES[cell.cat].color : "#38bdf8");
-  startTimer(cell, player, correct, options);
+  startTimer(cell, player);
   saveGame();
+}
+
+/* Révèle la bonne réponse et désactive les boutons. Renvoie son texte. */
+function revealCorrectAnswer() {
+  const right = answerButtons.find(a => a.isCorrect);
+  document.querySelectorAll(".answer").forEach(b => { b.disabled = true; });
+  if (right) right.btn.classList.add("correct");
+  return right ? right.text : "";
 }
 
 /* Bandeau question : slide depuis le bas */
@@ -759,10 +789,20 @@ function showQuestionBanner(catName, color) {
   $("#banner-cat").textContent = catName;
   $("#banner-cat").style.color = color;
   banner.classList.add("open");
+  /* Le bandeau est hors écran au repos : on ne l'expose aux lecteurs d'écran
+     que lorsqu'il est réellement affiché. */
+  banner.setAttribute("aria-hidden", "false");
 }
 function hideQuestionBanner() {
   const banner = $("#question-banner");
-  if (banner) banner.classList.remove("open");
+  if (!banner) return;
+  banner.classList.remove("open");
+  /* Si le focus est encore dans le bandeau, on le relâche avant de le cacher
+     (sinon le navigateur refuse aria-hidden sur un conteneur focalisé). */
+  if (document.activeElement && banner.contains(document.activeElement)) {
+    document.activeElement.blur();
+  }
+  banner.setAttribute("aria-hidden", "true");
 }
 
 /* ---------- Timer de réponse ---------- */
@@ -778,12 +818,15 @@ function answerTimeFor(player) {
   }
   return GAME_CONFIG.answerTimeByAge ? (GAME_CONFIG.answerTimeByAge[player.group] || null) : null;
 }
-function startTimer(cell, player, correct, options) {
+function startTimer(cell, player) {
   const total = answerTimeFor(player);
   if (!total) return;
-  timeLeft = total;
+  /* Compte à rebours sur une échéance absolue : l'intervalle ne dérive pas
+     si l'onglet est ralenti par le navigateur. */
+  const deadline = Date.now() + total * 1000;
   const wrap = $("#question-timerwrap");
   const bar = $("#question-timerbar");
+  const text = $("#question-timertext");
   show(wrap);
   bar.style.transition = "none";
   bar.style.width = "100%";
@@ -791,23 +834,22 @@ function startTimer(cell, player, correct, options) {
     bar.style.transition = "width " + total + "s linear";
     bar.style.width = "0%";
   });
-  $("#question-timertext").textContent = total + " s";
+  text.textContent = total + " s";
   questionTimer = setInterval(() => {
-    timeLeft--;
-    if (timeLeft > 0) {
-      $("#question-timertext").textContent = timeLeft + " s";
-    } else {
-      stopTimer();
-      player.stats.timeout++;
-      recordCatStat(player, cell, "timeout");
-      document.querySelectorAll(".answer").forEach(b => b.disabled = true);
-      const correctBtn = [...document.querySelectorAll(".answer")].find(b => b.textContent === options[correct]);
-      if (correctBtn) correctBtn.classList.add("correct");
-      $("#answer-feedback").textContent = "\u23f0 Temps écoulé ! C'était : " + options[correct] + ".";
-      saveGame();
-      setTimeout(nextTurn, 2200);
+    const msLeft = deadline - Date.now();
+    const seconds = Math.max(0, Math.ceil(msLeft / 1000));
+    if (msLeft > 0) {
+      text.textContent = seconds + " s";
+      return;
     }
-  }, 1000);
+    stopTimer();
+    player.stats.timeout++;
+    recordCatStat(player, cell, "timeout");
+    const rightText = revealCorrectAnswer();
+    $("#answer-feedback").textContent = "⏰ Temps écoulé ! C'était : " + rightText + ".";
+    saveGame();
+    setTimeout(nextTurn, 2200);
+  }, 200);
 }
 /* Statistiques par catégorie */
 function recordCatStat(player, cell, kind) {
@@ -817,14 +859,14 @@ function recordCatStat(player, cell, kind) {
   player.stats.byCat[cat][kind]++;
 }
 
-function answer(btn, isCorrect, cell, player, correct, options) {
+function answer(btn, isCorrect, cell, player) {
   stopTimer();
-  document.querySelectorAll(".answer").forEach(b => b.disabled = true);
+  document.querySelectorAll(".answer").forEach(b => { b.disabled = true; });
   const fb = $("#answer-feedback");
+  const rightText = revealCorrectAnswer();
   if (isCorrect) {
     player.stats.correct++;
     recordCatStat(player, cell, "correct");
-    btn.classList.add("correct");
     fb.textContent = "✅ Bonne réponse !";
     if (cell.isWedge && !player.wedges[cell.wedgeCat]) {
       player.wedges[cell.wedgeCat] = true;
@@ -844,9 +886,7 @@ function answer(btn, isCorrect, cell, player, correct, options) {
     player.stats.wrong++;
     recordCatStat(player, cell, "wrong");
     btn.classList.add("wrong");
-    const correctBtn = [...document.querySelectorAll(".answer")].find(b => b.textContent === options[correct]);
-    if (correctBtn) correctBtn.classList.add("correct");
-    fb.textContent = `❌ Mauvaise réponse. C'était : ${options[correct]}.`;
+    fb.textContent = `❌ Mauvaise réponse. C'était : ${rightText}.`;
     saveGame();
     setTimeout(() => { nextTurn(); }, 2000);
   }
@@ -873,7 +913,7 @@ function animateWedge(cell, catKey) {
     { transform: "translate(0,0) scale(1)", opacity: 0.95 },
     { transform: `translate(${dx * 0.5}px, ${dy * 0.5 - 60}px) scale(1.5)`, opacity: 1, offset: 0.5 },
     { transform: `translate(${dx}px, ${dy}px) scale(0.55)`, opacity: 0.9 }
-  ], { duration: 1100, easing: "cubic-bezier(.3,.7,.4,1)" }).onfinish = () => { chip.remove(); updateTurnUI(); };
+  ], { duration: GAME_CONFIG.wedgeFlightMs, easing: "cubic-bezier(.3,.7,.4,1)" }).onfinish = () => { chip.remove(); updateTurnUI(); };
 }
 
 /* Splash de bonne réponse : flash plein écran bref */
@@ -901,29 +941,9 @@ function win(player) {
   hide($("#game-screen"));
   show($("#win-screen"));
   $("#winner-name").textContent = `🏆 ${player.name} remporte la partie !`;
-  $("#winner-sub").textContent = `6 diamants collectés et question finale réussie. Bravo !`;
+  $("#winner-sub").textContent = "6 diamants collectés et question finale réussie. Bravo !";
   // Statistiques complètes de tous les joueurs sur l'écran de victoire
-  let statsHtml = "";
-  players.forEach(p => {
-    const st = p.stats || { correct: 0, wrong: 0, timeout: 0, byCat: {} };
-    const total = st.correct + st.wrong + st.timeout;
-    const pct = total ? Math.round(st.correct / total * 100) : 0;
-    statsHtml += `<div class="stats-player">
-      <div class="stats-head"><span class="pawn-mini-inline">${PAWNS[p.pawn].emoji}</span> <b>${p.name}</b>${p === player ? ' <span class="win-badge">🏆</span>' : ''}
-        <span class="stats-pct">${pct}%</span></div>
-      <div class="stats-line">✅ ${st.correct} · ❌ ${st.wrong} · ⏰ ${st.timeout} <span class="muted">(${total} questions)</span></div>
-      <div class="stats-cats">`;
-    CAT_KEYS.forEach(k => {
-      const c = st.byCat[k];
-      if (!c) return;
-      const info = catInfo(k);
-      const t = c.correct + c.wrong + c.timeout;
-      const cp = t ? Math.round(c.correct / t * 100) : 0;
-      statsHtml += `<span class="stats-cat"><span class="dot" style="background:${info.color}"></span>${info.icon} ${info.name} : ${cp}% (${c.correct}/${t})</span>`;
-    });
-    statsHtml += `</div></div>`;
-  });
-  $("#win-stats").innerHTML = statsHtml;
+  $("#win-stats").innerHTML = players.map(p => playerStatsHtml(p, player)).join("");
 }
 
 /* Nouvelle partie : efface la sauvegarde et revient à la configuration */
@@ -935,7 +955,10 @@ function newGame() {
   current = 0;
   players = [];
   pendingPawn = null;
-  activeTheme = activeTheme; // la recharge choisie est conservée dans le formulaire
+  answerButtons = [];
+  drawBags = {};
+  lastPaths = {};
+  // la recharge choisie est conservée dans le formulaire
   $("#dice-result").textContent = "";
   $("#btn-roll").disabled = false;
   awaitingRoll = true;
@@ -947,11 +970,8 @@ function newGame() {
 }
 $("#btn-newgame-header").onclick = newGame;
 
-$("#btn-restart").onclick = () => {
-  show($("#setup-screen"));
-  hide($("#game-screen"));
-  hide($("#win-screen"));
-};
+/* « Rejouer » = nouvelle partie complète : tout le monde se réinscrit. */
+$("#btn-restart").onclick = newGame;
 
 /* Init : restituer la partie en cours au chargement */
 renderSetup();

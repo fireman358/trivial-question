@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trivial Quest par tranche d'âge — Edukisto</title>
+<meta name="description" content="Jeu de quiz dans le navigateur : chaque joueur reçoit des questions adaptées à son âge. Plateau de 73 cases, 6 diamants, 9 packs à thème.">
 <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#333333">
@@ -21,13 +22,6 @@
       <div class="splash-sub">présente</div>
     </div>
   </div>
-
-<div id="studio-splash" aria-hidden="true">
-  <div class="splash-inner">
-    <div class="splash-logo"><svg class="splash-star" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3l5.2 18.2 10.8-5.2-5.2 10.8L61 32l-18.2 5.2 5.2 10.8-10.8-5.2L32 61l-5.2-18.2-10.8 5.2 5.2-10.8L3 32l18.2-5.2-5.2-10.8 10.8 5.2z" fill="#38bdf8"/><path d="M32 32c-1.6-2-3-3.1-4.8-3.1a4.7 4.7 0 1 0 0 9.4c1.8 0 3.2-1.1 4.8-3.1 1.6 2 3 3.1 4.8 3.1a4.7 4.7 0 1 0 0-9.4c-1.8 0-3.2 1.1-4.8 3.1z" stroke="#0f1115" stroke-width="2.2" fill="none"/></svg>Edukisto</div>
-    <div class="splash-sub">présente</div>
-  </div>
-</div>
 
 <header class="app-header">
     <div class="brand">
@@ -135,7 +129,7 @@
 <div id="correct-splash" aria-hidden="true"><span>✅ Bravo !</span></div>
 
 <!-- Bandeau question : slide depuis le bas (question + réponses + timer) -->
-<div id="question-banner" aria-hidden="true">
+<div id="question-banner" aria-hidden="true" role="group" aria-label="Question en cours">
   <div class="banner-head">
     <span id="banner-cat"></span>
     <div id="question-timerwrap" class="hidden">
@@ -143,11 +137,12 @@
       <span id="question-timertext"></span>
     </div>
   </div>
-  <p id="question-text"></p>
+  <p id="question-text" aria-live="polite"></p>
   <div id="answers"></div>
-  <p id="answer-feedback"></p>
+  <p id="answer-feedback" aria-live="polite"></p>
 </div>
 
+<script src="board.js"></script>
 <script src="config.js"></script>
 <script src="data/age-4-5.js"></script>
 <script src="data/age-6-8.js"></script>
